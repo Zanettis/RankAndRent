@@ -28,7 +28,11 @@
       "Bash(Select-Object Name)",
       "Bash(PowerShell -Command \"Get-ChildItem -Path 'c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\\\\murrieta-ecosystem' | Select-Object Name\")",
       "Bash(Get-Content \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\\\\murrieta-ecosystem\\\\landscaping\\\\astro.config.mjs\")",
-      "Bash(npx skills *)"
+      "Bash(npx skills *)",
+      "Bash(mv hero.jpg.png hero.jpg)",
+      "Bash(mv climber.jpg.png climber.jpg)",
+      "Bash(mv crew.jpg.png crew.jpg)",
+      "Read(//c/c/Users/zanet/OneDrive/Documentos/GitHub/RankAndRent/murrieta-ecosystem/tree-service/public/**)"
     ]
   }
 }
