@@ -13,8 +13,8 @@ const icons = ['🎨', '🌿', '💧', '🍂'];
   description="Transform your Murrieta yard with professional landscaping. Custom design, lawn care, irrigation, and seasonal cleanup. Free consultations."
 >
   <Hero
-    headline="Transform Your Murrieta Landscape"
-    subheadline="From custom garden design to weekly lawn care, we create beautiful, sustainable outdoor spaces in Murrieta's warm inland climate."
+    headline="Murrieta's Top-Rated Landscaping & Lawn Care"
+    subheadline="Custom landscape design, lawn maintenance, irrigation, and seasonal cleanup for Murrieta homeowners. Drought-smart, HOA-compliant, and built for inland SoCal. Free consultations."
     ctaText="Get a Free Consultation"
     secondaryCtaText="Call Now"
     secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
@@ -73,6 +73,65 @@ const icons = ['🎨', '🌿', '💧', '🍂'];
       <a href="/services/landscape-design" class="text-cta font-semibold hover:underline">
         See all services →
       </a>
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-16 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-primary mb-4">Serving Murrieta & the Temecula Valley</h2>
+      <p class="text-gray-600 max-w-3xl mx-auto mb-6">
+        We landscape homes and properties throughout the region — familiar with local HOA guidelines, soil conditions, and water restrictions in every community.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3 mb-8">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Canyon Lake', 'Winchester'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+      <a href="/services/landscape-design" class="text-cta font-semibold hover:underline">
+        See all services →
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {[
+        {
+          q: "How much does landscape design cost in Murrieta?",
+          a: "Landscape design consultations are free. Full design plans range from $500–$2,500 depending on yard size and complexity. Installation costs vary widely — a basic front yard refresh starts around $3,000, while full backyard transformations typically run $8,000–$25,000+. We provide detailed written estimates before any work begins."
+        },
+        {
+          q: "Do you design drought-tolerant landscapes?",
+          a: "Yes — it's one of our specialties. We use California native plants, drought-adapted species, and water-efficient ground covers that look great without excessive irrigation. Many of our designs qualify for local water district rebates."
+        },
+        {
+          q: "Do you handle HOA submissions and approvals?",
+          a: "Yes. We're familiar with HOA guidelines in communities throughout Murrieta including Bear Creek, Greer Ranch, and Copper Canyon. We prepare all required documentation and submit on your behalf."
+        },
+        {
+          q: "How long does a full yard transformation take?",
+          a: "Design takes 1–2 weeks. Installation for a standard yard typically takes 3–7 days depending on scope. We schedule around your availability and provide a timeline before starting."
+        },
+        {
+          q: "Do you offer ongoing lawn care after installation?",
+          a: "Yes. We offer weekly and biweekly lawn maintenance plans starting at $80/visit for standard lots. Services include mowing, edging, blowing, and seasonal fertilizing."
+        },
+        {
+          q: "Do you serve Temecula, Wildomar, and surrounding areas?",
+          a: "Yes. We serve Murrieta, Temecula, Wildomar, Menifee, Lake Elsinore, Canyon Lake, and Winchester. Free consultations available throughout the Temecula Valley."
+        },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
     </div>
   </section>
 
