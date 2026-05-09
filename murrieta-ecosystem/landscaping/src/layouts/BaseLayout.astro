@@ -7,10 +7,12 @@ interface Props {
   title: string;
   description: string;
   canonicalUrl?: string;
+  ogImage?: string;
 }
 
-const { title, description, canonicalUrl } = Astro.props;
+const { title, description, canonicalUrl, ogImage = '/og-image.jpg' } = Astro.props;
 const canonical = canonicalUrl ?? new URL(Astro.url.pathname, Astro.site).href;
+const ogImageAbsolute = new URL(ogImage, SITE_CONFIG.domain).href;
 
 const schema = {
   '@context': 'https://schema.org',
@@ -26,7 +28,15 @@ const schema = {
     postalCode: '92562',
     addressCountry: 'US',
   },
-  areaServed: { '@type': 'City', name: 'Murrieta' },
+  areaServed: [
+    { '@type': 'City', name: 'Murrieta' },
+    { '@type': 'City', name: 'Temecula' },
+    { '@type': 'City', name: 'Wildomar' },
+    { '@type': 'City', name: 'Menifee' },
+    { '@type': 'City', name: 'Lake Elsinore' },
+    { '@type': 'City', name: 'Canyon Lake' },
+    { '@type': 'City', name: 'Winchester' },
+  ],
   priceRange: '$$',
   description: SITE_CONFIG.description,
 };
@@ -47,6 +57,14 @@ const schema = {
     <meta property="og:url" content={canonical} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE_CONFIG.name} />
+    <meta property="og:image" content={ogImageAbsolute} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageAbsolute} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
