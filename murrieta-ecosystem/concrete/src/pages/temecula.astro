@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="Concrete Contractor Temecula, CA | Driveways, Patios & Stamped Concrete"
+  description="Licensed concrete contractor serving Temecula, CA. Driveways, patios, walkways, decorative stamped concrete, and repairs. Free estimates. Serving Redhawk, Wolf Creek, Crowne Hill, and all Temecula communities."
+  canonicalUrl="https://concrete-murrieta.com/temecula/"
+>
+  <Hero
+    headline="Concrete Driveways & Patios in Temecula, CA"
+    subheadline="Licensed concrete contractors serving all of Temecula. Driveways, patios, walkways, stamped concrete, and repairs — fully permitted, 10-year workmanship guarantee, free estimates."
+    ctaText="Get a Free Estimate"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Concrete Services in Temecula</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      From new driveway installations to decorative stamped patios, we deliver flawless concrete work for Temecula homes — fully permitted, quality guaranteed.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Concrete Work Built for Temecula's Climate</h2>
+      <p>
+        Temecula's inland heat — regularly above 100°F in summer — places unique demands on concrete. Proper mix design, curing time, and finishing techniques all matter more in this climate than in cooler coastal areas. We use concrete mixes and curing methods specifically suited to Temecula's temperature swings, reducing the risk of early cracking and extending the life of your driveway or patio by decades. All work is fully permitted through the City of Temecula or Riverside County.
+      </p>
+
+      <h2>Serving All Temecula Neighborhoods</h2>
+      <p>
+        We pour concrete throughout Temecula, including Redhawk, Wolf Creek, Paloma del Sol, Crowne Hill, Harveston, Morgan Hill, and communities near Old Town Temecula, Pechanga Resort, and the Wine Country. Many Temecula homes have aging concrete driveways and patios installed in the early 2000s that are now cracking — we specialize in both full replacement and targeted repairs that match the existing look.
+      </p>
+
+      <h2>Stamped Concrete for Temecula Outdoor Living</h2>
+      <p>
+        Temecula's warm climate is built for outdoor entertaining, and decorative stamped concrete is one of the most cost-effective ways to upgrade a patio, pool deck, or walkway. We offer a full range of stamps (flagstone, cobblestone, wood plank, slate) and integral color options that complement Temecula's earthy, Mediterranean aesthetic. Stamped concrete is significantly more affordable than natural stone while lasting just as long with proper installation.
+      </p>
+
+      <h2>Why Temecula Homeowners Choose Us</h2>
+      <p>
+        We're locally based in the Murrieta/Temecula Valley — not a franchise. We handle all permits, inspections, and HOA approval documentation. Every job comes with a 10-year workmanship guarantee: if a defect traces back to our installation, we return and fix it at no cost. Free on-site estimates available anywhere in Temecula.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Temecula Valley</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Canyon Lake', 'Winchester'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Get Your Free Concrete Estimate in Temecula" />
+  </section>
+</BaseLayout>
