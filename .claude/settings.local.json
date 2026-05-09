@@ -10,7 +10,13 @@
       "Bash(npm info *)",
       "Bash(npm install *)",
       "Bash(npm run *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.dsrtrees.com)",
+      "Bash(git clone *)",
+      "Bash(ls -la \"C:\\\\Users\\\\zanet\\\\AppData\\\\Local\\\\Temp\\\\swiftui-skill\" 2>&1)",
+      "Read(//c/Users/zanet/AppData/Local/Temp/swiftui-skill/**)"
     ]
   }
 }

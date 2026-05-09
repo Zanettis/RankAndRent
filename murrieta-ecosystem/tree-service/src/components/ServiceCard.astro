@@ -13,7 +13,12 @@ const { title, description, href, icon = '🌳' } = Astro.props;
   href={href}
   class="block p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-accent transition-all group"
 >
-  <div class="text-3xl mb-3">{icon}</div>
+  <div class="mb-3 text-primary">
+    {icon.startsWith('<svg')
+      ? <Fragment set:html={icon} />
+      : <span class="text-3xl">{icon}</span>
+    }
+  </div>
   <h3 class="text-lg font-bold text-primary mb-2 group-hover:text-accent transition-colors">
     {title}
   </h3>
