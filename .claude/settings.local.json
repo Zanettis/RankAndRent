@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)",
+      "PowerShell(ls -Path \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" -Force -ErrorAction SilentlyContinue | ForEach-Object { $_.FullName })",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" -Force -Recurse | Sort-Object FullName | ForEach-Object { $_.FullName.Replace\\('c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent', ''\\) })",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" -Force | Where-Object { $_.Name -notlike '.git' -and $_.Name -notlike '.claude' } | ForEach-Object { \"$\\($_.Name\\) - IsDirectory: $\\($_.PSIsContainer\\)\" })",
+      "Bash(npm --version)",
+      "Bash(npm info *)",
+      "Bash(npm install *)",
+      "Bash(npm run *)"
+    ]
+  }
+}

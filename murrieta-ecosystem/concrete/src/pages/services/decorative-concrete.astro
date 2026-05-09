@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../../config';
+---
+
+<BaseLayout
+  title="Decorative Concrete Murrieta, CA | Stamped & Stained Concrete | Free Estimates"
+  description="Decorative concrete in Murrieta, CA. Stamped, stained, and exposed aggregate finishes for driveways, patios, and pool decks. Free estimates."
+>
+  <Hero
+    headline="Decorative Concrete in Murrieta, CA"
+    subheadline="Stamped, stained, and polished concrete that transforms ordinary surfaces into stunning focal points for your Murrieta home."
+    ctaText="Get a Free Estimate"
+  />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>What is Decorative Concrete?</h2>
+      <p>
+        Decorative concrete uses coloring, texturing, and finishing techniques to create surfaces
+        that look like stone, brick, slate, or wood — but with concrete's durability and
+        lower maintenance requirements. It's the ideal way to upgrade the aesthetics of your
+        Murrieta home's exterior without paying the premium price of natural stone.
+      </p>
+
+      <h2>Popular Decorative Options</h2>
+      <p>
+        Stamped concrete uses patterned mats pressed into wet concrete to create textures
+        mimicking flagstone, cobblestone, or slate tile. Integral color produces concrete
+        that's tinted all the way through — no surface peeling. Acid staining creates
+        unique, variegated patterns that look genuinely like natural stone.
+        Exposed aggregate reveals the stone and sand within the concrete mix,
+        providing natural texture and slip resistance ideal for pool decks.
+      </p>
+
+      <h2>Best Applications for Decorative Concrete in Murrieta</h2>
+      <p>
+        Pool decks benefit enormously from decorative concrete — exposed aggregate stays cool
+        underfoot and provides traction when wet. Front walkways with stamped concrete make
+        a strong first impression. Backyard patios with stained or stamped concrete create
+        an upscale entertaining area that pairs beautifully with
+        <a href="https://landscaping-murrieta.com/services/landscape-design">professional landscaping</a>.
+        The combination of decorative concrete and mature, well-maintained trees creates
+        the most desirable outdoor living spaces in Murrieta — our customers sometimes coordinate
+        with <a href="https://treeservice-murrieta.com">tree service professionals</a>
+        to ensure their trees complement rather than compete with their new concrete work.
+      </p>
+    </div>
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-primary mb-6">More Concrete Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {SITE_CONFIG.services.filter(s => s.href !== '/services/decorative-concrete').map((s) => (
+          <ServiceCard title={s.title} description={s.description} href={s.href} />
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <LeadForm heading="Get Your Free Decorative Concrete Estimate" />
+    </div>
+  </div>
+</BaseLayout>

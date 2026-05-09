@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../../config';
+---
+
+<BaseLayout
+  title="Concrete Driveways Murrieta, CA | Installation & Replacement | Free Estimates"
+  description="Professional concrete driveway installation and replacement in Murrieta, CA. Licensed contractors, quality materials, 10-year guarantee. Free estimates."
+>
+  <Hero
+    headline="Concrete Driveways in Murrieta, CA"
+    subheadline="New driveway installation or full replacement — built to last in Murrieta's inland climate with proper reinforcement and grading."
+    ctaText="Get a Free Estimate"
+  />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Why Choose Concrete for Your Murrieta Driveway?</h2>
+      <p>
+        Concrete driveways outlast asphalt by decades in Murrieta's climate — typically 30–50 years
+        with proper installation vs. 15–25 years for asphalt. Concrete doesn't soften in summer
+        heat the way asphalt does, and it doesn't require sealing every few years.
+        The initial cost is higher, but the lifetime value is significantly better.
+      </p>
+
+      <h2>Our Driveway Installation Process</h2>
+      <p>
+        We start by excavating existing pavement and grading the subbase to ensure proper drainage
+        away from your home. We install a gravel base layer, then steel rebar or wire mesh
+        reinforcement before pouring. Expansion joints are placed at precise intervals to control
+        cracking. After pouring, the concrete is finished, cured, and sealed for maximum durability.
+      </p>
+      <p>
+        If your project involves removing a tree or large roots near the driveway, we coordinate
+        with <a href="https://treeservice-murrieta.com">tree service professionals</a> to handle
+        root removal properly before we pour — roots under concrete will cause cracking and heaving
+        as they grow.
+      </p>
+
+      <h2>Tree Roots and Driveways: A Critical Consideration</h2>
+      <p>
+        This is one of the most common issues we see in Murrieta — tree roots from established
+        eucalyptus, oak, or ficus trees that have grown under older driveways, causing cracking
+        and lifting. Before replacing a damaged driveway, a
+        <a href="https://treeservice-murrieta.com/services/tree-removal">certified arborist</a>
+        should assess whether root pruning or tree removal is necessary to prevent the same
+        problem from recurring in 5–10 years.
+      </p>
+
+      <h2>After Your New Driveway</h2>
+      <p>
+        A new concrete driveway dramatically improves curb appeal. Many homeowners also
+        refresh the surrounding
+        <a href="https://landscaping-murrieta.com/services/landscape-design">landscaping</a>
+        at the same time — new plants, mulch, and border edging that frames the new driveway beautifully.
+      </p>
+    </div>
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-primary mb-6">More Concrete Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {SITE_CONFIG.services.filter(s => s.href !== '/services/concrete-driveways').map((s) => (
+          <ServiceCard title={s.title} description={s.description} href={s.href} />
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <LeadForm heading="Get Your Free Driveway Estimate" />
+    </div>
+  </div>
+</BaseLayout>

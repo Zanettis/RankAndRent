@@ -1,0 +1,63 @@
+---
+import { SITE_CONFIG } from '../config';
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/services/concrete-driveways', label: 'Driveways' },
+  { href: '/services/patios-walkways', label: 'Patios' },
+  { href: '/services/concrete-repair', label: 'Repair' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/contact', label: 'Contact' },
+];
+---
+
+<header class="bg-primary text-white shadow-md sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="/" class="text-xl font-bold tracking-tight hover:text-accent transition-colors">
+      {SITE_CONFIG.name}
+    </a>
+
+    <button
+      id="menu-toggle"
+      class="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-accent"
+      aria-label="Toggle menu"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <nav id="nav-menu" class="hidden md:flex items-center gap-6 text-sm font-medium">
+      {navLinks.map((link) => (
+        <a href={link.href} class="hover:text-accent transition-colors">{link.label}</a>
+      ))}
+      <a
+        href="/contact"
+        class="bg-cta text-white px-4 py-2 rounded font-semibold hover:opacity-90 transition-opacity"
+      >
+        Free Quote
+      </a>
+    </nav>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-primary border-t border-white/20">
+    <nav class="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-3 text-sm font-medium">
+      {navLinks.map((link) => (
+        <a href={link.href} class="hover:text-accent transition-colors py-1">{link.label}</a>
+      ))}
+      <a
+        href="/contact"
+        class="bg-cta text-white px-4 py-2 rounded font-semibold text-center hover:opacity-90 transition-opacity mt-2"
+      >
+        Free Quote
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

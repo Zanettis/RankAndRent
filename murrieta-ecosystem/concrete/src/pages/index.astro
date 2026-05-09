@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { SITE_CONFIG } from '../config';
+
+const icons = ['🚗', '☀️', '🔧', '✨'];
+---
+
+<BaseLayout
+  title="Concrete Murrieta, CA | Driveways, Patios & Walkways"
+  description="Expert concrete driveways, patios, and walkways in Murrieta, CA. Licensed contractors, quality materials, lasting results. Free estimates."
+>
+  <Hero
+    headline="Murrieta's Concrete Experts"
+    subheadline="Durable concrete driveways, patios, and walkways built to last in Murrieta's inland climate. Licensed contractors, premium materials, guaranteed work."
+    ctaText="Get a Free Estimate"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Our Concrete Services</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      From new driveway installations to decorative stamped concrete patios, we deliver
+      flawless concrete work that enhances Murrieta homes and withstands the test of time.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service, i) => (
+        <ServiceCard
+          title={service.title}
+          description={service.description}
+          href={service.href}
+          icon={icons[i] ?? '🏗️'}
+        />
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-primary text-center mb-4">Quality You Can See, Durability You Can Count On</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+        <div class="text-center">
+          <div class="text-4xl mb-3">📐</div>
+          <h3 class="font-bold text-primary text-lg mb-2">Precision Installation</h3>
+          <p class="text-gray-600 text-sm">Proper grading, compaction, and reinforcement done right the first time. No shortcuts.</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-3">🌡️</div>
+          <h3 class="font-bold text-primary text-lg mb-2">Built for Inland SoCal</h3>
+          <p class="text-gray-600 text-sm">We use concrete mixes and curing techniques designed for Murrieta's heat and occasional frost.</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-3">📝</div>
+          <h3 class="font-bold text-primary text-lg mb-2">Fully Permitted Work</h3>
+          <p class="text-gray-600 text-sm">We handle all permits and inspections. Your project is done right and legally compliant.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Complete Your Outdoor Project</h2>
+    <p class="text-gray-600 text-center max-w-3xl mx-auto mb-8">
+      Getting a new driveway? You may need
+      <a href="https://treeservice-murrieta.com" class="text-cta hover:underline">tree root removal</a> first,
+      or want to finish the project with professional
+      <a href="https://landscaping-murrieta.com" class="text-cta hover:underline">landscaping</a> around
+      your new concrete. We coordinate with trusted local partners for a seamless experience.
+    </p>
+    <div class="text-center">
+      <a href="/services/concrete-driveways" class="text-cta font-semibold hover:underline">
+        See all services →
+      </a>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 pb-16">
+    <LeadForm heading="Ready for New Concrete? Get Your Free Estimate" />
+  </section>
+</BaseLayout>

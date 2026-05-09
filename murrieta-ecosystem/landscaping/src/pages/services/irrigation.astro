@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../../config';
+---
+
+<BaseLayout
+  title="Irrigation Systems Murrieta, CA | Installation & Repair | Free Quotes"
+  description="Professional irrigation installation and repair in Murrieta, CA. Drip systems, smart controllers, and water-efficient solutions. Free quotes."
+>
+  <Hero
+    headline="Water-Efficient Irrigation for Murrieta Homes"
+    subheadline="Smart irrigation systems that keep your landscape thriving while cutting your water bill and staying compliant with California restrictions."
+    ctaText="Get a Free Quote"
+  />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Why Irrigation Matters in Murrieta</h2>
+      <p>
+        Murrieta receives about 12 inches of rain per year — far below what most landscapes need
+        to thrive. Without a reliable irrigation system, you're either overwatering (wasting money
+        and violating restrictions) or underwatering (killing plants and increasing fire risk from
+        dry vegetation). A properly designed system is the foundation of any healthy Murrieta landscape.
+      </p>
+
+      <h2>Drip vs. Spray: Choosing the Right System</h2>
+      <p>
+        Spray systems are ideal for lawns — they cover large areas evenly. Drip irrigation
+        is better for trees, shrubs, and garden beds — it delivers water directly to root zones
+        with minimal evaporation, reducing water use by up to 50% compared to spray.
+        We design systems that use each type where it makes the most sense for your property.
+      </p>
+
+      <h2>Smart Controllers Save Water and Money</h2>
+      <p>
+        Modern smart irrigation controllers use weather data and soil sensors to automatically
+        adjust watering schedules based on actual conditions. If it rained last night, the system
+        skips the morning cycle. If temperatures spike, it waters more. We install and program
+        Rachio, Hunter, and Rain Bird smart systems that work with your smartphone.
+      </p>
+    </div>
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-primary mb-6">More Landscaping Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {SITE_CONFIG.services.filter(s => s.href !== '/services/irrigation').map((s) => (
+          <ServiceCard title={s.title} description={s.description} href={s.href} />
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <LeadForm heading="Get Your Free Irrigation System Quote" />
+    </div>
+  </div>
+</BaseLayout>

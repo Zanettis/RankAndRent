@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../../config';
+---
+
+<BaseLayout
+  title="Tree Trimming Murrieta, CA | Expert Pruning Services | Free Estimates"
+  description="Professional tree trimming and pruning in Murrieta, CA. Improve tree health, safety, and curb appeal. Licensed arborists. Free estimates."
+>
+  <Hero
+    headline="Expert Tree Trimming & Pruning in Murrieta"
+    subheadline="Proper pruning improves tree health, reduces storm risk, and keeps your yard looking beautiful year-round."
+    ctaText="Get a Free Quote"
+  />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>The Importance of Regular Tree Trimming</h2>
+      <p>
+        Regular trimming is the single most important thing you can do for your trees' long-term
+        health and safety. Murrieta's hot summers and occasional Santa Ana winds make proper
+        canopy management especially critical — an overgrown, dense canopy becomes a sail
+        in high winds, dramatically increasing the risk of branch failure or whole-tree loss.
+      </p>
+
+      <h2>What We Trim and Why</h2>
+      <p>
+        Our arborists remove dead, diseased, and crossing branches that compete for nutrients
+        and create entry points for pests and disease. We thin the canopy to allow light
+        and air circulation, which reduces fungal issues common in Murrieta's warm climate.
+        We also perform structural pruning on young trees to establish strong architecture
+        before problems develop.
+      </p>
+
+      <h2>Crown Reduction vs. Crown Thinning</h2>
+      <p>
+        Crown reduction shortens the overall height or spread of the tree while maintaining
+        its natural shape — ideal when a tree has outgrown its space or is conflicting with
+        structures. Crown thinning removes 15–20% of the canopy to increase light penetration
+        and reduce wind resistance while keeping the tree's full size. We recommend the right
+        approach based on your specific tree species and goals.
+      </p>
+
+      <h2>When to Trim Trees in Murrieta</h2>
+      <p>
+        Most trees are best trimmed in late fall through winter when they're dormant. However,
+        Murrieta's mild climate means many species can be trimmed year-round with care.
+        Emergency trimming for storm-damaged or hazardous limbs can be done any time.
+        We advise against heavy pruning during spring when trees are actively pushing new growth.
+      </p>
+    </div>
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-primary mb-6">More Tree Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {SITE_CONFIG.services.filter(s => s.href !== '/services/tree-trimming').map((s) => (
+          <ServiceCard title={s.title} description={s.description} href={s.href} />
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <LeadForm heading="Schedule Your Tree Trimming" />
+    </div>
+  </div>
+</BaseLayout>

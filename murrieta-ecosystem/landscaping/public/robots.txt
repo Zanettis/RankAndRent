@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://landscaping-murrieta.com/sitemap-index.xml

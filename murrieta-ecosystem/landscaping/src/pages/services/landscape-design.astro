@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../../config';
+---
+
+<BaseLayout
+  title="Landscape Design Murrieta, CA | Custom Yard Plans | Free Consultation"
+  description="Custom landscape design in Murrieta, CA. Beautiful, drought-smart designs that thrive in inland Southern California. Free consultations."
+>
+  <Hero
+    headline="Custom Landscape Design for Murrieta Homes"
+    subheadline="We design beautiful, water-smart outdoor spaces that reflect your style and thrive in Murrieta's warm inland climate."
+    ctaText="Schedule Free Consultation"
+  />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Landscape Design Built for Murrieta</h2>
+      <p>
+        Murrieta's climate is genuinely beautiful — warm, sunny, and mild enough to enjoy your
+        outdoor space nearly year-round. But it comes with unique challenges: clay-heavy soils,
+        water restrictions, intense summer heat, and HOA guidelines that vary by community.
+        Our landscape designs address all of these realities from the first sketch.
+      </p>
+
+      <h2>Our Design Process</h2>
+      <p>
+        We start with a consultation at your property to understand your goals, budget, lifestyle,
+        and any existing features worth keeping. We assess soil conditions, sun/shade patterns,
+        drainage, and HOA requirements before proposing a design. You'll receive a detailed plan
+        with plant selections, layout drawings, and phased implementation options.
+      </p>
+
+      <h2>Designs That Work With Nature</h2>
+      <p>
+        We prioritize California native and drought-adapted plants that look spectacular in Murrieta's
+        heat without requiring constant water. We also integrate features like decomposed granite paths,
+        boulders, and raised planting beds that reduce water use while adding visual interest.
+        For complete outdoor spaces, we coordinate with
+        <a href="https://concrete-murrieta.com/services/patios-walkways">concrete patio contractors</a>
+        and <a href="https://treeservice-murrieta.com/services/tree-trimming">arborists</a>
+        to plan around existing trees and hardscaping.
+      </p>
+
+      <h2>HOA Compliance</h2>
+      <p>
+        Many Murrieta communities have strict landscape guidelines. We're familiar with the most
+        common HOA requirements in Bear Creek, Greer Ranch, and Copper Canyon and can prepare
+        the required documentation for HOA approval on your behalf.
+      </p>
+    </div>
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-primary mb-6">More Landscaping Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {SITE_CONFIG.services.filter(s => s.href !== '/services/landscape-design').map((s) => (
+          <ServiceCard title={s.title} description={s.description} href={s.href} />
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <LeadForm heading="Schedule Your Free Landscape Design Consultation" />
+    </div>
+  </div>
+</BaseLayout>

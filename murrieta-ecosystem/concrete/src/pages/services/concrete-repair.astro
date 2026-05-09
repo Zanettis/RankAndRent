@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../../config';
+---
+
+<BaseLayout
+  title="Concrete Repair Murrieta, CA | Crack Repair & Resurfacing | Free Estimates"
+  description="Professional concrete repair in Murrieta, CA. Crack repair, resurfacing, and settling correction. Restore your driveway or patio. Free estimates."
+>
+  <Hero
+    headline="Concrete Repair & Resurfacing in Murrieta"
+    subheadline="Cracked, sunken, or spalling concrete? We restore your driveway, patio, or walkway to like-new condition at a fraction of replacement cost."
+    ctaText="Get a Free Estimate"
+  />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>When to Repair vs. Replace Concrete</h2>
+      <p>
+        Surface cracks, minor spalling, and discoloration are good candidates for repair
+        and resurfacing. Structural cracking, significant settling, or widespread deterioration
+        typically require replacement. We'll give you an honest assessment — sometimes repair
+        is the right answer, sometimes it's not, and we'll tell you which is which rather
+        than defaulting to the more expensive option.
+      </p>
+
+      <h2>Common Concrete Problems in Murrieta</h2>
+      <p>
+        Tree root intrusion is the most common cause of concrete damage in Murrieta —
+        established eucalyptus, sycamore, and ficus trees have aggressive surface roots
+        that crack and lift concrete. Before repairing damaged concrete, we often recommend
+        consulting a <a href="https://treeservice-murrieta.com">certified arborist</a>
+        to address the underlying root problem; otherwise the same cracking will recur.
+      </p>
+      <p>
+        Shrinkage cracking from improper mix water content or curing is also common
+        in Murrieta's dry, hot conditions. Settling from poor subbase compaction is
+        less common but does occur on older properties with sandy or poorly compacted soil.
+      </p>
+
+      <h2>Our Repair Process</h2>
+      <p>
+        We clean cracks thoroughly, undercut them for better bond, fill with high-strength
+        epoxy or polymer-modified cement depending on crack width, then surface-bond
+        and texture to match the surrounding concrete. For larger areas, we apply a
+        concrete overlay that bonds to the existing slab and provides a fresh surface.
+      </p>
+    </div>
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-primary mb-6">More Concrete Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {SITE_CONFIG.services.filter(s => s.href !== '/services/concrete-repair').map((s) => (
+          <ServiceCard title={s.title} description={s.description} href={s.href} />
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <LeadForm heading="Get Your Free Concrete Repair Estimate" />
+    </div>
+  </div>
+</BaseLayout>

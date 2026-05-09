@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { SITE_CONFIG } from '../config';
+
+const icons = ['🎨', '🌿', '💧', '🍂'];
+---
+
+<BaseLayout
+  title="Landscaping Murrieta, CA | Professional Landscape Design & Lawn Care"
+  description="Transform your Murrieta yard with professional landscaping. Custom design, lawn care, irrigation, and seasonal cleanup. Free consultations."
+>
+  <Hero
+    headline="Transform Your Murrieta Landscape"
+    subheadline="From custom garden design to weekly lawn care, we create beautiful, sustainable outdoor spaces in Murrieta's warm inland climate."
+    ctaText="Get a Free Consultation"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Our Landscaping Services</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      We design and maintain stunning outdoor spaces that thrive in Murrieta's climate —
+      beautiful, water-smart, and built to last.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service, i) => (
+        <ServiceCard
+          title={service.title}
+          description={service.description}
+          href={service.href}
+          icon={icons[i] ?? '🌱'}
+        />
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-primary text-center mb-4">Built for Murrieta's Climate</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+        <div class="text-center">
+          <div class="text-4xl mb-3">☀️</div>
+          <h3 class="font-bold text-primary text-lg mb-2">Drought-Smart Designs</h3>
+          <p class="text-gray-600 text-sm">We specialize in beautiful landscapes that use Murrieta's warm climate to your advantage, not against you.</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-3">🌊</div>
+          <h3 class="font-bold text-primary text-lg mb-2">Water-Efficient Irrigation</h3>
+          <p class="text-gray-600 text-sm">Smart irrigation systems that keep your lawn green while meeting California's water conservation requirements.</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-3">📋</div>
+          <h3 class="font-bold text-primary text-lg mb-2">HOA-Compliant Work</h3>
+          <p class="text-gray-600 text-sm">We know Murrieta's HOA requirements and handle all design submissions and approvals on your behalf.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Complete Yard Transformations</h2>
+    <p class="text-gray-600 text-center max-w-3xl mx-auto mb-8">
+      Planning a full outdoor renovation? We work alongside trusted local
+      <a href="https://treeservice-murrieta.com" class="text-cta hover:underline">tree service</a> and
+      <a href="https://concrete-murrieta.com" class="text-cta hover:underline">concrete contractors</a>
+      to deliver seamless, coordinated results from start to finish.
+    </p>
+    <div class="text-center">
+      <a href="/services/landscape-design" class="text-cta font-semibold hover:underline">
+        See all services →
+      </a>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 pb-16">
+    <LeadForm heading="Ready for a Beautiful Yard? Let's Talk" />
+  </section>
+</BaseLayout>

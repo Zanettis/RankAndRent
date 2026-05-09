@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../../config';
+---
+
+<BaseLayout
+  title="Stump Grinding Murrieta, CA | Complete Stump Removal | Free Estimates"
+  description="Professional stump grinding and removal in Murrieta, CA. Eliminate trip hazards, reclaim yard space, and prepare for new landscaping. Free estimates."
+>
+  <Hero
+    headline="Stump Grinding & Removal in Murrieta"
+    subheadline="Eliminate unsightly stumps, trip hazards, and pest attractors. We grind stumps below grade so you can replant or build on top."
+    ctaText="Get a Free Quote"
+  />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Why Remove That Old Stump?</h2>
+      <p>
+        Tree stumps are more than just an eyesore. Left in place, they attract termites, carpenter ants,
+        and other wood-boring insects that can migrate toward your home. They also harbor fungal
+        diseases that can spread to healthy trees nearby. Stumps are tripping hazards, they interfere
+        with lawn mowing, and they can send up new sprouts that require repeated treatment if
+        the root system remains active.
+      </p>
+
+      <h2>Grinding vs. Full Root Removal</h2>
+      <p>
+        Stump grinding is the most practical solution for most homeowners. We use a powerful
+        grinding machine to chew the stump 6–12 inches below grade, leaving wood chip mulch
+        that can be used in your garden or removed from the site. The remaining underground root
+        system will naturally decompose over several years without causing problems.
+      </p>
+      <p>
+        Full root extraction is only necessary if you're planning to pour concrete or paving
+        directly over the site — in which case we coordinate with
+        <a href="https://concrete-murrieta.com/services/concrete-driveways">concrete contractors</a>
+        to ensure the subgrade is properly prepared before any hardscaping begins.
+      </p>
+
+      <h2>What Comes After Stump Removal</h2>
+      <p>
+        Once the stump is ground down, the area is ready for new sod, planting, or hardscaping.
+        Many Murrieta homeowners take the opportunity to
+        <a href="https://landscaping-murrieta.com/services/landscape-design">redesign that section of their yard</a>
+        after removal — opening up space for a seating area, raised garden bed, or expanded lawn.
+      </p>
+    </div>
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-primary mb-6">More Tree Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {SITE_CONFIG.services.filter(s => s.href !== '/services/stump-grinding').map((s) => (
+          <ServiceCard title={s.title} description={s.description} href={s.href} />
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <LeadForm heading="Get a Free Stump Grinding Estimate" />
+    </div>
+  </div>
+</BaseLayout>

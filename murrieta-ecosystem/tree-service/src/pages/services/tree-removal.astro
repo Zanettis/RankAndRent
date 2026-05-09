@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../../config';
+---
+
+<BaseLayout
+  title="Tree Removal Murrieta, CA | Safe & Professional | Free Estimates"
+  description="Professional tree removal in Murrieta, CA. Licensed arborists, safe removal of hazardous and unwanted trees. Free estimates, same-day service available."
+>
+  <Hero
+    headline="Professional Tree Removal in Murrieta, CA"
+    subheadline="Safe, efficient removal of hazardous, dead, or unwanted trees. Our certified arborists protect your property every step of the way."
+    ctaText="Get a Free Quote"
+  />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-8" aria-label="breadcrumb">
+      <a href="/" class="hover:text-primary">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/services/tree-trimming" class="hover:text-primary">Services</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Tree Removal</span>
+    </nav>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>When Do You Need Tree Removal in Murrieta?</h2>
+      <p>
+        Trees are valuable assets to any Murrieta property — they provide shade, improve curb appeal,
+        and boost home values. However, there are situations where removal becomes necessary:
+        a tree is dead or dying, has become structurally compromised, poses a safety hazard to
+        your home or power lines, or simply needs to come down to make room for construction.
+      </p>
+
+      <h2>Our Tree Removal Process</h2>
+      <p>
+        We begin every removal with a thorough assessment of the tree's condition, lean, weight
+        distribution, and proximity to structures. Our certified arborists develop a removal plan
+        that protects your lawn, landscaping, fences, and home. We use professional-grade rigging
+        and specialized equipment to section down large trees safely in tight spaces.
+      </p>
+      <p>
+        All debris is removed from your property, and we can grind the stump to ground level
+        as part of the same visit if desired. We leave your yard clean and ready for
+        <a href="https://landscaping-murrieta.com/services/landscape-design">new landscaping</a> or
+        <a href="https://concrete-murrieta.com/services/concrete-driveways">hardscaping projects</a>.
+      </p>
+
+      <h2>Why Hire a Professional?</h2>
+      <p>
+        Tree removal is one of the most dangerous home improvement tasks a homeowner can attempt.
+        Without proper training and equipment, falling trees and limbs cause serious injuries
+        and expensive property damage every year. Our team carries full liability insurance and
+        workers' compensation — protecting you from any liability on your property.
+      </p>
+
+      <h2>Tree Removal Cost in Murrieta</h2>
+      <p>
+        Costs vary based on tree size, location, access difficulty, and whether stump grinding
+        is included. Small trees under 30 feet typically cost $300–$600. Large trees over 60 feet
+        can range from $800 to $2,000+. We provide free, written estimates with no surprise charges.
+      </p>
+
+      <h2>Service Area</h2>
+      <p>
+        We serve all Murrieta neighborhoods including Old Town, Bear Creek, Murrieta Oaks,
+        Copper Canyon, and Greer Ranch, as well as Temecula, Wildomar, and Lake Elsinore.
+      </p>
+    </div>
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-primary mb-6">Other Services We Offer</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {SITE_CONFIG.services.filter(s => s.href !== '/services/tree-removal').map((s) => (
+          <ServiceCard title={s.title} description={s.description} href={s.href} />
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <LeadForm heading="Get Your Free Tree Removal Estimate" />
+    </div>
+  </div>
+</BaseLayout>

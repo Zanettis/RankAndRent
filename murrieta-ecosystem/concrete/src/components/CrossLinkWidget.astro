@@ -1,0 +1,38 @@
+---
+interface CrossLink {
+  text: string;
+  href: string;
+  description: string;
+  icon?: string;
+}
+
+interface Props {
+  heading?: string;
+  links: CrossLink[];
+}
+
+const { heading = 'Related Services in Murrieta', links } = Astro.props;
+---
+
+<aside class="bg-accent/10 border border-accent/30 rounded-xl p-6 my-8">
+  <h3 class="text-lg font-bold text-primary mb-4 flex items-center gap-2">
+    <span>🔗</span> {heading}
+  </h3>
+  <ul class="space-y-3">
+    {links.map((link) => (
+      <li class="flex items-start gap-3">
+        <span class="text-xl mt-0.5">{link.icon ?? '→'}</span>
+        <div>
+          <a
+            href={link.href}
+            class="font-semibold text-primary hover:text-accent transition-colors"
+            rel="noopener"
+          >
+            {link.text}
+          </a>
+          <p class="text-sm text-gray-600 mt-0.5">{link.description}</p>
+        </div>
+      </li>
+    ))}
+  </ul>
+</aside>

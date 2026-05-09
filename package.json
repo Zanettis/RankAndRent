@@ -1,0 +1,15 @@
+{
+  "name": "murrieta-pbn-monorepo",
+  "private": true,
+  "workspaces": [
+    "murrieta-ecosystem/tree-service",
+    "murrieta-ecosystem/landscaping",
+    "murrieta-ecosystem/concrete"
+  ],
+  "scripts": {
+    "dev:tree": "npm run dev --workspace=murrieta-ecosystem/tree-service",
+    "dev:landscaping": "npm run dev --workspace=murrieta-ecosystem/landscaping",
+    "dev:concrete": "npm run dev --workspace=murrieta-ecosystem/concrete",
+    "build:all": "npm run build --workspaces --if-present"
+  }
+}

@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../../config';
+---
+
+<BaseLayout
+  title="Emergency Tree Service Murrieta, CA | 24/7 Storm Damage Response"
+  description="24/7 emergency tree service in Murrieta, CA. Storm damage, fallen trees, and hazardous limbs handled immediately. Call now for fast response."
+>
+  <Hero
+    headline="24/7 Emergency Tree Service in Murrieta"
+    subheadline="Storm damage, fallen trees, and hazardous limbs — we respond fast to protect your home and family. Available day and night."
+    ctaText={`Call Now: ${SITE_CONFIG.phone}`}
+    ctaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="bg-red-50 border border-red-200 rounded-xl p-6 mb-8">
+      <h2 class="text-xl font-bold text-red-700 mb-2">⚠️ Have a Tree Emergency?</h2>
+      <p class="text-red-700">
+        Call us immediately at <a href={`tel:${SITE_CONFIG.phone}`} class="font-bold underline">{SITE_CONFIG.phone}</a>.
+        We're available 24 hours a day, 7 days a week for true emergencies.
+      </p>
+    </div>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>What Counts as a Tree Emergency?</h2>
+      <p>
+        A tree emergency is any situation where a tree or large branch poses an immediate threat
+        to people, vehicles, structures, or utility lines. This includes trees that have fallen
+        or are actively leaning after a storm, large limbs hanging over your roof or car,
+        trees making contact with power lines, or any situation where waiting would create
+        significant additional risk or damage.
+      </p>
+
+      <h2>Murrieta's Weather Risks</h2>
+      <p>
+        Murrieta homeowners face specific tree hazards from Santa Ana winds (which can reach 60+ mph),
+        occasional winter storms, and summer thunderstorms. Our team is familiar with which species
+        and which root conditions are most vulnerable in local soils — we can assess your trees
+        proactively before the next wind event.
+      </p>
+
+      <h2>Our Emergency Response Process</h2>
+      <p>
+        When you call our emergency line, we dispatch an arborist as quickly as possible —
+        typically within 2–4 hours for genuine emergencies. We immediately secure the scene,
+        assess structural integrity, and perform the minimum necessary work to eliminate
+        the hazard. Full cleanup and additional work is scheduled as a follow-up.
+      </p>
+      <p>
+        After emergency work is complete, many homeowners also contact us about
+        <a href="https://concrete-murrieta.com">repairing concrete or hardscaping</a> damaged
+        by the fallen tree, and refreshing affected
+        <a href="https://landscaping-murrieta.com">landscaping areas</a>.
+      </p>
+    </div>
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-primary mb-6">More Tree Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {SITE_CONFIG.services.filter(s => s.href !== '/services/emergency-tree-service').map((s) => (
+          <ServiceCard title={s.title} description={s.description} href={s.href} />
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <LeadForm heading="Non-Emergency? Request a Quote Below" />
+    </div>
+  </div>
+</BaseLayout>

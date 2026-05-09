@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../../config';
+---
+
+<BaseLayout
+  title="Concrete Patios & Walkways Murrieta, CA | Custom Hardscaping | Free Estimates"
+  description="Custom concrete patios and walkways in Murrieta, CA. Standard, stamped, and exposed aggregate finishes. Free estimates from licensed contractors."
+>
+  <Hero
+    headline="Concrete Patios & Walkways in Murrieta"
+    subheadline="Create the outdoor living space you've always wanted — custom concrete work that complements your home and landscaping."
+    ctaText="Get a Free Estimate"
+  />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Concrete Patios: Murrieta's Outdoor Living Foundation</h2>
+      <p>
+        With Murrieta's warm climate and nearly 280 sunny days per year, outdoor living spaces
+        are used extensively from March through November. A properly designed and installed
+        concrete patio gives you a durable, low-maintenance foundation for outdoor furniture,
+        BBQ areas, fire pits, and entertaining spaces.
+      </p>
+
+      <h2>Finish Options</h2>
+      <p>
+        Standard broom finish is functional and affordable. Exposed aggregate adds texture
+        and visual interest. Stamped concrete mimics the look of stone, brick, or tile
+        at a fraction of the cost. We offer all three finishes and can incorporate
+        color into any option with integral pigments or acid staining.
+      </p>
+
+      <h2>Walkways That Work</h2>
+      <p>
+        Concrete walkways connect your outdoor spaces while controlling foot traffic and protecting
+        your lawn. We design walkways with proper pitch for drainage and can integrate them
+        seamlessly with your existing
+        <a href="https://landscaping-murrieta.com/services/landscape-design">landscaping plan</a>.
+        Steps, borders, and curved designs are all achievable with concrete.
+      </p>
+
+      <h2>Planning Your Project</h2>
+      <p>
+        Before pouring any patio or walkway, we check for underground utilities, assess tree root
+        locations (large roots from nearby trees must be managed — we coordinate with
+        <a href="https://treeservice-murrieta.com">tree service professionals</a> when needed),
+        and verify grading to ensure proper drainage away from your home's foundation.
+      </p>
+    </div>
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-primary mb-6">More Concrete Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {SITE_CONFIG.services.filter(s => s.href !== '/services/patios-walkways').map((s) => (
+          <ServiceCard title={s.title} description={s.description} href={s.href} />
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <LeadForm heading="Get Your Free Patio & Walkway Estimate" />
+    </div>
+  </div>
+</BaseLayout>

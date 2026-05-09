@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="Contact Murrieta Tree Service | Free Quote"
+  description="Contact Murrieta Tree Service for a free estimate. We respond within 24 hours. Call or fill out our quick form."
+>
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <div class="text-center mb-10">
+      <h1 class="text-4xl font-bold text-primary mb-4">Get Your Free Tree Service Quote</h1>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+        Fill out the form below or call us directly. We respond to all inquiries within 24 hours,
+        and same-day service is available for emergencies.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <div class="lg:col-span-2">
+        <LeadForm heading="Request a Free Quote" />
+      </div>
+
+      <aside class="space-y-6">
+        <div class="bg-primary text-white rounded-xl p-6">
+          <h3 class="font-bold text-lg mb-4">Contact Information</h3>
+          <div class="space-y-3 text-sm">
+            <p>📞 <a href={`tel:${SITE_CONFIG.phone}`} class="hover:text-accent">{SITE_CONFIG.phone}</a></p>
+            <p>✉️ <a href={`mailto:${SITE_CONFIG.email}`} class="hover:text-accent">{SITE_CONFIG.email}</a></p>
+            <p>📍 {SITE_CONFIG.address}</p>
+            <p>🕐 Mon–Sat: 7am–6pm</p>
+            <p>⚡ Emergency: 24/7</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+          <h3 class="font-bold text-primary text-lg mb-3">What to Expect</h3>
+          <ol class="space-y-3 text-sm text-gray-600">
+            <li class="flex gap-2"><span class="font-bold text-accent">1.</span> Submit your request</li>
+            <li class="flex gap-2"><span class="font-bold text-accent">2.</span> We call you within 24 hours</li>
+            <li class="flex gap-2"><span class="font-bold text-accent">3.</span> Free on-site estimate</li>
+            <li class="flex gap-2"><span class="font-bold text-accent">4.</span> Written quote, no pressure</li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

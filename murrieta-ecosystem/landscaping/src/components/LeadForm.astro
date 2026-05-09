@@ -1,0 +1,99 @@
+---
+interface Props {
+  heading?: string;
+  services?: string[];
+}
+
+const {
+  heading = 'Schedule Your Free Consultation',
+  services = ['Landscape Design', 'Lawn Care', 'Irrigation System', 'Seasonal Cleanup', 'Other'],
+} = Astro.props;
+---
+
+<section class="bg-gray-50 py-12 px-4 rounded-2xl">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary text-center mb-2">{heading}</h2>
+    <p class="text-gray-600 text-center mb-8">We respond within 24 hours. No obligation, completely free.</p>
+
+    <!-- Replace REPLACE_WITH_YOUR_ID with your Formspree form ID at https://formspree.io -->
+    <form
+      action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
+      method="POST"
+      class="space-y-4"
+    >
+      <input name="_gotcha" style="display:none" />
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="John Smith"
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+          />
+        </div>
+        <div>
+          <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number *</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            placeholder="(951) 555-0000"
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="john@example.com"
+          class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+        />
+      </div>
+
+      <div>
+        <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service Needed *</label>
+        <select
+          id="service"
+          name="service"
+          required
+          class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent bg-white"
+        >
+          <option value="">Select a service...</option>
+          {services.map((s) => <option value={s}>{s}</option>)}
+        </select>
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Describe Your Project</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Tell us about your yard, goals, property size, etc."
+          class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent resize-none"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full bg-cta text-white py-4 rounded-lg text-lg font-bold hover:opacity-90 transition-opacity shadow-md"
+      >
+        Schedule My Consultation →
+      </button>
+
+      <p class="text-xs text-gray-500 text-center">
+        Your information is private and will never be shared. We'll contact you within 24 hours.
+      </p>
+    </form>
+  </div>
+</section>

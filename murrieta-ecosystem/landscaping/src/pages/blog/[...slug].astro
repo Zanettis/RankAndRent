@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const formattedDate = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric', month: 'long', day: 'numeric'
+}).format(post.data.pubDate);
+---
+
+<BaseLayout title={`${post.data.title} | Murrieta Landscaping`} description={post.data.description}>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-6" aria-label="breadcrumb">
+      <a href="/" class="hover:text-primary">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/blog" class="hover:text-primary">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">{post.data.title}</span>
+    </nav>
+
+    <header class="mb-8">
+      <h1 class="text-4xl font-bold text-primary leading-tight mb-4">{post.data.title}</h1>
+      <div class="flex items-center gap-4 text-sm text-gray-500">
+        <time datetime={post.data.pubDate.toISOString()}>{formattedDate}</time>
+        <span>·</span>
+        <span>By {post.data.author}</span>
+      </div>
+    </header>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-primary prose-a:text-cta prose-a:no-underline hover:prose-a:underline">
+      <Content />
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-gray-200">
+      <LeadForm heading="Ready to Transform Your Murrieta Yard? Get a Free Consultation" />
+    </div>
+  </article>
+</BaseLayout>
