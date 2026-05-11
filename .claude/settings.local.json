@@ -32,7 +32,18 @@
       "Bash(mv hero.jpg.png hero.jpg)",
       "Bash(mv climber.jpg.png climber.jpg)",
       "Bash(mv crew.jpg.png crew.jpg)",
-      "Read(//c/c/Users/zanet/OneDrive/Documentos/GitHub/RankAndRent/murrieta-ecosystem/tree-service/public/**)"
+      "Read(//c/c/Users/zanet/OneDrive/Documentos/GitHub/RankAndRent/murrieta-ecosystem/tree-service/public/**)",
+      "Bash(git stash *)",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\\\\murrieta-ecosystem\\\\tree-service\\\\\" -Recurse -Directory | Select-Object -ExpandProperty FullName | head -30)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\\\\murrieta-ecosystem\\\\tree-service\\\\\" -Recurse -Force | Select-Object -Property FullName, PSIsContainer | Sort-Object FullName | Select-Object -First 100)",
+      "Bash(grep -E \"\\\\.astro$\")",
+      "Bash(node -e \"const p=require\\('./node_modules/@astrojs/sitemap/package.json'\\);console.log\\(p.version\\)\")",
+      "Bash(node -e \"const p=require\\('./node_modules/astro/package.json'\\);console.log\\(p.version\\)\")",
+      "Bash(node -e \"const chunks=[]; process.stdin.on\\('data',c=>chunks.push\\(c\\)\\); process.stdin.on\\('end',\\(\\)=>{const p=JSON.parse\\(chunks.join\\(''\\)\\);console.log\\('sitemap:',p.version\\);}\\);\")",
+      "Bash(node -e \"const chunks=[]; process.stdin.on\\('data',c=>chunks.push\\(c\\)\\); process.stdin.on\\('end',\\(\\)=>{const p=JSON.parse\\(chunks.join\\(''\\)\\);console.log\\('astro:',p.version\\);}\\);\")"
     ]
   }
 }

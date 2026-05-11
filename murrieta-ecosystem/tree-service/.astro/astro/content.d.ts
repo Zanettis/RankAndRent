@@ -159,9 +159,44 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"certified-arborist-murrieta.md": {
+	id: "certified-arborist-murrieta.md";
+  slug: "certified-arborist-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "complete-outdoor-guide-murrieta.md": {
 	id: "complete-outdoor-guide-murrieta.md";
   slug: "complete-outdoor-guide-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"emergency-tree-service-murrieta.md": {
+	id: "emergency-tree-service-murrieta.md";
+  slug: "emergency-tree-service-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"how-to-identify-dead-dying-tree-murrieta.md": {
+	id: "how-to-identify-dead-dying-tree-murrieta.md";
+  slug: "how-to-identify-dead-dying-tree-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"stump-grinding-cost-murrieta.md": {
+	id: "stump-grinding-cost-murrieta.md";
+  slug: "stump-grinding-cost-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"stump-grinding-vs-stump-removal-murrieta.md": {
+	id: "stump-grinding-vs-stump-removal-murrieta.md";
+  slug: "stump-grinding-vs-stump-removal-murrieta";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -173,9 +208,30 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"tree-removal-cost-murrieta.md": {
+	id: "tree-removal-cost-murrieta.md";
+  slug: "tree-removal-cost-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"tree-service-temecula-ca.md": {
+	id: "tree-service-temecula-ca.md";
+  slug: "tree-service-temecula-ca";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "tree-stump-removal-murrieta.md": {
 	id: "tree-stump-removal-murrieta.md";
   slug: "tree-stump-removal-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"tree-trimming-cost-murrieta.md": {
+	id: "tree-trimming-cost-murrieta.md";
+  slug: "tree-trimming-cost-murrieta";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
