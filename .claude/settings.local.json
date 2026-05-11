@@ -43,7 +43,13 @@
       "Bash(node -e \"const p=require\\('./node_modules/@astrojs/sitemap/package.json'\\);console.log\\(p.version\\)\")",
       "Bash(node -e \"const p=require\\('./node_modules/astro/package.json'\\);console.log\\(p.version\\)\")",
       "Bash(node -e \"const chunks=[]; process.stdin.on\\('data',c=>chunks.push\\(c\\)\\); process.stdin.on\\('end',\\(\\)=>{const p=JSON.parse\\(chunks.join\\(''\\)\\);console.log\\('sitemap:',p.version\\);}\\);\")",
-      "Bash(node -e \"const chunks=[]; process.stdin.on\\('data',c=>chunks.push\\(c\\)\\); process.stdin.on\\('end',\\(\\)=>{const p=JSON.parse\\(chunks.join\\(''\\)\\);console.log\\('astro:',p.version\\);}\\);\")"
+      "Bash(node -e \"const chunks=[]; process.stdin.on\\('data',c=>chunks.push\\(c\\)\\); process.stdin.on\\('end',\\(\\)=>{const p=JSON.parse\\(chunks.join\\(''\\)\\);console.log\\('astro:',p.version\\);}\\);\")",
+      "Bash(Get-ChildItem -Path murrieta-ecosystem -Recurse -Force)",
+      "Bash(Measure-Object)",
+      "Bash(Select-Object -ExpandProperty Count)",
+      "Bash(cd /c/Users/zanet/OneDrive/Documentos/GitHub/RankAndRent/murrieta-ecosystem && find . -type f | wc -l)",
+      "Read(//c/c/Users/zanet/OneDrive/Documentos/GitHub/RankAndRent/**)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\\\\murrieta-ecosystem\\\\tree-service\\\\src\\\\\" -Recurse -Name)"
     ]
   }
 }
