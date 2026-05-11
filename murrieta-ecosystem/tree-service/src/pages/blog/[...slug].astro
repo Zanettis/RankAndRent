@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import { getCollection } from 'astro:content';
+import { SITE_CONFIG } from '../../config';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -16,9 +17,34 @@ const { Content } = await post.render();
 const formattedDate = new Intl.DateTimeFormat('en-US', {
   year: 'numeric', month: 'long', day: 'numeric'
 }).format(post.data.pubDate);
+
+const postUrl = new URL(`/blog/${post.slug}/`, SITE_CONFIG.domain).href;
+
+const blogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.pubDate.toISOString(),
+  dateModified: post.data.pubDate.toISOString(),
+  author: {
+    '@type': 'Organization',
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.domain,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.domain,
+  },
+  url: postUrl,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl },
+  keywords: post.data.tags?.join(', '),
+};
 ---
 
-<BaseLayout title={`${post.data.title} | Murrieta Tree Service`} description={post.data.description}>
+<BaseLayout title={`${post.data.title} | ${SITE_CONFIG.name}`} description={post.data.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(blogSchema)} />
   <article class="max-w-3xl mx-auto px-4 py-12">
     <nav class="text-sm text-gray-500 mb-6" aria-label="breadcrumb">
       <a href="/" class="hover:text-primary">Home</a>

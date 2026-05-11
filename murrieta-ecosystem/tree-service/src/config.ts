@@ -1,10 +1,10 @@
 export const SITE_CONFIG = {
-  name: 'Murrieta Tree Service',
-  shortName: 'Tree Service Murrieta',
+  name: 'Murrieta Tree Experts',
+  shortName: 'Murrieta Tree Experts',
   phone: '(951) 555-0101',
-  email: 'info@treeservice-murrieta.com',
+  email: 'info@murrietatreeexperts.com',
   address: 'Murrieta, CA 92562',
-  domain: 'https://treeservice-murrieta.com',
+  domain: 'https://murrietatreeexperts.com',
   description: 'Professional tree removal, trimming, and stump grinding in Murrieta, CA. Licensed & insured. Free estimates.',
   services: [
     { title: 'Tree Removal', href: '/services/tree-removal', description: 'Safe, efficient removal of hazardous or unwanted trees.' },
