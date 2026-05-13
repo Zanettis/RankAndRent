@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
 interface Props {
   headline: string;
   subheadline: string;
@@ -6,7 +9,7 @@ interface Props {
   ctaHref?: string;
   secondaryCtaText?: string;
   secondaryCtaHref?: string;
-  backgroundImage?: string;
+  backgroundImage?: string | ImageMetadata;
 }
 
 const {
@@ -23,12 +26,25 @@ const {
 <section class="relative bg-primary text-white py-24 px-4 overflow-hidden">
   {backgroundImage && (
     <>
-      <img
-        src={backgroundImage}
-        alt=""
-        aria-hidden="true"
-        class="absolute inset-0 w-full h-full object-cover object-center"
-      />
+      {typeof backgroundImage === 'object' ? (
+        <Image
+          src={backgroundImage}
+          alt=""
+          aria-hidden="true"
+          fetchpriority="high"
+          loading="eager"
+          class="absolute inset-0 w-full h-full object-cover object-center"
+        />
+      ) : (
+        <img
+          src={backgroundImage}
+          alt=""
+          aria-hidden="true"
+          fetchpriority="high"
+          loading="eager"
+          class="absolute inset-0 w-full h-full object-cover object-center"
+        />
+      )}
       <div class="absolute inset-0 bg-primary/75"></div>
     </>
   )}
