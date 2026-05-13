@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
 ---
 
@@ -52,6 +53,14 @@ import { SITE_CONFIG } from '../../config';
         to improve the lawn's access to sunlight.
       </p>
     </div>
+
+    <CrossLinkWidget
+      heading="Tree Services That Affect Your Lawn"
+      links={[
+        { text: "Tree Trimming in Murrieta", href: "https://treeservice-murrieta.com/services/tree-trimming", description: "Canopy thinning improves sunlight access to lawn areas struggling under dense shade.", icon: "🌳" },
+        { text: "Stump Grinding Murrieta", href: "https://treeservice-murrieta.com/services/stump-grinding", description: "Remove stumps that block mowing and prevent uniform lawn maintenance.", icon: "🪵" },
+      ]}
+    />
 
     <div class="mt-12">
       <h2 class="text-2xl font-bold text-primary mb-6">More Landscaping Services</h2>

@@ -2,9 +2,9 @@ export const SITE_CONFIG = {
   name: 'Murrieta Landscaping',
   shortName: 'Landscaping Murrieta',
   phone: '(951) 555-0202',
-  email: 'info@landscaping-murrieta.com',
+  email: 'info@landscapingmurrieta.com',
   address: 'Murrieta, CA 92562',
-  domain: 'https://landscaping-murrieta.com',
+  domain: 'https://landscapingmurrieta.com',
   description: 'Professional landscaping design, lawn care, and yard transformation in Murrieta, CA. Free consultations.',
   services: [
     { title: 'Landscape Design', href: '/services/landscape-design', description: 'Custom landscape plans tailored to Murrieta\'s climate.' },

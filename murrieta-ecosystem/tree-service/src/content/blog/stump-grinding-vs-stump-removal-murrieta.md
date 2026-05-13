@@ -42,7 +42,7 @@ Full stump removal costs significantly more than grinding because of the equipme
 
 Grinding is the right choice in most residential situations:
 
-- **You want to restore the lawn.** After grinding, fill the depression with topsoil and seed or sod. The area will fully recover.
+- **You want to restore the lawn.** After grinding, fill the depression with topsoil and seed or sod. The area will fully recover. A [landscape professional](https://landscapingmurrieta.com/services/lawn-care) can match the restored area to your existing lawn with the right soil prep and grass variety for Murrieta's climate.
 - **You're not replanting a tree in the exact same spot.** Grinding leaves behind decomposing roots that can interfere with a new tree's roots during establishment.
 - **You want to minimize yard disruption.** No excavation, no large holes, no damage to adjacent landscaping.
 - **You're on a budget.** Grinding is reliably cheaper than excavation.

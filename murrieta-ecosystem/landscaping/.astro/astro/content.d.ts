@@ -152,9 +152,30 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"artificial-turf-murrieta.md": {
+	id: "artificial-turf-murrieta.md";
+  slug: "artificial-turf-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"backyard-transformation-cost-murrieta.md": {
+	id: "backyard-transformation-cost-murrieta.md";
+  slug: "backyard-transformation-cost-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "drought-tolerant-landscaping-murrieta.md": {
 	id: "drought-tolerant-landscaping-murrieta.md";
   slug: "drought-tolerant-landscaping-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"hoa-landscaping-murrieta.md": {
+	id: "hoa-landscaping-murrieta.md";
+  slug: "hoa-landscaping-murrieta";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -169,6 +190,13 @@ declare module 'astro:content' {
 "murrieta-lawn-care-guide.md": {
 	id: "murrieta-lawn-care-guide.md";
   slug: "murrieta-lawn-care-guide";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"when-to-call-arborist-before-landscaping-murrieta.md": {
+	id: "when-to-call-arborist-before-landscaping-murrieta.md";
+  slug: "when-to-call-arborist-before-landscaping-murrieta";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

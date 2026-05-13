@@ -187,6 +187,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"landscaping-after-tree-removal-murrieta.md": {
+	id: "landscaping-after-tree-removal-murrieta.md";
+  slug: "landscaping-after-tree-removal-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "stump-grinding-cost-murrieta.md": {
 	id: "stump-grinding-cost-murrieta.md";
   slug: "stump-grinding-cost-murrieta";

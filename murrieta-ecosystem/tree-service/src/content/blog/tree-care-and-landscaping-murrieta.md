@@ -26,7 +26,7 @@ Better alternatives for tree root zones:
 - **Wood chip mulch beds** extending to the drip line, which improve soil biology and tree health simultaneously
 - **Shade-tolerant perennials** like clivias or acanthus that thrive with filtered light
 
-When planning a full [landscape redesign around your trees](https://landscaping-murrieta.com/services/landscape-design), your landscaper should walk the property with an arborist's assessment in hand — knowing exactly where root flares are, which roots are structural vs. feeder roots, and how aggressive the specific species' root system is.
+When planning a full [landscape redesign around your trees](https://landscapingmurrieta.com/services/landscape-design), your landscaper should walk the property with an arborist's assessment in hand — knowing exactly where root flares are, which roots are structural vs. feeder roots, and how aggressive the specific species' root system is.
 
 ## Canopy Management for Curb Appeal
 

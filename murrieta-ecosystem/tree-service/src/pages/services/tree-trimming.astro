@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
 ---
 
@@ -52,6 +53,14 @@ import { SITE_CONFIG } from '../../config';
         We advise against heavy pruning during spring when trees are actively pushing new growth.
       </p>
     </div>
+
+    <CrossLinkWidget
+      heading="Coordinate Tree Trimming With Your Landscape Design"
+      links={[
+        { text: "Landscape Design in Murrieta", href: "https://landscapingmurrieta.com/services/landscape-design", description: "Plan your landscape around trimmed trees — maximize the new light and space.", icon: "🎨" },
+        { text: "Lawn Care Murrieta", href: "https://landscapingmurrieta.com/services/lawn-care", description: "Improve lawn health in areas that now receive more sunlight after canopy thinning.", icon: "🌿" },
+      ]}
+    />
 
     <div class="mt-12">
       <h2 class="text-2xl font-bold text-primary mb-6">More Tree Services</h2>

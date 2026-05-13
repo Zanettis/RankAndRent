@@ -25,7 +25,7 @@ Tree removal and major trimming should always happen first — before new plants
 
 ## Step 2: Design Your Landscape Around the Tree Reality
 
-Once you know your final tree configuration, [professional landscape design](https://landscaping-murrieta.com/services/landscape-design) can begin in earnest. A landscape plan that accounts for your trees' mature canopy size, shade patterns, and root zones will look dramatically better five years from now than one designed without that context.
+Once you know your final tree configuration, [professional landscape design](https://landscapingmurrieta.com/services/landscape-design) can begin in earnest. A landscape plan that accounts for your trees' mature canopy size, shade patterns, and root zones will look dramatically better five years from now than one designed without that context.
 
 In Murrieta specifically, this means:
 - Choosing drought-tolerant groundcovers for areas under tree canopies where lawn won't thrive
@@ -33,7 +33,7 @@ In Murrieta specifically, this means:
 - Planning irrigation zones that account for different water needs across the yard
 - Incorporating native plants that support local ecology and require minimal input after establishment
 
-The [landscaping plan](https://landscaping-murrieta.com/services/lawn-care) should also specify the location and size of all planting beds, grass areas, mulched zones, and any features like raised vegetable beds or food gardens. This information feeds directly into the hardscaping design.
+The [landscaping plan](https://landscapingmurrieta.com/services/lawn-care) should also specify the location and size of all planting beds, grass areas, mulched zones, and any features like raised vegetable beds or food gardens. This information feeds directly into the hardscaping design.
 
 ## Step 3: Design Hardscaping That Complements Nature
 

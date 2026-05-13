@@ -82,7 +82,7 @@ Sometimes, yes. It depends on what's causing the decline:
 - Root system failure or extensive root loss
 - The tree has died and is beginning to dry out and shed bark in large sections
 
-If the tree can't be saved, removal is the responsible choice — ideally before it becomes a hazard rather than after.
+If the tree can't be saved, removal is the responsible choice — ideally before it becomes a hazard rather than after. Once the tree is out, the cleared space is an opportunity: many Murrieta homeowners use it to redesign that section of their yard with a [professional landscape plan](https://landscapingmurrieta.com/services/landscape-design) that works with the new light and space the removal created.
 
 ## Murrieta-Specific Tree Health Threats
 

@@ -58,4 +58,6 @@ Full conversions don't have to happen at once. Most Murrieta homeowners approach
 
 This phased approach lets you spread cost, learn from each phase, and adjust the design based on how the first plantings perform in your specific microclimate.
 
+One consideration often missed in drought-tolerant conversions: if mature trees are part of your landscape, get a [tree assessment](https://treeservice-murrieta.com) before removing or significantly changing planting around them. Some trees that appear water-hungry are actually worth retaining with proper irrigation zoning — their shade reduces water demand for plants below. Others that look healthy may be nearing the end of their lifespan and aren't worth designing a permanent landscape around.
+
 The plants recommended in this article are all available at local Murrieta and Temecula nurseries including SummerWinds and Armstrong Garden Centers. When you're ready to move forward, a professional design consultation will help you select the right combination of species, sizes, and spacing for your specific property and goals.

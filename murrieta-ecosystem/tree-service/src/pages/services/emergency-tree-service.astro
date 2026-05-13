@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
 ---
 
@@ -55,9 +56,17 @@ import { SITE_CONFIG } from '../../config';
         After emergency work is complete, many homeowners also contact us about
         <a href="https://concrete-murrieta.com">repairing concrete or hardscaping</a> damaged
         by the fallen tree, and refreshing affected
-        <a href="https://landscaping-murrieta.com">landscaping areas</a>.
+        <a href="https://landscapingmurrieta.com">landscaping areas</a>.
       </p>
     </div>
+
+    <CrossLinkWidget
+      heading="Restore Your Yard After Emergency Tree Work"
+      links={[
+        { text: "Landscape Design in Murrieta", href: "https://landscapingmurrieta.com/services/landscape-design", description: "Rebuild your outdoor space after storm damage or emergency removal.", icon: "🎨" },
+        { text: "Seasonal Cleanup", href: "https://landscapingmurrieta.com/services/seasonal-cleanup", description: "Remove debris and prep the area for restoration plantings.", icon: "🍂" },
+      ]}
+    />
 
     <div class="mt-12">
       <h2 class="text-2xl font-bold text-primary mb-6">More Tree Services</h2>

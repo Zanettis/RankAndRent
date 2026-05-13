@@ -106,7 +106,7 @@ Wood chip mulch makes excellent garden mulch — it suppresses weeds, retains mo
 
 ### How soon can I plant grass over the ground stump area?
 
-After grinding, remove the bulk of the wood chip debris, add 4–6 inches of topsoil, and seed or sod. Most grass establishes well within one growing season, though full lawn integration can take a full year as the remaining root material below decomposes.
+After grinding, remove the bulk of the wood chip debris, add 4–6 inches of topsoil, and seed or sod. Most grass establishes well within one growing season, though full lawn integration can take a full year as the remaining root material below decomposes. For a complete restoration that blends seamlessly with your existing lawn, a [local landscaping professional](https://landscapingmurrieta.com/services/lawn-care) can handle soil amendment, proper grass selection, and irrigation adjustments for the restored area.
 
 ---
 

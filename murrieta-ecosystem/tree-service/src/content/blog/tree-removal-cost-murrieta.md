@@ -121,4 +121,6 @@ Structurally hazardous trees should be removed as soon as possible regardless of
 
 ---
 
+After removal, many Murrieta homeowners use the cleared space as an opportunity to redesign that area of their yard. A [free landscape design consultation](https://landscapingmurrieta.com/services/landscape-design) can turn an empty spot into the most attractive part of your outdoor space — with the right plants, irrigation, and soil prep for Murrieta's climate.
+
 Ready to get an accurate price for your tree removal? [Contact Murrieta Tree Experts](/contact) for a free, no-obligation on-site estimate. We serve Murrieta, Temecula, Wildomar, Menifee, and the surrounding Southwest Riverside County area.

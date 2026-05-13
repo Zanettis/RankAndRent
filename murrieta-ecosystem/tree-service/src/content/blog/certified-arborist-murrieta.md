@@ -131,4 +131,6 @@ These are informal terms, not licensed credentials. The recognized professional 
 
 ---
 
+For complete outdoor renovations, arborist work typically comes first — determining which trees stay, which go, and what trimming is needed — before [professional landscape design](https://landscapingmurrieta.com/services/landscape-design) begins. Coordinating both disciplines early produces better results than treating trees and landscaping as separate decisions.
+
 Murrieta Tree Experts works with ISA certified arborists and holds a current California contractor's license. [Schedule a free consultation](/contact) for any tree on your Murrieta or Temecula property — we'll give you an honest assessment and a clear recommendation.

@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
 ---
 
@@ -57,6 +58,14 @@ import { SITE_CONFIG } from '../../config';
         so you avoid fines or HOA violations.
       </p>
     </div>
+
+    <CrossLinkWidget
+      heading="Tree Irrigation & Arborist Services"
+      links={[
+        { text: "Tree Trimming in Murrieta", href: "https://treeservice-murrieta.com/services/tree-trimming", description: "Certified arborists help manage canopy to reduce water competition with your lawn and garden.", icon: "🌳" },
+        { text: "Tree Removal Murrieta", href: "https://treeservice-murrieta.com/services/tree-removal", description: "Removing a problem tree can dramatically change irrigation zone requirements for your yard.", icon: "🪓" },
+      ]}
+    />
 
     <div class="mt-12">
       <h2 class="text-2xl font-bold text-primary mb-6">More Landscaping Services</h2>

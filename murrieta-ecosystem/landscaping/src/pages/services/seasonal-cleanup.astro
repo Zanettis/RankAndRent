@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
 ---
 
@@ -64,6 +65,14 @@ import { SITE_CONFIG } from '../../config';
         Ask about our annual maintenance packages when you request a quote.
       </p>
     </div>
+
+    <CrossLinkWidget
+      heading="Combine Cleanup With Tree Trimming"
+      links={[
+        { text: "Tree Trimming in Murrieta", href: "https://treeservice-murrieta.com/services/tree-trimming", description: "Schedule tree trimming alongside your seasonal cleanup for a complete yard refresh.", icon: "🌳" },
+        { text: "Stump Grinding Murrieta", href: "https://treeservice-murrieta.com/services/stump-grinding", description: "Remove stumps and dead wood as part of a full spring or fall cleanup.", icon: "🪵" },
+      ]}
+    />
 
     <div class="mt-12">
       <h2 class="text-2xl font-bold text-primary mb-6">More Landscaping Services</h2>
