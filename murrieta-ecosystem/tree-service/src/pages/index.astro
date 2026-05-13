@@ -4,6 +4,10 @@ import Hero from '../components/Hero.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import LeadForm from '../components/LeadForm.astro';
 import { SITE_CONFIG } from '../config';
+import { Image } from 'astro:assets';
+import heroImg from '../assets/images/hero.jpg';
+import climberImg from '../assets/images/climber.jpg';
+import crewImg from '../assets/images/crew.jpg';
 
 const serviceIcons = [
   `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3L4 12h5l-3 6h12l-3-6h5L12 3z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v3M10 21h4"/></svg>`,
@@ -41,7 +45,7 @@ const testimonials = [
     ctaText="Get a Free Quote"
     secondaryCtaText={`Call ${SITE_CONFIG.phone}`}
     secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
-    backgroundImage="/images/hero.jpg"
+    backgroundImage={heroImg.src}
   />
 
   <!-- Trust Bar -->
@@ -94,9 +98,12 @@ const testimonials = [
     <p class="text-gray-600 text-center mb-10">Certified arborists handling every job safely and professionally.</p>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div class="overflow-hidden rounded-xl shadow-md">
-        <img
-          src="/images/climber.jpg"
+        <Image
+          src={climberImg}
           alt="Certified arborist climbing a large eucalyptus tree in Murrieta"
+          width={600}
+          height={288}
+          loading="lazy"
           class="w-full h-72 object-cover object-center hover:scale-105 transition-transform duration-500"
         />
         <div class="bg-gray-50 px-4 py-3">
@@ -105,9 +112,12 @@ const testimonials = [
         </div>
       </div>
       <div class="overflow-hidden rounded-xl shadow-md">
-        <img
-          src="/images/crew.jpg"
+        <Image
+          src={crewImg}
           alt="Tree service crew cutting fallen pine tree in Murrieta with chainsaws"
+          width={600}
+          height={288}
+          loading="lazy"
           class="w-full h-72 object-cover object-center hover:scale-105 transition-transform duration-500"
         />
         <div class="bg-gray-50 px-4 py-3">
