@@ -4,12 +4,50 @@ import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import { SITE_CONFIG } from '../../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How long does a concrete driveway last in Murrieta\'s climate?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A properly installed concrete driveway in Murrieta typically lasts 30–50 years. Concrete holds up exceptionally well in our inland Southern California climate because it doesn\'t soften in summer heat the way asphalt does. Proper curing, reinforcement, and periodic sealing will keep your driveway looking great and structurally sound for decades.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does a concrete driveway cost in Murrieta, CA?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Concrete driveway installation in Murrieta typically costs $6–$12 per square foot for standard concrete, and $12–$18 per square foot for stamped or decorative finishes. A standard two-car driveway (400–500 sq ft) runs $2,500–$6,000 installed. Final pricing depends on site conditions, demolition of the existing surface, and finish selection. We provide free, written on-site estimates.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does concrete driveway installation take from start to finish?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Most residential driveway installations take 2–3 days. Day one is demolition and subbase prep; day two is the pour and finishing. After pouring, we ask for 48–72 hours before light foot traffic and 7 full days before driving on the surface. We\'ll give you a complete timeline before the project starts so you can plan accordingly.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'My driveway has cracks from tree roots — what should I do?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Tree root intrusion is one of the most common causes of driveway damage in Murrieta — eucalyptus, ficus, and sycamore roots are especially aggressive. Before replacing the concrete, we strongly recommend having a certified arborist assess and remove the offending roots. If you just pour new concrete over an untreated root system, you\'ll face the same cracking problem within 5–10 years. We coordinate with local tree service professionals when needed.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I get a decorative or stamped finish on my driveway?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. Stamped concrete can mimic the look of flagstone, cobblestone, slate, or brick while providing the durability and lower maintenance cost of concrete. We also offer integral color and acid staining options. Decorative driveways typically cost $12–$18 per square foot and significantly boost curb appeal. We\'ll show you pattern and color samples during your free estimate.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does a concrete driveway need to be sealed, and how often?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Sealing is recommended but not mandatory for standard concrete driveways. For Murrieta\'s climate — intense UV exposure and occasional frost — a penetrating sealer every 3–5 years helps prevent surface wear and staining. Stamped and decorative concrete should be sealed every 2–3 years to protect the color and texture. We offer sealing as an add-on service at the time of installation.' },
+    },
+  ],
+};
 ---
 
 <BaseLayout
   title="Concrete Driveways Murrieta, CA | Installation & Replacement | Free Estimates"
   description="Professional concrete driveway installation and replacement in Murrieta, CA. Licensed contractors, quality materials, 10-year guarantee. Free estimates."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <Hero
     headline="Concrete Driveways in Murrieta, CA"
     subheadline="New driveway installation or full replacement — built to last in Murrieta's inland climate with proper reinforcement and grading."
@@ -67,9 +105,31 @@ import { SITE_CONFIG } from '../../config';
         ))}
       </div>
     </div>
-
-    <div class="mt-12">
-      <LeadForm heading="Get Your Free Driveway Estimate" />
-    </div>
   </div>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {[
+        { q: "How long does a concrete driveway last in Murrieta's climate?", a: "A properly installed concrete driveway in Murrieta typically lasts 30–50 years. Concrete holds up exceptionally well in our inland Southern California climate because it doesn't soften in summer heat the way asphalt does. Proper curing, reinforcement, and periodic sealing will keep your driveway looking great and structurally sound for decades." },
+        { q: "How much does a concrete driveway cost in Murrieta, CA?", a: "Concrete driveway installation in Murrieta typically costs $6–$12 per square foot for standard concrete, and $12–$18 per square foot for stamped or decorative finishes. A standard two-car driveway (400–500 sq ft) runs $2,500–$6,000 installed. Final pricing depends on site conditions, demolition of the existing surface, and finish selection. We provide free, written on-site estimates." },
+        { q: "How long does concrete driveway installation take from start to finish?", a: "Most residential driveway installations take 2–3 days. Day one is demolition and subbase prep; day two is the pour and finishing. After pouring, we ask for 48–72 hours before light foot traffic and 7 full days before driving on the surface. We'll give you a complete timeline before the project starts so you can plan accordingly." },
+        { q: "My driveway has cracks from tree roots — what should I do?", a: "Tree root intrusion is one of the most common causes of driveway damage in Murrieta — eucalyptus, ficus, and sycamore roots are especially aggressive. Before replacing the concrete, we strongly recommend having a certified arborist assess and remove the offending roots. If you just pour new concrete over an untreated root system, you'll face the same cracking problem within 5–10 years. We coordinate with local tree service professionals when needed." },
+        { q: "Can I get a decorative or stamped finish on my driveway?", a: "Absolutely. Stamped concrete can mimic the look of flagstone, cobblestone, slate, or brick while providing the durability and lower maintenance cost of concrete. We also offer integral color and acid staining options. Decorative driveways typically cost $12–$18 per square foot and significantly boost curb appeal. We'll show you pattern and color samples during your free estimate." },
+        { q: "Does a concrete driveway need to be sealed, and how often?", a: "Sealing is recommended but not mandatory for standard concrete driveways. For Murrieta's climate — intense UV exposure and occasional frost — a penetrating sealer every 3–5 years helps prevent surface wear and staining. Stamped and decorative concrete should be sealed every 2–3 years to protect the color and texture. We offer sealing as an add-on service at the time of installation." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 pb-16">
+    <LeadForm heading="Get Your Free Driveway Estimate" />
+  </section>
 </BaseLayout>

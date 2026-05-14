@@ -4,12 +4,50 @@ import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import { SITE_CONFIG } from '../../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'When should I repair my concrete versus replace it completely?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Repair is the right choice for surface cracks (hairline to 1/2 inch wide), minor spalling, discoloration, and small settled sections. Replacement makes more sense when structural cracks span the full depth of the slab, when settling is widespread, when tree roots have heaved multiple sections, or when more than 30–40% of the surface is deteriorated. We\'ll give you an honest assessment — we never recommend replacement just because it costs more.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does concrete repair cost in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Concrete crack repair in Murrieta typically runs $200–$800 for minor repairs, while resurfacing an entire driveway or patio costs $3–$6 per square foot. Mudjacking or slab leveling for settled concrete runs $500–$1,500 depending on the area. Full replacement costs significantly more. We provide free on-site written estimates so you know exactly what you\'re dealing with before committing to any work.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Why is my concrete cracking? Is it a structural problem?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Most concrete cracking in Murrieta is not a structural problem. Hairline cracks are normal as concrete cures and shrinks. Wider cracks often result from tree root intrusion, poor subbase compaction, insufficient expansion joints, or high water-to-cement ratios during the original pour. True structural cracking — which goes all the way through the slab and causes sections to shift vertically — is less common and indicates a subbase failure or severe root intrusion that requires a different approach.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you fix concrete that was damaged by tree roots?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes, but the tree root issue must be resolved first. Repairing or replacing concrete without addressing the underlying root system is a temporary fix — the roots will continue to grow and cause the same damage within a few years. We coordinate with certified arborists to have the offending roots removed or redirected before we perform concrete work. Once the root issue is handled, we can repair or replace the affected sections permanently.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you repair part of a slab without replacing the whole thing?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. We can cut out and replace individual damaged panels, fill and resurface cracked sections, or apply a bonded overlay to a large area without disturbing the rest of the slab. Partial repairs work well when the damage is localized and the surrounding concrete is still structurally sound. We\'ll saw-cut clean edges for any partial panel replacement so the repair integrates neatly with the existing surface.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long will a concrete repair last?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A properly executed concrete repair can last 10–20 years or more, depending on the repair method and whether the underlying cause was addressed. Epoxy crack fills and polymer-modified overlays bond aggressively to existing concrete and handle Murrieta\'s thermal cycling well. The key is preparation — cleaning, undercutting, and priming the repair area correctly. We use commercial-grade repair materials, not consumer patching compounds, for lasting results.' },
+    },
+  ],
+};
 ---
 
 <BaseLayout
   title="Concrete Repair Murrieta, CA | Crack Repair & Resurfacing | Free Estimates"
   description="Professional concrete repair in Murrieta, CA. Crack repair, resurfacing, and settling correction. Restore your driveway or patio. Free estimates."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <Hero
     headline="Concrete Repair & Resurfacing in Murrieta"
     subheadline="Cracked, sunken, or spalling concrete? We restore your driveway, patio, or walkway to like-new condition at a fraction of replacement cost."
@@ -58,9 +96,31 @@ import { SITE_CONFIG } from '../../config';
         ))}
       </div>
     </div>
-
-    <div class="mt-12">
-      <LeadForm heading="Get Your Free Concrete Repair Estimate" />
-    </div>
   </div>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {[
+        { q: "When should I repair my concrete versus replace it completely?", a: "Repair is the right choice for surface cracks (hairline to 1/2 inch wide), minor spalling, discoloration, and small settled sections. Replacement makes more sense when structural cracks span the full depth of the slab, when settling is widespread, when tree roots have heaved multiple sections, or when more than 30–40% of the surface is deteriorated. We'll give you an honest assessment — we never recommend replacement just because it costs more." },
+        { q: "How much does concrete repair cost in Murrieta?", a: "Concrete crack repair in Murrieta typically runs $200–$800 for minor repairs, while resurfacing an entire driveway or patio costs $3–$6 per square foot. Mudjacking or slab leveling for settled concrete runs $500–$1,500 depending on the area. Full replacement costs significantly more. We provide free on-site written estimates so you know exactly what you're dealing with before committing to any work." },
+        { q: "Why is my concrete cracking? Is it a structural problem?", a: "Most concrete cracking in Murrieta is not a structural problem. Hairline cracks are normal as concrete cures and shrinks. Wider cracks often result from tree root intrusion, poor subbase compaction, insufficient expansion joints, or high water-to-cement ratios during the original pour. True structural cracking — which goes all the way through the slab and causes sections to shift vertically — is less common and indicates a subbase failure or severe root intrusion that requires a different approach." },
+        { q: "Can you fix concrete that was damaged by tree roots?", a: "Yes, but the tree root issue must be resolved first. Repairing or replacing concrete without addressing the underlying root system is a temporary fix — the roots will continue to grow and cause the same damage within a few years. We coordinate with certified arborists to have the offending roots removed or redirected before we perform concrete work. Once the root issue is handled, we can repair or replace the affected sections permanently." },
+        { q: "Can you repair part of a slab without replacing the whole thing?", a: "Yes. We can cut out and replace individual damaged panels, fill and resurface cracked sections, or apply a bonded overlay to a large area without disturbing the rest of the slab. Partial repairs work well when the damage is localized and the surrounding concrete is still structurally sound. We'll saw-cut clean edges for any partial panel replacement so the repair integrates neatly with the existing surface." },
+        { q: "How long will a concrete repair last?", a: "A properly executed concrete repair can last 10–20 years or more, depending on the repair method and whether the underlying cause was addressed. Epoxy crack fills and polymer-modified overlays bond aggressively to existing concrete and handle Murrieta's thermal cycling well. The key is preparation — cleaning, undercutting, and priming the repair area correctly. We use commercial-grade repair materials, not consumer patching compounds, for lasting results." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 pb-16">
+    <LeadForm heading="Get Your Free Concrete Repair Estimate" />
+  </section>
 </BaseLayout>

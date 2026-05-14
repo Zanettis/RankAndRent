@@ -4,12 +4,50 @@ import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import { SITE_CONFIG } from '../../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What\'s the difference between stamped, stained, and exposed aggregate concrete?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Stamped concrete is pressed with patterned mats while wet to create textures mimicking stone, brick, slate, or wood — often combined with integral or topical color. Stained concrete (acid staining) uses a chemical reaction to create unique, mottled color patterns that penetrate the surface permanently; each slab looks one-of-a-kind. Exposed aggregate removes the top cement paste to reveal the natural stones in the mix, creating a textured, slip-resistant finish. Each technique achieves a different aesthetic and serves different use cases.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does decorative concrete cost more than regular concrete?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes, decorative concrete typically costs more than standard broom-finish concrete due to the additional labor, materials, and skill involved. Standard concrete runs $6–$12 per square foot installed, while stamped or decorative finishes run $14–$22 per square foot depending on pattern complexity and color options. The premium is often worth it — decorative concrete dramatically improves curb appeal and can increase your home\'s perceived value.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is stamped or decorative concrete slippery when wet?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Stamped concrete can be slippery when wet if it\'s sealed with a glossy topcoat sealer, especially for pool decks or areas exposed to rain. We address this in two ways: first, by adding a non-slip additive (aluminum oxide or sand) to the sealer; second, by recommending the appropriate sealer sheen level for each application. Exposed aggregate is inherently slip-resistant due to its rough texture. We\'ll recommend the right finish and sealer for your specific project and location.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long do decorative concrete finishes last in Murrieta\'s sun and heat?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Decorative concrete itself is very durable in Murrieta\'s climate — the concrete substrate typically lasts 30–50 years. The finish and color require more maintenance than plain concrete. Topical sealers that protect the color and texture need to be reapplied every 2–3 years in our high-UV environment. Integral color (pigment mixed into the concrete) is more fade-resistant than surface-applied color. With proper sealing and occasional recoating, decorative concrete looks great for 15–20+ years.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you add a decorative finish to an existing concrete slab?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes, in many cases. If the existing slab is structurally sound (no severe cracking or settling), we can apply a microtop or concrete overlay — a thin bonded layer that accepts stamping, staining, or texturing. This is a cost-effective way to transform an ugly existing patio or driveway without full demolition and replacement. The overlay bonds chemically to the existing concrete and typically adds 1/4 to 3/8 inch of thickness. We\'ll assess your existing slab during the free estimate to determine if it\'s a good candidate.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does decorative concrete require special sealing or maintenance?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Decorative concrete should be sealed shortly after installation to protect the color and texture, and resealed every 2–3 years depending on traffic and UV exposure — Murrieta\'s intense sunshine accelerates sealer breakdown more than coastal climates. For day-to-day care, use pH-neutral cleaners; avoid harsh acids or degreasers that can strip the sealer. We provide care instructions with every decorative concrete project and offer resealing services as your concrete ages.' },
+    },
+  ],
+};
 ---
 
 <BaseLayout
   title="Decorative Concrete Murrieta, CA | Stamped & Stained Concrete | Free Estimates"
   description="Decorative concrete in Murrieta, CA. Stamped, stained, and exposed aggregate finishes for driveways, patios, and pool decks. Free estimates."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <Hero
     headline="Decorative Concrete in Murrieta, CA"
     subheadline="Stamped, stained, and polished concrete that transforms ordinary surfaces into stunning focal points for your Murrieta home."
@@ -58,9 +96,31 @@ import { SITE_CONFIG } from '../../config';
         ))}
       </div>
     </div>
-
-    <div class="mt-12">
-      <LeadForm heading="Get Your Free Decorative Concrete Estimate" />
-    </div>
   </div>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {[
+        { q: "What's the difference between stamped, stained, and exposed aggregate concrete?", a: "Stamped concrete is pressed with patterned mats while wet to create textures mimicking stone, brick, slate, or wood — often combined with integral or topical color. Stained concrete (acid staining) uses a chemical reaction to create unique, mottled color patterns that penetrate the surface permanently; each slab looks one-of-a-kind. Exposed aggregate removes the top cement paste to reveal the natural stones in the mix, creating a textured, slip-resistant finish. Each technique achieves a different aesthetic and serves different use cases." },
+        { q: "Does decorative concrete cost more than regular concrete?", a: "Yes, decorative concrete typically costs more than standard broom-finish concrete due to the additional labor, materials, and skill involved. Standard concrete runs $6–$12 per square foot installed, while stamped or decorative finishes run $14–$22 per square foot depending on pattern complexity and color options. The premium is often worth it — decorative concrete dramatically improves curb appeal and can increase your home's perceived value." },
+        { q: "Is stamped or decorative concrete slippery when wet?", a: "Stamped concrete can be slippery when wet if it's sealed with a glossy topcoat sealer, especially for pool decks or areas exposed to rain. We address this in two ways: first, by adding a non-slip additive (aluminum oxide or sand) to the sealer; second, by recommending the appropriate sealer sheen level for each application. Exposed aggregate is inherently slip-resistant due to its rough texture. We'll recommend the right finish and sealer for your specific project and location." },
+        { q: "How long do decorative concrete finishes last in Murrieta's sun and heat?", a: "Decorative concrete itself is very durable in Murrieta's climate — the concrete substrate typically lasts 30–50 years. The finish and color require more maintenance than plain concrete. Topical sealers that protect the color and texture need to be reapplied every 2–3 years in our high-UV environment. Integral color (pigment mixed into the concrete) is more fade-resistant than surface-applied color. With proper sealing and occasional recoating, decorative concrete looks great for 15–20+ years." },
+        { q: "Can you add a decorative finish to an existing concrete slab?", a: "Yes, in many cases. If the existing slab is structurally sound (no severe cracking or settling), we can apply a microtop or concrete overlay — a thin bonded layer that accepts stamping, staining, or texturing. This is a cost-effective way to transform an ugly existing patio or driveway without full demolition and replacement. The overlay bonds chemically to the existing concrete and typically adds 1/4 to 3/8 inch of thickness. We'll assess your existing slab during the free estimate to determine if it's a good candidate." },
+        { q: "Does decorative concrete require special sealing or maintenance?", a: "Yes. Decorative concrete should be sealed shortly after installation to protect the color and texture, and resealed every 2–3 years depending on traffic and UV exposure — Murrieta's intense sunshine accelerates sealer breakdown more than coastal climates. For day-to-day care, use pH-neutral cleaners; avoid harsh acids or degreasers that can strip the sealer. We provide care instructions with every decorative concrete project and offer resealing services as your concrete ages." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 pb-16">
+    <LeadForm heading="Get Your Free Decorative Concrete Estimate" />
+  </section>
 </BaseLayout>

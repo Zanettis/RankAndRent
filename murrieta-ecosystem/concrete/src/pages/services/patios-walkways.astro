@@ -4,12 +4,50 @@ import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import { SITE_CONFIG } from '../../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What\'s the difference between stamped concrete and exposed aggregate?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Stamped concrete uses patterned mats pressed into wet concrete to create textures that mimic flagstone, cobblestone, slate, or brick. It can also be colored with pigments or acid stains. Exposed aggregate, on the other hand, involves removing the top layer of cement paste to reveal the natural stones and sand within the mix, creating a naturally textured, slip-resistant surface. Exposed aggregate is popular for pool decks and walkways; stamped concrete is preferred for patios and entertaining areas.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you add color to a concrete patio or walkway?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes — there are several ways to add color to concrete. Integral pigments are mixed directly into the concrete batch, producing color throughout the slab that won\'t peel or fade. Acid staining creates unique, variegated patterns that penetrate the surface and look genuinely like natural stone. Surface-applied color hardeners are also available for stamped concrete. We\'ll walk you through all options and show samples at your free estimate.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much do concrete patios and walkways cost in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Standard broom-finish concrete patios in Murrieta typically cost $8–$14 per square foot installed. Stamped or colored concrete runs $14–$22 per square foot depending on pattern complexity. Walkways are priced similarly on a per-square-foot basis. Final cost depends on the size, shape, finish, and any site prep required. We provide free written estimates with no obligation.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do you handle drainage and water runoff in the patio design?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Proper drainage is built into every patio we pour. We grade all slabs with a minimum 1/8 inch per foot slope away from the house foundation to prevent water from pooling against the structure. For larger patios or sites with challenging topography, we may incorporate trench drains or channel drains at the perimeter. We assess your site\'s existing drainage during the estimate to plan appropriately.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long before I can use my new concrete patio after installation?',
+      acceptedAnswer: { '@type': 'Answer', text: 'You can walk on a newly poured concrete patio after 24–48 hours, but we recommend waiting the full 48 hours to be safe. For furniture placement and light use, wait 7 days. Full concrete strength (28-day cure) is reached about a month after the pour, but the patio will be functionally ready for normal use after the first week. We\'ll give you specific care instructions for the curing period.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you repair an existing walkway instead of replacing it entirely?',
+      acceptedAnswer: { '@type': 'Answer', text: 'In many cases, yes. Surface cracks, minor spalling, and trip-hazard lip differences between panels can often be repaired rather than replaced — saving significant cost. We\'ll assess your existing walkway during a free estimate and give you an honest recommendation. If repair is possible, we\'ll tell you; if replacement is the better long-term value, we\'ll explain why. We never push replacement just to charge more.' },
+    },
+  ],
+};
 ---
 
 <BaseLayout
   title="Concrete Patios & Walkways Murrieta, CA | Custom Hardscaping | Free Estimates"
   description="Custom concrete patios and walkways in Murrieta, CA. Standard, stamped, and exposed aggregate finishes. Free estimates from licensed contractors."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <Hero
     headline="Concrete Patios & Walkways in Murrieta"
     subheadline="Create the outdoor living space you've always wanted — custom concrete work that complements your home and landscaping."
@@ -60,9 +98,31 @@ import { SITE_CONFIG } from '../../config';
         ))}
       </div>
     </div>
-
-    <div class="mt-12">
-      <LeadForm heading="Get Your Free Patio & Walkway Estimate" />
-    </div>
   </div>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {[
+        { q: "What's the difference between stamped concrete and exposed aggregate?", a: "Stamped concrete uses patterned mats pressed into wet concrete to create textures that mimic flagstone, cobblestone, slate, or brick. It can also be colored with pigments or acid stains. Exposed aggregate, on the other hand, involves removing the top layer of cement paste to reveal the natural stones and sand within the mix, creating a naturally textured, slip-resistant surface. Exposed aggregate is popular for pool decks and walkways; stamped concrete is preferred for patios and entertaining areas." },
+        { q: "Can you add color to a concrete patio or walkway?", a: "Yes — there are several ways to add color to concrete. Integral pigments are mixed directly into the concrete batch, producing color throughout the slab that won't peel or fade. Acid staining creates unique, variegated patterns that penetrate the surface and look genuinely like natural stone. Surface-applied color hardeners are also available for stamped concrete. We'll walk you through all options and show samples at your free estimate." },
+        { q: "How much do concrete patios and walkways cost in Murrieta?", a: "Standard broom-finish concrete patios in Murrieta typically cost $8–$14 per square foot installed. Stamped or colored concrete runs $14–$22 per square foot depending on pattern complexity. Walkways are priced similarly on a per-square-foot basis. Final cost depends on the size, shape, finish, and any site prep required. We provide free written estimates with no obligation." },
+        { q: "How do you handle drainage and water runoff in the patio design?", a: "Proper drainage is built into every patio we pour. We grade all slabs with a minimum 1/8 inch per foot slope away from the house foundation to prevent water from pooling against the structure. For larger patios or sites with challenging topography, we may incorporate trench drains or channel drains at the perimeter. We assess your site's existing drainage during the estimate to plan appropriately." },
+        { q: "How long before I can use my new concrete patio after installation?", a: "You can walk on a newly poured concrete patio after 24–48 hours, but we recommend waiting the full 48 hours to be safe. For furniture placement and light use, wait 7 days. Full concrete strength (28-day cure) is reached about a month after the pour, but the patio will be functionally ready for normal use after the first week. We'll give you specific care instructions for the curing period." },
+        { q: "Can you repair an existing walkway instead of replacing it entirely?", a: "In many cases, yes. Surface cracks, minor spalling, and trip-hazard lip differences between panels can often be repaired rather than replaced — saving significant cost. We'll assess your existing walkway during a free estimate and give you an honest recommendation. If repair is possible, we'll tell you; if replacement is the better long-term value, we'll explain why. We never push replacement just to charge more." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 pb-16">
+    <LeadForm heading="Get Your Free Patio & Walkway Estimate" />
+  </section>
 </BaseLayout>
