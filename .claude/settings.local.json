@@ -104,7 +104,21 @@
       "WebFetch(domain:pagespeed.web.dev)",
       "PowerShell(New-Item -ItemType Directory -Force -Path \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\\\\murrieta-ecosystem\\\\tree-service\\\\src\\\\assets\\\\images\")",
       "PowerShell($base = \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\\\\murrieta-ecosystem\\\\tree-service\"; Move-Item \"$base\\\\public\\\\images\\\\hero.jpg\" \"$base\\\\src\\\\assets\\\\images\\\\hero.jpg\"; Move-Item \"$base\\\\public\\\\images\\\\crew.jpg\" \"$base\\\\src\\\\assets\\\\images\\\\crew.jpg\"; Move-Item \"$base\\\\public\\\\images\\\\climber.jpg\" \"$base\\\\src\\\\assets\\\\images\\\\climber.jpg\"; Write-Host \"Moved all images\")",
-      "PowerShell($base = \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\\\\murrieta-ecosystem\\\\tree-service\"; Copy-Item \"$base\\\\src\\\\assets\\\\images\\\\hero.jpg\" \"$base\\\\public\\\\images\\\\hero.jpg\"; Write-Host \"Copied hero.jpg back to public\")"
+      "PowerShell($base = \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\\\\murrieta-ecosystem\\\\tree-service\"; Copy-Item \"$base\\\\src\\\\assets\\\\images\\\\hero.jpg\" \"$base\\\\public\\\\images\\\\hero.jpg\"; Write-Host \"Copied hero.jpg back to public\")",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" -Recurse -Depth 2 -Directory)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(git -C \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" show --stat b1f5c02)",
+      "Bash(git -C \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" show --stat 72d48a1)",
+      "Bash(git -C \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" show --stat af55b16)",
+      "Bash(git -C \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" log --oneline -20)",
+      "Bash(git -C \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" show b1f5c02 --no-stat)",
+      "Bash(git -C \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" show b1f5c02:package.json)",
+      "Bash(git -C \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" show 72d48a1:murrieta-ecosystem/landscaping/package.json)",
+      "Bash(git -C \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" show af55b16:astro.config.mjs)",
+      "Bash(git -C \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" show af55b16~1:package.json)",
+      "Bash(git -C \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" log --oneline --all -30)",
+      "Bash(git -C \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" show bef6d34)",
+      "Bash(git -C \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" show da3026a)"
     ]
   }
 }
