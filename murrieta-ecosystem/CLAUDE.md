@@ -88,6 +88,56 @@ cd murrieta-ecosystem/concrete && npm run build
 
 Build falhou = não commitar. Corrija primeiro.
 
+**Sinal de saúde no log do build:** a linha `[build] output: "hybrid"` deve aparecer sempre. Se aparecer `[build] output: "static"`, o Vercel está buildando do diretório errado (ver seção Vercel abaixo).
+
+---
+
+### Vercel — Configuração e Diagnóstico
+
+Cada site tem seu próprio projeto na Vercel. Configurações obrigatórias em cada projeto:
+
+#### Dashboard (Project Settings → Build and Deployment)
+
+| Projeto Vercel | Root Directory |
+|---|---|
+| rank-and-rent-tree-service | `murrieta-ecosystem/tree-service` |
+| rank-and-rent-landscaping | `murrieta-ecosystem/landscaping` |
+| rank-and-rent-concrete | `murrieta-ecosystem/concrete` |
+
+"Include files outside the root directory in the Build Step" deve estar **Enabled**.
+
+#### vercel.json (em cada site)
+
+```json
+{
+  "buildCommand": "npm run build",
+  "installCommand": "cd ../.. && npm install",
+  "framework": "astro"
+}
+```
+
+O `cd ../.. && npm install` é essencial — instala do root do monorepo para que o workspace hoisting funcione corretamente (deps transitivas como `zod` ficam disponíveis).
+
+#### package.json (em cada site)
+
+Cada site deve ter:
+```json
+"engines": {
+  "node": "20.x"
+}
+```
+
+**Por quê:** `@astrojs/vercel@7.x` só reconhece Node 18 e 20 no seu mapa interno. Se o Vercel buildar com Node 22 (que é o padrão atual), o adapter não reconhece e faz fallback para `nodejs18.x`. Node 18 foi removido da Vercel em 2025 (EOL). Pinnar Node 20 evita esse ciclo.
+
+#### Diagnóstico rápido de falhas
+
+| Sintoma no log | Causa | Fix |
+|---|---|---|
+| `[build] output: "static"` | Root Directory errado no dashboard | Configurar `murrieta-ecosystem/{site}` no dashboard |
+| `Missing pages directory: src/pages` | Idem (buildando da raiz do repo) | Idem |
+| `invalid "runtime": nodejs18.x` | Vercel buildou com Node 22, adapter fez fallback | Garantir `engines.node: "20.x"` no package.json do site |
+| `Cannot find module 'zod'` | installCommand rodando só no subdiretório | Garantir `cd ../.. && npm install` no vercel.json |
+
 ---
 
 ### Protocolo Multi-Agente (cross-site simultâneo)
