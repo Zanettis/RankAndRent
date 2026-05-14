@@ -118,7 +118,8 @@
       "Bash(git -C \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" show af55b16~1:package.json)",
       "Bash(git -C \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" log --oneline --all -30)",
       "Bash(git -C \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" show bef6d34)",
-      "Bash(git -C \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" show da3026a)"
+      "Bash(git -C \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\" show da3026a)",
+      "Bash(npm show *)"
     ]
   }
 }
