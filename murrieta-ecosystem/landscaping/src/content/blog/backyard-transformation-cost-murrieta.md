@@ -34,7 +34,7 @@ Design is where the project takes shape — and where money spent early saves mo
 
 **Full landscape design ($1,500–$2,500)**: Detailed planting plans with species, quantities, and spacing; grading and drainage plans; irrigation system layout; hardscape details with material specifications. Worth the investment for complex projects, projects requiring HOA approval, or any backyard over 2,500 sqft.
 
-For projects involving significant hardscape, coordinate design with your [concrete contractor](https://concrete-murrieta.com/services/patios-walkways) early — changes to patio size or location during installation are expensive.
+For projects involving significant hardscape, coordinate design with your [concrete contractor](https://murrietaconcreteworks.com/services/patios-walkways) early — changes to patio size or location during installation are expensive.
 
 ## Hardscaping: $4–$35/sqft Installed
 

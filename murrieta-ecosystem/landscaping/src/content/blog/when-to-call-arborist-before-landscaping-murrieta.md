@@ -44,7 +44,7 @@ Most Murrieta landscaping projects that run into expensive mid-project problems 
 
 **Running irrigation trenches through major structural roots.** Root damage from trenching can kill a large tree over 2–5 years, with decline showing slowly in the canopy above. The irrigation system is already installed by the time the problem becomes visible.
 
-**Designing a patio adjacent to a tree with invasive roots.** Concrete poured near aggressive root systems — eucalyptus, liquid amber, ficus — will crack within a few years as roots push beneath it. Knowing root locations before [concrete work is planned](https://concrete-murrieta.com/services/patios-walkways) allows the design to route around the root zone or use a design that bridges over it.
+**Designing a patio adjacent to a tree with invasive roots.** Concrete poured near aggressive root systems — eucalyptus, liquid amber, ficus — will crack within a few years as roots push beneath it. Knowing root locations before [concrete work is planned](https://murrietaconcreteworks.com/services/patios-walkways) allows the design to route around the root zone or use a design that bridges over it.
 
 **Designing a shade garden under a tree that later needs removal.** Shade-tolerant plants that thrived under a tree canopy fail quickly when the tree comes down and full sun exposure arrives. Design for the tree's realistic future, not its current state.
 

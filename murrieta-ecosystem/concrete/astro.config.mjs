@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig({
-  site: 'https://concrete-murrieta.com',
+  site: 'https://murrietaconcreteworks.com',
   output: 'hybrid',
   adapter: vercel(),
   integrations: [

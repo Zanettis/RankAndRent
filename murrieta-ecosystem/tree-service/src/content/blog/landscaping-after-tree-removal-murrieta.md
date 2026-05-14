@@ -74,7 +74,7 @@ The removal of a large tree is often the best opportunity you'll have to redesig
 
 A drought-tolerant planting bed with California natives and decomposed granite is the most popular choice for front yard cleared zones. It looks intentional, requires minimal water, and often outperforms the struggling turf that typically occupied the same area under tree canopy.
 
-A patio or hardscape expansion: if the cleared area is in a usable part of your backyard, this is an opportunity to extend a patio, add a sitting area, or create a [concrete walkway](https://concrete-murrieta.com/services/patios-walkways) that connects parts of the yard that were previously separated by the tree. Coordinate hardscape and landscaping together — the sequencing matters.
+A patio or hardscape expansion: if the cleared area is in a usable part of your backyard, this is an opportunity to extend a patio, add a sitting area, or create a [concrete walkway](https://murrietaconcreteworks.com/services/patios-walkways) that connects parts of the yard that were previously separated by the tree. Coordinate hardscape and landscaping together — the sequencing matters.
 
 A new smaller ornamental tree: if you liked having a tree in that spot, replacing with a better-scaled species is worth considering. Olive trees, multi-trunk Palo Verde, and crape myrtles are excellent Murrieta choices — drought-tolerant, beautiful, and sized to fit residential lots without creating the same future removal problem. Plant these in fall for best establishment.
 

@@ -51,7 +51,7 @@ How the installation is done matters as much as the turf itself. Proper installa
 
 **5. Infill and perimeter**: Infill material is spread and brushed in to support blade position. Perimeter nailing or bender board edging secures the turf edges. Clean perimeter transitions to driveways, sidewalks, and plant beds matter enormously for the final look.
 
-If you're combining turf with a new concrete driveway or patio, sequence matters — coordinate with your [concrete contractor](https://concrete-murrieta.com/services/concrete-driveways) to determine which work goes first. Generally, concrete edging and borders should be set before turf is installed.
+If you're combining turf with a new concrete driveway or patio, sequence matters — coordinate with your [concrete contractor](https://murrietaconcreteworks.com/services/concrete-driveways) to determine which work goes first. Generally, concrete edging and borders should be set before turf is installed.
 
 Typical installation timeline: 1–2 days for a standard 500–800 sqft front yard.
 

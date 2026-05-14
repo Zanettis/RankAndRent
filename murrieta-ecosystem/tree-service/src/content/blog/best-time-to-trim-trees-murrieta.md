@@ -41,7 +41,7 @@ Summer is the right time for:
 - Raising canopy for sight lines or fire clearance
 - Light trimming of fast-growing species like pepper trees and ficus
 
-If you're planning a full yard renovation that involves trimming followed by new planting, timing tree work in late fall or early winter allows the landscape design to proceed in spring when planting conditions are ideal. Many of our customers coordinate tree trimming with their [landscaping contractor](https://landscapingmurrieta.com/services/lawn-care) to handle both in a single project cycle — and some also use this opportunity to address old [concrete walkways or patios](https://concrete-murrieta.com/services/concrete-repair) that need updating before fresh plantings go in around them.
+If you're planning a full yard renovation that involves trimming followed by new planting, timing tree work in late fall or early winter allows the landscape design to proceed in spring when planting conditions are ideal. Many of our customers coordinate tree trimming with their [landscaping contractor](https://landscapingmurrieta.com/services/lawn-care) to handle both in a single project cycle — and some also use this opportunity to address old [concrete walkways or patios](https://murrietaconcreteworks.com/services/concrete-repair) that need updating before fresh plantings go in around them.
 
 ## Species-Specific Notes
 

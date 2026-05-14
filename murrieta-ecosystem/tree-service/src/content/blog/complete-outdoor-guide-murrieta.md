@@ -37,7 +37,7 @@ The [landscaping plan](https://landscapingmurrieta.com/services/lawn-care) shoul
 
 ## Step 3: Design Hardscaping That Complements Nature
 
-With the tree and landscape plan established, hardscaping — [concrete driveways](https://concrete-murrieta.com/services/concrete-driveways), [patios, and walkways](https://concrete-murrieta.com/services/patios-walkways) — can be designed to frame and connect all the natural elements.
+With the tree and landscape plan established, hardscaping — [concrete driveways](https://murrietaconcreteworks.com/services/concrete-driveways), [patios, and walkways](https://murrietaconcreteworks.com/services/patios-walkways) — can be designed to frame and connect all the natural elements.
 
 Concrete work should be planned with full knowledge of:
 - **Tree root zones**: Concrete poured over major tree roots will crack within years. Routes must respect root paths or be designed to bridge over them.

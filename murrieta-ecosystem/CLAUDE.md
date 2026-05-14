@@ -14,7 +14,7 @@ All content, copy, components, page text, meta descriptions, blog posts, and com
 |---|---|---|---|
 | `tree-service` | 3000 | murrietatreeexperts.com | `tree-service/src/config.ts` |
 | `landscaping` | 4322 | landscapingmurrieta.com | `landscaping/src/config.ts` |
-| `concrete` | 4323 | concrete-murrieta.com | `concrete/src/config.ts` |
+| `concrete` | 4323 | murrietaconcreteworks.com | `concrete/src/config.ts` |
 
 ---
 
@@ -205,6 +205,6 @@ cd murrieta-ecosystem/tree-service && npm run preview
 ## Cross-links Entre Sites (Footer/Widget)
 
 Os 3 sites se referenciam mutuamente:
-- tree-service → landscapingmurrieta.com | concrete-murrieta.com
-- landscaping → murrietatreeexperts.com | concrete-murrieta.com
+- tree-service → landscapingmurrieta.com | murrietaconcreteworks.com
+- landscaping → murrietatreeexperts.com | murrietaconcreteworks.com
 - concrete → murrietatreeexperts.com | landscapingmurrieta.com

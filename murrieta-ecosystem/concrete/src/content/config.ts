@@ -6,7 +6,7 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     pubDate: z.coerce.date(),
-    author: z.string().default('Murrieta Concrete Pros'),
+    author: z.string().default('Murrieta Concrete Works'),
     tags: z.array(z.string()).optional(),
     featured: z.boolean().default(false),
   }),

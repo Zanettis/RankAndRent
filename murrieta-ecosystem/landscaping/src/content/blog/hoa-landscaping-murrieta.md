@@ -32,7 +32,7 @@ Understanding what the committee is actually evaluating makes submissions much e
 
 **Tree heights and canopy management**: Many Murrieta HOAs regulate tree heights at property lines and near fences. A [certified arborist](https://murrietatreeexperts.com) familiar with your community's guidelines can advise on compliant trimming before you submit your landscape plan — or provide written documentation that your trees meet HOA standards.
 
-**Hardscape materials and colors**: Concrete patios, pavers, and retaining walls typically require HOA review. Material type, color, and height restrictions are common. Note that [concrete patios and driveways](https://concrete-murrieta.com/services/patios-walkways) also require HOA approval in most communities — if you're doing both hardscape and landscaping, coordinate your submissions to avoid sequential review delays.
+**Hardscape materials and colors**: Concrete patios, pavers, and retaining walls typically require HOA review. Material type, color, and height restrictions are common. Note that [concrete patios and driveways](https://murrietaconcreteworks.com/services/patios-walkways) also require HOA approval in most communities — if you're doing both hardscape and landscaping, coordinate your submissions to avoid sequential review delays.
 
 **Irrigation type**: Some Murrieta HOAs now require drip irrigation for new front-yard plantings. California's ongoing push for water conservation is accelerating this trend. If your current system uses spray heads in the front yard, a landscape redesign may trigger an irrigation upgrade requirement.
 

@@ -41,7 +41,7 @@ Done properly, crown management makes the entire landscape look more intentional
 
 ## Planning Landscape Work Around Tree Root Zones
 
-When you're adding new features to your yard — [concrete walkways or patios](https://concrete-murrieta.com/services/patios-walkways), raised garden beds, irrigation trenches — the location of existing tree roots matters enormously.
+When you're adding new features to your yard — [concrete walkways or patios](https://murrietaconcreteworks.com/services/patios-walkways), raised garden beds, irrigation trenches — the location of existing tree roots matters enormously.
 
 Cutting large structural roots during concrete or irrigation work can cause serious stress, instability, or death in mature trees. A professional arborist can map the critical root zone before any excavation begins, identifying where cuts are safe and where they need to route around.
 

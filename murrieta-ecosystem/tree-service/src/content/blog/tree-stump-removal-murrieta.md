@@ -26,7 +26,7 @@ For most Murrieta homeowners, stump grinding is the right answer. A powerful gri
 
 The remaining root system is left in place. This raises the most common question homeowners ask: "Won't the roots cause problems?" In the vast majority of cases, no. Once the stump is removed, the root system has no energy source and begins to decompose naturally. In Murrieta's warm soil, this process takes 5–10 years depending on the species. During that time, the roots simply become organic matter in your soil.
 
-The exception is if you're planning to pour concrete directly over the area. For [concrete driveways](https://concrete-murrieta.com/services/concrete-driveways), patios, or walkways, remaining roots can cause cracking and lifting as they expand and decompose. In these cases, full root excavation is necessary, and we coordinate with concrete contractors to ensure the subgrade is properly prepared.
+The exception is if you're planning to pour concrete directly over the area. For [concrete driveways](https://murrietaconcreteworks.com/services/concrete-driveways), patios, or walkways, remaining roots can cause cracking and lifting as they expand and decompose. In these cases, full root excavation is necessary, and we coordinate with concrete contractors to ensure the subgrade is properly prepared.
 
 ## DIY vs. Professional Stump Grinding
 
@@ -48,7 +48,7 @@ Once the stump is ground down, you have real flexibility:
 
 **Yard expansion**: Simply leveling and seeding the area expands your usable lawn.
 
-**Hardscaping**: After root removal (if needed), the area can receive concrete, pavers, or decomposed granite. Many homeowners who remove a front-yard tree replace it with a decorative planting bed, low-maintenance groundcover, or a small [concrete walkway extension](https://concrete-murrieta.com/services/patios-walkways).
+**Hardscaping**: After root removal (if needed), the area can receive concrete, pavers, or decomposed granite. Many homeowners who remove a front-yard tree replace it with a decorative planting bed, low-maintenance groundcover, or a small [concrete walkway extension](https://murrietaconcreteworks.com/services/patios-walkways).
 
 **New tree planting**: If you loved having a tree in that spot, we can advise on appropriate replacements. New trees should be planted a minimum of one year after stump removal to allow the soil to settle and decomposition to begin.
 

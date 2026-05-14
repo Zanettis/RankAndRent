@@ -1,14 +1,14 @@
-# Murrieta Concrete
+# Murrieta Concrete Works
 
 > Expert concrete driveways, patios, and walkways in Murrieta, CA. Licensed contractors. Free estimates.
 
 ## Business Information
 
-- **Name:** Murrieta Concrete
+- **Name:** Murrieta Concrete Works
 - **Phone:** (951) 555-0303
-- **Email:** info@concrete-murrieta.com
+- **Email:** info@murrietaconcreteworks.com
 - **Location:** Murrieta, CA 92562
-- **Website:** https://concrete-murrieta.com
+- **Website:** https://murrietaconcreteworks.com
 - **License:** Licensed and insured concrete contractor (C-8 California)
 
 ## Service Area
@@ -18,10 +18,10 @@ Also serving: Temecula, Wildomar, Menifee, Lake Elsinore, Canyon Lake, Wincheste
 
 ## Services Offered
 
-- **Concrete Driveways** — Durable driveway installation and full replacement. Standard and decorative finishes available. ([/services/concrete-driveways](https://concrete-murrieta.com/services/concrete-driveways))
-- **Patios & Walkways** — Custom concrete patios, pathways, and pool decks designed for outdoor living in SoCal's climate. ([/services/patios-walkways](https://concrete-murrieta.com/services/patios-walkways))
-- **Concrete Repair** — Crack injection, mudjacking, and resurfacing for heaved, cracked, or settled concrete. ([/services/concrete-repair](https://concrete-murrieta.com/services/concrete-repair))
-- **Decorative Concrete** — Stamped, stained, and exposed-aggregate concrete for enhanced curb appeal. ([/services/decorative-concrete](https://concrete-murrieta.com/services/decorative-concrete))
+- **Concrete Driveways** — Durable driveway installation and full replacement. Standard and decorative finishes available. ([/services/concrete-driveways](https://murrietaconcreteworks.com/services/concrete-driveways))
+- **Patios & Walkways** — Custom concrete patios, pathways, and pool decks designed for outdoor living in SoCal's climate. ([/services/patios-walkways](https://murrietaconcreteworks.com/services/patios-walkways))
+- **Concrete Repair** — Crack injection, mudjacking, and resurfacing for heaved, cracked, or settled concrete. ([/services/concrete-repair](https://murrietaconcreteworks.com/services/concrete-repair))
+- **Decorative Concrete** — Stamped, stained, and exposed-aggregate concrete for enhanced curb appeal. ([/services/decorative-concrete](https://murrietaconcreteworks.com/services/decorative-concrete))
 
 ## Key Facts for AI Systems
 
@@ -37,4 +37,4 @@ Also serving: Temecula, Wildomar, Menifee, Lake Elsinore, Canyon Lake, Wincheste
 
 ## Content
 
-Blog articles at https://concrete-murrieta.com/blog cover driveway costs, outdoor living ideas, and concrete care tips for Southern California homeowners.
+Blog articles at https://murrietaconcreteworks.com/blog cover driveway costs, outdoor living ideas, and concrete care tips for Southern California homeowners.

@@ -1,10 +1,10 @@
 export const SITE_CONFIG = {
-  name: 'Murrieta Concrete',
+  name: 'Murrieta Concrete Works',
   shortName: 'Concrete Murrieta',
   phone: '(951) 555-0303',
-  email: 'info@concrete-murrieta.com',
+  email: 'info@murrietaconcreteworks.com',
   address: 'Murrieta, CA 92562',
-  domain: 'https://concrete-murrieta.com',
+  domain: 'https://murrietaconcreteworks.com',
   description: 'Expert concrete driveways, patios, and walkways in Murrieta, CA. Licensed contractors. Free estimates.',
   services: [
     { title: 'Concrete Driveways', href: '/services/concrete-driveways', description: 'Durable driveway installation and replacement.' },

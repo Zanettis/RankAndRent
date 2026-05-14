@@ -38,11 +38,11 @@ Drip irrigation delivers water slowly and directly to the root zone, reducing ev
 
 ## Hardscaping as Water-Smart Design
 
-One of the most effective ways to reduce landscape water demand is to strategically replace irrigated areas with attractive hardscaping. This isn't just about [concrete driveways and patios](https://concrete-murrieta.com/services/concrete-driveways) — it includes:
+One of the most effective ways to reduce landscape water demand is to strategically replace irrigated areas with attractive hardscaping. This isn't just about [concrete driveways and patios](https://murrietaconcreteworks.com/services/concrete-driveways) — it includes:
 
 **Decomposed granite (DG)**: The most versatile and natural-looking permeable ground cover available. Gold, gray, and red varieties complement different architectural styles. DG is also significantly cheaper than concrete, making it ideal for large areas.
 
-**Permeable concrete pavers**: Unlike standard concrete, permeable pavers allow water to pass through the surface into the subbase, reducing runoff and allowing groundwater recharge. An excellent option for [driveways or patio areas](https://concrete-murrieta.com/services/patios-walkways) where you want the look and durability of hardscaping with better environmental performance.
+**Permeable concrete pavers**: Unlike standard concrete, permeable pavers allow water to pass through the surface into the subbase, reducing runoff and allowing groundwater recharge. An excellent option for [driveways or patio areas](https://murrietaconcreteworks.com/services/patios-walkways) where you want the look and durability of hardscaping with better environmental performance.
 
 **River rock and boulder features**: Strategically placed rock creates visual interest, prevents erosion on slopes, and requires zero irrigation.
 

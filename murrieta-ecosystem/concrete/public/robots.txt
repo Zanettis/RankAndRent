@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://concrete-murrieta.com/sitemap-index.xml
+Sitemap: https://murrietaconcreteworks.com/sitemap-index.xml
