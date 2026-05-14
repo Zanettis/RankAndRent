@@ -5,12 +5,50 @@ import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What\'s the difference between drip irrigation and a sprinkler system?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Drip irrigation delivers water slowly and directly to the root zone of individual plants through emitters, making it ideal for garden beds, shrubs, trees, and drought-tolerant landscaping. Sprinkler systems distribute water over a wider area via rotating or pop-up heads, making them better suited for lawns. Many Murrieta properties benefit from a hybrid system — drip for plant beds and sprinklers for turf areas — for maximum efficiency.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much can a smart irrigation controller save on my water bill?',
+      acceptedAnswer: { '@type': 'Answer', text: "Replacing a standard timer with a weather-based smart controller can reduce outdoor water use by 20–50%, depending on your current system. For the average Murrieta homeowner, that translates to $100–$300 per year in water savings. Smart controllers adjust automatically based on weather, soil moisture, and plant type — so your system never runs when it doesn't need to." },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are there rebates available for irrigation upgrades in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: "Yes. Both Eastern Municipal Water District (EVMWD) and Rancho California Water District (RCWD) offer rebates for qualifying irrigation upgrades, including smart controllers, drip conversion, and high-efficiency sprinkler heads. The amounts change periodically, but rebates of $100–$400 or more are common. We'll let you know exactly what you may qualify for when we assess your system." },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you upgrade my existing irrigation system or do I need a full replacement?',
+      acceptedAnswer: { '@type': 'Answer', text: "In most cases, we can upgrade your existing system rather than replacing it entirely. Common upgrades include adding a smart controller, converting spray heads to drip, replacing leaking valves, and rezoning for more efficient coverage. A full replacement is usually only necessary when pipes are severely damaged or the system layout is fundamentally inefficient. We'll assess your current setup and give you honest options." },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you install backflow prevention devices?',
+      acceptedAnswer: { '@type': 'Answer', text: "Yes. California law requires backflow prevention devices on all irrigation systems connected to a potable water supply, and Murrieta's HOAs and water districts enforce this requirement. We install pressure vacuum breakers and reduced pressure assemblies as appropriate for your system, ensuring full compliance with local code." },
+    },
+    {
+      '@type': 'Question',
+      name: "How long do irrigation systems typically last in Murrieta's climate?",
+      acceptedAnswer: { '@type': 'Answer', text: "A well-installed irrigation system in Murrieta can last 15–25 years with basic maintenance. PVC pipe is highly durable, but valves, sprinkler heads, and controllers typically need servicing or replacement every 5–10 years. Murrieta's hard water and UV exposure can accelerate wear on above-ground components. Annual system checks help catch small issues before they become costly repairs." },
+    },
+  ],
+};
 ---
 
 <BaseLayout
   title="Irrigation Systems Murrieta, CA | Smart Drip & Sprinkler Installation | Free Quote"
   description="Water-efficient irrigation systems for Murrieta homes. Drip irrigation, sprinkler installation, and smart controllers. Meets California water requirements. Free quotes."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <Hero
     headline="Smart Irrigation Systems for Murrieta Homes"
     subheadline="Keep your lawn and garden green without wasting water. We install drip irrigation, sprinkler systems, and smart controllers designed for inland SoCal's climate and water restrictions."
@@ -75,9 +113,31 @@ import { SITE_CONFIG } from '../../config';
         ))}
       </div>
     </div>
-
-    <div class="mt-12">
-      <LeadForm heading="Get Your Free Irrigation System Quote" />
-    </div>
   </div>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {[
+        { q: "What's the difference between drip irrigation and a sprinkler system?", a: "Drip irrigation delivers water slowly and directly to the root zone of individual plants through emitters, making it ideal for garden beds, shrubs, trees, and drought-tolerant landscaping. Sprinkler systems distribute water over a wider area via rotating or pop-up heads, making them better suited for lawns. Many Murrieta properties benefit from a hybrid system — drip for plant beds and sprinklers for turf areas — for maximum efficiency." },
+        { q: "How much can a smart irrigation controller save on my water bill?", a: "Replacing a standard timer with a weather-based smart controller can reduce outdoor water use by 20–50%, depending on your current system. For the average Murrieta homeowner, that translates to $100–$300 per year in water savings. Smart controllers adjust automatically based on weather, soil moisture, and plant type — so your system never runs when it doesn't need to." },
+        { q: "Are there rebates available for irrigation upgrades in Murrieta?", a: "Yes. Both Eastern Municipal Water District (EVMWD) and Rancho California Water District (RCWD) offer rebates for qualifying irrigation upgrades, including smart controllers, drip conversion, and high-efficiency sprinkler heads. The amounts change periodically, but rebates of $100–$400 or more are common. We'll let you know exactly what you may qualify for when we assess your system." },
+        { q: "Can you upgrade my existing irrigation system or do I need a full replacement?", a: "In most cases, we can upgrade your existing system rather than replacing it entirely. Common upgrades include adding a smart controller, converting spray heads to drip, replacing leaking valves, and rezoning for more efficient coverage. A full replacement is usually only necessary when pipes are severely damaged or the system layout is fundamentally inefficient. We'll assess your current setup and give you honest options." },
+        { q: "Do you install backflow prevention devices?", a: "Yes. California law requires backflow prevention devices on all irrigation systems connected to a potable water supply, and Murrieta's HOAs and water districts enforce this requirement. We install pressure vacuum breakers and reduced pressure assemblies as appropriate for your system, ensuring full compliance with local code." },
+        { q: "How long do irrigation systems typically last in Murrieta's climate?", a: "A well-installed irrigation system in Murrieta can last 15–25 years with basic maintenance. PVC pipe is highly durable, but valves, sprinkler heads, and controllers typically need servicing or replacement every 5–10 years. Murrieta's hard water and UV exposure can accelerate wear on above-ground components. Annual system checks help catch small issues before they become costly repairs." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 pb-16">
+    <LeadForm heading="Get Your Free Irrigation System Quote" />
+  </section>
 </BaseLayout>

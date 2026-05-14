@@ -5,12 +5,50 @@ import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: "How often should I have my lawn mowed in Murrieta's climate?",
+      acceptedAnswer: { '@type': 'Answer', text: "In Murrieta's warm inland climate, most lawns benefit from weekly mowing during the spring and summer growing season — typically March through October. During cooler months when growth slows, biweekly service is usually sufficient. We adjust your schedule automatically based on seasonal conditions so your lawn always looks its best." },
+    },
+    {
+      '@type': 'Question',
+      name: "What's the best lawn care schedule for summer in Southern California?",
+      acceptedAnswer: { '@type': 'Answer', text: "Southern California summers are tough on lawns. We recommend weekly mowing at a slightly higher blade height (3–4 inches) to reduce heat stress, deep but infrequent watering early in the morning to minimize evaporation, and a slow-release fertilizer application in late spring before temperatures spike. We also monitor for grub and chinch bug activity, which peaks during Murrieta's hottest months." },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you handle fertilization and weed control as part of lawn care?',
+      acceptedAnswer: { '@type': 'Answer', text: "Yes. We offer fertilization and weed control as add-ons to any maintenance plan. Our seasonal fertilization program includes a spring pre-emergent weed treatment, a summer slow-release feed, and a fall application to strengthen roots heading into winter. Spot weed control is included in all maintenance visits at no extra charge." },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you maintain a lawn if there are large trees creating shade or root competition?',
+      acceptedAnswer: { '@type': 'Answer', text: "Absolutely — this is a common challenge in Murrieta's older neighborhoods. We assess how tree canopy and surface roots affect your turf and adjust our approach accordingly, sometimes recommending shade-tolerant grass varieties or strategic mulching around root zones. In some cases, light canopy thinning by a certified arborist can significantly improve lawn health." },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does weekly or biweekly lawn care cost in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: "Standard residential lawn care in Murrieta starts at $75–$100 per visit for a typical lot, including mowing, edging, and blowing off hardscaped surfaces. Biweekly service is priced slightly higher per visit. Fertilization, weed control, and aeration are priced as add-ons. We provide a firm quote after a quick yard assessment — no surprises." },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I keep my lawn green while complying with California water restrictions?',
+      acceptedAnswer: { '@type': 'Answer', text: "California water restrictions require smart irrigation habits — watering before 9 a.m. or after 6 p.m., avoiding runoff, and limiting watering days based on local mandates. We help by programming your irrigation controller correctly, checking for leaks or inefficient heads, and recommending drought-tolerant turf alternatives like tall fescue or buffalo grass that stay green on less water. We're familiar with EVMWD and RCWD guidelines and can keep your lawn compliant." },
+    },
+  ],
+};
 ---
 
 <BaseLayout
   title="Lawn Care Murrieta, CA | Weekly & Monthly Maintenance | Free Quotes"
   description="Professional lawn care in Murrieta, CA. Mowing, edging, fertilizing, and weed control. Consistent weekly or biweekly service. Free quotes."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <Hero
     headline="Professional Lawn Care in Murrieta"
     subheadline="Consistent, reliable lawn maintenance that keeps your yard looking great every week — without the hassle of doing it yourself."
@@ -70,9 +108,31 @@ import { SITE_CONFIG } from '../../config';
         ))}
       </div>
     </div>
-
-    <div class="mt-12">
-      <LeadForm heading="Get Your Free Lawn Care Quote" />
-    </div>
   </div>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {[
+        { q: "How often should I have my lawn mowed in Murrieta's climate?", a: "In Murrieta's warm inland climate, most lawns benefit from weekly mowing during the spring and summer growing season — typically March through October. During cooler months when growth slows, biweekly service is usually sufficient. We adjust your schedule automatically based on seasonal conditions so your lawn always looks its best." },
+        { q: "What's the best lawn care schedule for summer in Southern California?", a: "Southern California summers are tough on lawns. We recommend weekly mowing at a slightly higher blade height (3–4 inches) to reduce heat stress, deep but infrequent watering early in the morning to minimize evaporation, and a slow-release fertilizer application in late spring before temperatures spike. We also monitor for grub and chinch bug activity, which peaks during Murrieta's hottest months." },
+        { q: "Do you handle fertilization and weed control as part of lawn care?", a: "Yes. We offer fertilization and weed control as add-ons to any maintenance plan. Our seasonal fertilization program includes a spring pre-emergent weed treatment, a summer slow-release feed, and a fall application to strengthen roots heading into winter. Spot weed control is included in all maintenance visits at no extra charge." },
+        { q: "Can you maintain a lawn if there are large trees creating shade or root competition?", a: "Absolutely — this is a common challenge in Murrieta's older neighborhoods. We assess how tree canopy and surface roots affect your turf and adjust our approach accordingly, sometimes recommending shade-tolerant grass varieties or strategic mulching around root zones. In some cases, light canopy thinning by a certified arborist can significantly improve lawn health." },
+        { q: "How much does weekly or biweekly lawn care cost in Murrieta?", a: "Standard residential lawn care in Murrieta starts at $75–$100 per visit for a typical lot, including mowing, edging, and blowing off hardscaped surfaces. Biweekly service is priced slightly higher per visit. Fertilization, weed control, and aeration are priced as add-ons. We provide a firm quote after a quick yard assessment — no surprises." },
+        { q: "How do I keep my lawn green while complying with California water restrictions?", a: "California water restrictions require smart irrigation habits — watering before 9 a.m. or after 6 p.m., avoiding runoff, and limiting watering days based on local mandates. We help by programming your irrigation controller correctly, checking for leaks or inefficient heads, and recommending drought-tolerant turf alternatives like tall fescue or buffalo grass that stay green on less water. We're familiar with EVMWD and RCWD guidelines and can keep your lawn compliant." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 pb-16">
+    <LeadForm heading="Get Your Free Lawn Care Quote" />
+  </section>
 </BaseLayout>

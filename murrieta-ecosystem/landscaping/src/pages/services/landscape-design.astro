@@ -4,12 +4,50 @@ import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import { SITE_CONFIG } from '../../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How much does landscape design cost in Murrieta, CA?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Landscape design consultations in Murrieta are free. Full design plans typically range from $500–$2,500 depending on yard size and complexity. Installation costs vary — a basic front yard refresh starts around $3,000, while full backyard transformations typically run $8,000–$25,000+. We provide detailed written estimates before any work begins, with no pressure to commit.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does the landscape design process take from consultation to completion?',
+      acceptedAnswer: { '@type': 'Answer', text: 'The design phase typically takes 1–2 weeks after your initial consultation, depending on the complexity of your yard. Installation for a standard Murrieta yard runs 3–7 days. If HOA approval is required — common in Bear Creek, Greer Ranch, or Copper Canyon — allow an additional 2–4 weeks for the review process. We factor all of this into your project timeline upfront.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What if I want changes to the proposed design?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Revisions are part of our process. After presenting the initial plan, we walk through it with you in detail and incorporate your feedback before finalizing. Most projects include one to two rounds of revisions at no extra charge. We want you to love the design before a single plant goes in the ground.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you design a landscape that complies with my HOA requirements?',
+      acceptedAnswer: { '@type': 'Answer', text: "Yes — HOA compliance is a core part of what we do in Murrieta. We're familiar with the landscape guidelines for Bear Creek, Greer Ranch, Copper Canyon, and other local communities. We prepare all required documentation and submit directly to your HOA on your behalf, reducing back-and-forth and delays." },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you handle the installation or just provide the design plan?',
+      acceptedAnswer: { '@type': 'Answer', text: 'We handle both. You can hire us for design-only if you have another contractor in mind, but most clients choose our full-service option — design, materials sourcing, installation, and irrigation setup — all with one team. This keeps your project on track and ensures the finished yard matches the design exactly.' },
+    },
+    {
+      '@type': 'Question',
+      name: "What plants work best in Murrieta's hot, dry climate?",
+      acceptedAnswer: { '@type': 'Answer', text: "Murrieta's inland climate is ideal for California native plants like Cleveland sage, black-eyed Susan, and toyon, as well as drought-adapted Mediterranean species such as lavender, rosemary, and bougainvillea. We also incorporate low-water succulents and ornamental grasses that provide color and texture without heavy irrigation. Many of our planting selections qualify for water district rebate programs offered through EVMWD and RCWD." },
+    },
+  ],
+};
 ---
 
 <BaseLayout
   title="Landscape Design Murrieta, CA | Custom Yard Plans | Free Consultation"
   description="Custom landscape design in Murrieta, CA. Beautiful, drought-smart designs that thrive in inland Southern California. Free consultations."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <Hero
     headline="Custom Landscape Design for Murrieta Homes"
     subheadline="We design beautiful, water-smart outdoor spaces that reflect your style and thrive in Murrieta's warm inland climate."
@@ -61,9 +99,31 @@ import { SITE_CONFIG } from '../../config';
         ))}
       </div>
     </div>
-
-    <div class="mt-12">
-      <LeadForm heading="Schedule Your Free Landscape Design Consultation" />
-    </div>
   </div>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {[
+        { q: "How much does landscape design cost in Murrieta, CA?", a: "Landscape design consultations in Murrieta are free. Full design plans typically range from $500–$2,500 depending on yard size and complexity. Installation costs vary — a basic front yard refresh starts around $3,000, while full backyard transformations typically run $8,000–$25,000+. We provide detailed written estimates before any work begins, with no pressure to commit." },
+        { q: "How long does the landscape design process take from consultation to completion?", a: "The design phase typically takes 1–2 weeks after your initial consultation, depending on the complexity of your yard. Installation for a standard Murrieta yard runs 3–7 days. If HOA approval is required — common in Bear Creek, Greer Ranch, or Copper Canyon — allow an additional 2–4 weeks for the review process. We factor all of this into your project timeline upfront." },
+        { q: "What if I want changes to the proposed design?", a: "Revisions are part of our process. After presenting the initial plan, we walk through it with you in detail and incorporate your feedback before finalizing. Most projects include one to two rounds of revisions at no extra charge. We want you to love the design before a single plant goes in the ground." },
+        { q: "Can you design a landscape that complies with my HOA requirements?", a: "Yes — HOA compliance is a core part of what we do in Murrieta. We're familiar with the landscape guidelines for Bear Creek, Greer Ranch, Copper Canyon, and other local communities. We prepare all required documentation and submit directly to your HOA on your behalf, reducing back-and-forth and delays." },
+        { q: "Do you handle the installation or just provide the design plan?", a: "We handle both. You can hire us for design-only if you have another contractor in mind, but most clients choose our full-service option — design, materials sourcing, installation, and irrigation setup — all with one team. This keeps your project on track and ensures the finished yard matches the design exactly." },
+        { q: "What plants work best in Murrieta's hot, dry climate?", a: "Murrieta's inland climate is ideal for California native plants like Cleveland sage, black-eyed Susan, and toyon, as well as drought-adapted Mediterranean species such as lavender, rosemary, and bougainvillea. We also incorporate low-water succulents and ornamental grasses that provide color and texture without heavy irrigation. Many of our planting selections qualify for water district rebate programs offered through EVMWD and RCWD." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 pb-16">
+    <LeadForm heading="Schedule Your Free Landscape Design Consultation" />
+  </section>
 </BaseLayout>
