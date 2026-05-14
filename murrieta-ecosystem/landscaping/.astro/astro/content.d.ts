@@ -180,6 +180,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"irrigation-system-cost-murrieta.mdx": {
+	id: "irrigation-system-cost-murrieta.mdx";
+  slug: "irrigation-system-cost-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "landscape-design-murrieta-homes.md": {
 	id: "landscape-design-murrieta-homes.md";
   slug: "landscape-design-murrieta-homes";
@@ -187,6 +194,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"landscaping-cost-murrieta.mdx": {
+	id: "landscaping-cost-murrieta.mdx";
+  slug: "landscaping-cost-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "murrieta-lawn-care-guide.md": {
 	id: "murrieta-lawn-care-guide.md";
   slug: "murrieta-lawn-care-guide";

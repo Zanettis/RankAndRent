@@ -159,9 +159,44 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"concrete-patio-cost-murrieta.md": {
+	id: "concrete-patio-cost-murrieta.md";
+  slug: "concrete-patio-cost-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"concrete-sealing-murrieta.md": {
+	id: "concrete-sealing-murrieta.md";
+  slug: "concrete-sealing-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"concrete-vs-asphalt-driveway-murrieta.md": {
+	id: "concrete-vs-asphalt-driveway-murrieta.md";
+  slug: "concrete-vs-asphalt-driveway-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "outdoor-living-murrieta.md": {
 	id: "outdoor-living-murrieta.md";
   slug: "outdoor-living-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"patio-ideas-murrieta.md": {
+	id: "patio-ideas-murrieta.md";
+  slug: "patio-ideas-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"stamped-concrete-murrieta.md": {
+	id: "stamped-concrete-murrieta.md";
+  slug: "stamped-concrete-murrieta";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
