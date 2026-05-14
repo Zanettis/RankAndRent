@@ -6,6 +6,9 @@
     "murrieta-ecosystem/landscaping",
     "murrieta-ecosystem/concrete"
   ],
+  "dependencies": {
+    "zod": "^3.25.28"
+  },
   "scripts": {
     "dev:tree": "npm run dev --workspace=murrieta-ecosystem/tree-service",
     "dev:landscaping": "npm run dev --workspace=murrieta-ecosystem/landscaping",
