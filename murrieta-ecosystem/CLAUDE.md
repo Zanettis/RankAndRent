@@ -12,7 +12,7 @@ All content, copy, components, page text, meta descriptions, blog posts, and com
 
 | Site | Porta dev | Domínio | Config central |
 |---|---|---|---|
-| `tree-service` | 3000 | treeservice-murrieta.com | `tree-service/src/config.ts` |
+| `tree-service` | 3000 | murrietatreeexperts.com | `tree-service/src/config.ts` |
 | `landscaping` | 4322 | landscaping-murrieta.com | `landscaping/src/config.ts` |
 | `concrete` | 4323 | concrete-murrieta.com | `concrete/src/config.ts` |
 
