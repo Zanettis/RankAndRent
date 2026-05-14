@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="Landscaping Perris, CA | Lawn Care & Yard Design | Free Consultation"
+  description="Professional landscaping and lawn care in Perris, CA. Fresh installations for new construction, drought-tolerant designs, and irrigation systems for Perris's growing communities. Free consultations."
+  canonicalUrl="https://landscapingmurrieta.com/perris/"
+>
+  <Hero
+    headline="Landscaping & Lawn Care in Perris, CA"
+    subheadline="Beautiful, drought-smart landscaping for Perris's newest homeowners and established neighborhoods. Custom landscape design, new installations, irrigation, and lawn care. Free consultations throughout Perris."
+    ctaText="Get a Free Consultation"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Landscaping Services in Perris</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      We design and install beautiful, water-smart yards throughout Perris — whether you're starting from a bare dirt builder lot or upgrading an existing landscape that no longer suits your needs.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Landscaping for Perris's New Construction Homes</h2>
+      <p>
+        Perris is one of the fastest-growing cities in southwest Riverside County, with a population approaching 80,000 and new subdivisions opening regularly near the 215 freeway corridor and around the Southern California Logistics Airport area. The majority of new homes in Perris come with minimal builder landscaping — a thin strip of front-yard sod, a few foundation shrubs, and a basic sprinkler timer. It passes inspection, but it's not designed to look great, perform well in Perris's hot summers, or hold up long-term.
+      </p>
+      <p>
+        Builder soil in new Perris subdivisions is typically heavily compacted from construction equipment. Without proper amendment and drainage work, newly planted lawns and shrubs often struggle to establish. We assess the soil before designing anything and address underlying conditions so your new landscape actually thrives.
+      </p>
+
+      <h2>Drought-Tolerant Landscaping in Perris</h2>
+      <p>
+        Perris is served by Eastern Municipal Water District, which uses California's tiered pricing system for outdoor water use. During summer months, traditional lawn irrigation is the biggest driver of high water bills for Perris homeowners. A well-designed drought-tolerant landscape with drip irrigation can reduce outdoor water use by 40–60% while looking significantly better than basic turf.
+      </p>
+      <p>
+        California native plants perform exceptionally well in Perris's climate — Salvia, Agave, Ceanothus, ornamental grasses, and low-water flowering perennials create lush, colorful yards without the maintenance burden of traditional lawn. Many of our designs qualify for EMWD turf replacement rebates, which can offset installation costs.
+      </p>
+
+      <h2>Serving All Perris Communities</h2>
+      <p>
+        We landscape homes throughout Perris, including neighborhoods near Lake Perris State Recreation Area, the I-215 corridor, Moreno Valley border communities, and new subdivisions throughout the city. We're experienced working in HOA-governed communities and handle all required documentation and approval submissions for exterior improvements.
+      </p>
+
+      <h2>Coordinated Outdoor Renovations in Perris</h2>
+      <p>
+        Many Perris homeowners — particularly those in new construction — are transforming their entire outdoor space at once: new landscaping, hardscape, and sometimes tree work all in one project. We coordinate directly with <a href="https://concrete-murrieta.com">concrete contractors</a> to sequence work so landscape plants go in after hardscape is complete and irrigation is laid before concrete is poured. When tree removal or major pruning is needed first, we work alongside <a href="https://murrietatreeexperts.com">certified arborists</a> to ensure everything flows in the right order.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Hemet', 'Perris'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Schedule Your Free Landscaping Consultation in Perris" />
+  </section>
+</BaseLayout>

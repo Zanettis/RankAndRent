@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="Concrete Contractor Perris, CA | Driveways, Patios & New Construction | Free Estimates"
+  description="Licensed concrete contractor serving Perris, CA. New driveway installation, patio construction, decorative stamped concrete, and repair for Perris's growing communities. Free estimates."
+  canonicalUrl="https://concrete-murrieta.com/perris/"
+>
+  <Hero
+    headline="Concrete Driveways & Patios in Perris, CA"
+    subheadline="Licensed concrete contractors serving all of Perris. New driveways, patios, walkways, decorative stamped concrete, and repair — fully permitted, built for new construction and established homes. Free estimates."
+    ctaText="Get a Free Estimate"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Concrete Services in Perris</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      From new driveway and patio installs in Perris's fast-growing subdivisions to concrete repair in established neighborhoods near Lake Perris, we deliver quality work — licensed, permitted, and guaranteed.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>New Concrete for Perris's Growing Subdivisions</h2>
+      <p>
+        Perris is one of Inland Southern California's fastest-growing cities, with new residential developments expanding rapidly along the 215 freeway corridor. New homeowners in Perris's subdivisions frequently upgrade their builder-grade outdoor spaces within the first few years — adding extended driveways to accommodate more vehicles, backyard patios for outdoor living, concrete walkways connecting side yards, or decorative stamped concrete to elevate curb appeal. We work with new construction homeowners throughout Perris regularly and understand the permitting requirements and HOA approval processes for exterior concrete improvements.
+      </p>
+
+      <h2>Driveway Expansion and RV Pads in Perris</h2>
+      <p>
+        Perris has a large number of homes with the yard space to accommodate RV parking, boat storage, or additional vehicle parking — and concrete is the right surface for it. We pour RV pads, extended driveways, and secondary parking areas that are properly graded for drainage and built to handle heavy vehicle loads. We pull all required permits from the City of Perris and ensure the work is inspected and documented correctly.
+      </p>
+
+      <h2>Concrete for Established Perris Neighborhoods</h2>
+      <p>
+        Older neighborhoods near Lake Perris State Recreation Area and Perris's historic downtown have driveways and walkways that have been in place for decades. Perris's soil conditions — including areas with expansive clay — contribute to cracking and heaving over time. We assess whether cracking is superficial and repairable or a sign of deeper subgrade movement requiring full replacement. Either way, we give you an honest recommendation and a clear written estimate before any work begins.
+      </p>
+
+      <h2>Serving All Perris Communities</h2>
+      <p>
+        We pour and repair concrete throughout Perris, including neighborhoods near Lake Perris, the 215 freeway corridor, Mead Valley, and developing areas near the Southern California Logistics Airport. All concrete work is permitted through the City of Perris or Riverside County as required. Free estimates available anywhere in Perris — no travel fee.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Hemet', 'Perris'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Get Your Free Concrete Estimate in Perris" />
+  </section>
+</BaseLayout>

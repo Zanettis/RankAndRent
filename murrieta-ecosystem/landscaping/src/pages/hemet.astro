@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="Landscaping Hemet, CA | Lawn Care & Yard Design | Free Consultation"
+  description="Professional landscaping and lawn care in Hemet, CA. Drought-tolerant designs, irrigation upgrades, and yard transformations for Hemet's residential communities. Affordable, free consultations."
+  canonicalUrl="https://landscapingmurrieta.com/hemet/"
+>
+  <Hero
+    headline="Landscaping & Lawn Care in Hemet, CA"
+    subheadline="Affordable, drought-smart yard transformations for Hemet's homes and retirement communities. Custom landscape design, lawn care, irrigation repair, and seasonal cleanup. Free consultations throughout Hemet and the San Jacinto Valley."
+    ctaText="Get a Free Consultation"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Landscaping Services in Hemet</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      We design and maintain beautiful, water-efficient yards throughout Hemet — tailored to the San Jacinto Valley's warm climate and realistic for a range of budgets.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Landscaping for Hemet's Homes and Retirement Communities</h2>
+      <p>
+        Hemet is a city of about 90,000 in the San Jacinto Valley with a large retirement population, established residential neighborhoods, and a significant number of mobile home communities. Many yards in Hemet were landscaped years or decades ago with water-hungry grass and outdated irrigation systems that are now costly to run and difficult to maintain. We specialize in practical, affordable landscape transformations — replacing overgrown or dying lawns with low-maintenance, drought-tolerant designs that look great year-round and cost far less to water.
+      </p>
+
+      <h2>Drought-Tolerant Landscaping in Hemet</h2>
+      <p>
+        Hemet is served by Hemet Valley water agencies that operate under California's tiered water pricing structure. Outdoor irrigation is the single largest driver of residential water bills in the summer, and older sprinkler systems in Hemet's established neighborhoods are often wildly inefficient — spraying water onto sidewalks, running during peak heat, or losing significant water to evaporation. We upgrade irrigation systems to modern smart controllers and drip systems, and design plant palettes using California natives and drought-adapted species that thrive in Hemet's climate with minimal supplemental water once established.
+      </p>
+      <p>
+        Many of our Hemet landscape designs also qualify for turf replacement rebates through local water agencies, which can reduce the cost of removing lawn and installing drought-tolerant alternatives. We handle the rebate documentation for you.
+      </p>
+
+      <h2>Serving All Hemet Neighborhoods</h2>
+      <p>
+        We landscape homes throughout Hemet, including East Hemet, Valle Vista, Seven Hills, the Ramona Bowl area, and neighborhoods along Florida Avenue, Stetson Avenue, and Acacia Avenue. We also serve properties in the surrounding unincorporated areas of Riverside County. Our team works on single-family homes, mobile home community common areas, and light commercial properties.
+      </p>
+
+      <h2>Coordinated Outdoor Improvements</h2>
+      <p>
+        Many Hemet homeowners combine landscaping with other outdoor improvements — new concrete patios, repaired driveways, or tree removal to open up yard space. We coordinate directly with <a href="https://concrete-murrieta.com">concrete contractors</a> to sequence work properly so landscaping goes in after hardscape is complete. When projects involve tree removal or significant trimming, we recommend working with <a href="https://murrietatreeexperts.com">certified arborists</a> first to clear the space before new planting begins.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Hemet', 'Perris'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Schedule Your Free Landscaping Consultation in Hemet" />
+  </section>
+</BaseLayout>

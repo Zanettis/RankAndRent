@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="Tree Service Hemet, CA | Tree Removal, Trimming & Stump Grinding"
+  description="Licensed tree service in Hemet, CA. Tree removal, trimming, stump grinding, and 24/7 emergency response. Serving all Hemet neighborhoods in the San Jacinto Valley. Free estimates."
+  canonicalUrl="https://murrietatreeexperts.com/hemet/"
+>
+  <Hero
+    headline="Tree Service in Hemet, CA — Licensed & Local"
+    subheadline="Certified arborists serving all of Hemet's neighborhoods — from mature trees in established residential areas to overgrown palms near mobile home parks. Tree removal, trimming, stump grinding, and emergency service. Free estimates."
+    ctaText="Get a Free Quote"
+    secondaryCtaText={`Call ${SITE_CONFIG.phone}`}
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Tree Services We Offer in Hemet</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      From mature shade trees in Hemet's older residential neighborhoods to palms along commercial corridors, our certified arborists handle every tree challenge professionally and at fair prices.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Tree Care in Hemet's Established Neighborhoods</h2>
+      <p>
+        Hemet is a city of about 90,000 residents nestled in the San Jacinto Valley, with a mix of older residential neighborhoods, mobile home communities, and a significant retirement population. Many of the trees here were planted 30–50 years ago and have grown well beyond what a homeowner can safely manage alone. Large eucalyptus, overgrown olive trees, and spreading ash trees are common throughout Hemet's established areas — and many have branches hanging over rooftops, encroaching on power lines, or lifting sidewalks with root growth. Our arborists assess each situation thoroughly and provide honest, fair-priced solutions.
+      </p>
+
+      <h2>Palm Tree Removal and Trimming in Hemet</h2>
+      <p>
+        Mexican fan palms and Canary Island date palms are widespread throughout Hemet — in residential yards, along commercial strips, and in mobile home park common areas. Without annual maintenance, palm skirts (dead fronds) build up into dense nesting habitat for rats and fire hazards during Hemet's dry summer months. We provide skirt removal, full crown cleaning, and palm removal for trees of any height. We use proper rigging and equipment to keep neighboring structures safe during the process.
+      </p>
+
+      <h2>Serving All Hemet Neighborhoods</h2>
+      <p>
+        We provide tree service throughout Hemet, including East Hemet, Valle Vista, Ramona Bowl area, Seven Hills, and neighborhoods near Florida Avenue and Stetson Avenue. We also serve properties near Diamond Valley Lake and throughout the surrounding unincorporated areas of Riverside County. Our team is familiar with the unique tree challenges common to the San Jacinto Valley — including drought-stressed trees that look healthy but have compromised root systems.
+      </p>
+
+      <h2>Emergency Tree Service in Hemet</h2>
+      <p>
+        Wind events and summer heat stress can push already-weakened trees over the edge without warning. Our emergency response team is available 24 hours a day, seven days a week for fallen trees, split limbs, and storm damage in Hemet. We respond promptly, stabilize the situation, and provide a clear written estimate before any additional work begins. We work with most homeowner insurance carriers and can document the damage thoroughly if a claim is needed.
+      </p>
+
+      <h2>Fair Pricing for Hemet Homeowners</h2>
+      <p>
+        We understand that Hemet is a budget-conscious community, and we price our work accordingly. There are no surprise fees, no pressure upsells, and no inflated estimates. We give you an honest assessment of what actually needs to be done — and what can wait. Our written estimates are free, and we stand behind every job with a satisfaction guarantee. We haul all debris from the site and leave your property clean.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Hemet', 'Perris'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Get Your Free Tree Service Quote in Hemet" />
+  </section>
+</BaseLayout>

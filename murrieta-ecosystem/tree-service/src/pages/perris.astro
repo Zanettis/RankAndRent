@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="Tree Service Perris, CA | Tree Removal, Trimming & Stump Grinding"
+  description="Licensed tree service in Perris, CA. Tree removal, trimming, stump grinding, and 24/7 emergency response. Serving new construction neighborhoods and established communities near Lake Perris. Free estimates."
+  canonicalUrl="https://murrietatreeexperts.com/perris/"
+>
+  <Hero
+    headline="Tree Service in Perris, CA — Certified & Ready"
+    subheadline="Licensed arborists serving all of Perris — from new construction subdivisions near the 215 freeway to established neighborhoods near Lake Perris. Tree removal, trimming, stump grinding, and emergency service. Free estimates."
+    ctaText="Get a Free Quote"
+    secondaryCtaText={`Call ${SITE_CONFIG.phone}`}
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Tree Services We Offer in Perris</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      Whether you're a new homeowner in one of Perris's fast-growing subdivisions or an established resident near Lake Perris State Recreation Area, our certified arborists have the right solution for your trees.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Tree Service for Perris's Fast-Growing Communities</h2>
+      <p>
+        Perris is one of Inland Southern California's fastest-growing cities, with a population of about 80,000 and expanding rapidly. New subdivisions have been rising throughout Perris for the past decade, bringing an influx of new homeowners who are planting trees for the first time or dealing with builder-standard trees that need professional care to establish properly. Young trees planted in compacted builder soil often develop weak structure without early corrective pruning — our arborists can establish good architecture early before problems become expensive.
+      </p>
+
+      <h2>Tree Removal for New Construction in Perris</h2>
+      <p>
+        Perris's rapid growth often means construction activity near existing trees — additions, ADUs, pool installations, and hardscape projects that require root zone clearing or full tree removal. We provide clean, efficient tree removal with proper root management to protect underground utilities and neighboring structures. We pull all required permits when needed and coordinate with general contractors and landscapers to keep your project timeline on track.
+      </p>
+
+      <h2>Mature Trees Near Lake Perris and Older Neighborhoods</h2>
+      <p>
+        The older residential areas of Perris — particularly neighborhoods near Lake Perris State Recreation Area and the historic downtown corridor — have large, mature trees that have been growing for decades. Many of these trees are now approaching the end of their structural lifespan or have developed significant deadwood that poses a falling hazard during Santa Ana wind events. Our arborists conduct thorough visual assessments and can identify risk before a tree becomes an emergency.
+      </p>
+
+      <h2>Emergency Tree Service in Perris</h2>
+      <p>
+        Wind events in the Perris Valley can be intense — funneled between mountain ranges and intensified by the topography. When a tree falls on a fence, structure, or vehicle, you need someone on-site fast. Our emergency team is available 24 hours a day, seven days a week. We respond quickly, assess the risk, remove what needs to go, and document everything for insurance purposes if needed.
+      </p>
+
+      <h2>Why Perris Homeowners Choose Us</h2>
+      <p>
+        We're based in Murrieta — about 25 minutes from most Perris neighborhoods — and we serve the broader southwest Riverside County area regularly. All our arborists are California licensed and carry full liability insurance and workers' compensation coverage. We provide written estimates before any work begins, haul all debris from the site, and don't consider the job done until you're satisfied. No hidden fees, no pressure tactics.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Hemet', 'Perris'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Get Your Free Tree Service Quote in Perris" />
+  </section>
+</BaseLayout>
