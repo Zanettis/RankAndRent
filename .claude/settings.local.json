@@ -130,7 +130,9 @@
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\\\\murrieta-ecosystem\\\\\" -Directory | Select-Object Name)",
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\\\\murrieta-ecosystem\" -Directory)",
       "Bash(Get-ChildItem -Force)",
-      "Bash(sed 's/\\\\.md$//')"
+      "Bash(sed 's/\\\\.md$//')",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\zanet\\\\OneDrive\\\\Documentos\\\\GitHub\\\\RankAndRent\\\\murrieta-ecosystem\\\\concrete\\\\\" -Recurse -Force | Select-Object FullName, Extension | Sort-Object FullName)",
+      "Bash(git -C \"c:/Users/zanet/OneDrive/Documentos/GitHub/RankAndRent\" status)"
     ]
   }
 }

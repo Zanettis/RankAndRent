@@ -1,5 +1,13 @@
 {
   "buildCommand": "npm run build",
   "installCommand": "cd ../.. && npm install",
-  "framework": "astro"
+  "framework": "astro",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.landscapingmurrieta.com" }],
+      "destination": "https://landscapingmurrieta.com/:path*",
+      "permanent": true
+    }
+  ]
 }

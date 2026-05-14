@@ -112,11 +112,21 @@ Cada site tem seu próprio projeto na Vercel. Configurações obrigatórias em c
 {
   "buildCommand": "npm run build",
   "installCommand": "cd ../.. && npm install",
-  "framework": "astro"
+  "framework": "astro",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.SEU-DOMINIO.com" }],
+      "destination": "https://SEU-DOMINIO.com/:path*",
+      "permanent": true
+    }
+  ]
 }
 ```
 
 O `cd ../.. && npm install` é essencial — instala do root do monorepo para que o workspace hoisting funcione corretamente (deps transitivas como `zod` ficam disponíveis).
+
+O redirect `www → não-www` é obrigatório. Sem ele, o Google rastreia as duas versões e classifica as páginas `www` como "Página alternativa com tag canônica adequada" no Search Console, desperdiçando crawl budget. O `permanent: true` emite um 301, que transfere o valor de SEO para a versão canônica.
 
 #### package.json (em cada site)
 
@@ -137,6 +147,12 @@ Cada site deve ter:
 | `Missing pages directory: src/pages` | Idem (buildando da raiz do repo) | Idem |
 | `invalid "runtime": nodejs18.x` | Vercel buildou com Node 22, adapter fez fallback | Garantir `engines.node: "20.x"` no package.json do site |
 | `Cannot find module 'zod'` | installCommand rodando só no subdiretório | Garantir `cd ../.. && npm install` no vercel.json |
+
+#### Diagnóstico rápido de SEO (Search Console)
+
+| Sintoma no Search Console | Causa | Fix |
+|---|---|---|
+| "Página alternativa com tag canônica adequada" em ~N páginas | `www.dominio.com` acessível sem redirect; Google rastreia ambas as versões | Garantir o bloco `redirects` no `vercel.json` redirecionando `www` → não-`www` |
 
 ---
 

@@ -1,5 +1,13 @@
 {
   "buildCommand": "npm run build",
   "installCommand": "cd ../.. && npm install",
-  "framework": "astro"
+  "framework": "astro",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.murrietatreeexperts.com" }],
+      "destination": "https://murrietatreeexperts.com/:path*",
+      "permanent": true
+    }
+  ]
 }
