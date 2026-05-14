@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="Water District Rebates for Drought-Tolerant Landscaping | Murrieta & Temecula"
+  description="EVMWD and RCWD offer cash rebates for replacing grass with drought-tolerant landscaping in Murrieta, Wildomar, Temecula, and surrounding areas. Learn how to claim up to $3 per square foot — and let us do the work."
+  canonicalUrl="https://landscapingmurrieta.com/drought-tolerant-rebate/"
+>
+  <Hero
+    headline="Get Paid to Upgrade Your Yard — Water District Rebates Explained"
+    subheadline="EVMWD and RCWD offer cash rebates when you replace grass with drought-tolerant landscaping. We handle the design, installation, and rebate paperwork — you get a beautiful yard and money back."
+    ctaText="Get a Free Consultation"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Our Drought-Tolerant Landscaping Services</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      We design and install rebate-qualifying drought-tolerant landscapes that reduce your water bill, earn you cash back, and look better than the lawn they replaced.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Which Water District Serves Your Home?</h2>
+      <p>
+        Two water agencies serve most of the Murrieta/Temecula Valley area, and both offer turf replacement rebate programs:
+      </p>
+      <ul>
+        <li><strong>Elsinore Valley Municipal Water District (EVMWD)</strong> — serves most of Murrieta, Wildomar, Lake Elsinore, and Canyon Lake</li>
+        <li><strong>Rancho California Water District (RCWD)</strong> — serves most of Temecula and portions of Murrieta and Winchester</li>
+      </ul>
+      <p>
+        To confirm which district serves your address, look at your water bill — the agency name appears in the header. You can also call your local water district or check their website.
+      </p>
+
+      <h2>How Much Can You Get Back?</h2>
+      <p>
+        Rebate amounts vary by program and funding availability. As of 2025, typical rebate ranges in this area:
+      </p>
+      <ul>
+        <li><strong>EVMWD Turf Replacement:</strong> Up to $2–$3 per square foot of qualifying lawn removed and replaced with water-efficient landscaping</li>
+        <li><strong>RCWD WaterSmart Landscaping:</strong> Up to $2 per square foot for qualifying turf conversion projects</li>
+        <li><strong>Metropolitan Water District (MWD) SoCal Incentive:</strong> Additional $1 per square foot layered on top of local rebates for customers in MWD's service area (which includes EVMWD and RCWD customers)</li>
+      </ul>
+      <p>
+        A 500 sq ft lawn replacement can realistically yield $1,500–$2,000 in combined rebates. A 1,000 sq ft front yard replacement can return $3,000–$4,000. These are rebates paid to you after the project is complete and verified — money in your pocket on top of the long-term water savings.
+      </p>
+
+      <h2>What Qualifies for the Rebate?</h2>
+      <p>
+        Most rebate programs require:
+      </p>
+      <ul>
+        <li>Removal of existing turf (grass must be fully removed, not just killed)</li>
+        <li>Replacement with drought-tolerant plants, mulch, permeable hardscape, or artificial turf (rules vary by district — artificial turf may qualify under some programs)</li>
+        <li>Installation of drip or low-flow irrigation (sprinklers spraying grass typically don't qualify)</li>
+        <li>Pre-project approval from the water district before you start (critical — most programs require you to apply and get approval before breaking ground, or you'll be disqualified)</li>
+        <li>Post-project inspection by the water district</li>
+      </ul>
+      <p>
+        <strong>The most common mistake:</strong> Homeowners complete the project, then apply for the rebate — and get rejected because they didn't get pre-approval. We walk you through the application process before we start work to make sure you're eligible.
+      </p>
+
+      <h2>What a Rebate-Qualifying Landscape Looks Like</h2>
+      <p>
+        A well-designed drought-tolerant yard doesn't look like bare dirt and rocks. The best designs combine:
+      </p>
+      <ul>
+        <li><strong>California native plants</strong> — sages, buckwheats, toyon, and ceanothus that are adapted to Murrieta's dry summers and support local pollinators</li>
+        <li><strong>Mediterranean-climate plants</strong> — lavender, rosemary, agave, and ornamental grasses that thrive in inland SoCal conditions</li>
+        <li><strong>Decomposed granite or mulch</strong> — between plants to suppress weeds and retain moisture</li>
+        <li><strong>Drip irrigation</strong> — targeted to each plant's root zone, controlled by a smart weather-based controller</li>
+        <li><strong>Permeable hardscape accents</strong> — steppers, gravel paths, or small boulders to add structure</li>
+      </ul>
+      <p>
+        We've designed dozens of turf replacement projects in Murrieta and Temecula. They consistently outperform the lawn they replaced — lower water bills, zero mowing, and better curb appeal.
+      </p>
+
+      <h2>Our Process — From Application to Final Inspection</h2>
+      <ol>
+        <li><strong>Free consultation:</strong> We visit your property, measure the lawn area, and assess which district's rebate program applies</li>
+        <li><strong>Design:</strong> We create a planting plan that meets rebate requirements and complements your home's style</li>
+        <li><strong>Pre-approval:</strong> We help you submit the rebate application to your water district before work begins</li>
+        <li><strong>Installation:</strong> Turf removal, subgrade prep, planting, mulching, and irrigation installation</li>
+        <li><strong>Post-inspection:</strong> District inspector verifies the project meets program requirements</li>
+        <li><strong>Rebate payment:</strong> You receive the rebate check from your water district</li>
+      </ol>
+
+      <h2>Service Area for Rebate-Qualifying Projects</h2>
+      <p>
+        We install drought-tolerant landscaping and assist with rebate applications throughout the EVMWD and RCWD service areas, including Murrieta, Temecula, Wildomar, Menifee, Lake Elsinore, Canyon Lake, and Winchester. If your city isn't listed, contact us — we may still serve your area.
+      </p>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <section class="bg-green-50 border border-green-200 rounded-xl max-w-4xl mx-auto px-8 py-10 mx-4 my-8">
+    <div class="text-center">
+      <h2 class="text-2xl font-bold text-primary mb-3">Ready to Apply for Your Rebate?</h2>
+      <p class="text-gray-600 mb-6">
+        We handle the paperwork, the design, and the installation. You get a better-looking yard, a lower water bill, and a rebate check from your water district.
+      </p>
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Serving the EVMWD & RCWD Service Areas</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Canyon Lake', 'Winchester'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Get Your Free Drought-Tolerant Landscaping Consultation" />
+  </section>
+</BaseLayout>
