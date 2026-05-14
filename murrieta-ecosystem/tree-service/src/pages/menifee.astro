@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="Tree Service Menifee, CA | Tree Removal, Trimming & Stump Grinding"
+  description="Licensed tree service in Menifee, CA. Tree removal, trimming, stump grinding, and 24/7 emergency response. Serving Sun City, Quail Valley, Romoland, and all Menifee communities. Free estimates."
+  canonicalUrl="https://murrietatreeexperts.com/menifee/"
+>
+  <Hero
+    headline="Tree Service in Menifee, CA — Certified & Ready"
+    subheadline="Licensed arborists serving all of Menifee — from Sun City to new master-planned communities. Tree removal, trimming, stump grinding, and 24/7 emergency service. Free estimates."
+    ctaText="Get a Free Quote"
+    secondaryCtaText={`Call ${SITE_CONFIG.phone}`}
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Tree Services We Offer in Menifee</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      From aging trees in established Sun City neighborhoods to young trees in Menifee's newest developments, our certified arborists handle every tree challenge professionally.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Tree Care Across Menifee's Diverse Communities</h2>
+      <p>
+        Menifee is one of Inland Southern California's fastest-growing cities, with a mix of established communities like Sun City — where mature trees planted decades ago now require professional maintenance or removal — and brand-new neighborhoods where young trees are being planted for the first time. Both situations call for different approaches. Mature trees in Sun City often have root systems that have grown into sidewalks, sewer lines, and foundations. Newly planted trees in newer developments need structural pruning early to establish safe architecture before problems develop. Our arborists understand both scenarios.
+      </p>
+
+      <h2>Palm Tree Removal and Trimming in Menifee</h2>
+      <p>
+        Menifee has a significant number of Canary Island date palms and Mexican fan palms planted throughout its neighborhoods and commercial corridors. These palms require annual skirt removal (dead frond removal) to eliminate fire risk and pest habitat. Overgrown palms that have not been maintained in years are also a liability — the heavy fruit clusters and dead fronds can fall on cars, people, and structures. We remove and trim palms of all sizes, including large specimens that require bucket trucks or climbing gear.
+      </p>
+
+      <h2>Serving All Menifee Neighborhoods</h2>
+      <p>
+        We provide tree service throughout Menifee, including Sun City, Quail Valley, Romoland, Bradley, Heritage Lakes, Heartland, and the newer communities near McCall Boulevard and Newport Road. We're also familiar with the HOA guidelines in Menifee's master-planned communities and can work within their approval requirements.
+      </p>
+
+      <h2>Emergency Tree Service in Menifee</h2>
+      <p>
+        When Santa Ana winds blow through Menifee, trees weakened by drought stress or root disease are the first to fail. Our emergency team is available 24 hours a day, seven days a week for fallen trees, hanging branches, and storm damage. We respond quickly, assess the risk, and remove what needs to go — then provide a clear written estimate for any follow-up work.
+      </p>
+
+      <h2>Why Menifee Homeowners Choose Us</h2>
+      <p>
+        We're locally based in the Murrieta/Menifee corridor — a short drive from any neighborhood in the city. All arborists are California licensed and carry full liability and workers' comp insurance. We provide written estimates before any work begins, haul all debris from the site, and follow up to make sure you're satisfied. No hidden fees, no upsells.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Canyon Lake', 'Winchester'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Get Your Free Tree Service Quote in Menifee" />
+  </section>
+</BaseLayout>

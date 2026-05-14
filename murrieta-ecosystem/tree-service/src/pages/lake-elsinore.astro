@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="Tree Service Lake Elsinore, CA | Defensible Space & Tree Removal | Free Estimates"
+  description="Licensed tree service in Lake Elsinore, CA. Defensible space clearance, tree removal, trimming, and 24/7 emergency service. CAL FIRE compliant. Serving Tuscany Hills, Lakeland Village, Canyon Hills, and all Lake Elsinore communities."
+  canonicalUrl="https://murrietatreeexperts.com/lake-elsinore/"
+>
+  <Hero
+    headline="Tree Service in Lake Elsinore, CA — Defensible Space Specialists"
+    subheadline="Licensed arborists serving Lake Elsinore's hillside communities, WUI fire zones, and lakefront neighborhoods. Defensible space clearance, tree removal, trimming, and 24/7 emergency service."
+    ctaText="Get a Free Quote"
+    secondaryCtaText={`Call ${SITE_CONFIG.phone}`}
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Tree Services We Offer in Lake Elsinore</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      Lake Elsinore's fire-prone hillsides and diverse neighborhoods require arborists who understand both fire safety compliance and property aesthetics. We deliver both.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Defensible Space Tree Work for Lake Elsinore's WUI Zones</h2>
+      <p>
+        Large portions of Lake Elsinore — including Tuscany Hills, Lakeland Village, the Canyon Hills area, and many hillside communities along Ortega Highway — fall within CAL FIRE's designated Wildland-Urban Interface (WUI) zones. Homeowners in these areas are legally required to maintain defensible space: 0–30 feet of Zone 1 clearance directly around the home, and 30–100 feet of Zone 2 reduced fuel spacing beyond that. Trees are a critical part of this calculation — dead trees must be removed, live trees must be spaced appropriately (at least 10 feet between crowns), and lower limbs must be cleared to eliminate ladder fuels.
+      </p>
+      <p>
+        We perform defensible space clearance that meets CAL FIRE and Riverside County standards. If you've received a vegetation management notice or a compliance deadline is approaching, contact us immediately — we prioritize fire-season compliance work.
+      </p>
+
+      <h2>Tree Removal Near the Lake and Hillside Properties</h2>
+      <p>
+        Lake Elsinore's varied terrain — from flat lakefront neighborhoods to steep canyon-facing hillsides — creates site-specific challenges for tree removal. Large trees on slopes require careful directional felling or sectional removal with specialized rigging to avoid damage to structures, fences, and neighboring properties. Our crews are trained and equipped for complex removals in tight spaces and on difficult terrain.
+      </p>
+
+      <h2>Serving All Lake Elsinore Communities</h2>
+      <p>
+        We provide tree service throughout Lake Elsinore, including Tuscany Hills, Canyon Hills, Lakeland Village, Lake Hills Estates, Mission Trail corridors, Lakeshore neighborhoods, and rural properties along Ortega Highway (Highway 74). We also serve unincorporated Riverside County areas adjacent to Lake Elsinore city limits.
+      </p>
+
+      <h2>Emergency Tree Service in Lake Elsinore</h2>
+      <p>
+        Lake Elsinore's geography — a bowl surrounded by hills — channels strong wind events through the valley and up into hillside neighborhoods. During Santa Ana conditions, weakened or dead trees on these properties can fail with little warning. Our 24/7 emergency team responds to fallen trees, hanging branches, and imminent hazards any time of day or night. We assess, remove, and clean up — then document the work for your insurance claim if needed.
+      </p>
+
+      <h2>Why Lake Elsinore Homeowners Choose Us</h2>
+      <p>
+        We're based in the Murrieta area and serve Lake Elsinore regularly — we know the terrain, the fire zones, and the regulatory requirements. All arborists are California licensed and fully insured. We provide written estimates before work begins, and we leave every job site clean. Free on-site quotes available anywhere in Lake Elsinore with no obligation.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Canyon Lake', 'Winchester'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Get Your Free Tree Service Quote in Lake Elsinore" />
+  </section>
+</BaseLayout>

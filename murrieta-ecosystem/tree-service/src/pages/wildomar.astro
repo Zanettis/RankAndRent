@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="Tree Service Wildomar, CA | Tree Removal & Trimming | Free Estimates"
+  description="Licensed tree service in Wildomar, CA. Tree removal, trimming, stump grinding, and 24/7 emergency response. Hillside lots, fire-zone trees, and HOA compliance. Free estimates."
+  canonicalUrl="https://murrietatreeexperts.com/wildomar/"
+>
+  <Hero
+    headline="Tree Service in Wildomar, CA — Licensed & Local"
+    subheadline="Certified arborists serving Wildomar's hillside properties, Heritage Lake, and rural lots. Tree removal, trimming, stump grinding, and 24/7 emergency service. Free estimates."
+    ctaText="Get a Free Quote"
+    secondaryCtaText={`Call ${SITE_CONFIG.phone}`}
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Tree Services We Offer in Wildomar</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      Wildomar's mix of hillside lots, rural parcels, and newer subdivisions creates unique tree challenges. Our arborists handle every situation safely and efficiently.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Tree Care on Wildomar's Hillside and Rural Properties</h2>
+      <p>
+        Wildomar sits between Murrieta and Lake Elsinore, with a landscape that ranges from flat suburban streets to steep hillside lots bordering undeveloped open space. That mix creates real tree hazards: large oaks and eucalyptus growing on uneven terrain, root systems undermining driveways and retaining walls, and mature trees weakened by Wildomar's clay soils and periodic drought stress. Our arborists are experienced working on sloped lots and rural parcels where crane access or specialized rigging is required.
+      </p>
+
+      <h2>Fire Risk and Defensible Space in Wildomar</h2>
+      <p>
+        Portions of Wildomar — particularly properties bordering open hillsides and canyon areas — fall within CAL FIRE's designated Wildland-Urban Interface (WUI) zones. Homeowners in these areas are required to maintain 100 feet of defensible space, which includes removing dead trees and shrubs, clearing ladder fuels, and keeping trees trimmed away from rooflines. We perform defensible space clearance work that meets CAL FIRE and Riverside County standards. If an inspection is coming up or you've received a compliance notice, we respond quickly.
+      </p>
+
+      <h2>Serving All Wildomar Neighborhoods</h2>
+      <p>
+        We provide tree service throughout Wildomar, including Heritage Lake, Palomar Hills, Clinton Keith Estates, and the rural parcels along Wildomar Trail and Clinton Keith Road. We also serve properties in unincorporated Riverside County adjacent to Wildomar city limits. No travel fee within our service area.
+      </p>
+
+      <h2>Emergency Tree Service in Wildomar</h2>
+      <p>
+        Santa Ana wind events hit Wildomar's hillside properties hard. A single strong gust can topple a weakened oak or bring down a large eucalyptus branch onto a roof or fence. Our 24/7 emergency response team is available any time a fallen or hanging tree creates an immediate hazard. We stabilize the situation, remove the debris, and provide a written assessment of surrounding trees that may present future risk.
+      </p>
+
+      <h2>Why Wildomar Homeowners Choose Us</h2>
+      <p>
+        We're based in the Murrieta area — close enough to Wildomar that we respond fast. All our arborists carry California licenses and we maintain full liability and workers' comp insurance on every job. We provide written estimates before work begins, haul all debris, and leave your property clean. No surprise charges, no pressure to add services.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Canyon Lake', 'Winchester'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Get Your Free Tree Service Quote in Wildomar" />
+  </section>
+</BaseLayout>
