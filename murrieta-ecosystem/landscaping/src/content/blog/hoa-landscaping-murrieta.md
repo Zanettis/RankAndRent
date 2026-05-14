@@ -30,7 +30,7 @@ Understanding what the committee is actually evaluating makes submissions much e
 
 **Turf requirements and allowances**: Many Murrieta HOAs historically required minimum turf coverage in front yards. California's evolving water policy is changing this — many HOAs are now actively allowing or encouraging turf removal. But the requirements vary by community, and you need to know your specific HOA's current position before planning a turf-replacement project.
 
-**Tree heights and canopy management**: Many Murrieta HOAs regulate tree heights at property lines and near fences. A [certified arborist](https://treeservice-murrieta.com) familiar with your community's guidelines can advise on compliant trimming before you submit your landscape plan — or provide written documentation that your trees meet HOA standards.
+**Tree heights and canopy management**: Many Murrieta HOAs regulate tree heights at property lines and near fences. A [certified arborist](https://murrietatreeexperts.com) familiar with your community's guidelines can advise on compliant trimming before you submit your landscape plan — or provide written documentation that your trees meet HOA standards.
 
 **Hardscape materials and colors**: Concrete patios, pavers, and retaining walls typically require HOA review. Material type, color, and height restrictions are common. Note that [concrete patios and driveways](https://concrete-murrieta.com/services/patios-walkways) also require HOA approval in most communities — if you're doing both hardscape and landscaping, coordinate your submissions to avoid sequential review delays.
 

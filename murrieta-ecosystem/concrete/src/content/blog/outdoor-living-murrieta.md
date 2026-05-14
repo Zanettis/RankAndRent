@@ -28,7 +28,7 @@ A proper outdoor patio or dining area needs:
 
 Mature trees are the best outdoor living amenity a Murrieta property can have. A well-placed tree provides natural shade that makes an outdoor space usable even during Murrieta's hottest afternoons — something a pergola or shade sail can approximate but never replicate.
 
-The challenge is that tree roots and concrete are natural adversaries. Before designing any outdoor patio near established trees, a [tree root assessment](https://treeservice-murrieta.com) is essential. Knowing where major roots extend allows you to:
+The challenge is that tree roots and concrete are natural adversaries. Before designing any outdoor patio near established trees, a [tree root assessment](https://murrietatreeexperts.com) is essential. Knowing where major roots extend allows you to:
 
 - Design the patio footprint to avoid cutting major structural roots
 - Route the patio edge around root flare areas that would otherwise be excavated
@@ -45,7 +45,7 @@ The most satisfying outdoor living spaces in Murrieta integrate multiple element
 
 **Shade element**: Pergola (requires footings and structural connections planned during concrete pour), sail shade (requires posts with concrete footings), or natural tree canopy.
 
-**Surrounding landscaping**: This is where the space truly comes alive. [Professional landscaping](https://landscaping-murrieta.com) around the patio creates privacy, adds color and fragrance, and softens the hardscape aesthetically. Tall ornamental grasses create natural privacy screens; flowering perennials bring color and pollinators; fragrant herbs like rosemary and lavender planted near seating areas create a sensory experience.
+**Surrounding landscaping**: This is where the space truly comes alive. [Professional landscaping](https://landscapingmurrieta.com) around the patio creates privacy, adds color and fragrance, and softens the hardscape aesthetically. Tall ornamental grasses create natural privacy screens; flowering perennials bring color and pollinators; fragrant herbs like rosemary and lavender planted near seating areas create a sensory experience.
 
 **Lighting**: Low-voltage LED landscape lighting extends the usability of outdoor spaces into evening and is best planned when irrigation is being installed — running conduit at the same time saves digging up your yard twice.
 

@@ -20,7 +20,7 @@ Before you can solve problems, you need to understand what you're working agains
 
 **Water restrictions**: California's tiered water pricing and periodic drought restrictions make overwatering expensive and socially discouraged. The goal is the minimum water your lawn needs to survive and look acceptable — not the amount needed for a lush, golf-course appearance.
 
-**Trees competing for water**: If you have mature trees in or near your lawn areas, their roots are almost certainly competing with your turf for both water and nutrients. This is one of the most common reasons Murrieta lawns look patchy despite adequate irrigation. Working with a [certified arborist](https://treeservice-murrieta.com/services/tree-trimming) to understand your tree's root systems can help you decide whether to adjust your lawn layout or accept lower turf density in those zones.
+**Trees competing for water**: If you have mature trees in or near your lawn areas, their roots are almost certainly competing with your turf for both water and nutrients. This is one of the most common reasons Murrieta lawns look patchy despite adequate irrigation. Working with a [certified arborist](https://murrietatreeexperts.com/services/tree-trimming) to understand your tree's root systems can help you decide whether to adjust your lawn layout or accept lower turf density in those zones.
 
 ## The Right Grass for Murrieta
 

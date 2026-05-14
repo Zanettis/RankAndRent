@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://landscaping-murrieta.com/sitemap-index.xml
+Sitemap: https://landscapingmurrieta.com/sitemap-index.xml

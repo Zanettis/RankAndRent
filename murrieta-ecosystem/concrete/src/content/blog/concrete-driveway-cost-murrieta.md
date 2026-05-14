@@ -30,9 +30,9 @@ They do NOT include: root removal, soil stabilization if subgrade is inadequate,
 
 **Existing material removal**: Removing old concrete costs $1.50–$3.00/sq ft. Asphalt is typically less expensive to remove. If you have pavers, the cost increases. Removal costs are a significant portion of many projects.
 
-**Tree roots**: This is Murrieta-specific and critically important. Established eucalyptus, sycamore, oak, and ficus trees common in Murrieta neighborhoods have aggressive surface root systems that frequently run under driveways. A [certified arborist assessment](https://treeservice-murrieta.com) before any driveway work is strongly recommended.
+**Tree roots**: This is Murrieta-specific and critically important. Established eucalyptus, sycamore, oak, and ficus trees common in Murrieta neighborhoods have aggressive surface root systems that frequently run under driveways. A [certified arborist assessment](https://murrietatreeexperts.com) before any driveway work is strongly recommended.
 
-If roots are present under your failing driveway, replacing it without addressing the roots guarantees the same cracking will return within 5–10 years. Options include root pruning (cutting roots to a depth that prevents future intrusion), root barriers (physical membranes that redirect roots downward), or [tree removal](https://treeservice-murrieta.com/services/tree-removal) in cases where the tree is too aggressive or too close. Each option affects both the arborist cost and the driveway design.
+If roots are present under your failing driveway, replacing it without addressing the roots guarantees the same cracking will return within 5–10 years. Options include root pruning (cutting roots to a depth that prevents future intrusion), root barriers (physical membranes that redirect roots downward), or [tree removal](https://murrietatreeexperts.com/services/tree-removal) in cases where the tree is too aggressive or too close. Each option affects both the arborist cost and the driveway design.
 
 **Slope and grading**: Flat driveways with good existing drainage are straightforward. Driveways on significant slopes require additional grading work, potentially retaining elements, and more complex drainage design.
 
@@ -54,12 +54,12 @@ Concrete's upfront cost is higher, but the lifetime cost is dramatically lower. 
 
 Before your concrete crew arrives, several things should be in place:
 
-1. **Tree root assessment completed** — as discussed, the [arborist visit](https://treeservice-murrieta.com) should happen before excavation
+1. **Tree root assessment completed** — as discussed, the [arborist visit](https://murrietatreeexperts.com) should happen before excavation
 2. **Utility locates completed** — we always call 811 before any digging, but you should verify this with any contractor you hire
 3. **Vehicle access planned** — concrete pours require 24–48 hours of cure time before vehicle traffic; plan where vehicles will be parked
 4. **Landscaping protected** — plants near the driveway footprint should be temporarily moved or protected from equipment and debris
 
-After your new driveway is complete, many Murrieta homeowners take the opportunity to [refresh the surrounding landscaping](https://landscaping-murrieta.com/services/landscape-design) — new plants, mulch, and clean border edges that frame the new concrete beautifully. The contrast between fresh concrete and refreshed plantings creates significant curb appeal improvement.
+After your new driveway is complete, many Murrieta homeowners take the opportunity to [refresh the surrounding landscaping](https://landscapingmurrieta.com/services/landscape-design) — new plants, mulch, and clean border edges that frame the new concrete beautifully. The contrast between fresh concrete and refreshed plantings creates significant curb appeal improvement.
 
 ## What Separates Quality Contractors from Cut-Rate Work
 

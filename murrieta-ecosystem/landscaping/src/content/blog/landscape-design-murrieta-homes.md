@@ -21,13 +21,13 @@ The key word is "properly executed." A poorly designed dry landscape just looks 
 
 The most overlooked aspect of landscape redesign is how existing trees shape everything else. Mature trees in Murrieta create canopy patterns, root systems, and microclimates that the best landscape designs work with, not against.
 
-Before any design begins, a [tree assessment from a certified arborist](https://treeservice-murrieta.com) is worth every dollar. This assessment tells you:
+Before any design begins, a [tree assessment from a certified arborist](https://murrietatreeexperts.com) is worth every dollar. This assessment tells you:
 - Which trees are healthy anchors worth designing around
 - Which trees are compromised and should come down before new plants go in
 - Where root systems extend underground, affecting where you can dig
 - What canopy changes might improve the conditions for plantings below
 
-[Coordinating with arborists](https://treeservice-murrieta.com/services/tree-trimming) during the design phase — not after — is one of the most consistent differences we see between successful landscape projects and frustrating ones. The trees don't change to accommodate the landscape; the landscape works around the trees.
+[Coordinating with arborists](https://murrietatreeexperts.com/services/tree-trimming) during the design phase — not after — is one of the most consistent differences we see between successful landscape projects and frustrating ones. The trees don't change to accommodate the landscape; the landscape works around the trees.
 
 ## What's Trending in Murrieta Front Yards
 

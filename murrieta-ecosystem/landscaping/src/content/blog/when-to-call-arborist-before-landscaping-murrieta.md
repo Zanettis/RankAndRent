@@ -20,7 +20,7 @@ Trees aren't just one element of a landscape — they set the conditions for eve
 
 **Water competition** determines which lawn areas are already in an impossible situation. Turf grass competing with established tree root systems in Murrieta's water-stressed soil isn't going to win. Designing a lawn maintenance plan for areas where tree roots are already claiming the water supply sets you up for chronic underperformance regardless of how well you irrigate.
 
-None of this information is visible on a surface inspection of your yard. An [arborist assessment](https://treeservice-murrieta.com) surfaces all of it systematically.
+None of this information is visible on a surface inspection of your yard. An [arborist assessment](https://murrietatreeexperts.com) surfaces all of it systematically.
 
 ## What a Tree Assessment Reveals That a Landscaper Can't
 
@@ -54,7 +54,7 @@ Most Murrieta landscaping projects that run into expensive mid-project problems 
 
 The sequence that produces the best outcomes:
 
-1. **[Tree assessment](https://treeservice-murrieta.com)** — determine which trees stay, which should come down, what trimming adjustments the design requires, and where root systems limit excavation
+1. **[Tree assessment](https://murrietatreeexperts.com)** — determine which trees stay, which should come down, what trimming adjustments the design requires, and where root systems limit excavation
 2. **Tree removal and major trimming** — while equipment access is clear, before new plants are in the ground
 3. **Landscape design** — now working with the confirmed final tree configuration, known root zones, and accurate shade patterns
 4. **Hardscaping** — concrete, pavers, and irrigation routed to respect root systems identified in the assessment
@@ -62,7 +62,7 @@ The sequence that produces the best outcomes:
 6. **Planting** — fall or early winter for best establishment in Murrieta's climate
 7. **Mulching** — the finishing layer that retains moisture and suppresses weeds
 
-The tree assessment at step one costs relatively little — typically $150–$300 for a residential property with a [certified arborist](https://treeservice-murrieta.com). It's the cheapest insurance available for a landscaping project of any size.
+The tree assessment at step one costs relatively little — typically $150–$300 for a residential property with a [certified arborist](https://murrietatreeexperts.com). It's the cheapest insurance available for a landscaping project of any size.
 
 ## When a Tree Assessment Is Especially Important
 
@@ -84,7 +84,7 @@ For some projects, an arborist visit is clearly necessary. For others, the urgen
 
 The best outdoor renovation projects happen when both the arborist and the landscape designer have been in the conversation before work starts. The arborist provides information the landscape designer needs: root flare locations and approximate lateral spread, whether trimming will change shade patterns significantly, whether any trees have a limited remaining lifespan that affects long-term planting investment nearby.
 
-A [certified arborist's assessment report](https://treeservice-murrieta.com) gives the landscape designer real information to work with — not assumptions about what's underground or guesses about how a tree will perform over the next decade.
+A [certified arborist's assessment report](https://murrietatreeexperts.com) gives the landscape designer real information to work with — not assumptions about what's underground or guesses about how a tree will perform over the next decade.
 
 When that coordination happens early, the resulting design accounts for the actual conditions rather than the assumed ones. Plants go in the right locations. Irrigation trenches route around root systems. Hardscape is positioned where it won't create conflicts. The whole project executes more smoothly, costs less in mid-project corrections, and produces better results.
 

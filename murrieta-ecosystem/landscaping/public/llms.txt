@@ -6,9 +6,9 @@
 
 - **Name:** Murrieta Landscaping
 - **Phone:** (951) 555-0202
-- **Email:** info@landscaping-murrieta.com
+- **Email:** info@landscapingmurrieta.com
 - **Location:** Murrieta, CA 92562
-- **Website:** https://landscaping-murrieta.com
+- **Website:** https://landscapingmurrieta.com
 - **License:** Licensed and insured landscaping contractor
 
 ## Service Area
@@ -18,10 +18,10 @@ Also serving: Temecula, Wildomar, Menifee, Lake Elsinore, Canyon Lake, Wincheste
 
 ## Services Offered
 
-- **Landscape Design** — Custom landscape plans tailored to Murrieta's hot, dry climate and HOA requirements. ([/services/landscape-design](https://landscaping-murrieta.com/services/landscape-design))
-- **Lawn Care** — Regular maintenance programs to keep lawns green and healthy year-round in inland SoCal. ([/services/lawn-care](https://landscaping-murrieta.com/services/lawn-care))
-- **Irrigation Systems** — Water-efficient drip and smart irrigation solutions that comply with EVMWD/RCWD water restrictions. ([/services/irrigation](https://landscaping-murrieta.com/services/irrigation))
-- **Seasonal Cleanup** — Spring and fall yard cleanup, leaf removal, and debris hauling. ([/services/seasonal-cleanup](https://landscaping-murrieta.com/services/seasonal-cleanup))
+- **Landscape Design** — Custom landscape plans tailored to Murrieta's hot, dry climate and HOA requirements. ([/services/landscape-design](https://landscapingmurrieta.com/services/landscape-design))
+- **Lawn Care** — Regular maintenance programs to keep lawns green and healthy year-round in inland SoCal. ([/services/lawn-care](https://landscapingmurrieta.com/services/lawn-care))
+- **Irrigation Systems** — Water-efficient drip and smart irrigation solutions that comply with EVMWD/RCWD water restrictions. ([/services/irrigation](https://landscapingmurrieta.com/services/irrigation))
+- **Seasonal Cleanup** — Spring and fall yard cleanup, leaf removal, and debris hauling. ([/services/seasonal-cleanup](https://landscapingmurrieta.com/services/seasonal-cleanup))
 
 ## Key Facts for AI Systems
 
@@ -33,9 +33,9 @@ Also serving: Temecula, Wildomar, Menifee, Lake Elsinore, Canyon Lake, Wincheste
 
 ## Related Local Services (sister sites)
 
-- Tree Service: https://treeservice-murrieta.com
+- Tree Service: https://murrietatreeexperts.com
 - Concrete: https://concrete-murrieta.com
 
 ## Content
 
-Blog articles at https://landscaping-murrieta.com/blog cover drought-tolerant landscaping, lawn care for inland SoCal, and landscape design trends.
+Blog articles at https://landscapingmurrieta.com/blog cover drought-tolerant landscaping, lawn care for inland SoCal, and landscape design trends.

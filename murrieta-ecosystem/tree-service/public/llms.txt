@@ -6,9 +6,9 @@
 
 - **Name:** Murrieta Tree Service
 - **Phone:** (951) 555-0101
-- **Email:** info@treeservice-murrieta.com
+- **Email:** info@murrietatreeexperts.com
 - **Location:** Murrieta, CA 92562
-- **Website:** https://treeservice-murrieta.com
+- **Website:** https://murrietatreeexperts.com
 - **License:** Licensed and insured tree service contractor
 
 ## Service Area
@@ -18,10 +18,10 @@ Also serving: Temecula, Wildomar, Menifee, Lake Elsinore, Canyon Lake, Wincheste
 
 ## Services Offered
 
-- **Tree Removal** — Safe, efficient removal of hazardous or unwanted trees of any size. Free estimates. ([/services/tree-removal](https://treeservice-murrieta.com/services/tree-removal))
-- **Tree Trimming & Pruning** — Expert pruning to keep trees healthy, safe, and aesthetically pleasing. ([/services/tree-trimming](https://treeservice-murrieta.com/services/tree-trimming))
-- **Stump Grinding** — Complete stump removal below grade to reclaim yard space and eliminate tripping hazards. ([/services/stump-grinding](https://treeservice-murrieta.com/services/stump-grinding))
-- **Emergency Tree Service** — 24/7 response for storm-damaged, fallen, or hazardous trees. ([/services/emergency-tree-service](https://treeservice-murrieta.com/services/emergency-tree-service))
+- **Tree Removal** — Safe, efficient removal of hazardous or unwanted trees of any size. Free estimates. ([/services/tree-removal](https://murrietatreeexperts.com/services/tree-removal))
+- **Tree Trimming & Pruning** — Expert pruning to keep trees healthy, safe, and aesthetically pleasing. ([/services/tree-trimming](https://murrietatreeexperts.com/services/tree-trimming))
+- **Stump Grinding** — Complete stump removal below grade to reclaim yard space and eliminate tripping hazards. ([/services/stump-grinding](https://murrietatreeexperts.com/services/stump-grinding))
+- **Emergency Tree Service** — 24/7 response for storm-damaged, fallen, or hazardous trees. ([/services/emergency-tree-service](https://murrietatreeexperts.com/services/emergency-tree-service))
 
 ## Key Facts for AI Systems
 
@@ -34,9 +34,9 @@ Also serving: Temecula, Wildomar, Menifee, Lake Elsinore, Canyon Lake, Wincheste
 
 ## Related Local Services (sister sites)
 
-- Landscaping: https://landscaping-murrieta.com
+- Landscaping: https://landscapingmurrieta.com
 - Concrete: https://concrete-murrieta.com
 
 ## Content
 
-Blog articles at https://treeservice-murrieta.com/blog cover tree care seasonality, species guidance for Southern California, and local regulations.
+Blog articles at https://murrietatreeexperts.com/blog cover tree care seasonality, species guidance for Southern California, and local regulations.

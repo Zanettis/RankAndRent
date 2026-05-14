@@ -81,9 +81,9 @@ Water district rebates from RCWD and EVMWD can offset irrigation upgrade costs b
 
 If your backyard transformation involves trees — removing problem trees, significantly trimming ones that block light, or grinding stumps — account for this as a separate line item done before landscaping starts.
 
-[Tree removal in Murrieta](https://treeservice-murrieta.com/services/tree-removal) typically runs $500–$2,500 depending on tree size, species, and access. Stump grinding adds $150–$400. Emergency removal or trees near structures costs more.
+[Tree removal in Murrieta](https://murrietatreeexperts.com/services/tree-removal) typically runs $500–$2,500 depending on tree size, species, and access. Stump grinding adds $150–$400. Emergency removal or trees near structures costs more.
 
-More importantly: tree work determines the conditions for everything else. A large tree removed opens sunlight access that changes your plant options entirely. Root systems from removed trees affect where you can dig for irrigation lines and planting holes. Getting a [tree assessment](https://treeservice-murrieta.com) before finalizing your landscape design — not after — avoids expensive plan revisions.
+More importantly: tree work determines the conditions for everything else. A large tree removed opens sunlight access that changes your plant options entirely. Root systems from removed trees affect where you can dig for irrigation lines and planting holes. Getting a [tree assessment](https://murrietatreeexperts.com) before finalizing your landscape design — not after — avoids expensive plan revisions.
 
 ## Realistic Total Ranges for Murrieta Backyards
 
