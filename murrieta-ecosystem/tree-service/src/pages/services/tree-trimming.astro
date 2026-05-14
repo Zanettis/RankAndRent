@@ -6,6 +6,43 @@ import ServiceCard from '../../components/ServiceCard.astro';
 import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How often should trees be trimmed in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Most trees in Murrieta benefit from trimming every 1–3 years depending on species and growth rate. Fast-growing trees like eucalyptus may need annual attention, while slower-growing oaks are typically fine every 2–3 years. Young trees should be trimmed more frequently to establish strong structural form before problems develop.' },
+    },
+    {
+      '@type': 'Question',
+      name: "What's the difference between crown reduction and crown thinning?",
+      acceptedAnswer: { '@type': 'Answer', text: "Crown reduction shortens the overall height or spread of a tree while maintaining its natural shape — ideal when a tree has outgrown its space or is conflicting with structures. Crown thinning removes 15–20% of branches throughout the canopy to increase light penetration and reduce wind resistance without reducing the tree's overall size. Our arborists recommend the right approach based on your specific tree and goals." },
+    },
+    {
+      '@type': 'Question',
+      name: 'When is the best time to trim trees in Murrieta, CA?',
+      acceptedAnswer: { '@type': 'Answer', text: "Late fall through winter is ideal for most tree species in Murrieta because trees are dormant and less susceptible to stress and disease. However, Murrieta's mild climate allows many species to be trimmed year-round with proper technique. Emergency trimming for storm-damaged or hazardous limbs can and should be done any time." },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does tree trimming cost?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Tree trimming in Murrieta typically costs $150–$1,000+ per tree. Small trees under 25 feet (fruit trees, ornamentals) run $150–$350. Medium trees 25–50 feet cost $300–$600. Large trees over 50 feet such as mature eucalyptus can be $500–$1,000+. Multi-tree discounts are available, and we always provide free written estimates.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you trim branches touching my roof or near power lines?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Our certified arborists are trained to safely remove branches that overhang structures and work near utility lines. Branches rubbing against your roof can cause serious damage over time, and we prioritize these as high-urgency items. For limbs in contact with active power lines, we follow utility safety protocols and coordinate with the provider when required.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Will trimming my tree damage it or slow its growth?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Proper pruning performed by a certified arborist will not damage your tree — in fact, it promotes healthier and more vigorous growth by removing dead or competing wood and improving light and air circulation. Over-pruning or improper cuts (like topping) can seriously harm a tree, which is why hiring trained professionals matters. We follow ISA pruning standards on every job.' },
+    },
+  ],
+};
+
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -40,6 +77,7 @@ const serviceSchema = {
   description="Professional tree trimming and pruning in Murrieta, CA. Improve tree health, safety, and curb appeal. Licensed arborists. Free estimates."
 >
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <Hero
     headline="Expert Tree Trimming & Pruning in Murrieta"
     subheadline="Proper pruning improves tree health, reduces storm risk, and keeps your yard looking beautiful year-round."
@@ -131,6 +169,30 @@ const serviceSchema = {
           <ServiceCard title={s.title} description={s.description} href={s.href} />
         ))}
       </div>
+    </div>
+
+    <div class="mt-12">
+      <section class="max-w-4xl mx-auto py-8">
+        <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {[
+            { q: "How often should trees be trimmed in Murrieta?", a: "Most trees in Murrieta benefit from trimming every 1–3 years depending on species and growth rate. Fast-growing trees like eucalyptus may need annual attention, while slower-growing oaks are typically fine every 2–3 years. Young trees should be trimmed more frequently to establish strong structural form before problems develop." },
+            { q: "What's the difference between crown reduction and crown thinning?", a: "Crown reduction shortens the overall height or spread of a tree while maintaining its natural shape — ideal when a tree has outgrown its space or is conflicting with structures. Crown thinning removes 15–20% of branches throughout the canopy to increase light penetration and reduce wind resistance without reducing the tree's overall size. Our arborists recommend the right approach based on your specific tree and goals." },
+            { q: "When is the best time to trim trees in Murrieta, CA?", a: "Late fall through winter is ideal for most tree species in Murrieta because trees are dormant and less susceptible to stress and disease. However, Murrieta's mild climate allows many species to be trimmed year-round with proper technique. Emergency trimming for storm-damaged or hazardous limbs can and should be done any time." },
+            { q: "How much does tree trimming cost?", a: "Tree trimming in Murrieta typically costs $150–$1,000+ per tree. Small trees under 25 feet (fruit trees, ornamentals) run $150–$350. Medium trees 25–50 feet cost $300–$600. Large trees over 50 feet such as mature eucalyptus can be $500–$1,000+. Multi-tree discounts are available, and we always provide free written estimates." },
+            { q: "Can you trim branches touching my roof or near power lines?", a: "Yes. Our certified arborists are trained to safely remove branches that overhang structures and work near utility lines. Branches rubbing against your roof can cause serious damage over time, and we prioritize these as high-urgency items. For limbs in contact with active power lines, we follow utility safety protocols and coordinate with the provider when required." },
+            { q: "Will trimming my tree damage it or slow its growth?", a: "Proper pruning performed by a certified arborist will not damage your tree — in fact, it promotes healthier and more vigorous growth by removing dead or competing wood and improving light and air circulation. Over-pruning or improper cuts (like topping) can seriously harm a tree, which is why hiring trained professionals matters. We follow ISA pruning standards on every job." },
+          ].map(({ q, a }) => (
+            <details class="border border-gray-200 rounded-xl overflow-hidden group">
+              <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+                {q}
+                <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+            </details>
+          ))}
+        </div>
+      </section>
     </div>
 
     <div class="mt-12">

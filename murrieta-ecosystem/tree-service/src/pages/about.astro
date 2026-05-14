@@ -1,0 +1,191 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="About Murrieta Tree Experts | Local Tree Service Since 2013"
+  description="Family-owned tree service serving Murrieta and the Temecula Valley since 2013. ISA-trained arborists, fully licensed and insured, honest pricing. Meet our team."
+>
+  <!-- Hero -->
+  <section class="bg-primary text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">About Murrieta Tree Experts</h1>
+      <p class="text-xl text-white/85 max-w-2xl mx-auto">Your Local Tree Care Specialists — Serving the Temecula Valley Since 2013</p>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary mb-8">Our Story</h2>
+    <div class="prose prose-lg max-w-none prose-headings:text-primary text-gray-700 space-y-5">
+      <p>
+        Murrieta Tree Experts was founded in 2013 by a father-and-son team who had spent years
+        working for larger regional tree companies and saw an opportunity to do things better.
+        They started with a single truck, a chipper, and a reputation built entirely on word of mouth —
+        taking on residential tree trimming jobs in Murrieta's established neighborhoods and proving
+        that quality work and honest pricing could build a lasting business.
+      </p>
+      <p>
+        Over the following decade, we grew steadily alongside the Temecula Valley community —
+        adding crew members, equipment, and services as our customers' needs expanded.
+        Today we handle everything from routine pruning and seasonal trimming to complex hazard
+        tree removal, emergency storm response, and stump grinding throughout Southwest Riverside County.
+        Every member of our team lives and works in the communities we serve, and that local
+        accountability is something we take seriously.
+      </p>
+      <p>
+        We have built our reputation on doing the job right the first time — no shortcuts,
+        no hidden charges, and no mess left behind. When you call Murrieta Tree Experts,
+        you are not calling a national franchise or a contractor who will pass your job
+        off to a subcontractor. You are calling the people who will actually show up at your
+        property and take care of your trees with the same care they would give their own.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why We're Different -->
+  <section class="bg-gray-50 py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-primary text-center mb-10">Why We're Different</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+          <div class="flex justify-center mb-4">
+            <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center">
+              <svg class="w-7 h-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="font-bold text-primary text-lg mb-3">Local Expertise</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            We know Murrieta's specific tree species, clay-heavy soils, and Santa Ana wind patterns
+            better than anyone. That knowledge informs every cut we make and every recommendation
+            we give — not generic advice, but guidance rooted in this specific landscape.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+          <div class="flex justify-center mb-4">
+            <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center">
+              <svg class="w-7 h-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="font-bold text-primary text-lg mb-3">Safety First</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Every job is led by a certified arborist who plans the work before a single cut is made.
+            We carry full liability insurance and workers' compensation on every job — protecting
+            you, our crew, and your property. We never cut corners when it comes to safety.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+          <div class="flex justify-center mb-4">
+            <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center">
+              <svg class="w-7 h-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="font-bold text-primary text-lg mb-3">Honest Pricing</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            We provide free written estimates before any work begins — no verbal quotes that
+            change on the day of the job. What we quote is what you pay. No surprise fees,
+            no pressure to add services, and no obligation if you decide to get other bids.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Team -->
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary mb-6">Our Team</h2>
+    <p class="text-gray-700 text-lg leading-relaxed">
+      Our crew is made up of ISA-trained arborists and experienced ground personnel who collectively
+      bring decades of hands-on tree care experience to every job. All team members undergo thorough
+      background checks and are Murrieta-area residents — many of them long-time locals who have
+      watched this community grow. We invest in ongoing training and safety certifications to ensure
+      our team stays current with best practices in arboriculture. When our crew shows up at your
+      property, they represent the same values the company was built on: hard work, professionalism,
+      and genuine care for the health of your trees and the safety of your home.
+    </p>
+  </section>
+
+  <!-- Credentials & Insurance -->
+  <section class="bg-gray-50 py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-primary text-center mb-10">Credentials & Insurance</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+        <div class="flex flex-col items-center gap-3">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-primary">CA Licensed Arborists</h3>
+          <p class="text-gray-600 text-sm">Fully licensed to operate in California. ISA-certified arborists leading every job.</p>
+        </div>
+        <div class="flex flex-col items-center gap-3">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-primary">Fully Insured</h3>
+          <p class="text-gray-600 text-sm">Full liability insurance and workers' compensation coverage on every job. You are protected.</p>
+        </div>
+        <div class="flex flex-col items-center gap-3">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-primary">Free Written Estimates</h3>
+          <p class="text-gray-600 text-sm">No obligation. No verbal quotes that change on arrival. Written estimates, always.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section class="max-w-4xl mx-auto px-4 py-16 text-center">
+    <h2 class="text-3xl font-bold text-primary mb-4">Our Service Area</h2>
+    <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+      We serve homeowners and property managers throughout Southwest Riverside County.
+      If you are within a reasonable distance of Murrieta, chances are we can help.
+    </p>
+    <div class="flex flex-wrap justify-center gap-3">
+      {["Murrieta", "Temecula", "Wildomar", "Menifee", "Lake Elsinore", "Canyon Lake", "Winchester", "Hemet", "Perris"].map((city) => (
+        <span class="bg-primary/10 text-primary font-semibold px-4 py-2 rounded-full text-sm">
+          {city}
+        </span>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-primary py-16 px-4 text-center text-white">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+      <p class="text-white/85 text-lg mb-8">
+        Contact us today for a free, no-obligation written estimate. We will come to your property,
+        assess your trees, and give you a clear price — no pressure, no surprises.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block bg-white text-primary font-bold text-lg px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors"
+      >
+        Get Your Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Or Send Us a Message" />
+  </section>
+</BaseLayout>
