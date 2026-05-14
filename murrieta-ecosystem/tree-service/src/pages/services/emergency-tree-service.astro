@@ -5,12 +5,43 @@ import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Emergency Tree Service',
+  name: '24/7 Emergency Tree Service in Murrieta, CA',
+  description: '24/7 emergency tree service in Murrieta, CA. Storm damage, fallen trees, and hazardous limbs handled immediately. Licensed arborists, fast response.',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.domain,
+    telephone: SITE_CONFIG.phone,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Murrieta' },
+    { '@type': 'City', name: 'Temecula' },
+    { '@type': 'City', name: 'Wildomar' },
+  ],
+  availableChannel: {
+    '@type': 'ServiceChannel',
+    serviceUrl: SITE_CONFIG.domain,
+    availableLanguage: 'English',
+    hoursAvailable: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+      opens: '00:00',
+      closes: '23:59',
+    },
+  },
+};
 ---
 
 <BaseLayout
   title="Emergency Tree Service Murrieta, CA | 24/7 Storm Damage Response"
   description="24/7 emergency tree service in Murrieta, CA. Storm damage, fallen trees, and hazardous limbs handled immediately. Call now for fast response."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <Hero
     headline="24/7 Emergency Tree Service in Murrieta"
     subheadline="Storm damage, fallen trees, and hazardous limbs — we respond fast to protect your home and family. Available day and night."

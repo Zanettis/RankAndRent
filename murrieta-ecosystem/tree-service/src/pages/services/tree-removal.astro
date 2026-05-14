@@ -5,12 +5,41 @@ import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Tree Removal',
+  name: 'Tree Removal in Murrieta, CA',
+  description: 'Professional tree removal in Murrieta, CA. Safe removal of hazardous, dead, or unwanted trees by certified arborists. Free estimates, same-day service available.',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.domain,
+    telephone: SITE_CONFIG.phone,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Murrieta' },
+    { '@type': 'City', name: 'Temecula' },
+    { '@type': 'City', name: 'Wildomar' },
+  ],
+  offers: {
+    '@type': 'Offer',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      minPrice: '300',
+      maxPrice: '2000',
+      priceCurrency: 'USD',
+    },
+  },
+};
 ---
 
 <BaseLayout
   title="Tree Removal Murrieta, CA | Safe & Professional | Free Estimates"
   description="Professional tree removal in Murrieta, CA. Licensed arborists, safe removal of hazardous and unwanted trees. Free estimates, same-day service available."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <Hero
     headline="Professional Tree Removal in Murrieta, CA"
     subheadline="Safe, efficient removal of hazardous, dead, or unwanted trees. Our certified arborists protect your property every step of the way."
@@ -21,7 +50,7 @@ import { SITE_CONFIG } from '../../config';
     <nav class="text-sm text-gray-500 mb-8" aria-label="breadcrumb">
       <a href="/" class="hover:text-primary">Home</a>
       <span class="mx-2">/</span>
-      <a href="/services/tree-trimming" class="hover:text-primary">Services</a>
+      <span>Services</span>
       <span class="mx-2">/</span>
       <span class="text-gray-800">Tree Removal</span>
     </nav>

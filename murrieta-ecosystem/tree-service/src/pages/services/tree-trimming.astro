@@ -5,12 +5,41 @@ import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Tree Trimming',
+  name: 'Tree Trimming & Pruning in Murrieta, CA',
+  description: 'Professional tree trimming and pruning in Murrieta, CA. Improve tree health, safety, and curb appeal. Licensed arborists. Free estimates.',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.domain,
+    telephone: SITE_CONFIG.phone,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Murrieta' },
+    { '@type': 'City', name: 'Temecula' },
+    { '@type': 'City', name: 'Wildomar' },
+  ],
+  offers: {
+    '@type': 'Offer',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      minPrice: '150',
+      maxPrice: '1000',
+      priceCurrency: 'USD',
+    },
+  },
+};
 ---
 
 <BaseLayout
   title="Tree Trimming Murrieta, CA | Expert Pruning Services | Free Estimates"
   description="Professional tree trimming and pruning in Murrieta, CA. Improve tree health, safety, and curb appeal. Licensed arborists. Free estimates."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <Hero
     headline="Expert Tree Trimming & Pruning in Murrieta"
     subheadline="Proper pruning improves tree health, reduces storm risk, and keeps your yard looking beautiful year-round."
@@ -18,6 +47,14 @@ import { SITE_CONFIG } from '../../config';
   />
 
   <div class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-8" aria-label="breadcrumb">
+      <a href="/" class="hover:text-primary">Home</a>
+      <span class="mx-2">/</span>
+      <span>Services</span>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Tree Trimming</span>
+    </nav>
+
     <div class="prose prose-lg max-w-none prose-headings:text-primary">
       <h2>The Importance of Regular Tree Trimming</h2>
       <p>
@@ -51,6 +88,31 @@ import { SITE_CONFIG } from '../../config';
         Murrieta's mild climate means many species can be trimmed year-round with care.
         Emergency trimming for storm-damaged or hazardous limbs can be done any time.
         We advise against heavy pruning during spring when trees are actively pushing new growth.
+      </p>
+
+      <h2>Tree Trimming Cost in Murrieta</h2>
+      <p>
+        Tree trimming costs depend on tree size, species, and the amount of work required. Typical
+        ranges in Murrieta:
+      </p>
+      <ul>
+        <li><strong>Small trees under 25 ft</strong> (fruit trees, ornamentals): $150–$350</li>
+        <li><strong>Medium trees 25–50 ft</strong> (mature oaks, pines): $300–$600</li>
+        <li><strong>Large trees over 50 ft</strong> (eucalyptus, mature palms): $500–$1,000+</li>
+      </ul>
+      <p>
+        Multi-tree discounts are available when scheduling trimming for several trees on the same
+        visit. We provide free written estimates — no obligation, no surprise charges.
+        If your tree also needs
+        <a href="/services/tree-removal">removal</a> or
+        <a href="/services/stump-grinding">stump grinding</a>,
+        bundling services saves on total cost.
+      </p>
+
+      <h2>Service Area</h2>
+      <p>
+        We provide tree trimming throughout Murrieta — including Old Town, Bear Creek, Murrieta Oaks,
+        Copper Canyon, and Greer Ranch — as well as Temecula, Wildomar, Menifee, and Lake Elsinore.
       </p>
     </div>
 

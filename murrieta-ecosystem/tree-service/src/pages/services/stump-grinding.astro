@@ -5,12 +5,41 @@ import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Stump Grinding',
+  name: 'Stump Grinding & Removal in Murrieta, CA',
+  description: 'Professional stump grinding and removal in Murrieta, CA. Eliminate trip hazards, reclaim yard space, and prepare for new landscaping. Free estimates.',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.domain,
+    telephone: SITE_CONFIG.phone,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Murrieta' },
+    { '@type': 'City', name: 'Temecula' },
+    { '@type': 'City', name: 'Wildomar' },
+  ],
+  offers: {
+    '@type': 'Offer',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      minPrice: '75',
+      maxPrice: '500',
+      priceCurrency: 'USD',
+    },
+  },
+};
 ---
 
 <BaseLayout
   title="Stump Grinding Murrieta, CA | Complete Stump Removal | Free Estimates"
   description="Professional stump grinding and removal in Murrieta, CA. Eliminate trip hazards, reclaim yard space, and prepare for new landscaping. Free estimates."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <Hero
     headline="Stump Grinding & Removal in Murrieta"
     subheadline="Eliminate unsightly stumps, trip hazards, and pest attractors. We grind stumps below grade so you can replant or build on top."
@@ -18,6 +47,14 @@ import { SITE_CONFIG } from '../../config';
   />
 
   <div class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-8" aria-label="breadcrumb">
+      <a href="/" class="hover:text-primary">Home</a>
+      <span class="mx-2">/</span>
+      <span>Services</span>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Stump Grinding</span>
+    </nav>
+
     <div class="prose prose-lg max-w-none prose-headings:text-primary">
       <h2>Why Remove That Old Stump?</h2>
       <p>
@@ -48,6 +85,29 @@ import { SITE_CONFIG } from '../../config';
         Many Murrieta homeowners take the opportunity to
         <a href="https://landscapingmurrieta.com/services/landscape-design">redesign that section of their yard</a>
         after removal — opening up space for a seating area, raised garden bed, or expanded lawn.
+      </p>
+
+      <h2>Stump Grinding Cost in Murrieta</h2>
+      <p>
+        Stump grinding is typically priced per stump or by diameter. Typical Murrieta pricing:
+      </p>
+      <ul>
+        <li><strong>Small stumps under 12" diameter</strong>: $75–$150</li>
+        <li><strong>Medium stumps 12–24"</strong>: $150–$300</li>
+        <li><strong>Large stumps over 24"</strong> (mature oak, pine): $300–$500+</li>
+        <li><strong>Multiple stumps</strong>: discounts available when grinding 3 or more on the same visit</li>
+      </ul>
+      <p>
+        When scheduled alongside
+        <a href="/services/tree-removal">tree removal</a>,
+        stump grinding is often available at a reduced rate. We provide free on-site estimates —
+        call us or fill out the form below.
+      </p>
+
+      <h2>Service Area</h2>
+      <p>
+        We grind stumps throughout Murrieta and surrounding Southwest Riverside County — including
+        Temecula, Wildomar, Menifee, Lake Elsinore, and Canyon Lake.
       </p>
     </div>
 

@@ -16,6 +16,43 @@ const serviceIcons = [
   `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
 ];
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How much does tree removal cost in Murrieta, CA?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Tree removal in Murrieta typically costs $300–$1,800+ depending on tree size, location, and complexity. Small trees under 25 ft run $300–$600. Large trees over 60 ft, or trees near structures, run $800–$2,000+. We provide free on-site written estimates with no obligation.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need a permit to remove a tree in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Most residential tree removals in Murrieta do not require a permit, but some protected species (like coast live oaks) and trees in certain HOA communities may. We\'ll advise you on permit requirements during your free estimate at no extra charge.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does tree removal take?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Most standard tree removals take 2–6 hours. Large trees or complex jobs near structures or power lines may take a full day. We\'ll give you a realistic time estimate when we assess the job.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you clean up after the job?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes — complete cleanup is always included. We chip all branches, haul away debris, and rake the area clean. Stump grinding is an optional add-on. You\'ll be left with a clean yard, no mess.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you remove trees near power lines or my house?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Our certified arborists are trained in hazard tree removal and work safely near structures and utilities. For trees directly contacting power lines, we coordinate with the utility company as required.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you offer emergency tree service?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes — 24/7 emergency service is available for storm damage, fallen trees, and hazardous situations. Call us any time for emergency response in Murrieta, Temecula, and surrounding areas.' },
+    },
+  ],
+};
+
 const testimonials = [
   {
     quote: "They came out the same day I called. The crew was professional, cleaned up everything, and the price was fair. My oak tree is gone and the yard looks great.",
@@ -39,6 +76,7 @@ const testimonials = [
   title="Tree Service Murrieta, CA | Professional Tree Removal & Trimming"
   description="Expert tree removal, trimming, and stump grinding in Murrieta, CA. Licensed & insured. 24/7 emergency service. Free estimates — call today!"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <Hero
     headline="Need a Tree Removed in Murrieta? We're Ready Today."
     subheadline="Professional tree removal, trimming, and stump grinding in Murrieta and the Temecula Valley. Licensed, insured, and locally owned — free estimates, no obligation."
