@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="Concrete Contractor Menifee, CA | Driveways, Patios & Repair | Free Estimates"
+  description="Licensed concrete contractor serving Menifee, CA. Driveway installation, patio construction, concrete repair, and decorative stamped concrete. Serving Sun City, Quail Valley, Heritage Lakes, and all Menifee communities. Free estimates."
+  canonicalUrl="https://concrete-murrieta.com/menifee/"
+>
+  <Hero
+    headline="Concrete Driveways & Patios in Menifee, CA"
+    subheadline="Licensed concrete contractors serving all of Menifee. New driveways, patios, walkways, decorative stamped concrete, and repair — fully permitted, satisfaction guaranteed, free estimates."
+    ctaText="Get a Free Estimate"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Concrete Services in Menifee</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      From cracked driveways in Sun City to new patio installs in Menifee's newest neighborhoods, we deliver quality concrete work — permitted, guaranteed, and built for this climate.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Concrete Repair for Sun City's Aging Driveways</h2>
+      <p>
+        Sun City is one of Menifee's oldest and most established neighborhoods, with homes built in the 1960s through 1990s. Many driveways and sidewalks in Sun City are now 30–50 years old and showing the effects of Menifee's clay-heavy soils, which expand and contract with seasonal moisture changes. The result is cracking, heaving, and uneven slabs that create trip hazards and reduce curb appeal. We specialize in both targeted crack repair and full driveway replacement — matching existing concrete texture and aggregate where possible for a clean, consistent look.
+      </p>
+
+      <h2>New Construction Concrete for Menifee's Growing Communities</h2>
+      <p>
+        Menifee is one of the fastest-growing cities in Inland Southern California, with new subdivisions and master-planned communities expanding rapidly. Many new homeowners are upgrading their builder-grade concrete with decorative stamped patios, expanded driveways, or custom walkway designs. We work with Menifee's new homeowner communities and understand the HOA approval processes required for exterior improvements in master-planned developments like Heritage Lakes and Heartland.
+      </p>
+
+      <h2>Clay Soil and Concrete Longevity in Menifee</h2>
+      <p>
+        Menifee's expansive clay soils are one of the main causes of premature concrete failure in this area. When clay absorbs water, it expands — pushing concrete slabs upward and creating cracks. When it dries, it contracts — sometimes creating voids beneath slabs that cause cracking under load. Proper subgrade preparation, including compaction and sometimes a gravel drainage layer, dramatically extends the life of any new concrete installation. We don't skip this step, and it's why our work holds up longer than installations done by contractors who cut corners on prep.
+      </p>
+
+      <h2>Serving All Menifee Neighborhoods</h2>
+      <p>
+        We pour and repair concrete throughout Menifee, including Sun City, Quail Valley, Romoland, Bradley Junction, Heritage Lakes, Heartland, and the expanding neighborhoods near Newport Road, Haun Road, and McCall Boulevard. All work is pulled with the appropriate City of Menifee or Riverside County permits. Free estimates available anywhere in Menifee — no travel fee.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Canyon Lake', 'Winchester'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Get Your Free Concrete Estimate in Menifee" />
+  </section>
+</BaseLayout>

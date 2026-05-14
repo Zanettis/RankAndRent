@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="Concrete Contractor Wildomar, CA | Driveways, Patios & Walkways | Free Estimates"
+  description="Licensed concrete contractor serving Wildomar, CA. Driveway installation and replacement, patio construction, walkways, and concrete repair. Hillside lot specialists. Serving Heritage Lake, Palomar Hills, and all Wildomar communities. Free estimates."
+  canonicalUrl="https://concrete-murrieta.com/wildomar/"
+>
+  <Hero
+    headline="Concrete Driveways & Patios in Wildomar, CA"
+    subheadline="Licensed concrete contractors built for Wildomar's hillside lots and diverse terrain. New driveways, patios, retaining walls, walkways, and repair — free estimates, no travel fee."
+    ctaText="Get a Free Estimate"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Concrete Services in Wildomar</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      Wildomar's hillside properties and clay soils require a concrete contractor who understands local drainage, slope requirements, and long-term durability. That's exactly what we deliver.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Concrete on Wildomar's Hillside and Sloped Lots</h2>
+      <p>
+        Many Wildomar properties sit on hillside lots with significant grade changes between the street and the home. Driveways on sloped lots require careful attention to drainage, proper slope angle (typically 1–2%), and a mix design that handles surface runoff without eroding. We've poured driveways on steep Wildomar lots where standard contractors declined the job — our crews are experienced with sloped subgrade prep, drainage channel integration, and the extra forming work that hillside pours require.
+      </p>
+
+      <h2>Wildomar's Clay Soil Problem — and How We Solve It</h2>
+      <p>
+        Like most of Southwest Riverside County, Wildomar sits on expansive clay soils that move with the seasons. Wet winters cause clay to swell; dry summers cause it to shrink and crack. Concrete poured over improperly prepared clay will fail within a few years — slabs crack, heave, and settle unevenly. We address this with aggressive subgrade compaction, appropriate base material, and concrete mix design calibrated for Wildomar's soil conditions. This prep work adds a day to the project but adds decades to the result.
+      </p>
+
+      <h2>Serving All Wildomar Communities</h2>
+      <p>
+        We pour and repair concrete throughout Wildomar, including Heritage Lake, Palomar Hills, Clinton Keith Estates, and rural lots along Wildomar Trail and Bundy Canyon Road. We also serve unincorporated Riverside County properties adjacent to Wildomar. All work is fully permitted through Riverside County Building and Safety. Free on-site estimates available with no travel fee.
+      </p>
+
+      <h2>Patio Concrete for Wildomar's Outdoor Living</h2>
+      <p>
+        Wildomar's wide lots and rural character make it ideal for expanded outdoor living spaces. Many Wildomar homeowners are adding covered patio slabs, outdoor kitchen pads, and detached garage slabs that weren't part of the original construction. We handle the full project — design consultation, permit submittal, forming, pour, and finish — and coordinate with the County inspector so you never have to chase paperwork.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Canyon Lake', 'Winchester'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Get Your Free Concrete Estimate in Wildomar" />
+  </section>
+</BaseLayout>
