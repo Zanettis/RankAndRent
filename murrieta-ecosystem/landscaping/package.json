@@ -7,6 +7,9 @@
     "build": "astro build",
     "preview": "astro preview --port 4322"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "@astrojs/mdx": "^3.1.6",
     "@astrojs/sitemap": "3.1.6",
