@@ -9,7 +9,7 @@ Three local home-service websites targeting Murrieta, CA homeowners, operated as
 | Site | Domain | Niche |
 |------|--------|-------|
 | Murrieta Tree Service | murrietatreeexperts.com | Tree removal, trimming, stump grinding, emergency |
-| Murrieta Landscaping | landscaping-murrieta.com | Landscape design, lawn care, irrigation, cleanup |
+| Murrieta Landscaping | landscapingmurrieta.com | Landscape design, lawn care, irrigation, cleanup |
 | Murrieta Concrete | concrete-murrieta.com | Driveways, patios, walkways, decorative concrete |
 
 ## 2. Target Audience
