@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="Concrete Contractor Fallbrook, CA | Driveways, Patios & Hardscaping | Free Estimates"
+  description="Licensed concrete contractor serving Fallbrook, CA. Long driveways, large patios, RV pads, and gated entry approaches for Fallbrook's large-lot homes and rural properties. Free estimates."
+  canonicalUrl="https://concrete-murrieta.com/fallbrook/"
+>
+  <Hero
+    headline="Concrete Driveways & Patios in Fallbrook, CA"
+    subheadline="Licensed concrete contractors serving Fallbrook's large-lot homes and rural properties. Long driveways, expansive patios, RV pads, and gated entry approaches — quality work scaled to match Fallbrook's properties. Free estimates, no pressure."
+    ctaText="Get a Free Estimate"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Concrete Services in Fallbrook</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      Fallbrook's large lots and custom homes require concrete work that's scaled for the property — long driveways, expansive outdoor entertaining areas, and functional hardscaping built to last. We deliver licensed, permitted, quality concrete work throughout Fallbrook.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Long Driveways and Gated Entry Approaches in Fallbrook</h2>
+      <p>
+        Many Fallbrook properties sit well off the street, with long driveway approaches that may span 100 feet or more. Concrete is the material of choice for these driveways — durable enough to handle years of use with minimal maintenance, and far superior to asphalt or gravel on Fallbrook's hilly terrain where surface runoff and erosion are ongoing concerns. We install and repair long concrete driveways throughout Fallbrook, including gated entry approaches, turnaround areas, and the connecting walkways and steps that are part of the approach to custom homes on large lots.
+      </p>
+
+      <h2>Large Patio and Outdoor Entertainment Areas</h2>
+      <p>
+        Fallbrook's climate — warm, sunny, and breezy — makes outdoor entertaining a year-round activity. Many of the custom homes in Fallbrook have large rear yards that are ideal for expansive patio slabs, outdoor kitchen pads, fire pit areas, and pool surrounds. We design and pour patio concrete at the scale Fallbrook properties call for — large format slabs, decorative stamped finishes, and exposed aggregate that matches the aesthetic of custom homes. Our team handles the full project from excavation and sub-base preparation through the final pour and finishing.
+      </p>
+
+      <h2>RV Pads and Agricultural Concrete Work</h2>
+      <p>
+        Fallbrook's rural character means many properties include RV parking, workshop pads, barn approaches, and other agricultural-scale concrete needs. We pour RV pads sized for class A motorhomes and fifth wheels, equipment pads for outbuildings, and heavy-duty concrete surfaces designed to handle the loads that larger vehicles and agricultural equipment place on them. We specify and pour concrete with appropriate thickness and reinforcement for the application, not the bare minimum.
+      </p>
+
+      <h2>Decorative Concrete for Fallbrook's Custom Homes</h2>
+      <p>
+        Fallbrook's custom home market expects a higher level of finish, and decorative concrete options deliver that without the cost of stone or pavers. Stamped concrete — available in a wide range of patterns and colors — can replicate the look of flagstone, slate, or cobblestone at a fraction of the material cost. We offer stamped concrete for patios, walkways, and pool decks, as well as stained concrete and exposed aggregate finishes. All decorative concrete work is sealed for protection against UV fading and surface wear.
+      </p>
+
+      <h2>Serving All of Fallbrook</h2>
+      <p>
+        We pour and repair concrete throughout Fallbrook, including properties along Mission Road, South Mission Road, Winterhaven Drive, and the surrounding rural areas of unincorporated San Diego County. Our team is based in Murrieta — about 25–30 minutes north via I-15 — and serves Fallbrook with no additional travel fees. All work is permitted through San Diego County as required. Free estimates available anywhere in the Fallbrook area.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Hemet', 'Perris', 'San Jacinto', 'Fallbrook'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Get Your Free Concrete Estimate in Fallbrook" />
+  </section>
+</BaseLayout>

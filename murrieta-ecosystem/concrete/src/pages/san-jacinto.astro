@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="Concrete Contractor San Jacinto, CA | Driveways, Patios & Repair | Free Estimates"
+  description="Licensed concrete contractor serving San Jacinto, CA. Driveway repair and replacement, patio installation, concrete repair, and decorative stamped concrete. Honest pricing for San Jacinto homeowners. Free estimates."
+  canonicalUrl="https://concrete-murrieta.com/san-jacinto/"
+>
+  <Hero
+    headline="Concrete Driveways & Patios in San Jacinto, CA"
+    subheadline="Licensed concrete contractors serving all of San Jacinto. Driveway repair and replacement, patios, walkways, decorative stamped concrete — quality work at honest prices for San Jacinto's older homes and newer developments alike. Free estimates, no pressure."
+    ctaText="Get a Free Estimate"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Concrete Services in San Jacinto</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      From cracked driveways in San Jacinto's historic neighborhoods to new patio installs for homeowners upgrading their properties, we deliver quality concrete work — licensed, permitted, and guaranteed.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Concrete Repair for San Jacinto's Aging Driveways and Walkways</h2>
+      <p>
+        San Jacinto is one of Riverside County's oldest incorporated cities, and much of its housing stock reflects that age. Driveways, walkways, and patio slabs throughout San Jacinto's established neighborhoods are frequently 30–50 years old — and many are well past their useful life. The clay-heavy soils of the San Jacinto Valley expand and contract with seasonal moisture changes, causing concrete to heave, crack, and shift over time. We specialize in both targeted crack repair — stabilizing and filling damage before it worsens — and complete slab replacement when repair is no longer a cost-effective option.
+      </p>
+
+      <h2>Driveway Replacement for San Jacinto's Older Homes</h2>
+      <p>
+        Many homeowners purchasing older properties in San Jacinto are dealing with driveways that are crumbling, heavily patched, or stained beyond restoration. A driveway replacement improves both the curb appeal and the practical function of the property — eliminating tripping hazards, pooling water, and the ongoing maintenance of failing concrete. We provide complete driveway removal and replacement, including proper sub-base preparation to ensure the new slab holds up over the long term. We work with standard broom-finish concrete as well as decorative options like stamped patterns and exposed aggregate.
+      </p>
+
+      <h2>New Patio and Walkway Installation in San Jacinto</h2>
+      <p>
+        San Jacinto homeowners — particularly those who have recently purchased and are upgrading older properties — are adding covered patios, backyard slabs, and decorative walkways as part of broader yard renovations. Stamped concrete is a popular choice in this area: it delivers the look of stone or pavers at a significantly lower cost, and it holds up well in the San Jacinto Valley's desert climate. We offer stamped patterns, stained finishes, and exposed aggregate, and we can match or complement existing concrete on your property.
+      </p>
+
+      <h2>Honest Pricing for San Jacinto Homeowners</h2>
+      <p>
+        We price our work honestly for San Jacinto homeowners. We don't inflate estimates, we don't upsell work that isn't necessary, and we give you a clear, written breakdown of what the job will cost before we start. If a crack can be repaired rather than replaced, we'll tell you that — even if replacement would be more profitable for us. Our goal is long-term relationships with San Jacinto homeowners and the referrals that come from doing right by people.
+      </p>
+
+      <h2>Serving All San Jacinto Neighborhoods</h2>
+      <p>
+        We pour and repair concrete throughout San Jacinto, including historic downtown neighborhoods, residential areas along Ramona Boulevard, Lyon Avenue, and State Street, and newer residential developments throughout the city. We also serve properties in the surrounding unincorporated areas of Riverside County. All work is permitted through the City of San Jacinto or Riverside County as required. Our team is based in Murrieta — about 35–45 minutes via I-215 and CA-74 — and serves San Jacinto with no additional travel fees.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Hemet', 'Perris', 'San Jacinto', 'Fallbrook'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Get Your Free Concrete Estimate in San Jacinto" />
+  </section>
+</BaseLayout>

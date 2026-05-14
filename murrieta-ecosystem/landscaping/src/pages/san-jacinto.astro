@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="Landscaping San Jacinto, CA | Lawn Care & Yard Design | Free Consultation"
+  description="Professional landscaping and lawn care in San Jacinto, CA. Drought-tolerant designs, irrigation upgrades, and yard transformations for San Jacinto's residential communities. Affordable, free consultations."
+  canonicalUrl="https://landscapingmurrieta.com/san-jacinto/"
+>
+  <Hero
+    headline="Landscaping & Lawn Care in San Jacinto, CA"
+    subheadline="Affordable, drought-smart yard transformations for San Jacinto's homes and historic neighborhoods. Custom landscape design, lawn care, irrigation repair, and seasonal cleanup. Free consultations throughout San Jacinto and the San Jacinto Valley."
+    ctaText="Get a Free Consultation"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Landscaping Services in San Jacinto</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      We design and maintain beautiful, water-efficient yards throughout San Jacinto — tailored to the desert climate of the San Jacinto Valley and realistic for a range of budgets.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Landscaping for San Jacinto's Established Homes</h2>
+      <p>
+        San Jacinto is one of Riverside County's oldest cities, incorporated in 1888, and many of its residential neighborhoods reflect that age. Yards throughout the city were often landscaped 20–40 years ago with high-water-use lawns and sprinkler systems that are now outdated, inefficient, and difficult to maintain. Many homeowners — both long-time residents and new owners who've purchased older homes — are looking to renovate their yards into something more practical, drought-resilient, and visually appealing. We specialize in exactly these kinds of transformations, working with budgets of all sizes to deliver real improvements.
+      </p>
+
+      <h2>Drought-Tolerant Landscaping in San Jacinto</h2>
+      <p>
+        San Jacinto's desert climate — hot summers, limited rainfall, and water delivered by Eastern Municipal Water District — makes drought-tolerant landscaping a practical necessity, not just a trend. Older grass lawns in San Jacinto's established neighborhoods consume far more water than they should, and many of the sprinkler systems serving them were installed decades ago with no regard for efficiency. We replace outdated irrigation with modern drip systems and smart controllers, and design plant palettes using California natives and drought-adapted species that thrive in the San Jacinto Valley's conditions with minimal supplemental water once established.
+      </p>
+      <p>
+        Many of our San Jacinto landscape designs may also qualify for turf replacement rebates through Eastern Municipal Water District, reducing the cost of removing lawn and installing drought-tolerant alternatives. We help with the rebate documentation process.
+      </p>
+
+      <h2>Yard Renovation for New Homeowners</h2>
+      <p>
+        San Jacinto has seen an influx of new homeowners purchasing older properties and looking to modernize their outdoor spaces. If you've recently bought a home in San Jacinto with a neglected yard — overgrown planting beds, dead lawn, broken irrigation, or outdated hardscape — we can help you assess what you have and build a renovation plan that makes the most of your space and budget. We break larger projects into manageable phases when needed, so you're not facing everything at once.
+      </p>
+
+      <h2>Serving All San Jacinto Neighborhoods</h2>
+      <p>
+        We landscape homes throughout San Jacinto, including the historic downtown area, neighborhoods near Ramona Boulevard, Lyon Avenue, and State Street, and residential areas surrounding the San Jacinto Valley Academy. We also serve properties in the surrounding unincorporated areas of Riverside County, including Seven Hills and the areas east toward Mt. San Jacinto State Park. Our team is based in Murrieta — about 35–45 minutes via I-215 and CA-74 — and serves San Jacinto regularly.
+      </p>
+
+      <h2>Coordinated Outdoor Improvements</h2>
+      <p>
+        Many San Jacinto homeowners combine landscaping with other outdoor upgrades — new concrete patios or repaired driveways alongside yard renovation. We coordinate directly with <a href="https://concrete-murrieta.com">concrete contractors</a> to sequence work properly so landscaping goes in after hardscape is complete. When projects involve tree removal or significant trimming to open up yard space, we recommend working with <a href="https://murrietatreeexperts.com">certified arborists</a> first before new planting begins.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Hemet', 'Perris', 'San Jacinto', 'Fallbrook'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Schedule Your Free Landscaping Consultation in San Jacinto" />
+  </section>
+</BaseLayout>

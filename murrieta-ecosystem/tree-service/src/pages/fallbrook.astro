@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="Tree Service Fallbrook, CA | Tree Removal, Trimming & Arborist"
+  description="Licensed tree service in Fallbrook, CA. Expert care for avocado, oak, citrus, and eucalyptus trees on large rural and semi-rural properties. Certified arborists, free estimates."
+  canonicalUrl="https://murrietatreeexperts.com/fallbrook/"
+>
+  <Hero
+    headline="Tree Service in Fallbrook, CA — Expert Arborists for Large Properties"
+    subheadline="Certified arborists serving Fallbrook's large-lot homes and agricultural properties. Expert care for avocado groves, mature oaks, citrus trees, and ornamental trees on semi-rural estates. Professional service, free estimates."
+    ctaText="Get a Free Quote"
+    secondaryCtaText={`Call ${SITE_CONFIG.phone}`}
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Tree Services We Offer in Fallbrook</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      Fallbrook's large properties and agricultural heritage demand a different level of tree expertise. Our certified arborists provide professional care for the area's diverse tree population — from productive avocado and citrus trees to ornamental oaks and large ornamental trees on custom estates.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Professional Tree Care for Fallbrook's Agricultural Properties</h2>
+      <p>
+        Fallbrook is known as the Avocado Capital of the World, and many properties throughout this semi-rural San Diego County community still carry working avocado groves, citrus orchards, and mature native oaks alongside custom homes and rural estates. Managing these trees requires a level of expertise that goes well beyond typical residential tree work. Our certified arborists understand agricultural-style tree management — proper pruning for productivity and structural integrity, disease identification in avocado and citrus trees, and safe removal of trees that have reached the end of their productive life.
+      </p>
+
+      <h2>Oak Tree Care and Preservation in Fallbrook</h2>
+      <p>
+        Coast live oaks and Engelmann oaks are part of Fallbrook's natural landscape and are protected under San Diego County's tree ordinances. Many properties throughout Fallbrook have mature oaks that require careful management — removing dead wood, managing mistletoe infestations, and assessing for root damage without disturbing sensitive root zones. Our arborists are well-versed in working with protected species and can help you maintain healthy oaks for generations. We never recommend unnecessary removal, and we document the work thoroughly for any permits required by the county.
+      </p>
+
+      <h2>Large-Lot Tree Removal and Trimming</h2>
+      <p>
+        Fallbrook's large rural lots — many spanning an acre or more — mean that tree work often involves significant logistics: long access routes, trees located far from the street, and the need to protect irrigation lines, outbuildings, and gated entries during the work. Our team brings the right equipment for large-property tree service and plans every job carefully before any cutting begins. We use proper rigging techniques to control every piece of wood that comes down, protecting your structures and landscaping throughout the process.
+      </p>
+
+      <h2>Serving All of Fallbrook</h2>
+      <p>
+        We provide tree service throughout Fallbrook, including neighborhoods along Mission Road, South Mission Road, Winterhaven Drive, and the rural properties in the surrounding unincorporated areas of San Diego County. We are based in Murrieta — about 25–30 minutes north via I-15 — and serve Fallbrook regularly. Our arborists are familiar with the specific tree species and soil conditions common to this part of San Diego County, including the avocado-growing hillsides and native oak woodlands.
+      </p>
+
+      <h2>Emergency Tree Service in Fallbrook</h2>
+      <p>
+        Santa Ana wind events and winter storms can bring down large trees on Fallbrook's large lots, often with significant property impact. Our emergency response team is available 24 hours a day, seven days a week for fallen trees, split limbs, and storm damage. On large rural properties, we have the equipment to handle trees of any size — and the experience to work safely in tight situations near structures, fences, and irrigation systems. We work with homeowner insurance carriers and can document damage thoroughly for claims.
+      </p>
+
+      <h2>High-Value Properties Deserve Professional Care</h2>
+      <p>
+        Fallbrook's custom homes and estate properties represent significant investments, and the trees on those properties are part of that value. A damaged oak or a poorly pruned avocado grove affects both the appearance and the productivity of your property. We price our work fairly and transparently, provide detailed written estimates at no charge, and stand behind every job. Fallbrook homeowners can expect the same professional-grade tree care that large commercial properties receive — at rates designed for residential budgets.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Hemet', 'Perris', 'San Jacinto', 'Fallbrook'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Get Your Free Tree Service Quote in Fallbrook" />
+  </section>
+</BaseLayout>

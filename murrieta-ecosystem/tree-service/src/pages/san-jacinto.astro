@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="Tree Service San Jacinto, CA | Tree Removal, Trimming & Stump Grinding"
+  description="Licensed tree service in San Jacinto, CA. Tree removal, trimming, stump grinding, and 24/7 emergency response. Serving all San Jacinto neighborhoods in the San Jacinto Valley. Free estimates."
+  canonicalUrl="https://murrietatreeexperts.com/san-jacinto/"
+>
+  <Hero
+    headline="Tree Service in San Jacinto, CA — Licensed & Local"
+    subheadline="Certified arborists serving all of San Jacinto's neighborhoods — from mature eucalyptus and palms in historic residential areas to fire-risk trees on the valley's edge. Tree removal, trimming, stump grinding, and emergency service. Free estimates."
+    ctaText="Get a Free Quote"
+    secondaryCtaText={`Call ${SITE_CONFIG.phone}`}
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Tree Services We Offer in San Jacinto</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      From aging eucalyptus and overgrown palms in San Jacinto's established neighborhoods to hazard trees near newer residential developments, our certified arborists handle every tree challenge professionally and at fair prices.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Tree Care in San Jacinto's Historic Neighborhoods</h2>
+      <p>
+        San Jacinto is one of Riverside County's oldest incorporated cities — founded in 1888 — and that history is visible in its residential neighborhoods. Many properties in San Jacinto have mature trees that were planted 40–60 years ago: eucalyptus lining older streets, sprawling mulberry trees in back yards, and large palms that have grown far beyond what a homeowner can safely manage. Our certified arborists serve all of San Jacinto's established areas, providing honest assessments and safe tree work for homes with older-growth trees that have become hazards or are simply overdue for professional attention.
+      </p>
+
+      <h2>Fire Season Risk and Tree Hazard Assessment</h2>
+      <p>
+        San Jacinto sits at the edge of the San Jacinto Valley, with Mt. San Jacinto State Park to the east and open desert terrain surrounding much of the city. During fire season — which in Southern California now runs most of the year — overgrown or dead trees on residential properties represent a genuine risk. Eucalyptus trees, common throughout San Jacinto's older neighborhoods, are particularly flammable and drop volatile litter year-round. We assess fire-risk trees, remove dead and dying wood, and help homeowners create defensible space around their properties in compliance with CAL FIRE guidelines.
+      </p>
+
+      <h2>Palm Tree Removal and Trimming in San Jacinto</h2>
+      <p>
+        Mexican fan palms and date palms are found throughout San Jacinto's residential areas and along many of its main corridors. Untrimmed palm skirts — the accumulation of dead fronds — create nesting habitat for rats and a fire hazard during dry summer months. We handle full crown cleaning, skirt removal, and complete palm removal for trees of any height. All work is done using proper rigging and equipment to protect neighboring structures throughout the process.
+      </p>
+
+      <h2>Serving All San Jacinto Neighborhoods</h2>
+      <p>
+        We provide tree service throughout San Jacinto, including the historic downtown area, neighborhoods near Ramona Boulevard, the San Jacinto Valley Academy area, and residential communities along Lyon Avenue and State Street. We also serve properties near the edge of the San Jacinto Wildlife Area and throughout the surrounding unincorporated areas of Riverside County. Our team is based in Murrieta — about 35–45 minutes via I-215 and CA-74 — and serves San Jacinto regularly with no additional travel fees.
+      </p>
+
+      <h2>Emergency Tree Service in San Jacinto</h2>
+      <p>
+        Windstorms off the pass and summer heat stress can push already-weakened trees over the edge without warning. Our emergency response team is available 24 hours a day, seven days a week for fallen trees, split limbs, and storm damage in San Jacinto. We respond promptly, stabilize the situation, and provide a clear written estimate before any additional work begins. We work with most homeowner insurance carriers and can document storm or wind damage thoroughly for a claim.
+      </p>
+
+      <h2>Fair Pricing for San Jacinto Homeowners</h2>
+      <p>
+        We price our work honestly for San Jacinto homeowners. There are no surprise fees, no pressure upsells, and no inflated estimates. We give you an honest assessment of what actually needs to be done — and what can safely wait. Our written estimates are free, we haul all debris from the site, and we stand behind every job with a satisfaction guarantee.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Hemet', 'Perris', 'San Jacinto', 'Fallbrook'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Get Your Free Tree Service Quote in San Jacinto" />
+  </section>
+</BaseLayout>

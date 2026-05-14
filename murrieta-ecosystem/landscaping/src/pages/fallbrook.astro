@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+---
+
+<BaseLayout
+  title="Landscaping Fallbrook, CA | Custom Yard Design & Irrigation | Free Consultation"
+  description="Professional landscaping for Fallbrook, CA's large lots and custom homes. Drought-tolerant design, irrigation systems, and garden-style landscaping for semi-rural properties. Free consultations."
+  canonicalUrl="https://landscapingmurrieta.com/fallbrook/"
+>
+  <Hero
+    headline="Landscaping & Yard Design in Fallbrook, CA"
+    subheadline="Custom landscape design for Fallbrook's large-lot homes and semi-rural properties. Drought-tolerant gardens, irrigation upgrades, and complete yard transformations — designed for the scale and character of Fallbrook living. Free consultations."
+    ctaText="Get a Free Consultation"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Landscaping Services in Fallbrook</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      Fallbrook's large lots, agricultural heritage, and custom homes call for a landscape approach that matches the scale of the property. We design and install beautiful, water-smart yards for Fallbrook's semi-rural lifestyle.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Custom Landscaping for Fallbrook's Large Properties</h2>
+      <p>
+        Fallbrook is unlike most communities in Southern California. Known as the Avocado Capital of the World, this unincorporated San Diego County community is defined by large lots, agricultural heritage, custom homes, and a semi-rural character that demands a landscaping approach scaled to match. Properties here often span an acre or more, with mature avocado and citrus trees, native oaks, and extensive existing plantings that need to be worked into — not around. We specialize in landscape design and installation that respects the character of Fallbrook properties while delivering meaningful improvements in appearance, water efficiency, and livability.
+      </p>
+
+      <h2>Irrigation Systems for Large Fallbrook Lots</h2>
+      <p>
+        Efficient irrigation is one of the most critical — and most neglected — aspects of large-lot landscaping in Fallbrook. Many properties have aging irrigation systems installed decades ago that leak, provide uneven coverage, and waste significant water on slopes and hillsides where it runs off before it can absorb. We design and install modern drip and micro-irrigation systems that deliver water precisely to plant root zones, eliminating runoff and dramatically reducing water consumption. We also upgrade to smart controllers that automatically adjust watering schedules based on weather data, so your irrigation runs only when it's actually needed.
+      </p>
+
+      <h2>Drought-Tolerant and Native Garden Design</h2>
+      <p>
+        Fallbrook's warm, Mediterranean-style climate is ideal for a wide range of California native and drought-adapted plants that create beautiful, low-maintenance gardens. We design plant palettes using species that perform well on Fallbrook's slopes and hillsides — including native sages, manzanitas, deer grass, and flowering perennials that attract pollinators and hold up to the Santa Ana wind events that Fallbrook experiences regularly. These gardens require minimal supplemental irrigation once established and look dramatically better year-round than a struggling lawn.
+      </p>
+
+      <h2>Serving All of Fallbrook</h2>
+      <p>
+        We landscape properties throughout Fallbrook, including large lots along Mission Road, Winterhaven Drive, and the surrounding rural areas. We serve custom homes, equestrian properties, and agricultural parcels throughout unincorporated San Diego County near Fallbrook. Our team is based in Murrieta — about 25–30 minutes north via I-15 — and serves Fallbrook regularly. We bring the right equipment for large-property landscaping and plan every project carefully before any work begins.
+      </p>
+
+      <h2>Coordinated Outdoor Improvements</h2>
+      <p>
+        Large Fallbrook properties often benefit from coordinating landscaping with concrete and hardscaping work — long driveways, patio entertainment areas, or gated entry approaches. We work directly with <a href="https://concrete-murrieta.com">concrete contractors</a> to sequence projects so hardscape goes in first and landscaping follows. When properties have trees that need removal or significant trimming to open up areas for new planting, we coordinate with <a href="https://murrietatreeexperts.com">certified arborists</a> to handle that work before the landscape installation begins.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Hemet', 'Perris', 'San Jacinto', 'Fallbrook'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Schedule Your Free Landscaping Consultation in Fallbrook" />
+  </section>
+</BaseLayout>
