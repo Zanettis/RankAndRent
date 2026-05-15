@@ -2,12 +2,32 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import LeadForm from '../components/LeadForm.astro';
 import { SITE_CONFIG } from '../config';
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE_CONFIG.name,
+  url: SITE_CONFIG.domain,
+  logo: `${SITE_CONFIG.domain}/favicon.svg`,
+  foundingDate: '2013',
+  telephone: SITE_CONFIG.phone,
+  email: SITE_CONFIG.email,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Murrieta',
+    addressRegion: 'CA',
+    postalCode: '92562',
+    addressCountry: 'US',
+  },
+  description: 'Family-owned tree service serving Murrieta and the Temecula Valley since 2013. ISA-trained arborists, fully licensed and insured.',
+};
 ---
 
 <BaseLayout
   title="About Murrieta Tree Experts | Local Tree Service Since 2013"
   description="Family-owned tree service serving Murrieta and the Temecula Valley since 2013. ISA-trained arborists, fully licensed and insured, honest pricing. Meet our team."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
   <!-- Hero -->
   <section class="bg-primary text-white py-16 px-4">
     <div class="max-w-4xl mx-auto text-center">

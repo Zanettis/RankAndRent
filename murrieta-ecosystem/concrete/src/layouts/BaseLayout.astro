@@ -8,9 +8,10 @@ interface Props {
   description: string;
   canonicalUrl?: string;
   ogImage?: string;
+  aggregateRating?: { ratingValue: string; reviewCount: string };
 }
 
-const { title, description, canonicalUrl, ogImage = '/og-image.jpg' } = Astro.props;
+const { title, description, canonicalUrl, ogImage = '/images/hero.jpg', aggregateRating } = Astro.props;
 const canonical = canonicalUrl ?? new URL(Astro.url.pathname, Astro.site).href;
 const ogImageAbsolute = new URL(ogImage, SITE_CONFIG.domain).href;
 
@@ -39,6 +40,7 @@ const schema = {
   ],
   priceRange: '$$',
   description: SITE_CONFIG.description,
+  ...(aggregateRating ? { aggregateRating: { '@type': 'AggregateRating', ...aggregateRating } } : {}),
 };
 ---
 

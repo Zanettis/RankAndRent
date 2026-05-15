@@ -3,12 +3,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import LeadForm from '../components/LeadForm.astro';
 import { Image } from 'astro:assets';
 import mixerImg from '../assets/images/concrete-mixer.jpg';
+import { SITE_CONFIG } from '../config';
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE_CONFIG.name,
+  url: SITE_CONFIG.domain,
+  logo: `${SITE_CONFIG.domain}/favicon.svg`,
+  foundingDate: '2010',
+  telephone: SITE_CONFIG.phone,
+  email: SITE_CONFIG.email,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Murrieta',
+    addressRegion: 'CA',
+    postalCode: '92562',
+    addressCountry: 'US',
+  },
+  description: 'Licensed concrete contractor serving Murrieta and the Temecula Valley since 2010. Driveways, patios, walkways, and decorative concrete with a 10-year workmanship guarantee.',
+};
 ---
 
 <BaseLayout
   title="About Us | Concrete Murrieta, CA"
   description="Learn about Murrieta Concrete — a licensed local concrete contractor serving Murrieta and the Temecula Valley since 2010. Driveways, patios, walkways, and decorative concrete with a 10-year workmanship guarantee."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
   <!-- Hero -->
   <section class="bg-primary text-white py-20 px-4">
     <div class="max-w-4xl mx-auto text-center">

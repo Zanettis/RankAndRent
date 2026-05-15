@@ -1,12 +1,33 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import LeadForm from '../components/LeadForm.astro';
+import { SITE_CONFIG } from '../config';
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE_CONFIG.name,
+  url: SITE_CONFIG.domain,
+  logo: `${SITE_CONFIG.domain}/favicon.svg`,
+  foundingDate: '2011',
+  telephone: SITE_CONFIG.phone,
+  email: SITE_CONFIG.email,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Murrieta',
+    addressRegion: 'CA',
+    postalCode: '92562',
+    addressCountry: 'US',
+  },
+  description: 'Locally-owned landscaping company serving Murrieta since 2011. Drought-smart design, HOA expertise, and full-service installation and maintenance for Temecula Valley homeowners.',
+};
 ---
 
 <BaseLayout
   title="About Us | Landscaping Murrieta, CA"
   description="Locally-owned landscaping company serving Murrieta since 2011. Drought-smart design, HOA expertise, and full-service installation and maintenance for Temecula Valley homeowners."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
   <!-- Hero -->
   <section class="bg-primary text-white py-20 px-4 text-center">
     <div class="max-w-4xl mx-auto">
