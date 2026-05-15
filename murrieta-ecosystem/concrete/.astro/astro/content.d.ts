@@ -152,6 +152,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"can-general-contractor-do-concrete-work.md": {
+	id: "can-general-contractor-do-concrete-work.md";
+  slug: "can-general-contractor-do-concrete-work";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "clay-soil-concrete-damage-menifee.md": {
 	id: "clay-soil-concrete-damage-menifee.md";
   slug: "clay-soil-concrete-damage-menifee";
@@ -229,6 +236,20 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"how-to-make-a-concrete-sidewalk.md": {
+	id: "how-to-make-a-concrete-sidewalk.md";
+  slug: "how-to-make-a-concrete-sidewalk";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"how-to-make-concrete-sidewalk-look-better.md": {
+	id: "how-to-make-concrete-sidewalk-look-better.md";
+  slug: "how-to-make-concrete-sidewalk-look-better";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "outdoor-living-murrieta.md": {
 	id: "outdoor-living-murrieta.md";
   slug: "outdoor-living-murrieta";
@@ -267,6 +288,13 @@ declare module 'astro:content' {
 "stamped-vs-brushed-concrete-murrieta.md": {
 	id: "stamped-vs-brushed-concrete-murrieta.md";
   slug: "stamped-vs-brushed-concrete-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"what-is-a-concrete-contractor.md": {
+	id: "what-is-a-concrete-contractor.md";
+  slug: "what-is-a-concrete-contractor";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
