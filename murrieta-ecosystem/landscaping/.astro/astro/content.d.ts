@@ -173,6 +173,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"best-time-to-landscape-southern-california.md": {
+	id: "best-time-to-landscape-southern-california.md";
+  slug: "best-time-to-landscape-southern-california";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "drip-irrigation-upgrade-murrieta.md": {
 	id: "drip-irrigation-upgrade-murrieta.md";
   slug: "drip-irrigation-upgrade-murrieta";
@@ -246,6 +253,13 @@ declare module 'astro:content' {
 "small-yard-landscaping-menifee-sun-city.md": {
 	id: "small-yard-landscaping-menifee-sun-city.md";
   slug: "small-yard-landscaping-menifee-sun-city";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"sod-vs-artificial-turf-murrieta.md": {
+	id: "sod-vs-artificial-turf-murrieta.md";
+  slug: "sod-vs-artificial-turf-murrieta";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

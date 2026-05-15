@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Do you handle HOA landscaping approval for Canyon Lake POA?', acceptedAnswer: { '@type': 'Answer', text: "Yes — Canyon Lake is a private, HOA-governed community and landscape changes require approval from the Canyon Lake Property Owners Association (CLPOA). We prepare the full submission package: plant list with species names, site plan showing placement, and photos of existing conditions. Many Canyon Lake homeowners find that having a professional submission significantly speeds up POA approval. We don't begin any work until approval is confirmed." } },
+    { '@type': 'Question', name: 'What landscaping styles work well in Canyon Lake?', acceptedAnswer: { '@type': 'Answer', text: "Canyon Lake's lakeside setting lends itself to relaxed, tropical, and Mediterranean styles — lush tropical plants like bird of paradise, agapanthus, and bougainvillea thrive here and add color while staying water-efficient. For lakefront lots, we focus on erosion-resistant ground covers and native plants that won't leach fertilizer into the lake. For interior lots, many homeowners prefer a low-maintenance California native palette that passes HOA review easily." } },
+    { '@type': 'Question', name: 'Can you maintain my Canyon Lake yard on a recurring schedule?', acceptedAnswer: { '@type': 'Answer', text: "Yes — we offer weekly and bi-weekly maintenance throughout Canyon Lake, covering lawn mowing, edging, blowing, shrub trimming, and seasonal cleanup. Canyon Lake's private gate community means we schedule regular access with your gate code or HOA visitor pass. We're familiar with Canyon Lake's community-wide landscape standards and ensure all maintenance stays within POA guidelines." } },
+    { '@type': 'Question', name: 'How much does landscaping typically cost for Canyon Lake properties?', acceptedAnswer: { '@type': 'Answer', text: "Canyon Lake landscaping projects typically run $5,000–$20,000+ depending on lot size, scope, and whether the project includes hardscape elements like patios or retaining walls. Lakefront lots with erosion control requirements or difficult access may have higher project costs. We provide free on-site consultations and written proposals before any work begins — no phone estimates since every yard is unique." } },
+  ],
+};
+---
+
+<BaseLayout
+  title="Landscaping Canyon Lake, CA | HOA-Compliant Design & Lawn Care"
+  description="Professional landscaping and lawn care in Canyon Lake, CA. HOA POA documentation, lakefront-friendly designs, irrigation, and weekly maintenance. Free consultations."
+  canonicalUrl="https://landscapingmurrieta.com/canyon-lake/"
+>
+  <Hero
+    headline="Landscaping & Lawn Care in Canyon Lake, CA"
+    subheadline="Beautiful outdoor spaces for Canyon Lake's gated lakeside community. HOA approval packages, lakefront-safe plantings, irrigation, and recurring maintenance. Free on-site consultations."
+    ctaText="Get a Free Consultation"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Landscaping Services in Canyon Lake</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      From HOA submission packages to lakefront-safe planting designs, we handle every aspect of Canyon Lake landscaping — beautiful results, community-compliant, properly maintained.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Landscaping in Canyon Lake's Unique Community</h2>
+      <p>
+        Canyon Lake is California's largest private, gated community — a city unto itself built around a 383-acre lake. Properties range from compact interior lots to sprawling lakefront estates with private docks. The combination of lakeside microclimate, strict HOA oversight, and diverse property types makes Canyon Lake one of the most interesting landscaping challenges in Southwest Riverside County. Our team has worked extensively in Canyon Lake and understands both the design opportunities and the regulatory requirements.
+      </p>
+
+      <h2>HOA Documentation and POA Submissions</h2>
+      <p>
+        The Canyon Lake Property Owners Association (CLPOA) requires advance approval for significant landscape changes — new planting designs, turf removal, irrigation modifications, and hardscape additions all typically need POA sign-off. We prepare complete submission packages including plant lists with common and botanical names, site plans, and photos. Homeowners who submit with professional documentation consistently report faster approvals. We track your submission status and respond to any POA follow-up questions.
+      </p>
+
+      <h2>Lakefront and Water-Adjacent Landscaping</h2>
+      <p>
+        Lakefront properties in Canyon Lake face unique challenges: steep bank slopes that need erosion control, fertilizer restrictions to protect water quality, and the constant moisture that encourages both beautiful lush growth and unwanted weeds. We use deep-rooted native grasses and ground covers for bank stabilization, avoid synthetic fertilizers near the water line, and select plants that thrive in the elevated humidity of lakeside locations. The result is a landscape that looks naturally at home in the Canyon Lake setting.
+      </p>
+
+      <h2>Why Canyon Lake Homeowners Choose Us</h2>
+      <p>
+        We're locally based in the Murrieta/Temecula Valley and serve Canyon Lake with no travel fees. Our team understands the CLPOA approval process and community aesthetic standards. We provide free on-site consultations, written proposals, and realistic timelines before any work begins. All installations come with a satisfaction guarantee — we stand behind our work.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Lake Elsinore', 'Wildomar', 'Menifee', 'Perris', 'Hemet'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <section class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions — Landscaping in Canyon Lake</h2>
+    <div class="space-y-4">
+      {[
+        { q: "Do you handle HOA landscaping approval for Canyon Lake POA?", a: "Yes — Canyon Lake is a private, HOA-governed community and landscape changes require approval from the Canyon Lake Property Owners Association (CLPOA). We prepare the full submission package: plant list with species names, site plan showing placement, and photos of existing conditions. Many Canyon Lake homeowners find that having a professional submission significantly speeds up POA approval. We don't begin any work until approval is confirmed." },
+        { q: "What landscaping styles work well in Canyon Lake?", a: "Canyon Lake's lakeside setting lends itself to relaxed, tropical, and Mediterranean styles — lush tropical plants like bird of paradise, agapanthus, and bougainvillea thrive here and add color while staying water-efficient. For lakefront lots, we focus on erosion-resistant ground covers and native plants that won't leach fertilizer into the lake. For interior lots, many homeowners prefer a low-maintenance California native palette that passes HOA review easily." },
+        { q: "Can you maintain my Canyon Lake yard on a recurring schedule?", a: "Yes — we offer weekly and bi-weekly maintenance throughout Canyon Lake, covering lawn mowing, edging, blowing, shrub trimming, and seasonal cleanup. Canyon Lake's private gate community means we schedule regular access with your gate code or HOA visitor pass. We're familiar with Canyon Lake's community-wide landscape standards and ensure all maintenance stays within POA guidelines." },
+        { q: "How much does landscaping typically cost for Canyon Lake properties?", a: "Canyon Lake landscaping projects typically run $5,000–$20,000+ depending on lot size, scope, and whether the project includes hardscape elements like patios or retaining walls. Lakefront lots with erosion control requirements or difficult access may have higher project costs. We provide free on-site consultations and written proposals before any work begins — no phone estimates since every yard is unique." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Schedule Your Free Landscaping Consultation in Canyon Lake" />
+  </section>
+</BaseLayout>

@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Do I need HOA approval for tree removal in Canyon Lake?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — Canyon Lake is a private, HOA-governed community and most tree removal or trimming work requires prior approval from the Canyon Lake Property Owners Association (CLPOA). We are familiar with the approval process and can provide the documentation — including photos, tree health assessment, and scope of work — that the POA typically requires. We recommend starting your request early, as approval timelines vary.' } },
+    { '@type': 'Question', name: 'Can you work on trees near the lake and waterfront properties in Canyon Lake?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We regularly work on lakefront and water-adjacent properties in Canyon Lake. Trees near the water — especially large willows, cottonwoods, and eucalyptus — require careful rigging and controlled removal to avoid debris falling into the lake or onto docks. Our crew uses specialized rigging equipment and takes extra precautions for any water-adjacent job.' } },
+    { '@type': 'Question', name: 'What types of trees are most common in Canyon Lake?', acceptedAnswer: { '@type': 'Answer', text: 'Canyon Lake properties commonly have eucalyptus, pine, palm, willow, cottonwood, and various ornamental trees. Eucalyptus and pine are the most frequently removed due to size, root damage, and fire risk. Palms often need dead frond removal and skinning to prevent pests and fire hazard. We handle all species found in the Canyon Lake area.' } },
+    { '@type': 'Question', name: 'How much does tree removal cost in Canyon Lake?', acceptedAnswer: { '@type': 'Answer', text: 'Tree removal in Canyon Lake typically ranges from $350 to $2,200+ depending on tree size, species, and access. Lakefront properties or lots with limited equipment access may require additional labor for manual rigging. We provide free written estimates with no obligation — call or submit a quote request and we will come out to assess.' } },
+  ],
+};
+---
+
+<BaseLayout
+  title="Tree Service Canyon Lake, CA | Tree Removal, Trimming & Stump Grinding"
+  description="Professional tree removal, trimming, and stump grinding in Canyon Lake, CA. HOA documentation provided. Licensed arborists serving lakefront and gated community properties. Free estimates."
+  canonicalUrl="https://murrietatreeexperts.com/canyon-lake/"
+>
+  <Hero
+    headline="Tree Service in Canyon Lake, CA — HOA-Ready & Fully Licensed"
+    subheadline="Certified arborists serving Canyon Lake's gated community and lakefront properties. We handle HOA documentation, careful waterfront removals, and full cleanup. Free estimates."
+    ctaText="Get a Free Quote"
+    secondaryCtaText={`Call ${SITE_CONFIG.phone}`}
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Tree Services in Canyon Lake</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      From routine palm trimming to complex lakefront removals, our certified arborists understand Canyon Lake's unique HOA requirements and waterfront challenges.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Tree Care in Canyon Lake's Gated Community</h2>
+      <p>
+        Canyon Lake is unlike any other community in Southwest Riverside County — a privately governed, gated city built around a 383-acre lake. The unique setting means trees face specific challenges: lakeside humidity encourages faster growth, water-adjacent roots can undermine docks and shoreline structures, and the POA maintains strict standards for property appearance and safety. Our arborists have worked extensively in Canyon Lake and understand both the horticultural demands and the approval process.
+      </p>
+
+      <h2>HOA Documentation and POA Approval</h2>
+      <p>
+        The Canyon Lake Property Owners Association (CLPOA) requires approval before most significant tree work. We help homeowners navigate this by providing written assessments, photos, and a clear scope of work in the format the POA expects. Many of our Canyon Lake clients tell us that having professional documentation made the approval process significantly faster. We do not start work without confirming your HOA status — protecting you from fines or disputes.
+      </p>
+
+      <h2>Lakefront and Water-Adjacent Tree Removal</h2>
+      <p>
+        Removing trees near Canyon Lake's shoreline, docks, and seawalls requires skill and proper rigging. We use controlled directional felling, crane-assisted removal when needed, and careful debris containment to ensure nothing enters the water. Waterfront eucalyptus, willows, and cottonwoods are the most frequent requests — these species grow rapidly in lakeside conditions and can become structural hazards if left unmanaged.
+      </p>
+
+      <h2>Why Canyon Lake Homeowners Choose Us</h2>
+      <p>
+        We're based locally in the Murrieta/Temecula Valley — not a franchise dispatching from hours away. All our arborists are California licensed and insured. We provide written estimates before any work begins and leave your property clean, with wood chipped and debris hauled. We coordinate directly with your HOA approval process at no extra charge.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Lake Elsinore', 'Wildomar', 'Menifee', 'Winchester', 'Perris'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <section class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions — Tree Service in Canyon Lake</h2>
+    <div class="space-y-4">
+      {[
+        { q: "Do I need HOA approval for tree removal in Canyon Lake?", a: "Yes — Canyon Lake is a private, HOA-governed community and most tree removal or trimming work requires prior approval from the Canyon Lake Property Owners Association (CLPOA). We are familiar with the approval process and can provide the documentation — including photos, tree health assessment, and scope of work — that the POA typically requires. We recommend starting your request early, as approval timelines vary." },
+        { q: "Can you work on trees near the lake and waterfront properties in Canyon Lake?", a: "Yes. We regularly work on lakefront and water-adjacent properties in Canyon Lake. Trees near the water — especially large willows, cottonwoods, and eucalyptus — require careful rigging and controlled removal to avoid debris falling into the lake or onto docks. Our crew uses specialized rigging equipment and takes extra precautions for any water-adjacent job." },
+        { q: "What types of trees are most common in Canyon Lake?", a: "Canyon Lake properties commonly have eucalyptus, pine, palm, willow, cottonwood, and various ornamental trees. Eucalyptus and pine are the most frequently removed due to size, root damage, and fire risk. Palms often need dead frond removal and skinning to prevent pests and fire hazard. We handle all species found in the Canyon Lake area." },
+        { q: "How much does tree removal cost in Canyon Lake?", a: "Tree removal in Canyon Lake typically ranges from $350 to $2,200+ depending on tree size, species, and access. Lakefront properties or lots with limited equipment access may require additional labor for manual rigging. We provide free written estimates with no obligation — call or submit a quote request and we will come out to assess." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Get Your Free Tree Service Quote in Canyon Lake" />
+  </section>
+</BaseLayout>

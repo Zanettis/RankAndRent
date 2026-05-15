@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Do you need HOA approval for concrete work in Canyon Lake?', acceptedAnswer: { '@type': 'Answer', text: "Yes — Canyon Lake is governed by the Canyon Lake Property Owners Association (CLPOA), and most exterior improvements including new concrete driveways, patios, and walkways require POA approval before work begins. We prepare HOA submission documentation including site plans, finish samples, and a written scope of work. We do not begin any concrete work until we confirm that your HOA approval is in hand." } },
+    { '@type': 'Question', name: 'What concrete finishes are popular in Canyon Lake?', acceptedAnswer: { '@type': 'Answer', text: "Canyon Lake homeowners tend to prefer finishes that complement the relaxed lakeside aesthetic. Exposed aggregate driveways and broom-finish concrete with decorative borders are popular for driveways. For patios and pool decks, stamped concrete in flagstone or slate patterns is common — it achieves a high-end look at a fraction of the cost of natural stone. Many Canyon Lake HOAs accept these finishes, and we can provide sample boards to include in your POA submission." } },
+    { '@type': 'Question', name: 'Can you pour concrete near lakefront property or on sloped lots in Canyon Lake?', acceptedAnswer: { '@type': 'Answer', text: "Yes — we regularly work on sloped lots and lakefront properties throughout Canyon Lake. Sloped areas require additional grading and drainage planning to ensure water moves away from structures properly. Lakefront properties may have access restrictions or environmental considerations near the shoreline. We assess these factors during your free on-site estimate and engineer the project accordingly." } },
+    { '@type': 'Question', name: 'How much does concrete work cost in Canyon Lake?', acceptedAnswer: { '@type': 'Answer', text: "Concrete projects in Canyon Lake typically range from $3,000 for smaller walkways and patios to $15,000+ for full driveway replacements and large patio installations on hillside or lakefront lots. HOA documentation and any permit fees are itemized separately in your written estimate. We provide free on-site estimates — contact us to schedule a visit." } },
+  ],
+};
+---
+
+<BaseLayout
+  title="Concrete Contractor Canyon Lake, CA | Driveways, Patios & HOA-Approved Work"
+  description="Licensed concrete contractor serving Canyon Lake, CA. Driveways, patios, walkways, and stamped concrete. HOA documentation provided. Free estimates for all Canyon Lake properties."
+  canonicalUrl="https://murrietaconcreteworks.com/canyon-lake/"
+>
+  <Hero
+    headline="Concrete Driveways & Patios in Canyon Lake, CA"
+    subheadline="Licensed concrete contractors serving Canyon Lake's gated community. HOA approval documentation, lakeside-ready finishes, and full-service installations. Free estimates."
+    ctaText="Get a Free Estimate"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Concrete Services in Canyon Lake</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      From HOA-documented driveway replacements to decorative stamped patios on lakefront lots, we deliver quality concrete work that meets Canyon Lake's community standards.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Concrete Work in Canyon Lake's Private Community</h2>
+      <p>
+        Canyon Lake is one of California's most unique residential communities — a private, gated city built around a 383-acre lake with one of the highest rates of homeownership in Riverside County. Properties here range from waterfront estates with private docks to interior hillside lots with sweeping views. Concrete work in Canyon Lake must navigate HOA approval requirements, varied topography, and the community's high aesthetic standards. We understand all three and deliver work that passes POA review and looks as good as it performs.
+      </p>
+
+      <h2>HOA Documentation for Canyon Lake POA</h2>
+      <p>
+        The Canyon Lake Property Owners Association (CLPOA) reviews and approves most exterior improvements, including new or replacement concrete driveways, patios, and walkways. Our submission packages include site plans showing dimensions and drainage flow, finish descriptions and color samples, and a written scope of work in the format the POA expects. We've helped many Canyon Lake homeowners through the approval process and know what the committee looks for. We never begin work without confirmed approval — protecting you from fines and mandatory removal.
+      </p>
+
+      <h2>Outdoor Living Concrete for Canyon Lake Homes</h2>
+      <p>
+        Canyon Lake's year-round warm weather makes outdoor living a priority for most homeowners. We install pool decks, entertaining patios, outdoor kitchen slabs, and fire pit areas using concrete finishes that complement the lakeside setting. Stamped concrete in slate, flagstone, and wood-plank patterns is popular for its durability and low maintenance compared to natural materials — and it stands up well to the humidity and heat cycles of the lakefront environment.
+      </p>
+
+      <h2>Why Canyon Lake Homeowners Choose Us</h2>
+      <p>
+        We're locally based in the Murrieta/Temecula Valley and serve Canyon Lake with no travel fees. We handle HOA documentation, permit applications, and all required inspections. Every project includes a 10-year workmanship guarantee: if a defect traces to our installation, we return and correct it at no cost. Free on-site estimates available for all Canyon Lake properties.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Lake Elsinore', 'Wildomar', 'Menifee', 'Perris', 'Hemet'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <section class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions — Concrete in Canyon Lake</h2>
+    <div class="space-y-4">
+      {[
+        { q: "Do you need HOA approval for concrete work in Canyon Lake?", a: "Yes — Canyon Lake is governed by the Canyon Lake Property Owners Association (CLPOA), and most exterior improvements including new concrete driveways, patios, and walkways require POA approval before work begins. We prepare HOA submission documentation including site plans, finish samples, and a written scope of work. We do not begin any concrete work until we confirm that your HOA approval is in hand." },
+        { q: "What concrete finishes are popular in Canyon Lake?", a: "Canyon Lake homeowners tend to prefer finishes that complement the relaxed lakeside aesthetic. Exposed aggregate driveways and broom-finish concrete with decorative borders are popular for driveways. For patios and pool decks, stamped concrete in flagstone or slate patterns is common — it achieves a high-end look at a fraction of the cost of natural stone. Many Canyon Lake HOAs accept these finishes, and we can provide sample boards to include in your POA submission." },
+        { q: "Can you pour concrete near lakefront property or on sloped lots in Canyon Lake?", a: "Yes — we regularly work on sloped lots and lakefront properties throughout Canyon Lake. Sloped areas require additional grading and drainage planning to ensure water moves away from structures properly. Lakefront properties may have access restrictions or environmental considerations near the shoreline. We assess these factors during your free on-site estimate and engineer the project accordingly." },
+        { q: "How much does concrete work cost in Canyon Lake?", a: "Concrete projects in Canyon Lake typically range from $3,000 for smaller walkways and patios to $15,000+ for full driveway replacements and large patio installations on hillside or lakefront lots. HOA documentation and any permit fees are itemized separately in your written estimate. We provide free on-site estimates — contact us to schedule a visit." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Get Your Free Concrete Estimate in Canyon Lake" />
+  </section>
+</BaseLayout>

@@ -201,6 +201,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"concrete-patio-vs-wood-deck-murrieta.md": {
+	id: "concrete-patio-vs-wood-deck-murrieta.md";
+  slug: "concrete-patio-vs-wood-deck-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "concrete-permits-murrieta-temecula.md": {
 	id: "concrete-permits-murrieta-temecula.md";
   slug: "concrete-permits-murrieta-temecula";
@@ -232,6 +239,13 @@ declare module 'astro:content' {
 "concrete-walkway-cost-temecula.md": {
 	id: "concrete-walkway-cost-temecula.md";
   slug: "concrete-walkway-cost-temecula";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"how-long-does-concrete-driveway-last-southern-california.md": {
+	id: "how-long-does-concrete-driveway-last-southern-california.md";
+  slug: "how-long-does-concrete-driveway-last-southern-california";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

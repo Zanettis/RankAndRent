@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'What drought-tolerant landscaping options work best in Lake Elsinore?', acceptedAnswer: { '@type': 'Answer', text: "Lake Elsinore's warm, dry summers are perfect for California natives and Mediterranean plants. Top performers include California lilac (Ceanothus), bougainvillea, agave, ornamental grasses, and low-water ground covers like lantana and society garlic. These plants thrive in Elsinore Valley's heat and qualify for EVMWD turf replacement rebates. We design yards that look great year-round without high water bills." } },
+    { '@type': 'Question', name: 'Does EVMWD offer water rebates for landscaping in Lake Elsinore?', acceptedAnswer: { '@type': 'Answer', text: "Yes — the Eastern Municipal Water District (EVMWD) serves Lake Elsinore and offers turf replacement rebates for residential properties that convert grass to drought-tolerant landscaping. The program pays per square foot of turf removed, and most front yard conversions qualify. We design projects to meet EVMWD's requirements and can walk you through the application process from pre-approval through final inspection." } },
+    { '@type': 'Question', name: 'Do you maintain lawns and landscapes weekly in Lake Elsinore?', acceptedAnswer: { '@type': 'Answer', text: "Yes — we offer weekly and bi-weekly lawn care maintenance throughout Lake Elsinore, including mowing, edging, trimming, and seasonal cleanup. For properties that have converted to drought-tolerant landscaping, we also provide maintenance visits for weeding, pruning, and irrigation system checks. Our maintenance routes cover all of Lake Elsinore including newer communities near Diamond Stadium and the lakefront areas." } },
+    { '@type': 'Question', name: 'How much does landscaping cost in Lake Elsinore?', acceptedAnswer: { '@type': 'Answer', text: "Landscaping project costs in Lake Elsinore range from $2,500 for a simple front yard conversion to $15,000+ for full backyard designs with irrigation and hardscape elements. A typical drought-tolerant front yard with sod removal, new plants, drip irrigation, and mulch runs $3,000–$6,000. EVMWD rebates can offset $1,000–$3,000 of that cost depending on the area converted. We provide free on-site estimates." } },
+  ],
+};
+---
+
+<BaseLayout
+  title="Landscaping Lake Elsinore, CA | Lawn Care, Drought-Tolerant Design & Irrigation"
+  description="Professional landscaping and lawn care in Lake Elsinore, CA. Drought-tolerant designs, EVMWD rebate help, irrigation installation, and weekly maintenance. Free consultations."
+  canonicalUrl="https://landscapingmurrieta.com/lake-elsinore/"
+>
+  <Hero
+    headline="Landscaping & Lawn Care in Lake Elsinore, CA"
+    subheadline="Beautiful, water-smart outdoor spaces for Lake Elsinore homeowners. Drought-tolerant design, lawn care, drip irrigation, and EVMWD rebate assistance. Free on-site consultations."
+    ctaText="Get a Free Consultation"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Landscaping Services in Lake Elsinore</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      From weekly lawn maintenance to full yard transformations, we design and maintain beautiful outdoor spaces for Lake Elsinore homes — water-smart and built for Elsinore Valley's climate.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Landscaping Built for Lake Elsinore's Climate</h2>
+      <p>
+        Lake Elsinore sits in the Elsinore Valley at about 1,250 feet elevation — warmer and windier than Murrieta and Temecula, and one of the fastest-growing cities in Southern California. This growth means many homes have older, water-intensive lawns that are increasingly expensive to maintain, while newer construction often comes with minimal landscaping that needs to be developed. Whether you're converting an aging lawn or starting from scratch on a new build, we design landscapes that fit the Elsinore Valley's climate and your budget.
+      </p>
+
+      <h2>EVMWD Turf Replacement Rebates</h2>
+      <p>
+        Lake Elsinore is in the Eastern Municipal Water District (EVMWD) service area, which offers significant rebates for converting grass to drought-tolerant landscaping. Homeowners who remove qualifying turf and replace it with approved plants can receive rebate checks that offset a meaningful portion of the project cost. We're familiar with EVMWD's requirements — the plant list, minimum conversion size, documentation needed, and inspection process — and we design projects from the start to maximize your rebate eligibility.
+      </p>
+
+      <h2>Irrigation for Lake Elsinore's Wind and Heat</h2>
+      <p>
+        Lake Elsinore's famous afternoon winds and summer heat increase evaporation and make overhead sprinklers inefficient. We install drip irrigation systems that deliver water directly to plant root zones, dramatically reducing water usage and wind drift loss. Smart irrigation controllers automatically adjust run times based on weather — many qualify for additional water district rebates on top of the turf conversion program.
+      </p>
+
+      <h2>Why Lake Elsinore Homeowners Choose Us</h2>
+      <p>
+        We're locally based in the Murrieta/Temecula Valley and serve all of Lake Elsinore with no travel fees. We provide free on-site consultations, written proposals with itemized costs, and realistic project timelines. Our work comes with a satisfaction guarantee — if something doesn't look right after installation, we come back and address it.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Canyon Lake', 'Perris', 'Hemet'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <section class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions — Landscaping in Lake Elsinore</h2>
+    <div class="space-y-4">
+      {[
+        { q: "What drought-tolerant landscaping options work best in Lake Elsinore?", a: "Lake Elsinore's warm, dry summers are perfect for California natives and Mediterranean plants. Top performers include California lilac (Ceanothus), bougainvillea, agave, ornamental grasses, and low-water ground covers like lantana and society garlic. These plants thrive in Elsinore Valley's heat and qualify for EVMWD turf replacement rebates. We design yards that look great year-round without high water bills." },
+        { q: "Does EVMWD offer water rebates for landscaping in Lake Elsinore?", a: "Yes — the Eastern Municipal Water District (EVMWD) serves Lake Elsinore and offers turf replacement rebates for residential properties that convert grass to drought-tolerant landscaping. The program pays per square foot of turf removed, and most front yard conversions qualify. We design projects to meet EVMWD's requirements and can walk you through the application process from pre-approval through final inspection." },
+        { q: "Do you maintain lawns and landscapes weekly in Lake Elsinore?", a: "Yes — we offer weekly and bi-weekly lawn care maintenance throughout Lake Elsinore, including mowing, edging, trimming, and seasonal cleanup. For properties that have converted to drought-tolerant landscaping, we also provide maintenance visits for weeding, pruning, and irrigation system checks. Our maintenance routes cover all of Lake Elsinore including newer communities near Diamond Stadium and the lakefront areas." },
+        { q: "How much does landscaping cost in Lake Elsinore?", a: "Landscaping project costs in Lake Elsinore range from $2,500 for a simple front yard conversion to $15,000+ for full backyard designs with irrigation and hardscape elements. A typical drought-tolerant front yard with sod removal, new plants, drip irrigation, and mulch runs $3,000–$6,000. EVMWD rebates can offset $1,000–$3,000 of that cost depending on the area converted. We provide free on-site estimates." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Schedule Your Free Landscaping Consultation in Lake Elsinore" />
+  </section>
+</BaseLayout>

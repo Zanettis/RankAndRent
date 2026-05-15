@@ -180,6 +180,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"how-long-does-tree-removal-take.md": {
+	id: "how-long-does-tree-removal-take.md";
+  slug: "how-long-does-tree-removal-take";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "how-to-identify-dead-dying-tree-murrieta.md": {
 	id: "how-to-identify-dead-dying-tree-murrieta.md";
   slug: "how-to-identify-dead-dying-tree-murrieta";
@@ -218,6 +225,13 @@ declare module 'astro:content' {
 "tree-removal-cost-murrieta.md": {
 	id: "tree-removal-cost-murrieta.md";
   slug: "tree-removal-cost-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"tree-removal-permit-murrieta-temecula.md": {
+	id: "tree-removal-permit-murrieta-temecula.md";
+  slug: "tree-removal-permit-murrieta-temecula";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

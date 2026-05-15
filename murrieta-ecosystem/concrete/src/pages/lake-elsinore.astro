@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Do you install concrete driveways and RV pads in Lake Elsinore?', acceptedAnswer: { '@type': 'Answer', text: "Yes — concrete driveways, RV pads, and boat storage pads are among our most requested projects in Lake Elsinore. The area's outdoor recreation culture means many homeowners need reinforced concrete pads for heavy vehicles and trailers. We size and reinforce slabs to handle the weight of motorhomes and boat trailers, and we pull all required Riverside County permits for the work." } },
+    { '@type': 'Question', name: 'How does Lake Elsinore soil affect concrete installation?', acceptedAnswer: { '@type': 'Answer', text: "Lake Elsinore sits near the Elsinore Fault zone and has a mix of alluvial soils and expansive clay — both of which move. Expansive clay swells when wet (rainy season) and shrinks in dry summer heat, which is the primary cause of concrete cracking. We always perform proper subbase preparation — removing existing material, bringing in compactable base rock, and compacting in lifts — before any pour. Rebar reinforcement is standard on all our Lake Elsinore projects." } },
+    { '@type': 'Question', name: 'Do you need a permit to pour concrete in Lake Elsinore?', acceptedAnswer: { '@type': 'Answer', text: "Permit requirements in Lake Elsinore depend on project type and whether the property is incorporated (City of Lake Elsinore) or unincorporated (Riverside County). New driveways with curb cuts, patios over 200 sq ft, and structural concrete work typically require permits. We determine permit requirements during your free estimate and handle all applications and inspections — you don't need to navigate the permit office yourself." } },
+    { '@type': 'Question', name: 'How much does a concrete driveway cost in Lake Elsinore?', acceptedAnswer: { '@type': 'Answer', text: "Concrete driveway costs in Lake Elsinore typically range from $6 to $12 per square foot for standard broom-finish concrete, depending on project size, access, and existing driveway removal. A standard two-car driveway (400–500 sq ft) runs $2,500–$5,000. Decorative stamped finishes add $3–$6 per sq ft. We provide free written estimates with no obligation — contact us to schedule an on-site visit." } },
+  ],
+};
+---
+
+<BaseLayout
+  title="Concrete Contractor Lake Elsinore, CA | Driveways, Patios & RV Pads"
+  description="Licensed concrete contractor in Lake Elsinore, CA. Driveways, patios, RV pads, walkways, and repairs. Permit handling, free estimates. Serving all Lake Elsinore neighborhoods."
+  canonicalUrl="https://murrietaconcreteworks.com/lake-elsinore/"
+>
+  <Hero
+    headline="Concrete Driveways & Patios in Lake Elsinore, CA"
+    subheadline="Licensed concrete contractors serving all of Lake Elsinore. Driveways, RV pads, patios, walkways, and repairs — fully permitted, free estimates, 10-year workmanship guarantee."
+    ctaText="Get a Free Estimate"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Concrete Services in Lake Elsinore</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      From reinforced RV pads to decorative patios, we deliver quality concrete work for Lake Elsinore homes — fully permitted and built to handle Elsinore Valley's soil and climate.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Concrete Built for Lake Elsinore's Growing Community</h2>
+      <p>
+        Lake Elsinore is one of the fastest-growing cities in Southern California, and with that growth comes significant demand for quality concrete work. New homes need driveways and patios. Older homes have cracked, heaving concrete from decades of expansive clay soil movement. And the area's outdoor recreation culture — boats, ATVs, motorhomes — means many properties need heavy-duty RV pads and reinforced storage areas. We serve all of these needs with properly engineered concrete work that's built to last.
+      </p>
+
+      <h2>RV Pads, Boat Storage, and Heavy-Duty Concrete</h2>
+      <p>
+        Lake Elsinore's proximity to the lake and nearby recreation areas makes it one of the most RV- and boat-friendly communities in Southwest Riverside County. Many homeowners need reinforced concrete pads capable of supporting motorhomes (20,000–40,000 lbs), boat trailers, and utility vehicles. We size slab thickness and rebar grids specifically for heavy loads — a 5-inch slab with #4 rebar for standard vehicles, 6-inch with heavier reinforcement for the largest motorhomes. We'll pull all Riverside County permits required for these installations.
+      </p>
+
+      <h2>Dealing with Lake Elsinore's Expansive Soils</h2>
+      <p>
+        The soils around Lake Elsinore include both alluvial deposits from the lake basin and expansive clay typical of Riverside County. This combination creates significant movement challenges for concrete. We address this with thorough subbase preparation: excavating to stable material, importing and compacting select fill, and installing rebar reinforcement in all slabs. These steps add cost over a minimal-prep pour but dramatically extend the service life of your concrete — avoiding costly repairs in 5–7 years.
+      </p>
+
+      <h2>Why Lake Elsinore Homeowners Choose Us</h2>
+      <p>
+        We're locally based in the Murrieta/Temecula Valley and serve all of Lake Elsinore — incorporated city and unincorporated county areas — without travel fees. We handle all permit applications and inspections. Every project includes a 10-year workmanship guarantee: if a defect traces back to our installation, we return and fix it at no charge. Free on-site estimates available throughout Lake Elsinore.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Canyon Lake', 'Perris', 'Hemet'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <section class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions — Concrete in Lake Elsinore</h2>
+    <div class="space-y-4">
+      {[
+        { q: "Do you install concrete driveways and RV pads in Lake Elsinore?", a: "Yes — concrete driveways, RV pads, and boat storage pads are among our most requested projects in Lake Elsinore. The area's outdoor recreation culture means many homeowners need reinforced concrete pads for heavy vehicles and trailers. We size and reinforce slabs to handle the weight of motorhomes and boat trailers, and we pull all required Riverside County permits for the work." },
+        { q: "How does Lake Elsinore soil affect concrete installation?", a: "Lake Elsinore sits near the Elsinore Fault zone and has a mix of alluvial soils and expansive clay — both of which move. Expansive clay swells when wet (rainy season) and shrinks in dry summer heat, which is the primary cause of concrete cracking. We always perform proper subbase preparation — removing existing material, bringing in compactable base rock, and compacting in lifts — before any pour. Rebar reinforcement is standard on all our Lake Elsinore projects." },
+        { q: "Do you need a permit to pour concrete in Lake Elsinore?", a: "Permit requirements in Lake Elsinore depend on project type and whether the property is incorporated (City of Lake Elsinore) or unincorporated (Riverside County). New driveways with curb cuts, patios over 200 sq ft, and structural concrete work typically require permits. We determine permit requirements during your free estimate and handle all applications and inspections — you don't need to navigate the permit office yourself." },
+        { q: "How much does a concrete driveway cost in Lake Elsinore?", a: "Concrete driveway costs in Lake Elsinore typically range from $6 to $12 per square foot for standard broom-finish concrete, depending on project size, access, and existing driveway removal. A standard two-car driveway (400–500 sq ft) runs $2,500–$5,000. Decorative stamped finishes add $3–$6 per sq ft. We provide free written estimates with no obligation — contact us to schedule an on-site visit." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Get Your Free Concrete Estimate in Lake Elsinore" />
+  </section>
+</BaseLayout>
