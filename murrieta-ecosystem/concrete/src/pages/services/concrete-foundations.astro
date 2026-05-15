@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { Image } from 'astro:assets';
+import { SITE_CONFIG } from '../../config';
+import pourImg from '../../assets/images/concrete-pour-team.jpg';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What types of concrete foundation work do you do in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'We handle residential foundation slabs (new construction), garage floor pours, ADU foundation pads, addition foundations, stem walls, and crawlspace slab enclosures. We do not perform structural foundation repair for existing homes with settlement issues — that requires a licensed structural engineer and specialized underpinning work. For new pours and additions, we\'re fully equipped.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does a concrete foundation slab cost in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Concrete foundation slabs in Murrieta typically cost $5–$10 per square foot for the concrete work alone, depending on thickness, reinforcement requirements, and site prep. A 20×20 garage slab (400 sq ft) runs approximately $2,000–$4,000. ADU foundations and addition footings vary significantly based on structural requirements. We provide free on-site estimates with written pricing.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is Murrieta\'s clay soil problem, and how does it affect foundation slabs?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Murrieta and the broader Temecula Valley sit on expansive clay soils — soil that swells when wet and shrinks when dry. This seasonal movement can crack and heave foundation slabs if the subbase isn\'t properly prepared. We over-excavate, add compacted gravel base material, and use heavier reinforcement (typically #4 rebar on 12-inch centers) for any slab on Murrieta\'s native soil.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do foundation pours require permits in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Any foundation pour that supports a structure — including ADUs, room additions, garages, and detached structures over 120 square feet — requires a building permit in Murrieta. The permit process includes a soil report in some cases, plan check, and inspections at key stages (footing excavation, pre-pour inspection, and final). We coordinate the permit process as part of the project.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How thick should a concrete slab foundation be?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Standard residential slabs are 4 inches thick for living areas and 6 inches thick for garages (to handle vehicle loads). ADU foundations and structures supporting heavier loads may require 6–8 inches plus a thickened perimeter footing. Slab thickness is determined by the load the structure will bear and the soil conditions underneath. We follow Murrieta building code requirements and engineer specs when provided.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does a concrete foundation slab take to cure before building on it?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Concrete reaches sufficient strength for framing work in 7 days, but full design strength (3,000 PSI for standard mix) is reached at 28 days. Most framing contractors begin work at the 7-day mark. We\'ll give you a specific timeline and let you know when the slab is ready for the next trade. We recommend against rushing this — adequate cure time prevents long-term cracking and surface damage.' },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_CONFIG.domain}/services/` },
+    { '@type': 'ListItem', position: 3, name: 'Concrete Foundations', item: `${SITE_CONFIG.domain}/services/concrete-foundations/` },
+  ],
+};
+---
+
+<BaseLayout
+  title="Concrete Foundation Contractor Murrieta, CA | Slabs, ADU Pads & Additions | Free Estimates"
+  description="Licensed concrete foundation contractor in Murrieta, CA. Garage slabs, ADU foundations, addition footings, and residential pads. Clay soil expertise. Free estimates."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <Hero
+    headline="Concrete Foundation Contractor in Murrieta, CA"
+    subheadline="Garage slabs, ADU pads, addition foundations, and residential pours — built right the first time on Murrieta's challenging clay soil."
+    ctaText="Get a Free Estimate"
+  />
+
+  <div class="max-w-4xl mx-auto px-4 pt-8 pb-2">
+    <Image
+      src={pourImg}
+      alt="Concrete pour team installing a foundation slab in Murrieta, CA"
+      width={1200}
+      height={600}
+      class="rounded-2xl w-full object-cover max-h-[420px]"
+    />
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Foundation Concrete Work We Do</h2>
+      <p>
+        We pour concrete foundations for garages, ADUs (accessory dwelling units), home additions,
+        detached workshops, pool equipment pads, and other residential structures. Our work covers
+        the concrete scope — excavation, subbase prep, formwork, reinforcement, and the pour itself.
+        We work from engineer drawings when provided or coordinate with the engineer on spec.
+      </p>
+
+      <h2>Murrieta's Clay Soil: What It Means for Your Slab</h2>
+      <p>
+        Murrieta sits on expansive clay soils that swell with moisture and shrink during dry
+        periods. This seasonal movement creates upward and downward force on any concrete slab
+        poured directly on native soil. The solution isn't optional — it's standard practice on
+        every job: over-excavate the native soil, install a minimum 4-inch compacted gravel base,
+        and use #4 rebar on 12-inch centers (rather than wire mesh alone). Skipping these steps
+        leads to cracked and heaved slabs within a few years.
+      </p>
+
+      <h2>ADU Foundations</h2>
+      <p>
+        Murrieta and Temecula have seen significant ADU construction activity as homeowners add
+        rental units or multigenerational housing. ADU foundations must meet specific setback,
+        thickness, and reinforcement requirements set by the city. We pull the permits, coordinate
+        with the plan checker, and schedule the required inspections at each stage — pre-pour
+        and final.
+      </p>
+
+      <h2>Garage Slabs</h2>
+      <p>
+        A standard two-car garage slab is 400–440 square feet at 6 inches thick with #4 rebar
+        reinforcement to handle vehicle loads. We integrate the slab with the existing driveway
+        apron and ensure the interior floor drains toward the garage door opening. If you're
+        converting a garage or upgrading an old slab, we can demo and repour to current standards.
+      </p>
+
+      <h2>Permits and Inspections</h2>
+      <p>
+        Foundation pours for any permitted structure require a building permit in Murrieta.
+        The city requires inspection at the pre-pour stage — before concrete is placed — to verify
+        formwork, rebar placement, and depth. We schedule and manage these inspections and will
+        notify you of any adjustments required by the inspector before we pour.
+      </p>
+    </div>
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-primary mb-6">More Concrete Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {SITE_CONFIG.services.filter(s => s.href !== '/services/concrete-foundations').map((s) => (
+          <ServiceCard title={s.title} description={s.description} href={s.href} />
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {[
+        { q: "What types of concrete foundation work do you do in Murrieta?", a: "We handle residential foundation slabs (new construction), garage floor pours, ADU foundation pads, addition foundations, stem walls, and crawlspace slab enclosures. We do not perform structural foundation repair for existing homes with settlement issues — that requires a licensed structural engineer and specialized underpinning work. For new pours and additions, we're fully equipped." },
+        { q: "How much does a concrete foundation slab cost in Murrieta?", a: "Concrete foundation slabs in Murrieta typically cost $5–$10 per square foot for the concrete work alone, depending on thickness, reinforcement requirements, and site prep. A 20×20 garage slab (400 sq ft) runs approximately $2,000–$4,000. ADU foundations and addition footings vary significantly based on structural requirements. We provide free on-site estimates with written pricing." },
+        { q: "What is Murrieta's clay soil problem, and how does it affect foundation slabs?", a: "Murrieta and the broader Temecula Valley sit on expansive clay soils — soil that swells when wet and shrinks when dry. This seasonal movement can crack and heave foundation slabs if the subbase isn't properly prepared. We over-excavate, add compacted gravel base material, and use heavier reinforcement (typically #4 rebar on 12-inch centers) for any slab on Murrieta's native soil." },
+        { q: "Do foundation pours require permits in Murrieta?", a: "Yes. Any foundation pour that supports a structure — including ADUs, room additions, garages, and detached structures over 120 square feet — requires a building permit in Murrieta. The permit process includes a soil report in some cases, plan check, and inspections at key stages (footing excavation, pre-pour inspection, and final). We coordinate the permit process as part of the project." },
+        { q: "How thick should a concrete slab foundation be?", a: "Standard residential slabs are 4 inches thick for living areas and 6 inches thick for garages (to handle vehicle loads). ADU foundations and structures supporting heavier loads may require 6–8 inches plus a thickened perimeter footing. Slab thickness is determined by the load the structure will bear and the soil conditions underneath. We follow Murrieta building code requirements and engineer specs when provided." },
+        { q: "How long does a concrete foundation slab take to cure before building on it?", a: "Concrete reaches sufficient strength for framing work in 7 days, but full design strength (3,000 PSI for standard mix) is reached at 28 days. Most framing contractors begin work at the 7-day mark. We'll give you a specific timeline and let you know when the slab is ready for the next trade. We recommend against rushing this — adequate cure time prevents long-term cracking and surface damage." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 pb-16">
+    <LeadForm heading="Get Your Free Foundation Estimate" />
+  </section>
+</BaseLayout>

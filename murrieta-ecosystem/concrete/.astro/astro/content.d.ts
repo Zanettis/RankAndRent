@@ -159,6 +159,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"concrete-contractor-insurance-murrieta.md": {
+	id: "concrete-contractor-insurance-murrieta.md";
+  slug: "concrete-contractor-insurance-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "concrete-curing-time-murrieta-heat.md": {
 	id: "concrete-curing-time-murrieta-heat.md";
   slug: "concrete-curing-time-murrieta-heat";
@@ -239,6 +246,13 @@ declare module 'astro:content' {
 "rv-pad-concrete-fallbrook.md": {
 	id: "rv-pad-concrete-fallbrook.md";
   slug: "rv-pad-concrete-fallbrook";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"small-concrete-jobs-murrieta.md": {
+	id: "small-concrete-jobs-murrieta.md";
+  slug: "small-concrete-jobs-murrieta";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
