@@ -72,6 +72,16 @@ const serviceSchema = {
     },
   },
 };
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_CONFIG.domain}/services/` },
+    { '@type': 'ListItem', position: 3, name: 'Emergency Tree Service', item: `${SITE_CONFIG.domain}/services/emergency-tree-service/` },
+  ],
+};
 ---
 
 <BaseLayout
@@ -80,6 +90,7 @@ const serviceSchema = {
 >
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero
     headline="24/7 Emergency Tree Service in Murrieta"
     subheadline="Storm damage, fallen trees, and hazardous limbs — we respond fast to protect your home and family. Available day and night."

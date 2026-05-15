@@ -4,6 +4,17 @@ import Hero from '../components/Hero.astro';
 import LeadForm from '../components/LeadForm.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import { SITE_CONFIG } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Do you provide landscaping for new construction homes in Perris?', acceptedAnswer: { '@type': 'Answer', text: "Yes — Perris has significant new construction activity, and many new homeowners need to landscape their builder-graded lots from scratch. We can take you from bare dirt to a finished landscape with plants, irrigation, and hardscape. We work with Perris's newer developments including Harvest at Citrus Heights, Stoneridge, and communities along Ramona Expressway." } },
+    { '@type': 'Question', name: "How do you handle Perris's varied soil conditions in landscaping?", acceptedAnswer: { '@type': 'Answer', text: "Perris has a mix of sandy loam in the valley and clay-heavy soils near hillsides and older areas. Sandy soils drain quickly but hold nutrients poorly; clay soils hold water but drain slowly. We test and amend soil based on the specific conditions at your property to create an optimal growing environment. Getting the soil right reduces water use and improves plant establishment significantly." } },
+    { '@type': 'Question', name: 'Do you serve Harvest at Citrus Heights and other Perris communities?', acceptedAnswer: { '@type': 'Answer', text: "Yes — we serve all of Perris including Harvest at Citrus Heights, Stoneridge, Mead Valley, communities along Perris Valley Road, and rural properties east of Interstate 215. Whether you're in a master-planned community with HOA guidelines or on a rural lot, we have the experience to design and install a landscape that meets your needs and any applicable community standards." } },
+    { '@type': 'Question', name: "What's the cost for a basic front yard landscape in Perris?", acceptedAnswer: { '@type': 'Answer', text: "A basic Perris front yard landscape — sod removal, drought-tolerant plants, drip irrigation, and mulch — typically runs $3,500–$8,000 for a standard residential lot. Concrete curbing, decorative boulders, or larger plants increase the cost. We always provide free written estimates after a site visit so you know the exact scope and cost before committing." } },
+  ],
+};
 ---
 
 <BaseLayout
@@ -72,6 +83,28 @@ import { SITE_CONFIG } from '../config';
           <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
         ))}
       </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <section class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions — Landscaping in Perris</h2>
+    <div class="space-y-4">
+      {[
+        { q: "Do you provide landscaping for new construction homes in Perris?", a: "Yes — Perris has significant new construction activity, and many new homeowners need to landscape their builder-graded lots from scratch. We can take you from bare dirt to a finished landscape with plants, irrigation, and hardscape. We work with Perris's newer developments including Harvest at Citrus Heights, Stoneridge, and communities along Ramona Expressway." },
+        { q: "How do you handle Perris's varied soil conditions in landscaping?", a: "Perris has a mix of sandy loam in the valley and clay-heavy soils near hillsides and older areas. Sandy soils drain quickly but hold nutrients poorly; clay soils hold water but drain slowly. We test and amend soil based on the specific conditions at your property to create an optimal growing environment. Getting the soil right reduces water use and improves plant establishment significantly." },
+        { q: "Do you serve Harvest at Citrus Heights and other Perris communities?", a: "Yes — we serve all of Perris including Harvest at Citrus Heights, Stoneridge, Mead Valley, communities along Perris Valley Road, and rural properties east of Interstate 215. Whether you're in a master-planned community with HOA guidelines or on a rural lot, we have the experience to design and install a landscape that meets your needs and any applicable community standards." },
+        { q: "What's the cost for a basic front yard landscape in Perris?", a: "A basic Perris front yard landscape — sod removal, drought-tolerant plants, drip irrigation, and mulch — typically runs $3,500–$8,000 for a standard residential lot. Concrete curbing, decorative boulders, or larger plants increase the cost. We always provide free written estimates after a site visit so you know the exact scope and cost before committing." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
     </div>
   </section>
 

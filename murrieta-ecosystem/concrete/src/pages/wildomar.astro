@@ -4,6 +4,17 @@ import Hero from '../components/Hero.astro';
 import LeadForm from '../components/LeadForm.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import { SITE_CONFIG } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Can you pour concrete on sloped or hillside lots in Wildomar?', acceptedAnswer: { '@type': 'Answer', text: "Yes — sloped driveways and hillside concrete work are common in Wildomar, especially in Heritage Lake, Palomar Hills, and properties along the Clinton Keith Road corridor. Sloped driveways require proper grading, drainage channels, and thicker slab sections in some areas. We design sloped pours to direct water away from structures and prevent ponding. All quotes account for site-specific slope conditions." } },
+    { '@type': 'Question', name: "How does Wildomar's clay soil cause concrete problems?", acceptedAnswer: { '@type': 'Answer', text: "Wildomar's clay soils expand when wet (winter rains) and shrink when dry (summer heat). This cyclic movement puts stress on concrete slabs from below, eventually causing cracking and lifting. We counteract this by removing clay and replacing it with compactable road base material under all slabs, using heavier reinforcement (3/8\" rebar), and thickening edges to resist uplift forces. Getting the base right is the most important part of any Wildomar concrete job." } },
+    { '@type': 'Question', name: 'Do you serve Heritage Lake and Palomar Hills communities in Wildomar?', acceptedAnswer: { '@type': 'Answer', text: "Yes — we work throughout Wildomar including Heritage Lake, Palomar Hills, and properties along Clinton Keith Road, Grand Avenue, and Palomar Road. We understand the access constraints on Wildomar's hillside lots and factor in equipment positioning and concrete truck access when quoting your project. We visit every site before providing a written estimate." } },
+    { '@type': 'Question', name: "What's the typical cost for a concrete driveway replacement in Wildomar?", acceptedAnswer: { '@type': 'Answer', text: "A standard two-car concrete driveway replacement in Wildomar typically runs $3,500–$7,500, including demolition, base preparation, rebar reinforcement, concrete pour, and broom finish. Sloped driveways, decorative finishes, or sites with limited equipment access run higher. We provide free written on-site estimates — phone quotes aren't reliable because every site is different." } },
+  ],
+};
 ---
 
 <BaseLayout
@@ -66,6 +77,28 @@ import { SITE_CONFIG } from '../config';
           <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
         ))}
       </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <section class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions — Concrete in Wildomar</h2>
+    <div class="space-y-4">
+      {[
+        { q: "Can you pour concrete on sloped or hillside lots in Wildomar?", a: "Yes — sloped driveways and hillside concrete work are common in Wildomar, especially in Heritage Lake, Palomar Hills, and properties along the Clinton Keith Road corridor. Sloped driveways require proper grading, drainage channels, and thicker slab sections in some areas. We design sloped pours to direct water away from structures and prevent ponding. All quotes account for site-specific slope conditions." },
+        { q: "How does Wildomar's clay soil cause concrete problems?", a: "Wildomar's clay soils expand when wet (winter rains) and shrink when dry (summer heat). This cyclic movement puts stress on concrete slabs from below, eventually causing cracking and lifting. We counteract this by removing clay and replacing it with compactable road base material under all slabs, using heavier reinforcement (3/8\" rebar), and thickening edges to resist uplift forces. Getting the base right is the most important part of any Wildomar concrete job." },
+        { q: "Do you serve Heritage Lake and Palomar Hills communities in Wildomar?", a: "Yes — we work throughout Wildomar including Heritage Lake, Palomar Hills, and properties along Clinton Keith Road, Grand Avenue, and Palomar Road. We understand the access constraints on Wildomar's hillside lots and factor in equipment positioning and concrete truck access when quoting your project. We visit every site before providing a written estimate." },
+        { q: "What's the typical cost for a concrete driveway replacement in Wildomar?", a: "A standard two-car concrete driveway replacement in Wildomar typically runs $3,500–$7,500, including demolition, base preparation, rebar reinforcement, concrete pour, and broom finish. Sloped driveways, decorative finishes, or sites with limited equipment access run higher. We provide free written on-site estimates — phone quotes aren't reliable because every site is different." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
     </div>
   </section>
 

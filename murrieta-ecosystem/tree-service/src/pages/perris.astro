@@ -4,6 +4,17 @@ import Hero from '../components/Hero.astro';
 import LeadForm from '../components/LeadForm.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import { SITE_CONFIG } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: "Do you serve Perris's newer master-planned communities like Harvest at Citrus Heights?", acceptedAnswer: { '@type': 'Answer', text: 'Yes — we work throughout Perris including Harvest at Citrus Heights, Stoneridge, Mead Valley, and surrounding areas. Newer developments in Perris often have fast-growing developer-installed trees that are now reaching problem sizes. We handle both routine maintenance trimming and full removal when a tree has outgrown its location.' } },
+    { '@type': 'Question', name: 'How do you handle tree removal on large agricultural or commercial lots in Perris?', acceptedAnswer: { '@type': 'Answer', text: "Perris has a mix of residential, agricultural, and industrial properties, and we handle all of them. Large lots give us better equipment access, which often reduces cost. For agricultural land with multiple trees, we can bundle removals into one visit for efficiency. We also work with commercial property managers on tree maintenance programs." } },
+    { '@type': 'Question', name: 'Do I need a permit for tree removal in Perris, CA?', acceptedAnswer: { '@type': 'Answer', text: "Most residential tree removals in Perris don't require a permit. However, trees in unincorporated Riverside County portions of the area may have different rules than City of Perris parcels. We determine the applicable jurisdiction during your estimate and check any permit requirements. Protected species like coast live oaks always require special review regardless of location." } },
+    { '@type': 'Question', name: 'What\'s the most common tree problem you see on Perris properties?', acceptedAnswer: { '@type': 'Answer', text: 'In Perris, the most frequent issues we handle are overgrown eucalyptus trees (a liability near structures), invasive pepper trees with surface roots damaging driveways and patios, and large palms that have grown beyond the property\'s scale. We also see storm-damaged trees and trees weakened by prolonged drought stress that have become safety hazards.' } },
+  ],
+};
 ---
 
 <BaseLayout
@@ -71,6 +82,28 @@ import { SITE_CONFIG } from '../config';
           <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
         ))}
       </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <section class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions — Tree Service in Perris</h2>
+    <div class="space-y-4">
+      {[
+        { q: "Do you serve Perris's newer master-planned communities like Harvest at Citrus Heights?", a: "Yes — we work throughout Perris including Harvest at Citrus Heights, Stoneridge, Mead Valley, and surrounding areas. Newer developments in Perris often have fast-growing developer-installed trees that are now reaching problem sizes. We handle both routine maintenance trimming and full removal when a tree has outgrown its location." },
+        { q: "How do you handle tree removal on large agricultural or commercial lots in Perris?", a: "Perris has a mix of residential, agricultural, and industrial properties, and we handle all of them. Large lots give us better equipment access, which often reduces cost. For agricultural land with multiple trees, we can bundle removals into one visit for efficiency. We also work with commercial property managers on tree maintenance programs." },
+        { q: "Do I need a permit for tree removal in Perris, CA?", a: "Most residential tree removals in Perris don't require a permit. However, trees in unincorporated Riverside County portions of the area may have different rules than City of Perris parcels. We determine the applicable jurisdiction during your estimate and check any permit requirements. Protected species like coast live oaks always require special review regardless of location." },
+        { q: "What's the most common tree problem you see on Perris properties?", a: "In Perris, the most frequent issues we handle are overgrown eucalyptus trees (a liability near structures), invasive pepper trees with surface roots damaging driveways and patios, and large palms that have grown beyond the property's scale. We also see storm-damaged trees and trees weakened by prolonged drought stress that have become safety hazards." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
     </div>
   </section>
 

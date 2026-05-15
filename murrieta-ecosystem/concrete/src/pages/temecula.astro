@@ -4,6 +4,17 @@ import Hero from '../components/Hero.astro';
 import LeadForm from '../components/LeadForm.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import { SITE_CONFIG } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Do you install concrete driveways for HOA communities like Redhawk and Wolf Creek in Temecula?', acceptedAnswer: { '@type': 'Answer', text: "Yes — we work throughout Temecula's HOA communities including Redhawk, Wolf Creek, Paloma del Sol, and Crowne Hill. Many HOAs require specific concrete finishes, border colors, or approval of decorative patterns before installation begins. We're experienced with HOA approval processes and can provide sample boards and documentation to support your application. We never start work until approvals are in hand." } },
+    { '@type': 'Question', name: "How does Temecula's clay soil affect concrete driveway installation?", acceptedAnswer: { '@type': 'Answer', text: "Temecula sits on expansive clay soils that swell when wet and shrink in dry heat — this movement is the primary cause of concrete cracking over time. We address this with proper subbase preparation: removing and replacing the top 6–8 inches with compactable base material, adding moisture barrier sheeting where appropriate, and reinforcing slabs with rebar or wire mesh. These steps significantly extend the life of your concrete driveway in Temecula's climate." } },
+    { '@type': 'Question', name: "How long does concrete take to cure in Temecula's summer heat?", acceptedAnswer: { '@type': 'Answer', text: "Concrete cures faster in Temecula's heat, but faster isn't always better — rapid surface drying can cause cracking. We apply curing compounds immediately after finishing to retain moisture and allow proper internal curing. In summer, we typically recommend waiting 7 days before light vehicle traffic and 28 days before heavy loads. We may schedule pours for early morning to avoid peak afternoon heat." } },
+    { '@type': 'Question', name: 'Do you handle permits for concrete projects in Temecula?', acceptedAnswer: { '@type': 'Answer', text: "Yes. The City of Temecula requires permits for concrete driveway installations and replacements that involve curb cuts or changes to drainage. We pull all required permits, schedule City inspections, and ensure the work meets Temecula's R-1 residential standards. Permit costs vary by project scope and are itemized separately in your written estimate. We handle the entire process — you don't need to visit City Hall." } },
+  ],
+};
 ---
 
 <BaseLayout
@@ -66,6 +77,28 @@ import { SITE_CONFIG } from '../config';
           <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
         ))}
       </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <section class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions — Concrete in Temecula</h2>
+    <div class="space-y-4">
+      {[
+        { q: "Do you install concrete driveways for HOA communities like Redhawk and Wolf Creek in Temecula?", a: "Yes — we work throughout Temecula's HOA communities including Redhawk, Wolf Creek, Paloma del Sol, and Crowne Hill. Many HOAs require specific concrete finishes, border colors, or approval of decorative patterns before installation begins. We're experienced with HOA approval processes and can provide sample boards and documentation to support your application. We never start work until approvals are in hand." },
+        { q: "How does Temecula's clay soil affect concrete driveway installation?", a: "Temecula sits on expansive clay soils that swell when wet and shrink in dry heat — this movement is the primary cause of concrete cracking over time. We address this with proper subbase preparation: removing and replacing the top 6–8 inches with compactable base material, adding moisture barrier sheeting where appropriate, and reinforcing slabs with rebar or wire mesh. These steps significantly extend the life of your concrete driveway in Temecula's climate." },
+        { q: "How long does concrete take to cure in Temecula's summer heat?", a: "Concrete cures faster in Temecula's heat, but faster isn't always better — rapid surface drying can cause cracking. We apply curing compounds immediately after finishing to retain moisture and allow proper internal curing. In summer, we typically recommend waiting 7 days before light vehicle traffic and 28 days before heavy loads. We may schedule pours for early morning to avoid peak afternoon heat." },
+        { q: "Do you handle permits for concrete projects in Temecula?", a: "Yes. The City of Temecula requires permits for concrete driveway installations and replacements that involve curb cuts or changes to drainage. We pull all required permits, schedule City inspections, and ensure the work meets Temecula's R-1 residential standards. Permit costs vary by project scope and are itemized separately in your written estimate. We handle the entire process — you don't need to visit City Hall." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
     </div>
   </section>
 

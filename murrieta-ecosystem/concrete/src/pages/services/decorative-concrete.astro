@@ -41,6 +41,16 @@ const faqSchema = {
     },
   ],
 };
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_CONFIG.domain}/services/` },
+    { '@type': 'ListItem', position: 3, name: 'Decorative Concrete', item: `${SITE_CONFIG.domain}/services/decorative-concrete/` },
+  ],
+};
 ---
 
 <BaseLayout
@@ -48,6 +58,7 @@ const faqSchema = {
   description="Decorative concrete in Murrieta, CA. Stamped, stained, and exposed aggregate finishes for driveways, patios, and pool decks. Free estimates."
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero
     headline="Decorative Concrete in Murrieta, CA"
     subheadline="Stamped, stained, and polished concrete that transforms ordinary surfaces into stunning focal points for your Murrieta home."

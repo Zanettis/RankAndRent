@@ -4,6 +4,17 @@ import Hero from '../components/Hero.astro';
 import LeadForm from '../components/LeadForm.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import { SITE_CONFIG } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Do you provide tree service in older historic neighborhoods in San Jacinto?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — many San Jacinto neighborhoods have mature trees dating back 40–80 years, often in tight urban lots. We specialize in technical removals where limited equipment access and proximity to structures require careful section-by-section climbing work. We\'ve worked extensively throughout downtown San Jacinto, Ramona Bowl area, and surrounding established neighborhoods.' } },
+    { '@type': 'Question', name: "How does San Jacinto Valley's summer heat affect tree health?", acceptedAnswer: { '@type': 'Answer', text: 'The San Jacinto Valley experiences extreme summer heat, with temperatures regularly exceeding 105°F. This stress affects water intake and can accelerate disease progression in drought-weakened trees. We see a spike in calls each fall when trees that looked fine in spring have declined through summer. Annual health assessments help catch problems before they become safety hazards.' } },
+    { '@type': 'Question', name: 'Do you handle large rural tree removals near the San Jacinto Mountains foothills?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — we service properties in the foothills east of San Jacinto, including areas near Idyllwild Road and the communities between San Jacinto and Beaumont. Rural and foothill properties often have large old-growth trees that require advanced rigging to remove safely. We assess site access and tree condition together to develop a safe removal plan.' } },
+    { '@type': 'Question', name: "What's the typical cost for tree service in San Jacinto?", acceptedAnswer: { '@type': 'Answer', text: 'Tree removal in San Jacinto typically runs $300–$1,800 depending on tree size, access, and location. Urban lots with older mature trees often require more labor than rural properties with good equipment access. We provide free written estimates with no obligation — call or submit a request online to schedule.' } },
+  ],
+};
 ---
 
 <BaseLayout
@@ -76,6 +87,28 @@ import { SITE_CONFIG } from '../config';
           <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
         ))}
       </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <section class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions — Tree Service in San Jacinto</h2>
+    <div class="space-y-4">
+      {[
+        { q: "Do you provide tree service in older historic neighborhoods in San Jacinto?", a: "Yes — many San Jacinto neighborhoods have mature trees dating back 40–80 years, often in tight urban lots. We specialize in technical removals where limited equipment access and proximity to structures require careful section-by-section climbing work. We've worked extensively throughout downtown San Jacinto, Ramona Bowl area, and surrounding established neighborhoods." },
+        { q: "How does San Jacinto Valley's summer heat affect tree health?", a: "The San Jacinto Valley experiences extreme summer heat, with temperatures regularly exceeding 105°F. This stress affects water intake and can accelerate disease progression in drought-weakened trees. We see a spike in calls each fall when trees that looked fine in spring have declined through summer. Annual health assessments help catch problems before they become safety hazards." },
+        { q: "Do you handle large rural tree removals near the San Jacinto Mountains foothills?", a: "Yes — we service properties in the foothills east of San Jacinto, including areas near Idyllwild Road and the communities between San Jacinto and Beaumont. Rural and foothill properties often have large old-growth trees that require advanced rigging to remove safely. We assess site access and tree condition together to develop a safe removal plan." },
+        { q: "What's the typical cost for tree service in San Jacinto?", a: "Tree removal in San Jacinto typically runs $300–$1,800 depending on tree size, access, and location. Urban lots with older mature trees often require more labor than rural properties with good equipment access. We provide free written estimates with no obligation — call or submit a request online to schedule." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
     </div>
   </section>
 

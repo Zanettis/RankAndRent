@@ -42,6 +42,16 @@ const faqSchema = {
     },
   ],
 };
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_CONFIG.domain}/services/` },
+    { '@type': 'ListItem', position: 3, name: 'Seasonal Cleanup', item: `${SITE_CONFIG.domain}/services/seasonal-cleanup/` },
+  ],
+};
 ---
 
 <BaseLayout
@@ -49,6 +59,7 @@ const faqSchema = {
   description="Professional seasonal yard cleanup in Murrieta, CA. Spring and fall cleanups including leaf removal, pruning, mulching, and debris hauling. Free quotes."
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero
     headline="Seasonal Yard Cleanup in Murrieta, CA"
     subheadline="Spring and fall yard cleanups that keep your property looking sharp year-round. Leaf removal, pruning, mulching, edging, and full debris haul-away. Free quotes."

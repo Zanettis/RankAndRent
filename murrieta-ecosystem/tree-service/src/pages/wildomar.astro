@@ -4,6 +4,17 @@ import Hero from '../components/Hero.astro';
 import LeadForm from '../components/LeadForm.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import { SITE_CONFIG } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Do you work on hillside and sloped lots in Wildomar?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — hillside and sloped properties are common in Wildomar, especially in Heritage Lake, Palomar Hills, and Clinton Keith Estates. We have specialized rigging equipment and technique for trees on steep terrain where a ground-level crew can\'t operate safely. Our arborists assess each sloped job individually and develop a removal plan that protects structures below.' } },
+    { '@type': 'Question', name: 'Are there tree removal permit requirements in Wildomar, CA?', acceptedAnswer: { '@type': 'Answer', text: 'Wildomar follows Riverside County land use guidelines for tree removal on unincorporated parcels. Most standard residential tree removals do not require a permit, but protected oak species or trees in riparian corridors near Wildomar Creek may need county review. We check applicable requirements during your free estimate and handle the process for you.' } },
+    { '@type': 'Question', name: "How does Wildomar's clay soil affect tree root systems?", acceptedAnswer: { '@type': 'Answer', text: "Wildomar's heavy clay soils drain poorly, which can lead to root rot in susceptible tree species and cause surface roots to spread wide and shallow rather than anchoring deep. This creates both a stability risk and a sidewalk/driveway damage concern. We assess root health during our estimate and can recommend whether removal or crown reduction is the right approach." } },
+    { '@type': 'Question', name: 'Do you serve Heritage Lake and Palomar Hills communities in Wildomar?', acceptedAnswer: { '@type': 'Answer', text: "Yes — we service all of Wildomar's communities including Heritage Lake, Palomar Hills, and properties along Clinton Keith Road and Grand Avenue. We're familiar with the common tree species in these neighborhoods — particularly Canary Island palms, sycamores, and eucalyptus — and understand the access constraints on Wildomar's hillside lots." } },
+  ],
+};
 ---
 
 <BaseLayout
@@ -71,6 +82,28 @@ import { SITE_CONFIG } from '../config';
           <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
         ))}
       </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <section class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions — Tree Service in Wildomar</h2>
+    <div class="space-y-4">
+      {[
+        { q: "Do you work on hillside and sloped lots in Wildomar?", a: "Yes — hillside and sloped properties are common in Wildomar, especially in Heritage Lake, Palomar Hills, and Clinton Keith Estates. We have specialized rigging equipment and technique for trees on steep terrain where a ground-level crew can't operate safely. Our arborists assess each sloped job individually and develop a removal plan that protects structures below." },
+        { q: "Are there tree removal permit requirements in Wildomar, CA?", a: "Wildomar follows Riverside County land use guidelines for tree removal on unincorporated parcels. Most standard residential tree removals do not require a permit, but protected oak species or trees in riparian corridors near Wildomar Creek may need county review. We check applicable requirements during your free estimate and handle the process for you." },
+        { q: "How does Wildomar's clay soil affect tree root systems?", a: "Wildomar's heavy clay soils drain poorly, which can lead to root rot in susceptible tree species and cause surface roots to spread wide and shallow rather than anchoring deep. This creates both a stability risk and a sidewalk/driveway damage concern. We assess root health during our estimate and can recommend whether removal or crown reduction is the right approach." },
+        { q: "Do you serve Heritage Lake and Palomar Hills communities in Wildomar?", a: "Yes — we service all of Wildomar's communities including Heritage Lake, Palomar Hills, and properties along Clinton Keith Road and Grand Avenue. We're familiar with the common tree species in these neighborhoods — particularly Canary Island palms, sycamores, and eucalyptus — and understand the access constraints on Wildomar's hillside lots." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
     </div>
   </section>
 

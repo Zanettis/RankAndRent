@@ -1,0 +1,388 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { SITE_CONFIG } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Why doesn\'t Thumbtack work well for tree service emergencies?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Thumbtack is designed for non-urgent project bidding. When you submit a tree service request, contractors submit bids over the following hours — which is fine for a kitchen remodel but completely wrong when you have a tree on your roof after a Santa Ana windstorm. Emergency tree situations require calling a company directly with 24/7 availability, not waiting for a bid competition to play out.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Thumbtack verify ISA arborist certification?',
+      acceptedAnswer: { '@type': 'Answer', text: 'No. Thumbtack performs basic identity and background checks but does not require or verify ISA (International Society of Arboriculture) certification. ISA certification demonstrates actual knowledge of tree biology, risk assessment, and proper pruning standards — a critical credential for work that involves removing or pruning large trees near structures. Always ask for ISA certification directly, regardless of which platform you use.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Thumbtack sell my contact information to multiple contractors?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Thumbtack\'s model works differently than HomeAdvisor\'s. On Thumbtack, contractors see your request and choose to submit bids — you don\'t automatically get called by multiple contractors. However, you may still receive multiple contacts from contractors who bid on your project. Your phone number and email are visible to any contractor who submits a quote.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the best Thumbtack alternative for tree service in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For Murrieta homeowners, the best alternative is contacting a local ISA-certified arborist directly — someone who knows Southwest Riverside County\'s specific tree species (eucalyptus, oak, ficus, sycamore), clay-heavy soils, and Santa Ana wind conditions. A direct call gets you to a real arborist who can schedule an on-site assessment, not a platform that generates a bidding queue.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I find a licensed tree contractor in Murrieta without using Thumbtack?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Search directly on Google for "tree service Murrieta" or "certified arborist Murrieta" and call companies from the organic results. Verify the contractor\'s license at the California Contractors State License Board (CSLB) at cslb.ca.gov. For additional screening, check Google reviews or ask specifically for ISA certification and proof of liability insurance before allowing any work to begin.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is Thumbtack good for getting tree trimming estimates in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For non-urgent tree trimming, Thumbtack can give you a rough sense of pricing from multiple contractors. The limitation is that accurate pricing for tree trimming requires seeing the trees in person — a quote based on your description will rarely match the final price. You\'re better off getting 2–3 free on-site estimates from local Murrieta arborists, which gives you actual comparable quotes for the specific work needed.' },
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Thumbtack Alternatives for Tree Service in Murrieta, CA (2025)"
+  description="Why Thumbtack doesn't work for tree service emergencies — and the best alternatives for Murrieta homeowners who need a certified arborist without a bidding auction."
+  canonicalUrl="https://murrietatreeexperts.com/thumbtack-alternatives/"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Hero -->
+  <section class="bg-primary text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        Thumbtack Alternatives for Tree Service in Murrieta, CA
+      </h1>
+      <p class="text-xl text-white/85 max-w-2xl mx-auto">
+        Thumbtack's bid system is built for kitchen remodels — not for the tree on your roof at 11pm after a Santa Ana wind event. Here's what Murrieta homeowners should use instead.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why Thumbtack Falls Short for Tree Work -->
+  <section class="max-w-4xl mx-auto px-4 py-14">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary text-gray-700">
+      <h2>Why Thumbtack Doesn't Work Well for Tree Service</h2>
+      <p>
+        Thumbtack is a reasonable platform for finding a house painter, dog walker, or someone to assemble furniture. For tree service in Murrieta, it has three structural problems that make it a poor fit:
+      </p>
+
+      <h3>1. It's a Bidding Queue, Not an Emergency Line</h3>
+      <p>
+        Thumbtack works by displaying your project request to contractors in your area, who then submit bids over the following hours. This is fine if you're planning a routine trim three weeks from now. It's completely useless if you have storm damage, a hazardous leaning tree, or branches down on your car. Emergency tree situations require a company you can call directly with 24/7 capacity — not a platform that generates a bidding queue.
+      </p>
+
+      <h3>2. Thumbtack Doesn't Verify ISA Certification</h3>
+      <p>
+        Thumbtack performs background checks and verifies basic identity, but it does not require ISA (International Society of Arboriculture) certification. ISA certification is a meaningful credential in tree care — it requires passing an exam covering tree biology, pruning standards, risk assessment, and proper equipment use. A contractor who is ISA-certified is not the same as someone who owns a chainsaw and a truck. Thumbtack doesn't distinguish between the two.
+      </p>
+      <p>
+        For tree work near your home, near a neighbor's fence, or on a tree with potential hazards, ISA certification matters. Murrieta's dominant tree species — eucalyptus, California oak, ficus, sycamore — each have specific pruning requirements and failure patterns. An uncertified contractor may not know that excessive eucalyptus pruning can cause epicormic sprouting or structural imbalance, or that coast live oaks can develop sudden oak death symptoms that look identical to drought stress.
+      </p>
+
+      <h3>3. Accurate Tree Pricing Requires On-Site Assessment</h3>
+      <p>
+        A tree service estimate based on your written description is almost never accurate. Actual pricing depends on the tree's height, trunk diameter, proximity to structures, access for equipment, number of limbs, species-specific pruning requirements, and whether a permit is required. Contractors who bid on Thumbtack projects are bidding on incomplete information — and the final price will change when they see the tree in person. You're better served getting 2–3 actual on-site estimates from local Murrieta arborists.
+      </p>
+    </div>
+  </section>
+
+  <!-- What to Look For -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold text-primary mb-6">What a Legitimate Murrieta Tree Company Looks Like</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {[
+          { title: 'ISA-Certified Arborists on Staff', body: 'Ask whether the crew lead or project manager is ISA-certified. This credential demonstrates real knowledge of tree care — not just equipment operation.' },
+          { title: 'California C-61/D-49 License', body: 'Tree service contractors in California working on jobs over $500 typically need a contractor\'s license. Verify at cslb.ca.gov before work begins.' },
+          { title: 'Liability Insurance + Workers\' Comp', body: 'Without both, you may be liable for injuries on your property or damage to neighbors. Request certificates of insurance, not just verbal confirmation.' },
+          { title: 'Free On-Site Estimate', body: 'Any legitimate arborist will assess your tree in person before quoting. Phone or form-based estimates for tree work are inherently unreliable.' },
+          { title: '24/7 Emergency Response', body: 'Murrieta is in a Santa Ana wind corridor. Tree emergencies happen at night and on weekends. Confirm actual availability before you need it.' },
+          { title: 'Local Murrieta Presence', body: 'A company based locally knows Riverside County permit requirements, local HOA rules, and the specific tree species and soil conditions of the Temecula Valley.' },
+        ].map(item => (
+          <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+            <h3 class="font-bold text-primary mb-2">{item.title}</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- The Alternatives -->
+  <section class="max-w-4xl mx-auto px-4 py-14">
+    <h2 class="text-3xl font-bold text-primary mb-2">5 Thumbtack Alternatives for Tree Service in Murrieta</h2>
+    <p class="text-gray-600 mb-10">Ranked for Murrieta homeowners specifically — not generic national advice.</p>
+
+    <!-- Option 1 -->
+    <div class="border-2 border-primary rounded-2xl p-7 mb-8 bg-primary/5">
+      <div class="flex items-start gap-4 mb-4">
+        <span class="bg-primary text-white font-bold text-lg rounded-full w-10 h-10 flex items-center justify-center shrink-0">1</span>
+        <div>
+          <h3 class="text-2xl font-bold text-primary">Call a Local Arborist Directly</h3>
+          <p class="text-green-700 font-semibold text-sm mt-1">Best for Every Type of Tree Work in Murrieta</p>
+        </div>
+      </div>
+      <p class="text-gray-700 mb-4">
+        Calling a local, ISA-certified arborist directly eliminates every problem Thumbtack has. No bid queue, no platform middleman, no waiting. You talk to a real person who knows Murrieta, schedules an on-site assessment, and gives you a written estimate for the actual work needed. For emergencies, you reach someone with 24/7 availability — not a platform inbox.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+        <div>
+          <h4 class="font-bold text-gray-800 mb-2">Pros</h4>
+          <ul class="text-sm text-gray-600 space-y-1">
+            <li>✓ Direct relationship with the people doing the work</li>
+            <li>✓ On-site assessment produces accurate pricing</li>
+            <li>✓ Emergency availability confirmed upfront</li>
+            <li>✓ Your contact info goes to one company only</li>
+            <li>✓ Can verify ISA cert and CSLB license before any commitment</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-800 mb-2">Cons</h4>
+          <ul class="text-sm text-gray-600 space-y-1">
+            <li>— Requires 2–3 calls to get competitive pricing</li>
+            <li>— Need to do your own license verification (CSLB)</li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-sm text-gray-600 font-medium">
+        <span class="font-bold text-primary">Murrieta Tree Experts:</span> {SITE_CONFIG.phone} — Free on-site estimates, ISA-certified team, 24/7 emergency response.
+      </p>
+    </div>
+
+    <!-- Option 2 -->
+    <div class="border border-gray-200 rounded-2xl p-7 mb-8">
+      <div class="flex items-start gap-4 mb-4">
+        <span class="bg-gray-200 text-gray-700 font-bold text-lg rounded-full w-10 h-10 flex items-center justify-center shrink-0">2</span>
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800">Google Local Services Ads (LSAs)</h3>
+          <p class="text-gray-500 text-sm mt-1">Google-verified contractors with background checks</p>
+        </div>
+      </div>
+      <p class="text-gray-700 mb-4">
+        Google's Local Services Ads verify contractor background checks, licensing, and insurance before showing results. When you search "tree service near me" in Murrieta, LSA results appear at the very top with a "Google Guaranteed" badge. You call the company directly — Google doesn't auction your info to multiple contractors.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+        <div>
+          <h4 class="font-bold text-gray-800 mb-2">Pros</h4>
+          <ul class="text-sm text-gray-600 space-y-1">
+            <li>✓ Google independently verifies license and insurance</li>
+            <li>✓ "Google Guaranteed" provides limited consumer protection</li>
+            <li>✓ Direct contact — no bid system</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-800 mb-2">Cons</h4>
+          <ul class="text-sm text-gray-600 space-y-1">
+            <li>— ISA certification is not part of Google's vetting</li>
+            <li>— Limited local Murrieta companies participate</li>
+            <li>— Availability depends on who's actively running ads</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Option 3 -->
+    <div class="border border-gray-200 rounded-2xl p-7 mb-8">
+      <div class="flex items-start gap-4 mb-4">
+        <span class="bg-gray-200 text-gray-700 font-bold text-lg rounded-full w-10 h-10 flex items-center justify-center shrink-0">3</span>
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800">Nextdoor</h3>
+          <p class="text-gray-500 text-sm mt-1">Neighborhood recommendations from verified Murrieta residents</p>
+        </div>
+      </div>
+      <p class="text-gray-700 mb-4">
+        Searching "tree service" in your Murrieta neighborhood on Nextdoor often surfaces contractors who have recently worked for neighbors. The recommendations come from verified local residents — people who can confirm whether a crew actually showed up on time, cleaned up their debris, and did the job they quoted.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+        <div>
+          <h4 class="font-bold text-gray-800 mb-2">Pros</h4>
+          <ul class="text-sm text-gray-600 space-y-1">
+            <li>✓ Real neighborhood-level feedback</li>
+            <li>✓ Your contact info is not shared or auctioned</li>
+            <li>✓ Contractors visible in your specific subdivision</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-800 mb-2">Cons</h4>
+          <ul class="text-sm text-gray-600 space-y-1">
+            <li>— No standardized license or ISA verification</li>
+            <li>— Coverage depends on who's been active in your area recently</li>
+            <li>— Not appropriate for emergencies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Option 4 -->
+    <div class="border border-gray-200 rounded-2xl p-7 mb-8">
+      <div class="flex items-start gap-4 mb-4">
+        <span class="bg-gray-200 text-gray-700 font-bold text-lg rounded-full w-10 h-10 flex items-center justify-center shrink-0">4</span>
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800">Yelp</h3>
+          <p class="text-gray-500 text-sm mt-1">Review-based contractor research and direct contact</p>
+        </div>
+      </div>
+      <p class="text-gray-700 mb-4">
+        Yelp is useful as a research and pre-screening tool for tree service in Murrieta. You can read review histories, filter by rating, and then contact businesses directly — Yelp doesn't sell your info to multiple contractors the way HomeAdvisor or Thumbtack does.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+        <div>
+          <h4 class="font-bold text-gray-800 mb-2">Pros</h4>
+          <ul class="text-sm text-gray-600 space-y-1">
+            <li>✓ Large review volume helps spot patterns quickly</li>
+            <li>✓ Direct contact — your info isn't auctioned</li>
+            <li>✓ Good for filtering out poor performers before calling</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-800 mb-2">Cons</h4>
+          <ul class="text-sm text-gray-600 space-y-1">
+            <li>— Yelp does not verify license, insurance, or ISA certification</li>
+            <li>— Review filtering algorithm has been controversial</li>
+            <li>— Many legitimate local arborists don't maintain Yelp profiles</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Option 5 -->
+    <div class="border border-gray-200 rounded-2xl p-7 mb-8">
+      <div class="flex items-start gap-4 mb-4">
+        <span class="bg-gray-200 text-gray-700 font-bold text-lg rounded-full w-10 h-10 flex items-center justify-center shrink-0">5</span>
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800">Direct Google Search + CSLB Verification</h3>
+          <p class="text-gray-500 text-sm mt-1">Skip every platform entirely</p>
+        </div>
+      </div>
+      <p class="text-gray-700 mb-4">
+        Search "tree service Murrieta" or "certified arborist Murrieta" on Google and call businesses from the organic results. Then verify the license independently using the California Contractors State License Board (CSLB) at cslb.ca.gov. Companies that rank organically in Murrieta have demonstrated local relevance over time — they're not paying to appear in a bidding queue.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+        <div>
+          <h4 class="font-bold text-gray-800 mb-2">Pros</h4>
+          <ul class="text-sm text-gray-600 space-y-1">
+            <li>✓ No platform intermediary — full control over who you contact</li>
+            <li>✓ CSLB license lookup is free and takes 2 minutes</li>
+            <li>✓ Organic rankings signal real local presence</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-800 mb-2">Cons</h4>
+          <ul class="text-sm text-gray-600 space-y-1">
+            <li>— Requires your own license and insurance verification</li>
+            <li>— No structured way to compare bids</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="bg-gray-50 py-14 px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-primary text-center mb-10">Side-by-Side Comparison</h2>
+      <div class="overflow-x-auto rounded-xl shadow">
+        <table class="w-full text-sm bg-white">
+          <thead>
+            <tr class="bg-primary text-white">
+              <th class="px-4 py-3 text-left font-bold">Option</th>
+              <th class="px-4 py-3 text-center font-bold">Sells Your Info?</th>
+              <th class="px-4 py-3 text-center font-bold">ISA Verified</th>
+              <th class="px-4 py-3 text-center font-bold">Emergency OK</th>
+              <th class="px-4 py-3 text-center font-bold">On-Site Estimate</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="bg-primary/5">
+              <td class="px-4 py-3 font-bold text-primary">Local Arborist (Direct)</td>
+              <td class="px-4 py-3 text-center text-green-600 font-bold">No</td>
+              <td class="px-4 py-3 text-center text-green-600 font-bold">Yes (ask)</td>
+              <td class="px-4 py-3 text-center text-green-600 font-bold">Yes</td>
+              <td class="px-4 py-3 text-center text-green-600 font-bold">Yes</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-medium text-gray-700">Thumbtack</td>
+              <td class="px-4 py-3 text-center text-yellow-600">Via bids</td>
+              <td class="px-4 py-3 text-center text-red-500">No</td>
+              <td class="px-4 py-3 text-center text-red-500">No</td>
+              <td class="px-4 py-3 text-center text-yellow-600">Varies</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-4 py-3 font-medium text-gray-700">Google LSAs</td>
+              <td class="px-4 py-3 text-center text-green-600">No</td>
+              <td class="px-4 py-3 text-center text-red-500">No</td>
+              <td class="px-4 py-3 text-center text-yellow-600">Maybe</td>
+              <td class="px-4 py-3 text-center text-yellow-600">Varies</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-medium text-gray-700">Nextdoor</td>
+              <td class="px-4 py-3 text-center text-green-600">No</td>
+              <td class="px-4 py-3 text-center text-red-500">No</td>
+              <td class="px-4 py-3 text-center text-red-500">No</td>
+              <td class="px-4 py-3 text-center text-yellow-600">Varies</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-4 py-3 font-medium text-gray-700">Yelp</td>
+              <td class="px-4 py-3 text-center text-green-600">No</td>
+              <td class="px-4 py-3 text-center text-red-500">No</td>
+              <td class="px-4 py-3 text-center text-yellow-600">Maybe</td>
+              <td class="px-4 py-3 text-center text-yellow-600">Varies</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-medium text-gray-700">Direct Google + CSLB</td>
+              <td class="px-4 py-3 text-center text-green-600">No</td>
+              <td class="px-4 py-3 text-center text-red-500">DIY</td>
+              <td class="px-4 py-3 text-center text-yellow-600">Maybe</td>
+              <td class="px-4 py-3 text-center text-green-600">Yes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="max-w-4xl mx-auto px-4 py-14">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {[
+        { q: "Why doesn't Thumbtack work well for tree service emergencies?", a: "Thumbtack is designed for non-urgent project bidding. When you submit a tree service request, contractors submit bids over the following hours — which is fine for a kitchen remodel but completely wrong when you have a tree on your roof after a Santa Ana windstorm. Emergency tree situations require calling a company directly with 24/7 availability, not waiting for a bid competition to play out." },
+        { q: "Does Thumbtack verify ISA arborist certification?", a: "No. Thumbtack performs basic identity and background checks but does not require or verify ISA (International Society of Arboriculture) certification. ISA certification demonstrates actual knowledge of tree biology, risk assessment, and proper pruning standards — a critical credential for work that involves removing or pruning large trees near structures. Always ask for ISA certification directly, regardless of which platform you use." },
+        { q: "Does Thumbtack sell my contact information to multiple contractors?", a: "Thumbtack's model works differently than HomeAdvisor's. On Thumbtack, contractors see your request and choose to submit bids — you don't automatically get called by multiple contractors. However, you may still receive multiple contacts from contractors who bid on your project. Your phone number and email are visible to any contractor who submits a quote." },
+        { q: "What is the best Thumbtack alternative for tree service in Murrieta?", a: "For Murrieta homeowners, the best alternative is contacting a local ISA-certified arborist directly — someone who knows Southwest Riverside County's specific tree species (eucalyptus, oak, ficus, sycamore), clay-heavy soils, and Santa Ana wind conditions. A direct call gets you to a real arborist who can schedule an on-site assessment, not a platform that generates a bidding queue." },
+        { q: "How do I find a licensed tree contractor in Murrieta without using Thumbtack?", a: "Search directly on Google for 'tree service Murrieta' or 'certified arborist Murrieta' and call companies from the organic results. Verify the contractor's license at the California Contractors State License Board (CSLB) at cslb.ca.gov. For additional screening, check Google reviews or ask specifically for ISA certification and proof of liability insurance before allowing any work to begin." },
+        { q: "Is Thumbtack good for getting tree trimming estimates in Murrieta?", a: "For non-urgent tree trimming, Thumbtack can give you a rough sense of pricing from multiple contractors. The limitation is that accurate pricing for tree trimming requires seeing the trees in person — a quote based on your description will rarely match the final price. You're better off getting 2–3 free on-site estimates from local Murrieta arborists, which gives you actual comparable quotes for the specific work needed." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="bg-primary py-14 px-4 text-center text-white">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Skip Thumbtack. Call the Local Arborist.</h2>
+      <p class="text-white/85 text-lg mb-8">
+        We're based in Murrieta — not a national platform matching you with whoever bid lowest. Your call goes directly to our ISA-certified team. Free on-site estimate, licensed and insured, 24/7 emergency availability.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block bg-white text-primary font-bold text-lg px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors"
+      >
+        Get Your Free Tree Service Estimate
+      </a>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Or Request a Free Estimate Online" />
+  </section>
+</BaseLayout>

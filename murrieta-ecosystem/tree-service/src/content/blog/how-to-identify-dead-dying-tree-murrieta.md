@@ -5,6 +5,21 @@ pubDate: 2025-05-17
 author: "Murrieta Tree Experts"
 tags: ["tree health", "dead tree", "murrieta", "arborist", "tree removal"]
 featured: false
+howToSteps:
+  - name: "Check bark condition"
+    text: "Inspect the bark for peeling in large sections, crumbling, or areas of bare exposed wood. Healthy bark is firmly attached; bark that falls away or exposes discolored wood beneath signals serious decline."
+  - name: "Look for absence of leaf growth during the growing season"
+    text: "Deciduous trees should have leaves in spring and summer. Evergreens should stay green year-round. Consistent failure to produce new foliage — not just stress browning — indicates serious decline or death."
+  - name: "Inspect for fungal growth at the base or on the trunk"
+    text: "Mushrooms, shelf fungi, or bracket fungi on the trunk or at the base indicate internal wood decay already underway. The fungi appear because the decay has been progressing inside — their presence means the structural wood may be compromised."
+  - name: "Assess canopy for widespread dead branches"
+    text: "Check whether dead branches make up a significant portion of the canopy or appear throughout multiple scaffold branches. Progressive dieback from branch tips toward the trunk indicates the tree's vascular system is failing."
+  - name: "Check for canopy thinning and sparse foliage"
+    text: "A suddenly sparse canopy — where significant sky is visible through what was previously a dense tree — signals decline. Sparse foliage combined with any other sign warrants a professional arborist assessment."
+  - name: "Look for visible cracks, cavities, or hollow trunk sections"
+    text: "Vertical cracks along the trunk, cavities where wood has rotted, or sections that sound hollow when knocked are signs of structural compromise. These increase the risk of failure during Murrieta's Santa Ana wind events."
+  - name: "Examine root area for heaving or soil displacement"
+    text: "Soil heaving on one side of the tree base (ground appears pushed up or buckled) indicates roots are lifting — a pre-failure sign in leaning trees. Significant root exposure, damage, or fungal growth at ground level also warrants evaluation."
 ---
 
 A dead or dying tree in your Murrieta yard isn't just an eyesore — it's a safety hazard. Dead trees lose structural integrity over time, and in Murrieta's Santa Ana wind corridor, a structurally compromised tree can fall without warning. Identifying the warning signs early gives you time to address the problem on your schedule, rather than in an emergency.

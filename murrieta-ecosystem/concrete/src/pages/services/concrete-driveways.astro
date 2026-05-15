@@ -43,6 +43,16 @@ const faqSchema = {
     },
   ],
 };
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_CONFIG.domain}/services/` },
+    { '@type': 'ListItem', position: 3, name: 'Concrete Driveways', item: `${SITE_CONFIG.domain}/services/concrete-driveways/` },
+  ],
+};
 ---
 
 <BaseLayout
@@ -50,6 +60,7 @@ const faqSchema = {
   description="Professional concrete driveway installation and replacement in Murrieta, CA. Licensed contractors, quality materials, 10-year guarantee. Free estimates."
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero
     headline="Concrete Driveways in Murrieta, CA"
     subheadline="New driveway installation or full replacement — built to last in Murrieta's inland climate with proper reinforcement and grading."

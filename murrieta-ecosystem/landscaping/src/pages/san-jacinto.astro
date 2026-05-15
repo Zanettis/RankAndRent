@@ -4,6 +4,17 @@ import Hero from '../components/Hero.astro';
 import LeadForm from '../components/LeadForm.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import { SITE_CONFIG } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: "What plants survive San Jacinto's extreme summer heat and winter cold?", acceptedAnswer: { '@type': 'Answer', text: "San Jacinto experiences temperature swings that most coastal plants can't handle — summer highs above 105°F and winter lows occasionally below 28°F. We focus on plants with wide temperature tolerance: native Salvia species, Hesperaloe parviflora, Agave, Yucca, Leucophyllum (Texas sage), and established olive trees. These plants thrive in San Jacinto's climate without special protection." } },
+    { '@type': 'Question', name: 'Can you landscape older rural properties in San Jacinto?', acceptedAnswer: { '@type': 'Answer', text: "Yes — many San Jacinto properties have overgrown or neglected landscapes that need renovation more than full installation. We can clear overgrown areas, remove unwanted trees and shrubs, improve drainage, and install a new planting plan that's more appropriate for the site. Rural property landscaping often involves more clearing than urban jobs, and we have the equipment to handle it." } },
+    { '@type': 'Question', name: 'Do you serve communities near San Jacinto College and Valley Campus?', acceptedAnswer: { '@type': 'Answer', text: "Yes — we serve all of San Jacinto including neighborhoods near San Jacinto College, the Valley Campus, Soboba Casino, and the established residential areas along State Street and Ramona Boulevard. We're familiar with the mix of property types in the area and can work efficiently in both dense residential neighborhoods and larger rural lots." } },
+    { '@type': 'Question', name: 'How much does landscaping typically cost in San Jacinto?', acceptedAnswer: { '@type': 'Answer', text: "San Jacinto landscaping projects typically run $2,500–$12,000 depending on scope. A basic drought-tolerant front yard makeover with drip irrigation runs $3,000–$6,500. Larger projects with hardscape, mature trees, and full irrigation design start around $10,000. We offer free site estimates and can phase the work to match your timeline and budget." } },
+  ],
+};
 ---
 
 <BaseLayout
@@ -74,6 +85,28 @@ import { SITE_CONFIG } from '../config';
           <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
         ))}
       </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <section class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions — Landscaping in San Jacinto</h2>
+    <div class="space-y-4">
+      {[
+        { q: "What plants survive San Jacinto's extreme summer heat and winter cold?", a: "San Jacinto experiences temperature swings that most coastal plants can't handle — summer highs above 105°F and winter lows occasionally below 28°F. We focus on plants with wide temperature tolerance: native Salvia species, Hesperaloe parviflora, Agave, Yucca, Leucophyllum (Texas sage), and established olive trees. These plants thrive in San Jacinto's climate without special protection." },
+        { q: "Can you landscape older rural properties in San Jacinto?", a: "Yes — many San Jacinto properties have overgrown or neglected landscapes that need renovation more than full installation. We can clear overgrown areas, remove unwanted trees and shrubs, improve drainage, and install a new planting plan that's more appropriate for the site. Rural property landscaping often involves more clearing than urban jobs, and we have the equipment to handle it." },
+        { q: "Do you serve communities near San Jacinto College and Valley Campus?", a: "Yes — we serve all of San Jacinto including neighborhoods near San Jacinto College, the Valley Campus, Soboba Casino, and the established residential areas along State Street and Ramona Boulevard. We're familiar with the mix of property types in the area and can work efficiently in both dense residential neighborhoods and larger rural lots." },
+        { q: "How much does landscaping typically cost in San Jacinto?", a: "San Jacinto landscaping projects typically run $2,500–$12,000 depending on scope. A basic drought-tolerant front yard makeover with drip irrigation runs $3,000–$6,500. Larger projects with hardscape, mature trees, and full irrigation design start around $10,000. We offer free site estimates and can phase the work to match your timeline and budget." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
     </div>
   </section>
 

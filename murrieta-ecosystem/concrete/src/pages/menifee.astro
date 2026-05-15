@@ -4,6 +4,17 @@ import Hero from '../components/Hero.astro';
 import LeadForm from '../components/LeadForm.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import { SITE_CONFIG } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Do you repair or replace aging concrete driveways in Sun City Menifee?', acceptedAnswer: { '@type': 'Answer', text: "Yes — Sun City Menifee is one of our busiest service areas for concrete driveway repair and replacement. Many Sun City driveways were poured in the 1970s–1990s and have reached end of life, with widespread cracking, lifting, and surface deterioration. We assess whether repair or full replacement makes better long-term financial sense and give you an honest recommendation. We work clean and quiet, respecting the community character." } },
+    { '@type': 'Question', name: "How does Menifee's expansive clay soil cause concrete cracking?", acceptedAnswer: { '@type': 'Answer', text: "Menifee sits on Yolo and Hanford clay soils that are among the most expansive in the Inland Valley. These soils swell up to 10% in volume when saturated and shrink dramatically in dry conditions — putting enormous stress on concrete slabs from below. We address this with proper excavation (removing 6–8 inches of native clay), compactable base replacement, and steel reinforcement sized for the soil conditions. Skipping these steps leads to early failure." } },
+    { '@type': 'Question', name: 'Do you serve Heritage Lakes, Heartland, and newer Menifee developments?', acceptedAnswer: { '@type': 'Answer', text: "Yes — we work throughout Menifee including Heritage Lakes, Heartland, Audie Murphy Ranch, and communities along Bradley Road, Newport Road, and Menifee Road. Both older Sun City properties and newer master-planned communities have active concrete replacement programs. We're familiar with HOA requirements in the newer communities and can provide finish samples for approval before installation." } },
+    { '@type': 'Question', name: 'Can you install an RV pad or extra parking slab in Menifee?', acceptedAnswer: { '@type': 'Answer', text: "Yes — RV pad installation is a popular request in Menifee, where many homes have side yards or extended lots suitable for additional parking. A standard RV pad (12×40 feet) typically runs $2,800–$5,500 depending on site preparation requirements. We can include a gate cut, drain inlet, and electrical conduit as options. Check with your HOA before requesting a quote — some communities restrict RV storage." } },
+  ],
+};
 ---
 
 <BaseLayout
@@ -66,6 +77,28 @@ import { SITE_CONFIG } from '../config';
           <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
         ))}
       </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <section class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions — Concrete in Menifee</h2>
+    <div class="space-y-4">
+      {[
+        { q: "Do you repair or replace aging concrete driveways in Sun City Menifee?", a: "Yes — Sun City Menifee is one of our busiest service areas for concrete driveway repair and replacement. Many Sun City driveways were poured in the 1970s–1990s and have reached end of life, with widespread cracking, lifting, and surface deterioration. We assess whether repair or full replacement makes better long-term financial sense and give you an honest recommendation. We work clean and quiet, respecting the community character." },
+        { q: "How does Menifee's expansive clay soil cause concrete cracking?", a: "Menifee sits on Yolo and Hanford clay soils that are among the most expansive in the Inland Valley. These soils swell up to 10% in volume when saturated and shrink dramatically in dry conditions — putting enormous stress on concrete slabs from below. We address this with proper excavation (removing 6–8 inches of native clay), compactable base replacement, and steel reinforcement sized for the soil conditions. Skipping these steps leads to early failure." },
+        { q: "Do you serve Heritage Lakes, Heartland, and newer Menifee developments?", a: "Yes — we work throughout Menifee including Heritage Lakes, Heartland, Audie Murphy Ranch, and communities along Bradley Road, Newport Road, and Menifee Road. Both older Sun City properties and newer master-planned communities have active concrete replacement programs. We're familiar with HOA requirements in the newer communities and can provide finish samples for approval before installation." },
+        { q: "Can you install an RV pad or extra parking slab in Menifee?", a: "Yes — RV pad installation is a popular request in Menifee, where many homes have side yards or extended lots suitable for additional parking. A standard RV pad (12×40 feet) typically runs $2,800–$5,500 depending on site preparation requirements. We can include a gate cut, drain inlet, and electrical conduit as options. Check with your HOA before requesting a quote — some communities restrict RV storage." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
     </div>
   </section>
 

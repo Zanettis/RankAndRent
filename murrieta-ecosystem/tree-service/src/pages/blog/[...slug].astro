@@ -41,10 +41,35 @@ const blogSchema = {
   mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl },
   keywords: post.data.tags?.join(', '),
 };
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_CONFIG.domain}/blog/` },
+    { '@type': 'ListItem', position: 3, name: post.data.title, item: postUrl },
+  ],
+};
+
+const howToSchema = post.data.howToSteps?.length ? {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: post.data.title,
+  description: post.data.description,
+  step: post.data.howToSteps.map((s, i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: s.name,
+    text: s.text,
+  })),
+} : null;
 ---
 
 <BaseLayout title={`${post.data.title} | ${SITE_CONFIG.name}`} description={post.data.description}>
   <script type="application/ld+json" set:html={JSON.stringify(blogSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  {howToSchema && <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />}
   <article class="max-w-3xl mx-auto px-4 py-12">
     <nav class="text-sm text-gray-500 mb-6" aria-label="breadcrumb">
       <a href="/" class="hover:text-primary">Home</a>

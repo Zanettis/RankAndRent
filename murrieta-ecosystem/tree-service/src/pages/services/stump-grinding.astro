@@ -70,6 +70,16 @@ const serviceSchema = {
     },
   },
 };
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_CONFIG.domain}/services/` },
+    { '@type': 'ListItem', position: 3, name: 'Stump Grinding', item: `${SITE_CONFIG.domain}/services/stump-grinding/` },
+  ],
+};
 ---
 
 <BaseLayout
@@ -78,6 +88,7 @@ const serviceSchema = {
 >
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero
     headline="Stump Grinding & Removal in Murrieta"
     subheadline="Eliminate unsightly stumps, trip hazards, and pest attractors. We grind stumps below grade so you can replant or build on top."

@@ -9,6 +9,7 @@ const blog = defineCollection({
     author: z.string().default('Murrieta Concrete Works'),
     tags: z.array(z.string()).optional(),
     featured: z.boolean().default(false),
+    howToSteps: z.array(z.object({ name: z.string(), text: z.string() })).optional(),
   }),
 });
 

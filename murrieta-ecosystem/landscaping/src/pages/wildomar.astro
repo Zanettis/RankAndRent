@@ -4,6 +4,17 @@ import Hero from '../components/Hero.astro';
 import LeadForm from '../components/LeadForm.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import { SITE_CONFIG } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Can you landscape hillside lots in Wildomar?', acceptedAnswer: { '@type': 'Answer', text: "Yes — hillside landscaping is one of our specialties in Wildomar. We work with sloped terrain throughout Heritage Lake, Palomar Hills, and Clinton Keith Estates. Our hillside designs address erosion control, proper drainage, and plant selection for slopes. We use deep-rooted native groundcovers, terracing, and decomposed granite paths to create beautiful, stable landscapes on challenging lots." } },
+    { '@type': 'Question', name: "How do you handle Wildomar's clay soil in landscape projects?", acceptedAnswer: { '@type': 'Answer', text: "Wildomar's heavy clay soils drain poorly and compact easily, which limits plant choices and irrigation design. We amend clay soil with organic compost and gypsum to improve structure, install raised planting beds where deep drainage is needed, and select plants that tolerate wet winters and dry summers on clay. Getting the soil preparation right is the foundation of a successful landscape on Wildomar's clay." } },
+    { '@type': 'Question', name: 'Do you serve Heritage Lake and Clinton Keith Estates neighborhoods in Wildomar?', acceptedAnswer: { '@type': 'Answer', text: "Yes — we work throughout Wildomar including Heritage Lake, Palomar Hills, Clinton Keith Estates, and properties along the California Oaks Road corridor. We know the community character and common HOA guidelines in these neighborhoods and can help you design a yard that looks great within any community restrictions." } },
+    { '@type': 'Question', name: 'What plants thrive on Wildomar hillside properties?', acceptedAnswer: { '@type': 'Answer', text: "For Wildomar's hillside lots, we recommend drought-adapted groundcovers like Ceanothus (California lilac), Salvia clevelandii (Cleveland sage), Arctostaphylos (manzanita), and Echium candicans (pride of Madeira). These plants establish deep roots that anchor sloped soil, require minimal water once established, and provide significant visual interest with seasonal blooms." } },
+  ],
+};
 ---
 
 <BaseLayout
@@ -72,6 +83,28 @@ import { SITE_CONFIG } from '../config';
           <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
         ))}
       </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <section class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions — Landscaping in Wildomar</h2>
+    <div class="space-y-4">
+      {[
+        { q: "Can you landscape hillside lots in Wildomar?", a: "Yes — hillside landscaping is one of our specialties in Wildomar. We work with sloped terrain throughout Heritage Lake, Palomar Hills, and Clinton Keith Estates. Our hillside designs address erosion control, proper drainage, and plant selection for slopes. We use deep-rooted native groundcovers, terracing, and decomposed granite paths to create beautiful, stable landscapes on challenging lots." },
+        { q: "How do you handle Wildomar's clay soil in landscape projects?", a: "Wildomar's heavy clay soils drain poorly and compact easily, which limits plant choices and irrigation design. We amend clay soil with organic compost and gypsum to improve structure, install raised planting beds where deep drainage is needed, and select plants that tolerate wet winters and dry summers on clay. Getting the soil preparation right is the foundation of a successful landscape on Wildomar's clay." },
+        { q: "Do you serve Heritage Lake and Clinton Keith Estates neighborhoods in Wildomar?", a: "Yes — we work throughout Wildomar including Heritage Lake, Palomar Hills, Clinton Keith Estates, and properties along the California Oaks Road corridor. We know the community character and common HOA guidelines in these neighborhoods and can help you design a yard that looks great within any community restrictions." },
+        { q: "What plants thrive on Wildomar hillside properties?", a: "For Wildomar's hillside lots, we recommend drought-adapted groundcovers like Ceanothus (California lilac), Salvia clevelandii (Cleveland sage), Arctostaphylos (manzanita), and Echium candicans (pride of Madeira). These plants establish deep roots that anchor sloped soil, require minimal water once established, and provide significant visual interest with seasonal blooms." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
     </div>
   </section>
 

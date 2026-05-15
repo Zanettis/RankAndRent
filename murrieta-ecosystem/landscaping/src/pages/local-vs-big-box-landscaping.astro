@@ -1,0 +1,214 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { SITE_CONFIG } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is the difference between a local landscaping company and a national chain?',
+      acceptedAnswer: { '@type': 'Answer', text: 'National landscaping chains (TruGreen, BrightView, LandCare, and similar) use standardized service programs designed for average conditions across many markets. A local Murrieta landscaper designs service programs specifically for inland Southern California: clay-heavy soils, extreme summer heat, EVMWD and RCWD water restrictions, fire defensible space requirements, and the drought-tolerant plant palette that performs best here. Local knowledge produces meaningfully better outcomes for Murrieta yards.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do national landscaping companies know Murrieta\'s watering restrictions?',
+      acceptedAnswer: { '@type': 'Answer', text: 'National chains are aware that California has water restrictions, but the specific rules from EVMWD (Eastern Municipal Water District) and RCWD (Rancho California Water District) — which serve most of Murrieta — change regularly and involve specific day-of-week and time-of-day rules. A local landscaper working in Murrieta every week knows these rules in detail and sets up irrigation schedules that keep your lawn healthy without violations or wasted water.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are national landscaping companies more expensive than local ones in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'National chains are often comparably priced or more expensive than local Murrieta landscapers for standard maintenance services — and their overhead costs (corporate infrastructure, regional management layers, national marketing) must be covered somewhere in the pricing. Local landscapers have lower overhead and can often offer better pricing on custom work, one-time projects, and renovations that fall outside a national chain\'s standardized service menu.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can a big-box landscaping company handle drought-tolerant landscaping in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'National chains offer drought-tolerant packages, but the plant selection is often generic and not optimized for Murrieta\'s specific combination of clay soil, intense UV, and inland heat. A local landscaper who has installed and maintained drought-tolerant yards throughout the Temecula Valley knows which plants actually perform in Murrieta\'s conditions — not just which plants are on a national approved-plant list.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does it matter that HOA landscaping rules vary in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes, significantly. Murrieta has dozens of active HOAs with different landscaping standards — Greer Ranch, Spencer\'s Crossing, Copper Canyon, and others each have specific rules about turf replacement, approved plant species, hardscape ratios, and seasonal cleanup requirements. A national chain may not be familiar with your specific HOA\'s current requirements. A local landscaper who regularly works in your neighborhood typically knows the HOA rules without you having to research and communicate them yourself.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What should I look for when hiring a landscaping company in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Look for a California C-27 Landscaping contractor\'s license (verify at cslb.ca.gov), liability insurance and workers\' compensation coverage, demonstrated experience with inland Southern California\'s specific soil and climate conditions, familiarity with local HOA requirements and water district restrictions, and references from recent work in Murrieta specifically. A written estimate with clear scope and materials specification protects both parties.' },
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Local vs. National Landscaping Companies in Murrieta, CA — Why Local Wins"
+  description="TruGreen, BrightView, and national chains vs. local Murrieta landscapers. Why local knowledge of clay soil, EVMWD water rules, and HOA requirements makes a real difference."
+  canonicalUrl="https://landscapingmurrieta.com/local-vs-big-box-landscaping/"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Hero -->
+  <section class="bg-primary text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        Local Landscaping vs. National Chains in Murrieta, CA
+      </h1>
+      <p class="text-xl text-white/85 max-w-2xl mx-auto">
+        TruGreen's lawn care program was designed for Ohio. Murrieta has clay soil, 109°F summers, EVMWD watering restrictions, and fire defensible space requirements. Here's why local wins.
+      </p>
+    </div>
+  </section>
+
+  <!-- The Core Argument -->
+  <section class="max-w-4xl mx-auto px-4 py-14">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary text-gray-700">
+      <h2>Why National Landscaping Programs Don't Fit Murrieta</h2>
+      <p>
+        National landscaping chains — TruGreen, BrightView, LandCare, and similar companies — build standardized service programs that work reasonably well in average conditions across many markets. Murrieta is not an average market. The inland Temecula Valley has a combination of conditions that require local expertise to navigate well:
+      </p>
+      <ul>
+        <li><strong>Clay-heavy soils</strong> that compact aggressively, drain poorly, and require specific aeration timing, amendment strategies, and irrigation adjustment</li>
+        <li><strong>Summer heat extremes</strong> that reach 109°F — conditions where standard lawn programs push growth that demands more water than the climate can sustainably support</li>
+        <li><strong>Strict water district rules</strong> from EVMWD and RCWD with specific day-of-week, time-of-day, and seasonal watering restrictions that change and require local knowledge to navigate correctly</li>
+        <li><strong>Fire defensible space requirements</strong> from CAL FIRE and local ordinances that affect how landscaping is designed and maintained within 100 feet of structures</li>
+        <li><strong>HOA landscaping standards</strong> that vary significantly by subdivision and regularly update their approved plant lists and turf replacement policies</li>
+        <li><strong>An evolving drought-tolerant plant palette</strong> that performs very differently in Murrieta's specific microclimate than generic California drought-tolerant plant lists suggest</li>
+      </ul>
+      <p>
+        A national chain's service representative in Murrieta may be locally based, but the programs they're implementing were designed at a corporate level for conditions that don't match what your yard actually needs.
+      </p>
+    </div>
+  </section>
+
+  <!-- Where Local Wins: Specific Areas -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold text-primary mb-8">6 Areas Where Local Landscapers Outperform National Chains in Murrieta</h2>
+      <div class="space-y-6">
+        {[
+          {
+            title: '1. Clay Soil Management',
+            body: "Murrieta sits on clay and clay-loam soils that compact significantly under irrigation and foot traffic. National programs often treat California as a single market and apply generic aeration and amendment schedules. A local landscaper who has worked Murrieta and Temecula Valley soils for years knows when to aerate (grass-type-specific timing matters here), which amendments actually improve clay structure long-term, and how to set up irrigation that delivers water to root depth rather than running off compacted surface. The difference in lawn health over 3–5 years is significant.",
+          },
+          {
+            title: '2. Water District Compliance',
+            body: "EVMWD (Eastern Municipal Water District) and RCWD (Rancho California Water District) regulate water use for most of Murrieta. Both have evolving rules on irrigation days, times, and seasonal adjustments — and both have tiered rate structures that penalize overuse. A local landscaper calibrates irrigation schedules to stay within current district guidelines while maintaining lawn and plant health. A national chain may apply a standard California-wide schedule that isn't optimized for your specific district's current requirements.",
+          },
+          {
+            title: '3. Fire Defensible Space',
+            body: "CAL FIRE requires a 100-foot defensible space buffer around structures in fire-hazard areas — and much of Murrieta qualifies. This affects plant selection (fire-resistant vs. fire-prone species), spacing, and the management of dry vegetation through the summer. A local landscaper familiar with Southwest Riverside County's specific requirements designs plantings that meet CAL FIRE standards and won't require annual major overhaul before fire season. National chains may not have fire-code expertise integrated into their standard service programs.",
+          },
+          {
+            title: '4. HOA Rule Navigation',
+            body: "Murrieta has dozens of active HOAs — Greer Ranch, Spencer's Crossing, Copper Canyon, Cal Oaks, and others — each with their own landscaping standards, approved plant lists, turf replacement policies, and seasonal maintenance requirements. An experienced local landscaper who works regularly in your neighborhood knows these rules without you having to research and relay them. National chains may apply generic programs that inadvertently create HOA violations requiring expensive remediation.",
+          },
+          {
+            title: '5. Drought-Tolerant Plant Selection',
+            body: "Drought-tolerant landscaping is increasingly the direction for Murrieta yards — both for water savings and fire defensibility. But the generic drought-tolerant plant lists that national chains work from don't account for Murrieta's specific combination of intense UV, clay soil, occasional frost in low-lying areas, and summer heat. A local landscaper has installed and maintained drought-tolerant landscapes throughout the area and knows which plants actually thrive here: which California natives work, which Mediterranean varieties do well, and which 'drought-tolerant' plants from nursery tags actually need more water than advertised in Murrieta's conditions.",
+          },
+          {
+            title: '6. Responsive Relationships',
+            body: "When a national chain service tech leaves, your call goes to a regional call center. When your local Murrieta landscaper leaves, you call their direct line. A tree fell on your irrigation system at 7am the day before your daughter's outdoor birthday party. A local company can mobilize quickly; a national chain schedules a service ticket for next Tuesday. For ongoing maintenance relationships, the difference in responsiveness compounds over years into a meaningfully different customer experience.",
+          },
+        ].map(item => (
+          <div class="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+            <h3 class="font-bold text-primary text-lg mb-3">{item.title}</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- The Cost Question -->
+  <section class="max-w-4xl mx-auto px-4 py-14">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary text-gray-700">
+      <h2>Are National Chains Cheaper?</h2>
+      <p>
+        Not necessarily. National chains have real overhead: corporate infrastructure, regional management layers, national marketing spend, and compliance systems. These costs must be recovered somewhere in their pricing. For commodity services — standard lawn mowing at a fixed cadence — a national chain may offer competitive pricing because of volume. For anything requiring customization — a drought-tolerant renovation, an HOA-compliant redesign, a drip irrigation retrofit — a local landscaper will typically be comparable or less expensive because they're not fitting your project into a standardized service tier.
+      </p>
+      <p>
+        The total cost comparison also needs to account for outcomes. A lawn maintenance program that isn't calibrated to Murrieta's clay soil and water restrictions may produce lower quality results — more brown patches in summer, higher water bills, more replanting — than a local program that gets the conditions right from the start. The "cheaper" national program can cost more over two years than the well-calibrated local program.
+      </p>
+
+      <h2>When Does a National Chain Make Sense?</h2>
+      <p>
+        National chains have legitimate strengths for specific scenarios:
+      </p>
+      <ul>
+        <li><strong>Commercial properties</strong> where scale and standardized reporting matter more than hyper-local expertise</li>
+        <li><strong>Large institutional contracts</strong> where the chain's bonding, insurance levels, and compliance infrastructure are required</li>
+        <li><strong>Commodity lawn mowing</strong> on large simple properties where customization isn't needed and price per visit is the primary driver</li>
+      </ul>
+      <p>
+        For residential homeowners in Murrieta's single-family neighborhoods, local expertise wins on nearly every dimension that matters: lawn health, water compliance, HOA navigation, fire code adherence, and responsiveness.
+      </p>
+    </div>
+  </section>
+
+  <!-- What to Look For in a Local Landscaper -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold text-primary mb-6">What to Look For in a Murrieta Landscaper</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {[
+          { title: 'California C-27 License', body: 'Landscaping contractors in California need a C-27 license for work involving hardscape, irrigation, and planting. Verify at cslb.ca.gov — takes 2 minutes.' },
+          { title: 'Inland SoCal Experience', body: 'Ask specifically about experience with Murrieta or Temecula Valley conditions. Clay soil and extreme summer heat require a different approach than coastal California.' },
+          { title: 'EVMWD / RCWD Familiarity', body: 'Ask whether they stay current on local water district rules. A landscaper who doesn\'t know your water district\'s current regulations can set up irrigation that violates restrictions.' },
+          { title: 'HOA Knowledge', body: 'If you have an HOA, ask if they\'ve worked in your subdivision before. HOA rule familiarity saves you from having to relay requirements that a local specialist already knows.' },
+          { title: 'Liability + Workers\' Comp', body: 'Request current certificates of insurance. Without workers\' compensation coverage, an injured worker can make a claim against your homeowner\'s policy.' },
+          { title: 'Written Estimate with Scope', body: 'A legitimate landscaper provides written estimates that specify materials, labor, and timeline. Verbal estimates are hard to enforce if the final bill differs.' },
+        ].map(item => (
+          <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+            <h3 class="font-bold text-primary mb-2">{item.title}</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="max-w-4xl mx-auto px-4 py-14">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {[
+        { q: "What is the difference between a local landscaping company and a national chain?", a: "National landscaping chains (TruGreen, BrightView, LandCare, and similar) use standardized service programs designed for average conditions across many markets. A local Murrieta landscaper designs service programs specifically for inland Southern California: clay-heavy soils, extreme summer heat, EVMWD and RCWD water restrictions, fire defensible space requirements, and the drought-tolerant plant palette that performs best here. Local knowledge produces meaningfully better outcomes for Murrieta yards." },
+        { q: "Do national landscaping companies know Murrieta's watering restrictions?", a: "National chains are aware that California has water restrictions, but the specific rules from EVMWD (Eastern Municipal Water District) and RCWD (Rancho California Water District) — which serve most of Murrieta — change regularly and involve specific day-of-week and time-of-day rules. A local landscaper working in Murrieta every week knows these rules in detail and sets up irrigation schedules that keep your lawn healthy without violations or wasted water." },
+        { q: "Are national landscaping companies more expensive than local ones in Murrieta?", a: "National chains are often comparably priced or more expensive than local Murrieta landscapers for standard maintenance services — and their overhead costs (corporate infrastructure, regional management layers, national marketing) must be covered somewhere in the pricing. Local landscapers have lower overhead and can often offer better pricing on custom work, one-time projects, and renovations that fall outside a national chain's standardized service menu." },
+        { q: "Can a big-box landscaping company handle drought-tolerant landscaping in Murrieta?", a: "National chains offer drought-tolerant packages, but the plant selection is often generic and not optimized for Murrieta's specific combination of clay soil, intense UV, and inland heat. A local landscaper who has installed and maintained drought-tolerant yards throughout the Temecula Valley knows which plants actually perform in Murrieta's conditions — not just which plants are on a national approved-plant list." },
+        { q: "Does it matter that HOA landscaping rules vary in Murrieta?", a: "Yes, significantly. Murrieta has dozens of active HOAs with different landscaping standards — Greer Ranch, Spencer's Crossing, Copper Canyon, and others each have specific rules about turf replacement, approved plant species, hardscape ratios, and seasonal cleanup requirements. A national chain may not be familiar with your specific HOA's current requirements. A local landscaper who regularly works in your neighborhood typically knows the HOA rules without you having to research and communicate them yourself." },
+        { q: "What should I look for when hiring a landscaping company in Murrieta?", a: "Look for a California C-27 Landscaping contractor's license (verify at cslb.ca.gov), liability insurance and workers' compensation coverage, demonstrated experience with inland Southern California's specific soil and climate conditions, familiarity with local HOA requirements and water district restrictions, and references from recent work in Murrieta specifically. A written estimate with clear scope and materials specification protects both parties." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="bg-primary py-14 px-4 text-center text-white">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Work With Landscapers Who Know Murrieta</h2>
+      <p class="text-white/85 text-lg mb-8">
+        We're local. We know the clay soil, the EVMWD rules, the HOA requirements, and which plants actually thrive in Murrieta's heat — not just which ones are on a national approved list. Free consultation, written estimate, licensed and insured.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block bg-white text-primary font-bold text-lg px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors"
+      >
+        Get Your Free Landscaping Consultation
+      </a>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Ready to Work With a Local Murrieta Landscaper?" />
+  </section>
+</BaseLayout>

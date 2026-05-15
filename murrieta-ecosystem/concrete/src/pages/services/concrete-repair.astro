@@ -41,6 +41,16 @@ const faqSchema = {
     },
   ],
 };
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_CONFIG.domain}/services/` },
+    { '@type': 'ListItem', position: 3, name: 'Concrete Repair', item: `${SITE_CONFIG.domain}/services/concrete-repair/` },
+  ],
+};
 ---
 
 <BaseLayout
@@ -48,6 +58,7 @@ const faqSchema = {
   description="Professional concrete repair in Murrieta, CA. Crack repair, resurfacing, and settling correction. Restore your driveway or patio. Free estimates."
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero
     headline="Concrete Repair & Resurfacing in Murrieta"
     subheadline="Cracked, sunken, or spalling concrete? We restore your driveway, patio, or walkway to like-new condition at a fraction of replacement cost."
