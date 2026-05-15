@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
+import { SITE_CONFIG } from '../../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How much does mulching cost in Murrieta, CA?',
+      acceptedAnswer: { '@type': 'Answer', text: "Mulching cost in Murrieta depends on the square footage covered and the type of mulch selected. Material typically runs $35–$80 per cubic yard depending on type (shredded wood, gorilla hair, decorative rock, or decomposed granite). For a typical 500 sq ft planting bed with 3-inch coverage, expect $150–$350 in mulch plus labor. We provide free estimates and can deliver and install in one visit." },
+    },
+    {
+      '@type': 'Question',
+      name: 'What type of mulch is best for Murrieta gardens?',
+      acceptedAnswer: { '@type': 'Answer', text: "For Murrieta's dry climate, shredded wood mulch (gorilla hair) and redwood bark are excellent organic choices — they break down slowly in our low-rainfall environment and improve soil over time. Decomposed granite (DG) and decorative gravel are popular for drought-tolerant and low-water landscapes because they don't break down or require annual refreshing. We recommend organic mulch for planting beds with shrubs and perennials; DG or gravel for pathways and under xeriscape plantings." },
+    },
+    {
+      '@type': 'Question',
+      name: 'How often should mulch be refreshed in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: "In Murrieta's dry climate, organic mulch breaks down more slowly than in humid areas — most wood mulches last 2–3 years before needing refreshing. Plan for an annual top-up of 1 inch to maintain the 3-inch ideal depth. Decomposed granite and gravel installations rarely need full replacement, though they may need occasional top-up and raking over time." },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does mulch help with water conservation in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: "Yes — significantly. A 3-inch layer of organic mulch can reduce soil moisture evaporation by 25–50%, directly cutting how much you need to irrigate. In Murrieta's summer heat, this translates to meaningful water bill savings. Many water districts including EVMWD recommend mulching as part of water-wise landscaping. Some rebate programs include mulch installation as a qualifying component." },
+    },
+  ],
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Mulching',
+  name: 'Mulching Services in Murrieta, CA',
+  description: 'Professional mulching in Murrieta, CA. Organic and decorative mulch installation for water conservation and plant health. Free estimates.',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.domain,
+    telephone: SITE_CONFIG.phone,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Murrieta' },
+    { '@type': 'City', name: 'Temecula' },
+    { '@type': 'City', name: 'Wildomar' },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_CONFIG.domain}/services/` },
+    { '@type': 'ListItem', position: 3, name: 'Mulching', item: `${SITE_CONFIG.domain}/services/mulching/` },
+  ],
+};
+---
+
+<BaseLayout
+  title="Mulching Services Murrieta, CA | Wood Mulch, DG & Decorative Rock"
+  description="Professional mulching in Murrieta, CA. Shredded wood, gorilla hair, decomposed granite, and decorative rock. Water-saving installation for Murrieta gardens. Free estimates."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <Hero
+    headline="Mulching Services in Murrieta — Protect Plants, Save Water"
+    subheadline="Professional mulch installation for Murrieta gardens. Wood mulch, decomposed granite, and decorative rock delivered and installed. Reduces water use and suppresses weeds. Free estimates."
+    ctaText="Get a Free Estimate"
+  />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-8" aria-label="breadcrumb">
+      <a href="/" class="hover:text-primary">Home</a>
+      <span class="mx-2">/</span>
+      <span>Services</span>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Mulching</span>
+    </nav>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Why Mulching Matters in Murrieta's Climate</h2>
+      <p>
+        Murrieta receives only about 11 inches of rain per year, and summer soil temperatures can damage plant roots when bare soil is exposed to direct sun. A 3-inch layer of mulch acts as insulation — keeping soil cooler in summer, warmer in winter, retaining moisture to reduce irrigation frequency, and suppressing weed germination. In Murrieta's climate, mulching is one of the highest-value, lowest-cost landscaping investments you can make.
+      </p>
+
+      <h2>Types of Mulch We Install in Murrieta</h2>
+      <p>
+        <strong>Shredded Wood / Gorilla Hair Mulch</strong> — Dense, stringy shredded wood that locks in place on slopes and doesn't blow away in Murrieta's afternoon winds. Excellent for planting beds with shrubs and perennials. Breaks down slowly in our dry climate, improving soil over 2–3 years.
+      </p>
+      <p>
+        <strong>Redwood and Cedar Bark</strong> — Attractive, aromatic, and pest-resistant. A popular choice for visible front yard beds. Moderately long-lasting in Murrieta's low-rainfall conditions.
+      </p>
+      <p>
+        <strong>Decomposed Granite (DG)</strong> — The go-to choice for drought-tolerant and xeriscape landscapes. Doesn't decompose, so it's essentially a one-time install. Works well under native plants and in pathways. Available in natural tan, brown, and gold finishes.
+      </p>
+      <p>
+        <strong>Decorative Rock and River Rock</strong> — Permanent, zero-maintenance option for low-water landscapes. Excellent heat retention for xeriscape designs. We can install weed barrier fabric underneath for added weed suppression.
+      </p>
+
+      <h2>Mulching for Water Conservation</h2>
+      <p>
+        A 3-inch mulch layer can reduce evaporation from soil by 25–50%, directly reducing how often you need to irrigate. Over a Murrieta summer, this can translate to hundreds of gallons saved and a meaningfully lower water bill. Some EVMWD rebate programs include mulching as part of a qualifying water-wise landscape conversion.
+      </p>
+
+      <h2>Professional Installation vs. DIY</h2>
+      <p>
+        You can buy bags of mulch at a hardware store, but professional bulk installation delivers significantly better value. We source material at wholesale pricing, deliver via bulk truck (avoiding the 50-bag scenario), and spread and rake to the correct depth and grade. For larger jobs — a 1,000+ sq ft conversion — the labor and material cost of professional installation is often comparable to doing it yourself while taking a full weekend.
+      </p>
+    </div>
+
+    <CrossLinkWidget
+      heading="Pair Your Mulching Project With"
+      links={[
+        { text: "Drought-Tolerant Landscaping", href: "https://landscapingmurrieta.com/drought-tolerant-rebate", description: "Combine mulching with drought-tolerant plants to maximize water savings.", icon: "🌵" },
+        { text: "Irrigation Installation", href: "https://landscapingmurrieta.com/services/irrigation", description: "Add efficient drip irrigation under your new mulch for optimal plant health.", icon: "💧" },
+        { text: "Concrete Pathways", href: "https://murrietaconcreteworks.com/services/concrete-walkways-sidewalks", description: "Define mulched areas with clean concrete borders and walkways.", icon: "🏡" },
+      ]}
+    />
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-primary mb-6">Other Landscaping Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {SITE_CONFIG.services.map((s) => (
+          <ServiceCard title={s.title} description={s.description} href={s.href} />
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <section class="max-w-4xl mx-auto py-8">
+        <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {[
+            { q: "How much does mulching cost in Murrieta, CA?", a: "Mulching cost in Murrieta depends on the square footage covered and the type of mulch selected. Material typically runs $35–$80 per cubic yard depending on type (shredded wood, gorilla hair, decorative rock, or decomposed granite). For a typical 500 sq ft planting bed with 3-inch coverage, expect $150–$350 in mulch plus labor. We provide free estimates and can deliver and install in one visit." },
+            { q: "What type of mulch is best for Murrieta gardens?", a: "For Murrieta's dry climate, shredded wood mulch (gorilla hair) and redwood bark are excellent organic choices — they break down slowly in our low-rainfall environment and improve soil over time. Decomposed granite (DG) and decorative gravel are popular for drought-tolerant and low-water landscapes because they don't break down or require annual refreshing. We recommend organic mulch for planting beds with shrubs and perennials; DG or gravel for pathways and under xeriscape plantings." },
+            { q: "How often should mulch be refreshed in Murrieta?", a: "In Murrieta's dry climate, organic mulch breaks down more slowly than in humid areas — most wood mulches last 2–3 years before needing refreshing. Plan for an annual top-up of 1 inch to maintain the 3-inch ideal depth. Decomposed granite and gravel installations rarely need full replacement, though they may need occasional top-up and raking over time." },
+            { q: "Does mulch help with water conservation in Murrieta?", a: "Yes — significantly. A 3-inch layer of organic mulch can reduce soil moisture evaporation by 25–50%, directly cutting how much you need to irrigate. In Murrieta's summer heat, this translates to meaningful water bill savings. Many water districts including EVMWD recommend mulching as part of water-wise landscaping. Some rebate programs include mulch installation as a qualifying component." },
+          ].map(({ q, a }) => (
+            <details class="border border-gray-200 rounded-xl overflow-hidden group">
+              <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+                {q}
+                <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+            </details>
+          ))}
+        </div>
+      </section>
+    </div>
+
+    <div class="mt-12">
+      <LeadForm heading="Get Your Free Mulching Estimate" />
+    </div>
+  </div>
+</BaseLayout>

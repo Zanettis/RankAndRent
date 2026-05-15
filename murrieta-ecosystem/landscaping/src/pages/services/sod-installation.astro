@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
+import { SITE_CONFIG } from '../../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How much does sod installation cost in Murrieta, CA?',
+      acceptedAnswer: { '@type': 'Answer', text: "Sod installation in Murrieta typically runs $1.50–$3.00 per square foot for the sod itself, plus $0.50–$1.50 per square foot for soil prep, grading, and installation labor. A standard 500 sq ft front lawn costs approximately $1,000–$2,250 installed. The full cost depends on existing lawn removal (add $0.50–$1.00/sq ft if existing sod or grass needs to be stripped), soil quality, and any grading needed. We provide free on-site estimates with itemized pricing." },
+    },
+    {
+      '@type': 'Question',
+      name: 'What type of sod is best for Murrieta\'s climate?',
+      acceptedAnswer: { '@type': 'Answer', text: "For Murrieta's hot, dry summers, tall fescue is the most popular choice — it stays green year-round, tolerates heat reasonably well, and handles full sun and moderate shade. For full-sun areas with very hot exposures, Bermuda grass (hybrid varieties like Tifway 419) is the most heat-resistant option and uses less water, but it goes dormant and turns tan in winter. Zoysia grass is a middle ground — heat and drought tolerant, stays green longer than Bermuda, but grows more slowly. We'll recommend the right variety for your specific conditions." },
+    },
+    {
+      '@type': 'Question',
+      name: 'When is the best time to install sod in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: "Sod can be installed year-round in Murrieta, but fall (September–November) and spring (February–April) are optimal windows. Fall installs take advantage of cooling temperatures and the beginning of rainy season, reducing irrigation needs during establishment. Avoid July–August if possible — newly laid sod in 105°F heat requires aggressive irrigation and still faces higher stress and failure risk." },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do you prepare the soil before laying sod in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: "Soil preparation is critical and is what separates a long-lasting lawn from one that struggles in 2–3 years. In Murrieta's clay-heavy soils, we till to 4–6 inches, add soil amendment to improve drainage and root penetration, grade for proper drainage slope (minimum 1% grade away from structures), and often apply a pre-plant fertilizer. Skipping these steps on clay soil results in compacted, waterlogged roots and a lawn that never quite thrives." },
+    },
+  ],
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Sod Installation',
+  name: 'Sod Installation in Murrieta, CA',
+  description: 'Professional sod installation in Murrieta, CA. Proper soil prep, variety selection, grading, and installation for lasting results. Free estimates.',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.domain,
+    telephone: SITE_CONFIG.phone,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Murrieta' },
+    { '@type': 'City', name: 'Temecula' },
+    { '@type': 'City', name: 'Wildomar' },
+    { '@type': 'City', name: 'Menifee' },
+  ],
+  offers: {
+    '@type': 'Offer',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      minPrice: '1000',
+      maxPrice: '5000',
+      priceCurrency: 'USD',
+    },
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_CONFIG.domain}/services/` },
+    { '@type': 'ListItem', position: 3, name: 'Sod Installation', item: `${SITE_CONFIG.domain}/services/sod-installation/` },
+  ],
+};
+---
+
+<BaseLayout
+  title="Sod Installation Murrieta, CA | Lawn Installation & Soil Prep"
+  description="Professional sod installation in Murrieta, CA. Expert soil preparation, variety selection, and installation for lasting results. Serving Temecula, Wildomar, and Menifee. Free estimates."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <Hero
+    headline="Sod Installation in Murrieta, CA — Instant Green Lawn"
+    subheadline="Professional sod installation with proper soil prep for Murrieta's clay soils. Variety selection, grading, and same-day new lawn. Free estimates throughout Southwest Riverside County."
+    ctaText="Get a Free Estimate"
+  />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-8" aria-label="breadcrumb">
+      <a href="/" class="hover:text-primary">Home</a>
+      <span class="mx-2">/</span>
+      <span>Services</span>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Sod Installation</span>
+    </nav>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Why Professional Sod Installation Matters in Murrieta</h2>
+      <p>
+        Murrieta's clay-heavy soils, summer heat, and limited natural rainfall make sod installation more nuanced here than in cooler, wetter climates. Sod laid on unprepared clay soil will look fine for 6–12 months, then begin to struggle as roots hit the compaction layer and drainage fails. Proper soil preparation — tilling, amendment, and grading — is what separates a lawn that thrives for 15 years from one that needs renovation in 3.
+      </p>
+
+      <h2>Our Sod Installation Process</h2>
+      <p>
+        We start by assessing your existing soil and grade. If old turf or sod is in place, we remove and dispose of it before any new installation. Soil is tilled to 4–6 inches, amended to improve drainage and root penetration in clay soils, and graded to ensure water drains away from your home and hardscaped areas. Then we lay fresh sod — delivered same-day from the farm — in tight, staggered rows with no gaps. We roll the sod to ensure full contact with the soil surface, then complete an initial deep watering.
+      </p>
+
+      <h2>Choosing the Right Sod Variety for Murrieta</h2>
+      <p>
+        The most common choices for Murrieta homeowners:
+      </p>
+      <p>
+        <strong>Tall Fescue</strong> — The most popular cool-season option. Stays green year-round, handles both full sun and partial shade, and performs reasonably well in Murrieta's heat. Needs regular irrigation but is the easiest to maintain for most homeowners.
+      </p>
+      <p>
+        <strong>Hybrid Bermuda (Tifway 419, Tifgreen)</strong> — The best choice for hot, full-sun lawns that need to handle drought. Uses significantly less water than fescue in summer. Goes dormant (tan) in winter. Excellent for homes where water conservation is a priority.
+      </p>
+      <p>
+        <strong>Zoysia</strong> — Dense, slow-growing, and drought tolerant. Handles heat well and stays green longer than Bermuda. Slower to establish but very low maintenance once in.
+      </p>
+
+      <h2>Sod vs. Seeding: Which Is Right for Murrieta?</h2>
+      <p>
+        Seeding is rarely successful in Murrieta's climate for a new lawn. Summer heat prevents germination; fall planting competes with weed establishment; and overseeding results are inconsistent in clay soils without significant preparation. Sod gives you instant establishment, immediate weed suppression, and a mature root system in 3–4 weeks. For most Murrieta homeowners, sod is the better choice.
+      </p>
+    </div>
+
+    <CrossLinkWidget
+      heading="Complete Your Outdoor Space"
+      links={[
+        { text: "Irrigation Installation", href: "https://landscapingmurrieta.com/services/irrigation", description: "Set up efficient drip or spray irrigation to keep your new sod healthy.", icon: "💧" },
+        { text: "Concrete Patios & Walkways", href: "https://murrietaconcreteworks.com/services/concrete-patios", description: "Add concrete borders, walkways, or a patio to frame your new lawn.", icon: "🏡" },
+        { text: "Tree Planting in Murrieta", href: "https://murrietatreeexperts.com/services/tree-planting", description: "Add shade trees to keep your new sod cooler in Murrieta's summer heat.", icon: "🌳" },
+      ]}
+    />
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-primary mb-6">Other Landscaping Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {SITE_CONFIG.services.filter(s => !s.href.includes('sod')).map((s) => (
+          <ServiceCard title={s.title} description={s.description} href={s.href} />
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <section class="max-w-4xl mx-auto py-8">
+        <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {[
+            { q: "How much does sod installation cost in Murrieta, CA?", a: "Sod installation in Murrieta typically runs $1.50–$3.00 per square foot for the sod itself, plus $0.50–$1.50 per square foot for soil prep, grading, and installation labor. A standard 500 sq ft front lawn costs approximately $1,000–$2,250 installed. The full cost depends on existing lawn removal (add $0.50–$1.00/sq ft if existing sod or grass needs to be stripped), soil quality, and any grading needed. We provide free on-site estimates with itemized pricing." },
+            { q: "What type of sod is best for Murrieta's climate?", a: "For Murrieta's hot, dry summers, tall fescue is the most popular choice — it stays green year-round, tolerates heat reasonably well, and handles full sun and moderate shade. For full-sun areas with very hot exposures, Bermuda grass (hybrid varieties like Tifway 419) is the most heat-resistant option and uses less water, but it goes dormant and turns tan in winter. Zoysia grass is a middle ground — heat and drought tolerant, stays green longer than Bermuda, but grows more slowly. We'll recommend the right variety for your specific conditions." },
+            { q: "When is the best time to install sod in Murrieta?", a: "Sod can be installed year-round in Murrieta, but fall (September–November) and spring (February–April) are optimal windows. Fall installs take advantage of cooling temperatures and the beginning of rainy season, reducing irrigation needs during establishment. Avoid July–August if possible — newly laid sod in 105°F heat requires aggressive irrigation and still faces higher stress and failure risk." },
+            { q: "How do you prepare the soil before laying sod in Murrieta?", a: "Soil preparation is critical and is what separates a long-lasting lawn from one that struggles in 2–3 years. In Murrieta's clay-heavy soils, we till to 4–6 inches, add soil amendment to improve drainage and root penetration, grade for proper drainage slope (minimum 1% grade away from structures), and often apply a pre-plant fertilizer. Skipping these steps on clay soil results in compacted, waterlogged roots and a lawn that never quite thrives." },
+          ].map(({ q, a }) => (
+            <details class="border border-gray-200 rounded-xl overflow-hidden group">
+              <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+                {q}
+                <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+            </details>
+          ))}
+        </div>
+      </section>
+    </div>
+
+    <div class="mt-12">
+      <LeadForm heading="Get Your Free Sod Installation Estimate" />
+    </div>
+  </div>
+</BaseLayout>

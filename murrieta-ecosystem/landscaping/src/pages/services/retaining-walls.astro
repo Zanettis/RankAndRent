@@ -1,0 +1,176 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
+import { SITE_CONFIG } from '../../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How much does a retaining wall cost in Murrieta, CA?',
+      acceptedAnswer: { '@type': 'Answer', text: "Retaining wall costs in Murrieta depend on height, length, and material. A basic concrete block wall (CMU) typically runs $30–$50 per linear foot per foot of height. A 4-foot tall, 30-foot long wall is roughly $3,600–$6,000 in materials and labor. Decorative block and natural stone walls cost more. Walls over 4 feet in height require engineering and permits in Murrieta, which adds cost. We provide free on-site estimates — every slope is different." },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do retaining walls require a permit in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: "Yes — retaining walls over 4 feet in height (measured from the base of the footing to the top of the wall) require a building permit in Murrieta and must include a soils report and structural engineering. Walls under 4 feet typically don't require a permit for residential properties, though HOA approval may still be needed. We handle permit applications and coordinate engineering review as part of our service." },
+    },
+    {
+      '@type': 'Question',
+      name: 'What materials are used for retaining walls in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: "Common retaining wall materials in Murrieta include concrete masonry unit (CMU) block, segmental retaining wall block (Allan Block, Versa-Lok), poured concrete, natural stone, and timber (less common due to termite risk in this area). For most residential applications under 4 feet, segmental retaining wall block offers the best combination of cost, aesthetics, and durability. Concrete and engineered walls are used for larger applications or slopes requiring engineered solutions." },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do retaining walls handle Murrieta\'s expansive clay soils?',
+      acceptedAnswer: { '@type': 'Answer', text: "Clay soils in Murrieta expand significantly when wet and shrink when dry — this movement creates lateral pressure on retaining walls and is the primary cause of wall failure. Proper design addresses this with adequate drainage (gravel backfill, weep holes or perforated drain pipe behind the wall), appropriate footing depth, and correct batter (wall lean) for the soil conditions. Walls installed without proper drainage in Murrieta's clay soils frequently lean, crack, or fail within 5–10 years." },
+    },
+  ],
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Retaining Wall Installation',
+  name: 'Retaining Wall Installation in Murrieta, CA',
+  description: 'Professional retaining wall installation in Murrieta, CA. Block, stone, and concrete walls for slopes and grade changes. Permit coordination included. Free estimates.',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.domain,
+    telephone: SITE_CONFIG.phone,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Murrieta' },
+    { '@type': 'City', name: 'Temecula' },
+    { '@type': 'City', name: 'Wildomar' },
+    { '@type': 'City', name: 'Menifee' },
+  ],
+  offers: {
+    '@type': 'Offer',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      minPrice: '2000',
+      maxPrice: '20000',
+      priceCurrency: 'USD',
+    },
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_CONFIG.domain}/services/` },
+    { '@type': 'ListItem', position: 3, name: 'Retaining Walls', item: `${SITE_CONFIG.domain}/services/retaining-walls/` },
+  ],
+};
+---
+
+<BaseLayout
+  title="Retaining Walls Murrieta, CA | Block, Stone & Concrete Wall Installation"
+  description="Professional retaining wall installation in Murrieta, CA. Block, stone, and concrete walls for slopes and hillside properties. Permit coordination, free estimates. Serving Temecula, Wildomar, and Menifee."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <Hero
+    headline="Retaining Walls in Murrieta, CA — Slopes Solved"
+    subheadline="Professional retaining wall installation for Murrieta's hillside lots and sloped properties. Block, stone, and concrete walls built to handle clay soil movement. Permit coordination included. Free estimates."
+    ctaText="Get a Free Estimate"
+  />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-8" aria-label="breadcrumb">
+      <a href="/" class="hover:text-primary">Home</a>
+      <span class="mx-2">/</span>
+      <span>Services</span>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Retaining Walls</span>
+    </nav>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Retaining Walls for Murrieta's Hillside Properties</h2>
+      <p>
+        Many of Murrieta's most desirable neighborhoods — Bear Creek, La Cresta, portions of Murrieta Oaks, and hillside developments throughout Wildomar and Temecula — have significant grade changes that need retaining walls to create usable outdoor space, prevent erosion, and manage drainage. A properly engineered retaining wall transforms a steep, unusable slope into terraced planting areas, lawn space, or hardscaped entertaining areas.
+      </p>
+
+      <h2>Why Proper Design Matters in Murrieta's Clay Soils</h2>
+      <p>
+        Murrieta's expansive clay soils are one of the most challenging conditions for retaining walls in California. Clay expands significantly when wet (winter rains) and contracts when dry (summer heat). This cycling movement creates lateral pressure on retaining walls that inadequately designed structures simply can't handle over time. We see failed walls throughout Murrieta — walls that lean, crack, or collapse because they were installed without proper drainage, correct footing depth, or appropriate batter for the soil conditions.
+      </p>
+      <p>
+        All our retaining walls include: compacted aggregate base, properly sized footings, gravel drainage layer behind the wall, weep holes or perforated drain pipe to relieve hydrostatic pressure, and correct wall batter (backward lean into the slope) based on wall height and soil conditions.
+      </p>
+
+      <h2>Materials We Install</h2>
+      <p>
+        <strong>Segmental Retaining Wall Block (Allan Block, Versa-Lok, Boulderwall)</strong> — The most popular choice for residential Murrieta properties. Attractive, durable, and suitable for walls up to 4 feet without engineering (though we always recommend professional design). Available in a range of colors and textures to complement your home.
+      </p>
+      <p>
+        <strong>Concrete Masonry Unit (CMU) Block</strong> — Standard gray block is functional and cost-effective. Often used where the wall will be hidden or plastered. Holds up well in Murrieta's conditions when properly drained.
+      </p>
+      <p>
+        <strong>Natural and Manufactured Stone</strong> — Dry-stacked or mortared stone walls offer a high-end aesthetic that complements Murrieta's Spanish and Mediterranean architecture. Mortared stone walls over 4 feet require engineering.
+      </p>
+      <p>
+        <strong>Poured Concrete</strong> — For large walls, steep slopes, or situations requiring engineered solutions, poured concrete offers the highest strength. Typically required for commercial applications and residential walls over 6 feet.
+      </p>
+
+      <h2>Permits and Engineering for Murrieta Retaining Walls</h2>
+      <p>
+        In Murrieta, retaining walls over 4 feet require a building permit and, in most cases, a soils report and structural engineering stamp. We coordinate the permit application, connect you with a licensed engineer if required, and ensure the final installation passes City of Murrieta inspection. We do not skip permitting on walls that require it — your property needs the inspection record for resale.
+      </p>
+    </div>
+
+    <CrossLinkWidget
+      heading="Complete Your Slope Project"
+      links={[
+        { text: "Landscape Design in Murrieta", href: "https://landscapingmurrieta.com/services/landscape-design", description: "Design plantings for the terraced areas behind your new retaining walls.", icon: "🌿" },
+        { text: "Concrete Patios & Walkways", href: "https://murrietaconcreteworks.com/services/concrete-patios", description: "Add a concrete patio or walkway at the base or top of your new wall.", icon: "🏡" },
+        { text: "Concrete Walls", href: "https://murrietaconcreteworks.com/services/concrete-walls", description: "Need a poured concrete retaining wall? Our concrete team handles larger structural walls.", icon: "🏗️" },
+      ]}
+    />
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-primary mb-6">Other Landscaping Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {SITE_CONFIG.services.map((s) => (
+          <ServiceCard title={s.title} description={s.description} href={s.href} />
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <section class="max-w-4xl mx-auto py-8">
+        <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {[
+            { q: "How much does a retaining wall cost in Murrieta, CA?", a: "Retaining wall costs in Murrieta depend on height, length, and material. A basic concrete block wall (CMU) typically runs $30–$50 per linear foot per foot of height. A 4-foot tall, 30-foot long wall is roughly $3,600–$6,000 in materials and labor. Decorative block and natural stone walls cost more. Walls over 4 feet in height require engineering and permits in Murrieta, which adds cost. We provide free on-site estimates — every slope is different." },
+            { q: "Do retaining walls require a permit in Murrieta?", a: "Yes — retaining walls over 4 feet in height (measured from the base of the footing to the top of the wall) require a building permit in Murrieta and must include a soils report and structural engineering. Walls under 4 feet typically don't require a permit for residential properties, though HOA approval may still be needed. We handle permit applications and coordinate engineering review as part of our service." },
+            { q: "What materials are used for retaining walls in Murrieta?", a: "Common retaining wall materials in Murrieta include concrete masonry unit (CMU) block, segmental retaining wall block (Allan Block, Versa-Lok), poured concrete, natural stone, and timber (less common due to termite risk in this area). For most residential applications under 4 feet, segmental retaining wall block offers the best combination of cost, aesthetics, and durability. Concrete and engineered walls are used for larger applications or slopes requiring engineered solutions." },
+            { q: "How do retaining walls handle Murrieta's expansive clay soils?", a: "Clay soils in Murrieta expand significantly when wet and shrink when dry — this movement creates lateral pressure on retaining walls and is the primary cause of wall failure. Proper design addresses this with adequate drainage (gravel backfill, weep holes or perforated drain pipe behind the wall), appropriate footing depth, and correct batter (wall lean) for the soil conditions. Walls installed without proper drainage in Murrieta's clay soils frequently lean, crack, or fail within 5–10 years." },
+          ].map(({ q, a }) => (
+            <details class="border border-gray-200 rounded-xl overflow-hidden group">
+              <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+                {q}
+                <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+            </details>
+          ))}
+        </div>
+      </section>
+    </div>
+
+    <div class="mt-12">
+      <LeadForm heading="Get Your Free Retaining Wall Estimate" />
+    </div>
+  </div>
+</BaseLayout>

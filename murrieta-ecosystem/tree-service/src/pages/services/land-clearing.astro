@@ -1,0 +1,169 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
+import { SITE_CONFIG } from '../../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How much does land clearing cost in Murrieta, CA?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Land clearing costs in Murrieta depend heavily on lot size, vegetation density, and what needs to be done with the material. Light clearing of brush and small trees on a standard residential lot starts around $500–$1,500. Clearing a larger lot with mature trees, stumps, and heavy brush typically runs $2,000–$8,000+. We provide free on-site estimates — lot size and conditions vary too much for phone quotes.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is included in land clearing?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Our land clearing service includes removing trees, shrubs, brush, weeds, and organic material from your lot. We chip or haul all material, and can grind any stumps in the same visit. We leave the lot graded and ready for construction, landscaping, or whatever comes next. Exact scope depends on your project — we walk every lot before quoting.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need a permit for land clearing in Murrieta or Riverside County?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Permit requirements depend on lot size, location, and what\'s being removed. Clearing that involves grading or drainage changes often requires a grading permit from the City of Murrieta or Riverside County. Removing protected oak trees requires separate review regardless of grading. We check permit requirements during your estimate and handle the application process for you.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you clear land for fire defensible space compliance?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes — fire clearance is one of our most common land clearing requests in Murrieta and the surrounding Southwest Riverside County area. California law requires 100-foot defensible space around structures in high fire hazard severity zones. We clear brush, remove dead and overgrown vegetation, and can provide documentation for CAL FIRE compliance inspections.' },
+    },
+  ],
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Land Clearing',
+  name: 'Land Clearing in Murrieta, CA',
+  description: 'Professional land clearing in Murrieta, CA. Brush removal, tree clearing, stump grinding, and fire defensible space clearing. Free estimates.',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.domain,
+    telephone: SITE_CONFIG.phone,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Murrieta' },
+    { '@type': 'City', name: 'Temecula' },
+    { '@type': 'City', name: 'Wildomar' },
+    { '@type': 'City', name: 'Menifee' },
+  ],
+  offers: {
+    '@type': 'Offer',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      minPrice: '500',
+      maxPrice: '8000',
+      priceCurrency: 'USD',
+    },
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_CONFIG.domain}/services/` },
+    { '@type': 'ListItem', position: 3, name: 'Land Clearing', item: `${SITE_CONFIG.domain}/services/land-clearing/` },
+  ],
+};
+---
+
+<BaseLayout
+  title="Land Clearing Murrieta, CA | Brush Removal & Fire Defensible Space"
+  description="Professional land clearing in Murrieta, CA. Brush removal, tree clearing, stump grinding, and CAL FIRE defensible space compliance. Licensed, insured. Free estimates."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <Hero
+    headline="Land Clearing in Murrieta, CA — Brush, Trees & Fire Clearance"
+    subheadline="From residential lot clearing to CAL FIRE defensible space compliance, our licensed crew handles full vegetation removal in Murrieta and Southwest Riverside County. Free estimates."
+    ctaText="Get a Free Quote"
+  />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-8" aria-label="breadcrumb">
+      <a href="/" class="hover:text-primary">Home</a>
+      <span class="mx-2">/</span>
+      <span>Services</span>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Land Clearing</span>
+    </nav>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Land Clearing Services in Murrieta</h2>
+      <p>
+        Whether you're preparing a vacant lot for construction, restoring an overgrown property, or meeting CAL FIRE defensible space requirements, professional land clearing is the first step. We remove trees, shrubs, brush, and organic debris — then chip or haul everything clean — leaving your lot ready for whatever comes next.
+      </p>
+
+      <h2>What We Clear</h2>
+      <p>
+        Our land clearing crews handle all types of vegetation: native chaparral and brush, invasive species like arundo and castor bean, overgrown ornamentals, dead trees and stumps, and construction-site vegetation removal. We work with everything from small residential lots to multi-acre parcels throughout Murrieta, Temecula, Wildomar, Menifee, and unincorporated Southwest Riverside County.
+      </p>
+
+      <h2>Fire Defensible Space Clearing</h2>
+      <p>
+        California law (PRC 4291) requires property owners in high fire hazard severity zones to maintain 100-foot defensible space around all structures. This means removing dead vegetation, thinning brush to specific spacing requirements, and creating separation between plants and structures. Our fire clearance work meets CAL FIRE standards, and we can provide documentation for compliance inspections. Murrieta, Wildomar, and portions of Temecula are in high fire hazard zones — annual inspection notices are common.
+      </p>
+
+      <h2>Lot Clearing for New Construction</h2>
+      <p>
+        Building a home, ADU, pool, or garage on a lot that has existing vegetation? We coordinate with your contractor to remove all trees and organic material in the build footprint, handle stump grinding, and can rough-grade the cleared area. We work around existing utilities and flagged survey stakes, and schedule clearing to match your construction timeline.
+      </p>
+
+      <h2>Cost and What Affects It</h2>
+      <p>
+        Land clearing cost depends on lot size, vegetation density, tree count and size, whether stumps need grinding, and what happens to the debris (chipped on-site vs. hauled off). We don't quote by phone — lot conditions vary too much. Contact us for a free on-site estimate and we'll walk the property with you.
+      </p>
+    </div>
+
+    <CrossLinkWidget
+      heading="Next Steps After Land Clearing"
+      links={[
+        { text: "Landscape Design in Murrieta", href: "https://landscapingmurrieta.com/services/landscape-design", description: "Turn a cleared lot into a designed outdoor space with professional landscaping.", icon: "🌿" },
+        { text: "Concrete Driveways & Patios", href: "https://murrietaconcreteworks.com/services/concrete-driveways", description: "Install concrete features on your freshly cleared and graded lot.", icon: "🏗️" },
+        { text: "Irrigation Installation", href: "https://landscapingmurrieta.com/services/irrigation", description: "Set up efficient irrigation before new landscaping goes in.", icon: "💧" },
+      ]}
+    />
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-primary mb-6">Other Tree Services We Offer</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {SITE_CONFIG.services.map((s) => (
+          <ServiceCard title={s.title} description={s.description} href={s.href} />
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <section class="max-w-4xl mx-auto py-8">
+        <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {[
+            { q: "How much does land clearing cost in Murrieta, CA?", a: "Land clearing costs in Murrieta depend heavily on lot size, vegetation density, and what needs to be done with the material. Light clearing of brush and small trees on a standard residential lot starts around $500–$1,500. Clearing a larger lot with mature trees, stumps, and heavy brush typically runs $2,000–$8,000+. We provide free on-site estimates — lot size and conditions vary too much for phone quotes." },
+            { q: "What is included in land clearing?", a: "Our land clearing service includes removing trees, shrubs, brush, weeds, and organic material from your lot. We chip or haul all material, and can grind any stumps in the same visit. We leave the lot graded and ready for construction, landscaping, or whatever comes next. Exact scope depends on your project — we walk every lot before quoting." },
+            { q: "Do I need a permit for land clearing in Murrieta or Riverside County?", a: "Permit requirements depend on lot size, location, and what's being removed. Clearing that involves grading or drainage changes often requires a grading permit from the City of Murrieta or Riverside County. Removing protected oak trees requires separate review regardless of grading. We check permit requirements during your estimate and handle the application process for you." },
+            { q: "Can you clear land for fire defensible space compliance?", a: "Yes — fire clearance is one of our most common land clearing requests in Murrieta and the surrounding Southwest Riverside County area. California law requires 100-foot defensible space around structures in high fire hazard severity zones. We clear brush, remove dead and overgrown vegetation, and can provide documentation for CAL FIRE compliance inspections." },
+          ].map(({ q, a }) => (
+            <details class="border border-gray-200 rounded-xl overflow-hidden group">
+              <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+                {q}
+                <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+            </details>
+          ))}
+        </div>
+      </section>
+    </div>
+
+    <div class="mt-12">
+      <LeadForm heading="Get Your Free Land Clearing Estimate" />
+    </div>
+  </div>
+</BaseLayout>
