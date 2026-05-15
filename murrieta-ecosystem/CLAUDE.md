@@ -62,6 +62,97 @@ Telefone, email, nome, domínio, serviços = sempre via `src/config.ts` (`SITE_C
 
 ---
 
+### BaseLayout.astro — Como Adicionar Props Corretamente
+
+O `BaseLayout.astro` já tem um bloco `interface Props` definido. **Nunca declare um segundo `interface Props`** — isso duplica a interface e não causa erro de build no Astro (TypeScript em modo lenient), mas cria confusão e comportamento inesperado.
+
+**Correto — adicionar ao bloco existente:**
+```typescript
+interface Props {
+  title: string;
+  description: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  aggregateRating?: { ratingValue: string; reviewCount: string }; // ← adicione aqui
+}
+```
+
+**Props opcionais de schema (FAQPage, Organization, etc.):** não adicionar ao BaseLayout. Em vez disso, inserir um `<script type="application/ld+json">` diretamente na página que o usa — é o padrão já estabelecido no projeto.
+
+Props já existentes no BaseLayout (aplicado nos 3 sites):
+- `title`, `description`, `canonicalUrl`, `ogImage` — básicos
+- `aggregateRating?: { ratingValue, reviewCount }` — injeta no LocalBusiness schema quando fornecido
+
+---
+
+### OG Images — Convenção
+
+Imagens referenciadas em `<meta property="og:image">` **devem estar em `public/images/`**, não em `src/assets/images/`. Arquivos em `src/assets/` são processados pelo pipeline do Astro e não acessíveis como URLs estáticas nos meta tags.
+
+| Site | OG image padrão |
+|---|---|
+| tree-service | `public/images/hero.jpg` ✓ |
+| landscaping | `public/images/hero.jpg` ✓ |
+| concrete | `public/images/hero.jpg` ✓ |
+
+O default no `BaseLayout.astro` de todos os 3 sites é `ogImage = '/images/hero.jpg'`. Páginas com imagem própria passam o prop `ogImage="/images/nome-da-imagem.jpg"`.
+
+---
+
+### ⚠️ Pendências de Segurança (ação manual necessária)
+
+**`.env` commitados com credenciais reais:**
+Os arquivos `.env` de todos os 3 sites estão no histórico do git com a chave real do Resend (`RESEND_API_KEY`). Ações necessárias:
+1. Revogar e regenerar a API key no dashboard da Resend
+2. `git rm --cached murrieta-ecosystem/tree-service/.env murrieta-ecosystem/landscaping/.env murrieta-ecosystem/concrete/.env`
+3. Adicionar `.env*` ao `.gitignore` da raiz
+4. Configurar as variáveis de ambiente no dashboard do Vercel (não usar `.env` local para produção)
+
+**Números de telefone placeholder:**
+Os `config.ts` dos 3 sites usam números fictícios (555-XXXX). Esses números aparecem no schema LocalBusiness e em vários blog posts. Substituir pelos números reais antes de fazer o go-live.
+
+---
+
+### Inventário de Páginas por Site
+
+#### Páginas de Comparação/Alternativas
+| Site | Páginas |
+|---|---|
+| tree-service | `thumbtack-alternatives.astro`, `homeadvisor-alternatives.astro` |
+| landscaping | `local-vs-big-box-landscaping.astro`, `homeadvisor-alternatives.astro` |
+| concrete | `homeadvisor-alternatives.astro` |
+
+> Antes de criar uma comparison page nova, verificar sempre com `ls src/pages/` — o agente explorador já deixou de detectar páginas existentes nesse projeto.
+
+#### Blog posts (contagem aproximada, maio 2026)
+- tree-service: ~13 posts
+- landscaping: ~16 posts
+- concrete: ~15 posts
+
+#### City landing pages (com FAQPage schema)
+7 cidades × 3 sites = 21 páginas: Murrieta, Temecula, Wildomar, Menifee, Perris, San Jacinto, Hemet, Fallbrook
+
+---
+
+### Schema.org — Inventário Completo (pós Phase 2+3)
+
+| Página / Template | Schemas presentes |
+|---|---|
+| Todas as páginas (BaseLayout) | `LocalBusiness` (+ `AggregateRating` opcional via prop) |
+| `index.astro` | `FAQPage` (inline) + `AggregateRating` (via BaseLayout prop) |
+| `about.astro` | `Organization` (inline — foundingDate, logo, address) |
+| City pages (`/temecula/`, etc.) | `FAQPage` (inline, 3–4 perguntas por cidade) |
+| Service pages (`/services/*`) | `Service` + `BreadcrumbList` |
+| `blog/[...slug].astro` | `BlogPosting` + `BreadcrumbList` + `HowTo` (condicional via frontmatter `howToSteps`) |
+| Comparison pages | `FAQPage` |
+
+**AggregateRating — valores placeholder (atualizar com dados reais):**
+- tree-service: 4.9 / 87 reviews
+- landscaping: 4.8 / 62 reviews
+- concrete: 4.9 / 74 reviews
+
+---
+
 ### Convenções de Commit
 
 ```
