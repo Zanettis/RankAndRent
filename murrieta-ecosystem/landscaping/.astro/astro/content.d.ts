@@ -166,6 +166,20 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"best-drought-tolerant-plants-murrieta.md": {
+	id: "best-drought-tolerant-plants-murrieta.md";
+  slug: "best-drought-tolerant-plants-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"drip-irrigation-upgrade-murrieta.md": {
+	id: "drip-irrigation-upgrade-murrieta.md";
+  slug: "drip-irrigation-upgrade-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "drought-tolerant-landscaping-murrieta.md": {
 	id: "drought-tolerant-landscaping-murrieta.md";
   slug: "drought-tolerant-landscaping-murrieta";
@@ -173,9 +187,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"evmwd-water-rebate-drought-tolerant-landscaping.md": {
+	id: "evmwd-water-rebate-drought-tolerant-landscaping.md";
+  slug: "evmwd-water-rebate-drought-tolerant-landscaping";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "hoa-landscaping-murrieta.md": {
 	id: "hoa-landscaping-murrieta.md";
   slug: "hoa-landscaping-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"hoa-landscaping-rules-murrieta-temecula.md": {
+	id: "hoa-landscaping-rules-murrieta-temecula.md";
+  slug: "hoa-landscaping-rules-murrieta-temecula";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -204,6 +232,27 @@ declare module 'astro:content' {
 "murrieta-lawn-care-guide.md": {
 	id: "murrieta-lawn-care-guide.md";
   slug: "murrieta-lawn-care-guide";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"prepare-lawn-murrieta-dry-season.md": {
+	id: "prepare-lawn-murrieta-dry-season.md";
+  slug: "prepare-lawn-murrieta-dry-season";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"small-yard-landscaping-menifee-sun-city.md": {
+	id: "small-yard-landscaping-menifee-sun-city.md";
+  slug: "small-yard-landscaping-menifee-sun-city";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"when-to-aerate-lawn-southern-california.md": {
+	id: "when-to-aerate-lawn-southern-california.md";
+  slug: "when-to-aerate-lawn-southern-california";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
