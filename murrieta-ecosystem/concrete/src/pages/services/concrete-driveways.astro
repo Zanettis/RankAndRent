@@ -3,7 +3,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import { Image } from 'astro:assets';
 import { SITE_CONFIG } from '../../config';
+import drivewayImg from '../../assets/images/driveway-fresh.jpg';
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -53,6 +55,16 @@ const faqSchema = {
     subheadline="New driveway installation or full replacement — built to last in Murrieta's inland climate with proper reinforcement and grading."
     ctaText="Get a Free Estimate"
   />
+
+  <div class="max-w-4xl mx-auto px-4 pt-8 pb-2">
+    <Image
+      src={drivewayImg}
+      alt="Freshly poured and finished concrete driveway in Murrieta, CA"
+      width={1200}
+      height={600}
+      class="rounded-2xl w-full object-cover max-h-[420px]"
+    />
+  </div>
 
   <div class="max-w-4xl mx-auto px-4 py-12">
     <div class="prose prose-lg max-w-none prose-headings:text-primary">

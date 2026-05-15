@@ -3,7 +3,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import { Image } from 'astro:assets';
 import { SITE_CONFIG } from '../../config';
+import retainingImg from '../../assets/images/retaining-walls.jpg';
+import walkwayImg from '../../assets/images/workers-walkway.png';
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -53,6 +56,25 @@ const faqSchema = {
     subheadline="Create the outdoor living space you've always wanted — custom concrete work that complements your home and landscaping."
     ctaText="Get a Free Estimate"
   />
+
+  <div class="max-w-4xl mx-auto px-4 pt-8 pb-2">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <Image
+        src={retainingImg}
+        alt="Concrete retaining wall and patio construction in Murrieta, CA"
+        width={800}
+        height={500}
+        class="rounded-2xl w-full object-cover h-64"
+      />
+      <Image
+        src={walkwayImg}
+        alt="Concrete workers installing a walkway for a Murrieta home"
+        width={800}
+        height={500}
+        class="rounded-2xl w-full object-cover h-64"
+      />
+    </div>
+  </div>
 
   <div class="max-w-4xl mx-auto px-4 py-12">
     <div class="prose prose-lg max-w-none prose-headings:text-primary">
