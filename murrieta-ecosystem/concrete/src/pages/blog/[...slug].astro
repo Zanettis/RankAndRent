@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import LeadForm from '../../components/LeadForm.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { getCollection } from 'astro:content';
 import { SITE_CONFIG } from '../../config';
 
@@ -90,6 +91,16 @@ const howToSchema = post.data.howToSteps?.length ? {
 
     <div class="prose prose-lg max-w-none prose-headings:text-primary prose-a:text-cta prose-a:no-underline hover:prose-a:underline">
       <Content />
+    </div>
+
+    <div class="mt-12">
+      <CrossLinkWidget
+        heading="Also Serving Murrieta Homeowners"
+        links={[
+          { text: "Tree Removal & Trimming", href: "https://murrietatreeexperts.com", description: "Licensed arborists for tree removal, trimming, and stump grinding throughout Murrieta.", icon: "🌳" },
+          { text: "Landscaping & Lawn Care", href: "https://landscapingmurrieta.com", description: "Full landscape design, lawn care, and irrigation in Murrieta and the Temecula Valley.", icon: "🌿" },
+        ]}
+      />
     </div>
 
     <div class="mt-12 pt-8 border-t border-gray-200">
