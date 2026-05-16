@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
 
 const faqSchema = {
@@ -98,6 +99,24 @@ const breadcrumbSchema = {
         concrete overlay that bonds to the existing slab and provides a fresh surface.
       </p>
     </div>
+
+    <CrossLinkWidget
+      heading="Related Services in Murrieta"
+      links={[
+        {
+          text: 'Tree Removal in Murrieta',
+          href: 'https://murrietatreeexperts.com/services/tree-removal',
+          description: 'Tree root intrusion is a leading cause of concrete damage — remove roots before repairing.',
+          icon: '🌳',
+        },
+        {
+          text: 'Lawn Care & Restoration',
+          href: 'https://landscapingmurrieta.com/services/lawn-care',
+          description: 'Restore lawn and landscape around repaired concrete surfaces.',
+          icon: '🌿',
+        },
+      ]}
+    />
 
     <div class="mt-12">
       <h2 class="text-2xl font-bold text-primary mb-6">More Concrete Services</h2>

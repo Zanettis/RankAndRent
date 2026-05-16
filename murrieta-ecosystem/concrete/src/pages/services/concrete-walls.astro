@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { Image } from 'astro:assets';
 import { SITE_CONFIG } from '../../config';
 import wallImg from '../../assets/images/retaining-walls.jpg';
@@ -130,6 +131,24 @@ const breadcrumbSchema = {
         irrigation and planting work happens after the wall is complete and backfilled.
       </p>
     </div>
+
+    <CrossLinkWidget
+      heading="Related Services in Murrieta"
+      links={[
+        {
+          text: 'Retaining Walls & Landscaping',
+          href: 'https://landscapingmurrieta.com/services/retaining-walls',
+          description: 'Combine concrete walls with professional landscaping and retaining wall design.',
+          icon: '🌱',
+        },
+        {
+          text: 'Tree Removal in Murrieta',
+          href: 'https://murrietatreeexperts.com/services/tree-removal',
+          description: 'Remove trees near wall areas before construction to avoid future root damage.',
+          icon: '🌳',
+        },
+      ]}
+    />
 
     <div class="mt-12">
       <h2 class="text-2xl font-bold text-primary mb-6">More Concrete Services</h2>

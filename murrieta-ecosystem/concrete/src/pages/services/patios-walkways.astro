@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { Image } from 'astro:assets';
 import { SITE_CONFIG } from '../../config';
 import retainingImg from '../../assets/images/retaining-walls.jpg';
@@ -122,6 +123,24 @@ const breadcrumbSchema = {
         and verify grading to ensure proper drainage away from your home's foundation.
       </p>
     </div>
+
+    <CrossLinkWidget
+      heading="Complete Your Outdoor Project"
+      links={[
+        {
+          text: 'Landscape Design in Murrieta',
+          href: 'https://landscapingmurrieta.com/services/landscape-design',
+          description: 'Pair your new patio with professional landscape design for a complete backyard transformation.',
+          icon: '🌱',
+        },
+        {
+          text: 'Lawn Care & Restoration',
+          href: 'https://landscapingmurrieta.com/services/lawn-care',
+          description: 'Restore and maintain lawn areas adjacent to your new concrete.',
+          icon: '🌿',
+        },
+      ]}
+    />
 
     <div class="mt-12">
       <h2 class="text-2xl font-bold text-primary mb-6">More Concrete Services</h2>

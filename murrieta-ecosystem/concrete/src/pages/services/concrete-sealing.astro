@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
+import { SITE_CONFIG } from '../../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How often should I seal my concrete in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For standard driveways and patios in Murrieta, we recommend sealing every 3–5 years with a penetrating sealer. Stamped and decorative concrete should be re-sealed every 2–3 years to maintain color and protect the surface texture. Pool decks near water benefit from annual inspection and re-sealing every 2–3 years. Signs it\'s time to re-seal: water no longer beads on the surface, the concrete looks dull or faded, or you see light surface wear.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What type of sealer is best for my concrete?',
+      acceptedAnswer: { '@type': 'Answer', text: 'The right sealer depends on the concrete type and use case. Penetrating sealers (silane/siloxane) work below the surface to repel water and protect from UV without changing appearance — ideal for driveways and natural-look concrete. Acrylic sealers add a slight sheen and enhance color, popular for stamped and decorative concrete. Polyurethane sealers provide the hardest film and the highest abrasion resistance — best for high-traffic areas like commercial driveways or garage floors. We\'ll match the sealer to your specific concrete and goals.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can sealing prevent concrete cracks?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Sealing prevents water infiltration that causes freeze-thaw cracking, and protects from UV degradation that causes surface scaling. It does not prevent structural cracking from root intrusion, soil settlement, or overloading — those require addressing the underlying cause. If your concrete already has cracks, those should be repaired before sealing; sealing over open cracks traps moisture and makes the crack worse over time.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does concrete sealing take and when can I use it after?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Sealing a typical residential driveway or patio takes 2–4 hours including surface prep and application. Drying time depends on the sealer type and temperature: acrylic sealers are dry to foot traffic in 4–6 hours and to vehicle traffic in 24 hours. Penetrating sealers are dry in 1–2 hours. In Murrieta\'s summer heat, we schedule sealing in the early morning to avoid direct sun on freshly applied sealer, which can cause whitening or bubbling.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does concrete sealing cost in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Professional concrete sealing in Murrieta typically costs $0.50–$1.50 per square foot depending on the sealer type, surface condition, and prep work required. A standard two-car driveway (400–500 sq ft) runs $200–$750 sealed. Stamped or decorative concrete with color-enhancing acrylic sealer costs more due to the product and extra care required. We provide free estimates and often offer sealing as an add-on when performing other concrete work at your property.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should I seal new concrete right away?',
+      acceptedAnswer: { '@type': 'Answer', text: 'New concrete needs to cure fully before sealing — typically 28 days. Sealing too early traps bleed water in the slab, which can cause discoloration, delamination, or whitening under the sealer. After a new pour, we give the concrete its full cure time before returning to apply sealer. If we\'re sealing concrete we just installed, this is scheduled as a follow-up visit about 30 days after the pour.' },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_CONFIG.domain}/services/` },
+    { '@type': 'ListItem', position: 3, name: 'Concrete Sealing', item: `${SITE_CONFIG.domain}/services/concrete-sealing/` },
+  ],
+};
+---
+
+<BaseLayout
+  title="Concrete Sealing & Maintenance Murrieta, CA | Driveway & Patio Sealing | Free Estimates"
+  description="Professional concrete sealing in Murrieta, CA. Protect your driveway, patio, or pool deck from UV, staining, and water damage. Penetrating and acrylic sealers. Free estimates."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <Hero
+    headline="Concrete Sealing & Maintenance in Murrieta, CA"
+    subheadline="Protect your driveway, patio, or pool deck from UV fading, water intrusion, and surface wear. The right sealer extends concrete life by years."
+    ctaText="Get a Free Estimate"
+  />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Why Concrete Sealing Matters in Murrieta's Climate</h2>
+      <p>
+        Murrieta's inland Southern California climate is hard on concrete. UV radiation at
+        this elevation degrades unprotected concrete surfaces faster than coastal areas.
+        Summer heat causes thermal expansion and contraction that opens microcracks. The
+        occasional winter freeze — uncommon but real in Murrieta — drives water into those
+        cracks and expands them. A quality sealer addresses all of these stress factors.
+      </p>
+      <p>
+        Unprotected concrete in Murrieta typically shows visible surface degradation within
+        5–7 years: fading, dusting, light scaling, and staining from oils or fertilizers.
+        Sealed concrete maintains its appearance and structural integrity significantly longer.
+      </p>
+
+      <h2>Sealer Types We Use</h2>
+      <p>
+        <strong>Penetrating sealers (silane/siloxane)</strong> absorb into the concrete
+        and create a water-repellent barrier below the surface. They don't change the
+        concrete's appearance and are ideal for driveways and natural-finish patios.
+        The longest-lasting option — properly applied, they hold for 5–10 years.
+      </p>
+      <p>
+        <strong>Acrylic sealers</strong> form a film on the surface that adds a subtle
+        sheen and enhances color. Excellent for stamped and decorative concrete. They
+        need more frequent reapplication (every 2–3 years) but the color enhancement
+        is visually significant on decorative finishes.
+      </p>
+      <p>
+        <strong>Polyurethane sealers</strong> provide the hardest, most abrasion-resistant
+        film available. Best for garage floors, commercial driveways, or high-traffic areas
+        where durability matters more than appearance. More expensive to apply but lasts
+        longer than acrylics between reapplications.
+      </p>
+
+      <h2>What We Do Before Sealing</h2>
+      <p>
+        Surface preparation is the most important part of a sealing job. We pressure-wash
+        the concrete to remove dirt, oils, and algae. For oil stains, we apply a degreaser
+        and scrub before washing. Any cracks wider than hairline are repaired before sealing —
+        sealing over open cracks traps moisture and accelerates damage rather than preventing it.
+        We allow the surface to dry fully before applying sealer, which in Murrieta's dry
+        climate usually means a few hours.
+      </p>
+
+      <h2>When It's Time to Repair, Not Just Seal</h2>
+      <p>
+        If your concrete has significant cracking, spalling, or settled sections, sealing
+        alone won't fix the underlying problem. In those cases, we'll recommend
+        <a href="/services/concrete-repair">concrete repair</a> or partial replacement
+        before sealing. Sealing damaged concrete masks the problem temporarily but
+        doesn't prevent further deterioration.
+      </p>
+    </div>
+
+    <CrossLinkWidget
+      heading="Related Concrete Services"
+      links={[
+        {
+          text: 'Concrete Repair in Murrieta',
+          href: '/services/concrete-repair',
+          description: 'If your concrete has cracks or damage, repair it before sealing for lasting results.',
+          icon: '🔧',
+        },
+        {
+          text: 'Decorative Concrete & Stamped Finishes',
+          href: '/services/decorative-concrete',
+          description: 'Stamped and stained concrete that benefits most from regular professional sealing.',
+          icon: '✨',
+        },
+      ]}
+    />
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-primary mb-6">More Concrete Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {SITE_CONFIG.services.filter(s => s.href !== '/services/concrete-sealing').map((s) => (
+          <ServiceCard title={s.title} description={s.description} href={s.href} />
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {[
+        { q: "How often should I seal my concrete in Murrieta?", a: "For standard driveways and patios in Murrieta, we recommend sealing every 3–5 years with a penetrating sealer. Stamped and decorative concrete should be re-sealed every 2–3 years to maintain color and protect the surface texture. Pool decks near water benefit from annual inspection and re-sealing every 2–3 years. Signs it's time to re-seal: water no longer beads on the surface, the concrete looks dull or faded, or you see light surface wear." },
+        { q: "What type of sealer is best for my concrete?", a: "The right sealer depends on the concrete type and use case. Penetrating sealers (silane/siloxane) work below the surface to repel water and protect from UV without changing appearance — ideal for driveways and natural-look concrete. Acrylic sealers add a slight sheen and enhance color, popular for stamped and decorative concrete. Polyurethane sealers provide the hardest film and the highest abrasion resistance — best for high-traffic areas like commercial driveways or garage floors. We'll match the sealer to your specific concrete and goals." },
+        { q: "Can sealing prevent concrete cracks?", a: "Sealing prevents water infiltration that causes freeze-thaw cracking, and protects from UV degradation that causes surface scaling. It does not prevent structural cracking from root intrusion, soil settlement, or overloading — those require addressing the underlying cause. If your concrete already has cracks, those should be repaired before sealing; sealing over open cracks traps moisture and makes the crack worse over time." },
+        { q: "How long does concrete sealing take and when can I use it after?", a: "Sealing a typical residential driveway or patio takes 2–4 hours including surface prep and application. Drying time depends on the sealer type and temperature: acrylic sealers are dry to foot traffic in 4–6 hours and to vehicle traffic in 24 hours. Penetrating sealers are dry in 1–2 hours. In Murrieta's summer heat, we schedule sealing in the early morning to avoid direct sun on freshly applied sealer, which can cause whitening or bubbling." },
+        { q: "How much does concrete sealing cost in Murrieta?", a: "Professional concrete sealing in Murrieta typically costs $0.50–$1.50 per square foot depending on the sealer type, surface condition, and prep work required. A standard two-car driveway (400–500 sq ft) runs $200–$750 sealed. Stamped or decorative concrete with color-enhancing acrylic sealer costs more due to the product and extra care required. We provide free estimates and often offer sealing as an add-on when performing other concrete work at your property." },
+        { q: "Should I seal new concrete right away?", a: "New concrete needs to cure fully before sealing — typically 28 days. Sealing too early traps bleed water in the slab, which can cause discoloration, delamination, or whitening under the sealer. After a new pour, we give the concrete its full cure time before returning to apply sealer. If we're sealing concrete we just installed, this is scheduled as a follow-up visit about 30 days after the pour." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 pb-16">
+    <LeadForm heading="Get Your Free Concrete Sealing Estimate" />
+  </section>
+</BaseLayout>

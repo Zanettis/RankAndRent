@@ -152,6 +152,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"best-time-pour-concrete-murrieta.md": {
+	id: "best-time-pour-concrete-murrieta.md";
+  slug: "best-time-pour-concrete-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "can-general-contractor-do-concrete-work.md": {
 	id: "can-general-contractor-do-concrete-work.md";
   slug: "can-general-contractor-do-concrete-work";
@@ -183,6 +190,20 @@ declare module 'astro:content' {
 "concrete-driveway-cost-murrieta.md": {
 	id: "concrete-driveway-cost-murrieta.md";
   slug: "concrete-driveway-cost-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"concrete-driveway-home-value-murrieta.md": {
+	id: "concrete-driveway-home-value-murrieta.md";
+  slug: "concrete-driveway-home-value-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"concrete-efflorescence-murrieta.md": {
+	id: "concrete-efflorescence-murrieta.md";
+  slug: "concrete-efflorescence-murrieta";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -306,9 +327,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"tree-roots-concrete-driveway-murrieta.md": {
+	id: "tree-roots-concrete-driveway-murrieta.md";
+  slug: "tree-roots-concrete-driveway-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "what-is-a-concrete-contractor.md": {
 	id: "what-is-a-concrete-contractor.md";
   slug: "what-is-a-concrete-contractor";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"why-concrete-cracks-murrieta.md": {
+	id: "why-concrete-cracks-murrieta.md";
+  slug: "why-concrete-cracks-murrieta";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

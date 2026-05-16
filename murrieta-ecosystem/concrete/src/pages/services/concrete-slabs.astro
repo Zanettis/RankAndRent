@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { Image } from 'astro:assets';
 import { SITE_CONFIG } from '../../config';
 import mixerImg from '../../assets/images/concrete-mixer.jpg';
@@ -129,6 +130,24 @@ const breadcrumbSchema = {
         slab cures if desired (we coordinate with flooring contractors for this step).
       </p>
     </div>
+
+    <CrossLinkWidget
+      heading="Related Services in Murrieta"
+      links={[
+        {
+          text: 'Stump Grinding in Murrieta',
+          href: 'https://murrietatreeexperts.com/services/stump-grinding',
+          description: 'Remove stumps from the area before pouring a new concrete slab.',
+          icon: '🌳',
+        },
+        {
+          text: 'Lawn Care & Restoration',
+          href: 'https://landscapingmurrieta.com/services/lawn-care',
+          description: 'Restore lawn and landscaping around your new concrete pad.',
+          icon: '🌿',
+        },
+      ]}
+    />
 
     <div class="mt-12">
       <h2 class="text-2xl font-bold text-primary mb-6">More Concrete Services</h2>

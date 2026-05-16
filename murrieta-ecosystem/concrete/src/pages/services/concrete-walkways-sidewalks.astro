@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { Image } from 'astro:assets';
 import { SITE_CONFIG } from '../../config';
 import walkwayImg from '../../assets/images/workers-walkway.png';
@@ -123,6 +124,24 @@ const breadcrumbSchema = {
         when it's the better long-term value.
       </p>
     </div>
+
+    <CrossLinkWidget
+      heading="Related Services in Murrieta"
+      links={[
+        {
+          text: 'Stump Grinding in Murrieta',
+          href: 'https://murrietatreeexperts.com/services/stump-grinding',
+          description: 'Remove tree stumps in the path of new walkways before concrete work begins.',
+          icon: '🌳',
+        },
+        {
+          text: 'Lawn Care & Restoration',
+          href: 'https://landscapingmurrieta.com/services/lawn-care',
+          description: 'Restore lawn edges and borders disturbed during walkway installation.',
+          icon: '🌿',
+        },
+      ]}
+    />
 
     <div class="mt-12">
       <h2 class="text-2xl font-bold text-primary mb-6">More Concrete Services</h2>

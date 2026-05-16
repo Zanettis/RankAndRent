@@ -16,6 +16,9 @@ export const SITE_CONFIG = {
     { title: 'Concrete Walls', href: '/services/concrete-walls', description: 'Retaining walls, block walls, and garden walls.' },
     { title: 'Concrete Foundations', href: '/services/concrete-foundations', description: 'Garage slabs, ADU pads, and addition foundation pours.' },
     { title: 'Concrete Slabs', href: '/services/concrete-slabs', description: 'Shed pads, RV pads, shop floors, and equipment pads.' },
+    { title: 'Concrete Pool Decks', href: '/services/concrete-pool-decks', description: 'Slip-resistant pool deck installations in exposed aggregate, stamped, or brushed finishes.' },
+    { title: 'Concrete Sealing', href: '/services/concrete-sealing', description: 'Professional sealing to protect and extend the life of your concrete.' },
+    { title: 'Mudjacking & Slab Leveling', href: '/services/mudjacking-slab-leveling', description: 'Lift and level sunken or settled concrete without full replacement.' },
   ],
   locations: [
     { city: 'Temecula', href: '/temecula' },

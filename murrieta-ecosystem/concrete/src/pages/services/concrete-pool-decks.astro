@@ -1,0 +1,189 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
+import { SITE_CONFIG } from '../../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is the best concrete finish for a pool deck in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Exposed aggregate and broom-finished concrete are the most popular choices for pool decks in Murrieta because both provide excellent slip resistance when wet. Exposed aggregate has a rougher texture and hides minor surface wear well. Stamped concrete is also an option for a higher-end look, though we recommend a non-slip sealer with any decorative finish near water. We\'ll help you pick the right finish for your pool area during the free estimate.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does a concrete pool deck cost in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Standard broom-finished concrete pool decks run $6–$10 per square foot in Murrieta. Exposed aggregate finishes cost $10–$14 per square foot. Stamped or decorative finishes range from $14–$20 per square foot. A typical pool deck of 600–800 square feet runs $5,000–$12,000 depending on the finish and site conditions. We provide free written estimates before any work begins.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I keep my pool deck cool in Murrieta\'s summer heat?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Concrete naturally stays cooler than pavers or stone in direct sun because it reflects more heat. Light-colored concrete or an exposed aggregate with light-toned aggregate stays significantly cooler than dark materials. We can also apply a cool-deck coating — a spray-applied acrylic texture that insulates the surface and has been shown to reduce surface temperatures by 30–40°F compared to standard concrete. This is especially popular in Murrieta where summer temperatures frequently exceed 100°F.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need a permit for a pool deck in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Pool decks in Murrieta typically require a permit when they are part of a new pool installation or when they\'re within the setback from the pool barrier. Resurfacing or replacing an existing pool deck in kind generally does not require a permit. We check the requirements for your specific project during the estimate and can handle the permit process when needed.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I have trees near my concrete pool deck?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes, but tree species and placement matter. Aggressive-rooting trees like ficus, eucalyptus, and willow should be kept at least 20–30 feet from the pool deck to prevent root heaving. Smaller ornamental trees with non-invasive root systems can be planted closer. If existing trees are near the pool area, we recommend a consultation with a certified arborist before pouring concrete — removing or redirecting problem roots before the pour prevents cracking later.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does a concrete pool deck installation take?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Most pool deck projects take 3–5 days from demolition to finish. Day one handles demo and subbase prep; day two is the pour and finishing; days three through five are curing time before walking on the surface. For exposed aggregate finishes, we wash off the surface cream while the concrete is still green, which adds a step but doesn\'t typically extend the overall timeline. We\'ll provide a day-by-day schedule before starting.' },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_CONFIG.domain}/services/` },
+    { '@type': 'ListItem', position: 3, name: 'Concrete Pool Decks', item: `${SITE_CONFIG.domain}/services/concrete-pool-decks/` },
+  ],
+};
+---
+
+<BaseLayout
+  title="Concrete Pool Deck Contractor Murrieta, CA | Exposed Aggregate & Stamped | Free Estimates"
+  description="Expert concrete pool deck installation in Murrieta, CA. Slip-resistant finishes, cool-deck coatings, exposed aggregate, and stamped concrete. Free estimates."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <Hero
+    headline="Concrete Pool Decks in Murrieta, CA"
+    subheadline="Slip-resistant, heat-reflective pool decks built for Murrieta's inland SoCal climate. Exposed aggregate, stamped, broom finish, and cool-deck coatings."
+    ctaText="Get a Free Estimate"
+  />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Pool Deck Concrete Built for Murrieta's Heat</h2>
+      <p>
+        A pool deck in Murrieta takes a beating — relentless UV exposure, summer temperatures
+        above 100°F, wet-to-dry cycles from splashing, and years of barefoot traffic. Not all
+        concrete finishes are equal when it comes to heat, slip safety, and durability. We've
+        installed pool decks throughout Murrieta, Temecula, Wildomar, and Menifee and know
+        which finishes hold up and which fall apart.
+      </p>
+
+      <h2>Finish Options for Concrete Pool Decks</h2>
+      <p>
+        <strong>Exposed aggregate</strong> is our most requested pool deck finish. The
+        rough texture is naturally slip-resistant, it stays cooler than smooth finishes,
+        and the aggregate hides minor surface wear over time. We select aggregate color
+        to complement your home's exterior and landscaping.
+      </p>
+      <p>
+        <strong>Broom finish</strong> is the practical choice — textured, slip-resistant,
+        and the most cost-effective. A broom finish with the right sealer handles
+        pool-deck demands well and gives you a clean, classic look.
+      </p>
+      <p>
+        <strong>Stamped concrete</strong> brings the aesthetics of flagstone, travertine,
+        or cobblestone to your pool area at a fraction of the material cost. We use a
+        non-slip sealer on all stamped pool deck work — required near water, and we
+        don't skip it.
+      </p>
+      <p>
+        <strong>Cool-deck coatings</strong> are a spray-applied acrylic texture that
+        insulates the surface from solar heat. Popular for pool decks in Murrieta's
+        extreme summer heat, they can reduce surface temperatures by 30–40°F compared
+        to untreated concrete.
+      </p>
+
+      <h2>Drainage and Safety Design</h2>
+      <p>
+        A properly sloped pool deck drains water away from the pool coping and toward
+        designated drain points — preventing standing water, reducing slip hazards, and
+        protecting the pool structure. We engineer the slope during the subbase grading
+        phase, not as an afterthought. Drainage requirements vary based on your pool
+        configuration and Murrieta's code requirements; we handle the specifics during
+        the estimate.
+      </p>
+
+      <h2>Before You Pour: Tree Root Coordination</h2>
+      <p>
+        Trees near the pool area are a common source of pool deck damage. Aggressive-rooting
+        species like ficus, eucalyptus, and sycamore will crack and lift concrete within
+        5–10 years if roots aren't managed. We work with
+        <a href="https://murrietatreeexperts.com/services/tree-removal" rel="noopener">certified tree service professionals</a>
+        to assess and remove problem roots before pouring, so your pool deck investment is
+        protected long-term.
+      </p>
+
+      <h2>Landscaping Integration</h2>
+      <p>
+        The area around your pool deck — planting beds, retaining walls, lawn transitions —
+        should be planned before or alongside the concrete work. Coordinating hardscape and
+        softscape together avoids rework and produces a more cohesive result. If you're
+        planning landscaping around your new pool deck, our partners at
+        <a href="https://landscapingmurrieta.com/services/landscape-design" rel="noopener">Murrieta Landscaping</a>
+        can help with the full outdoor design.
+      </p>
+    </div>
+
+    <CrossLinkWidget
+      heading="Plan Your Full Pool Area Project"
+      links={[
+        {
+          text: 'Tree Removal Before Concrete',
+          href: 'https://murrietatreeexperts.com/services/tree-removal',
+          description: 'Remove problem trees and roots before pouring your pool deck to prevent future cracking.',
+          icon: '🌳',
+        },
+        {
+          text: 'Landscape Design Around Your Pool',
+          href: 'https://landscapingmurrieta.com/services/landscape-design',
+          description: 'Coordinate planting beds, retaining walls, and lawn areas around your new pool deck.',
+          icon: '🌱',
+        },
+      ]}
+    />
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-primary mb-6">More Concrete Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {SITE_CONFIG.services.filter(s => s.href !== '/services/concrete-pool-decks').map((s) => (
+          <ServiceCard title={s.title} description={s.description} href={s.href} />
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {[
+        { q: "What is the best concrete finish for a pool deck in Murrieta?", a: "Exposed aggregate and broom-finished concrete are the most popular choices for pool decks in Murrieta because both provide excellent slip resistance when wet. Exposed aggregate has a rougher texture and hides minor surface wear well. Stamped concrete is also an option for a higher-end look, though we recommend a non-slip sealer with any decorative finish near water. We'll help you pick the right finish for your pool area during the free estimate." },
+        { q: "How much does a concrete pool deck cost in Murrieta?", a: "Standard broom-finished concrete pool decks run $6–$10 per square foot in Murrieta. Exposed aggregate finishes cost $10–$14 per square foot. Stamped or decorative finishes range from $14–$20 per square foot. A typical pool deck of 600–800 square feet runs $5,000–$12,000 depending on the finish and site conditions. We provide free written estimates before any work begins." },
+        { q: "How do I keep my pool deck cool in Murrieta's summer heat?", a: "Concrete naturally stays cooler than pavers or stone in direct sun because it reflects more heat. Light-colored concrete or an exposed aggregate with light-toned aggregate stays significantly cooler than dark materials. We can also apply a cool-deck coating — a spray-applied acrylic texture that insulates the surface and has been shown to reduce surface temperatures by 30–40°F compared to standard concrete. This is especially popular in Murrieta where summer temperatures frequently exceed 100°F." },
+        { q: "Do I need a permit for a pool deck in Murrieta?", a: "Pool decks in Murrieta typically require a permit when they are part of a new pool installation or when they're within the setback from the pool barrier. Resurfacing or replacing an existing pool deck in kind generally does not require a permit. We check the requirements for your specific project during the estimate and can handle the permit process when needed." },
+        { q: "Can I have trees near my concrete pool deck?", a: "Yes, but tree species and placement matter. Aggressive-rooting trees like ficus, eucalyptus, and willow should be kept at least 20–30 feet from the pool deck to prevent root heaving. Smaller ornamental trees with non-invasive root systems can be planted closer. If existing trees are near the pool area, we recommend a consultation with a certified arborist before pouring concrete — removing or redirecting problem roots before the pour prevents cracking later." },
+        { q: "How long does a concrete pool deck installation take?", a: "Most pool deck projects take 3–5 days from demolition to finish. Day one handles demo and subbase prep; day two is the pour and finishing; days three through five are curing time before walking on the surface. For exposed aggregate finishes, we wash off the surface cream while the concrete is still green, which adds a step but doesn't typically extend the overall timeline. We'll provide a day-by-day schedule before starting." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 pb-16">
+    <LeadForm heading="Get Your Free Pool Deck Estimate" />
+  </section>
+</BaseLayout>

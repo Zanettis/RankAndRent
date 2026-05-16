@@ -1,0 +1,183 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
+import { SITE_CONFIG } from '../../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is mudjacking and how does it work?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Mudjacking (also called slab jacking or concrete lifting) is a process where we drill small holes in a sunken concrete slab and pump a slurry mixture of soil, cement, and water beneath it. The slurry fills voids in the subbase and generates hydraulic pressure that lifts the slab back to its original position. The holes are then patched. The slab is stable and usable within 24–48 hours. Mudjacking costs significantly less than full slab replacement and produces permanent results when the underlying cause of settlement is addressed.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does mudjacking cost in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Mudjacking in Murrieta typically costs $500–$1,500 for a residential project, depending on the number of slabs affected and how far they\'ve settled. This compares to $2,500–$6,000+ for full slab replacement. For a settled driveway panel or patio section that is structurally sound but has sunk 1–3 inches, mudjacking is almost always the more cost-effective solution. We provide free written estimates so you can compare options before committing.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What causes concrete to sink or settle in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'The most common causes of concrete settlement in the Murrieta area are: (1) Expansive clay soil — Menifee, Perris, and parts of Murrieta have soils with high clay content that shrink when dry and swell when wet, causing the subbase to shift. (2) Poor compaction — subbase that wasn\'t compacted correctly during the original installation settles over time under load. (3) Soil erosion from irrigation or drainage — water washing material out from under the slab creates voids. (4) Tree root decomposition — when large roots under a slab die and decompose, they leave voids the slab then drops into.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is mudjacking better than polyurethane foam lifting?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Both work, but they have different trade-offs. Mudjacking uses a natural slurry that is compatible with the existing soil base and has decades of proven performance. It costs less per project than polyurethane foam lifting, which uses expanding foam injected through smaller holes. Polyurethane foam dries faster (minutes vs. hours), is lighter, and is better for situations where adding weight to the subbase is a concern. For most residential driveways and patios in Murrieta, traditional mudjacking is the more cost-effective option. We\'ll recommend the right approach for your specific slab condition.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you level my patio or driveway if it has cracks?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes, though the answer depends on the type and severity of the cracks. Settled concrete that has surface cracks due to the movement can often be lifted and then crack-filled to restore function and appearance. Slabs with severe structural cracking — breaks that have caused sections to shift or crumble significantly — may need replacement instead of lifting. We assess the slab condition during the free estimate and give you an honest recommendation.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does mudjacking last?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Mudjacking is a permanent repair when the underlying cause of settlement is addressed. Slabs lifted to correct level on a stabilized subbase have been known to remain stable for 20+ years. If the cause of settlement — poor drainage, clay soil movement, decomposing organic material — isn\'t addressed alongside the lifting, the slab may slowly resettle over several years. During the estimate, we identify contributing factors and advise on any drainage or soil corrections needed for long-term stability.' },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_CONFIG.domain}/services/` },
+    { '@type': 'ListItem', position: 3, name: 'Mudjacking & Slab Leveling', item: `${SITE_CONFIG.domain}/services/mudjacking-slab-leveling/` },
+  ],
+};
+---
+
+<BaseLayout
+  title="Mudjacking & Concrete Slab Leveling Murrieta, CA | Sunken Driveway & Patio | Free Estimates"
+  description="Mudjacking and slab leveling in Murrieta, CA. Lift sunken driveways, patios, and walkways at a fraction of replacement cost. Free estimates. Menifee, Temecula, Wildomar."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <Hero
+    headline="Mudjacking & Concrete Slab Leveling in Murrieta"
+    subheadline="Sunken driveway, settled patio, or uneven walkway? We lift and level concrete slabs at a fraction of full replacement cost. Menifee, Temecula, Wildomar, and surrounding areas."
+    ctaText="Get a Free Estimate"
+  />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Lift Sunken Concrete Without Replacing It</h2>
+      <p>
+        When a concrete slab sinks or settles, the instinct is to tear it out and start
+        over. In most cases, that's unnecessary and expensive. Mudjacking — also called
+        slab jacking or concrete lifting — raises a settled slab back to its original
+        position by pumping a grout mixture beneath it. The process takes hours, not days,
+        costs a fraction of replacement, and produces permanent results.
+      </p>
+      <p>
+        We perform mudjacking and slab leveling throughout Murrieta, Temecula, Menifee,
+        Wildomar, Hemet, and surrounding Riverside County communities. Menifee and Perris
+        properties with expansive clay soils are particularly common candidates — the
+        seasonal soil shrink-swell cycle is the leading cause of concrete settlement in
+        this part of Inland Southern California.
+      </p>
+
+      <h2>How Mudjacking Works</h2>
+      <p>
+        We drill a series of 1.5–2 inch holes through the settled concrete slab in a
+        pattern calculated to lift it evenly. Through those holes, we pump a hydraulic
+        slurry — a mixture of soil, portland cement, and water — under pressure until
+        the slab lifts to the target elevation. Once the slab is level, we patch the
+        drill holes with matched concrete and texture them to blend with the existing surface.
+        The material cures within 24–48 hours and the area is fully usable.
+      </p>
+
+      <h2>When Mudjacking Makes Sense</h2>
+      <p>
+        Mudjacking is the right choice when: the concrete slab is structurally sound
+        (no severe cracking or crumbling), the settlement is 1–4 inches, and the slab
+        covers an area that would be expensive to replace. Common candidates include
+        sunken driveway panels, settled patio sections, tilted walkway slabs, and
+        pool deck sections that have dropped near the coping. It is not appropriate for
+        severely cracked, thin, or deteriorated concrete that would not withstand the
+        lifting pressure.
+      </p>
+
+      <h2>The Clay Soil Problem in Menifee and Perris</h2>
+      <p>
+        Expansive clay soil is the primary driver of concrete settlement in many Murrieta-area
+        communities. Clay absorbs water and swells, then dries out and contracts — a cycle
+        that shifts the subbase beneath concrete. Each wet-dry cycle moves the soil a little
+        more, gradually creating voids that slabs drop into. Mudjacking fills those voids
+        permanently, but we also advise on drainage corrections to reduce the frequency
+        of future soil movement in high-clay areas.
+      </p>
+
+      <h2>Mudjacking vs. Full Slab Replacement</h2>
+      <p>
+        For a structurally sound but settled slab, mudjacking typically costs 50–70% less
+        than full replacement. There's no demolition, no disposal of old concrete, no
+        subbase excavation, and no weeks-long cure time. If your slab is beyond saving —
+        severely cracked, crumbling, or contaminated with root damage throughout —
+        we'll tell you honestly, and we can handle the
+        <a href="/services/concrete-driveways">driveway</a> or
+        <a href="/services/concrete-repair">repair</a> work instead.
+      </p>
+    </div>
+
+    <CrossLinkWidget
+      heading="Related Concrete Services"
+      links={[
+        {
+          text: 'Concrete Repair & Resurfacing',
+          href: '/services/concrete-repair',
+          description: 'Crack repair, resurfacing, and restoration for concrete that needs more than lifting.',
+          icon: '🔧',
+        },
+        {
+          text: 'Concrete Driveway Replacement',
+          href: '/services/concrete-driveways',
+          description: 'When a slab is beyond saving, we handle full driveway replacement.',
+          icon: '🏗️',
+        },
+      ]}
+    />
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-primary mb-6">More Concrete Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {SITE_CONFIG.services.filter(s => s.href !== '/services/mudjacking-slab-leveling').map((s) => (
+          <ServiceCard title={s.title} description={s.description} href={s.href} />
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {[
+        { q: "What is mudjacking and how does it work?", a: "Mudjacking (also called slab jacking or concrete lifting) is a process where we drill small holes in a sunken concrete slab and pump a slurry mixture of soil, cement, and water beneath it. The slurry fills voids in the subbase and generates hydraulic pressure that lifts the slab back to its original position. The holes are then patched. The slab is stable and usable within 24–48 hours. Mudjacking costs significantly less than full slab replacement and produces permanent results when the underlying cause of settlement is addressed." },
+        { q: "How much does mudjacking cost in Murrieta?", a: "Mudjacking in Murrieta typically costs $500–$1,500 for a residential project, depending on the number of slabs affected and how far they've settled. This compares to $2,500–$6,000+ for full slab replacement. For a settled driveway panel or patio section that is structurally sound but has sunk 1–3 inches, mudjacking is almost always the more cost-effective solution. We provide free written estimates so you can compare options before committing." },
+        { q: "What causes concrete to sink or settle in Murrieta?", a: "The most common causes of concrete settlement in the Murrieta area are: (1) Expansive clay soil — Menifee, Perris, and parts of Murrieta have soils with high clay content that shrink when dry and swell when wet, causing the subbase to shift. (2) Poor compaction — subbase that wasn't compacted correctly during the original installation settles over time under load. (3) Soil erosion from irrigation or drainage — water washing material out from under the slab creates voids. (4) Tree root decomposition — when large roots under a slab die and decompose, they leave voids the slab then drops into." },
+        { q: "Is mudjacking better than polyurethane foam lifting?", a: "Both work, but they have different trade-offs. Mudjacking uses a natural slurry that is compatible with the existing soil base and has decades of proven performance. It costs less per project than polyurethane foam lifting, which uses expanding foam injected through smaller holes. Polyurethane foam dries faster (minutes vs. hours), is lighter, and is better for situations where adding weight to the subbase is a concern. For most residential driveways and patios in Murrieta, traditional mudjacking is the more cost-effective option. We'll recommend the right approach for your specific slab condition." },
+        { q: "Can you level my patio or driveway if it has cracks?", a: "Yes, though the answer depends on the type and severity of the cracks. Settled concrete that has surface cracks due to the movement can often be lifted and then crack-filled to restore function and appearance. Slabs with severe structural cracking — breaks that have caused sections to shift or crumble significantly — may need replacement instead of lifting. We assess the slab condition during the free estimate and give you an honest recommendation." },
+        { q: "How long does mudjacking last?", a: "Mudjacking is a permanent repair when the underlying cause of settlement is addressed. Slabs lifted to correct level on a stabilized subbase have been known to remain stable for 20+ years. If the cause of settlement — poor drainage, clay soil movement, decomposing organic material — isn't addressed alongside the lifting, the slab may slowly resettle over several years. During the estimate, we identify contributing factors and advise on any drainage or soil corrections needed for long-term stability." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 pb-16">
+    <LeadForm heading="Get Your Free Mudjacking Estimate" />
+  </section>
+</BaseLayout>

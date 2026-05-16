@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { Image } from 'astro:assets';
 import { SITE_CONFIG } from '../../config';
 import pourImg from '../../assets/images/concrete-pour-team.jpg';
@@ -122,6 +123,24 @@ const breadcrumbSchema = {
         notify you of any adjustments required by the inspector before we pour.
       </p>
     </div>
+
+    <CrossLinkWidget
+      heading="Prepare Your Site for a New Foundation"
+      links={[
+        {
+          text: 'Land Clearing in Murrieta',
+          href: 'https://murrietatreeexperts.com/services/land-clearing',
+          description: 'Clear trees, brush, and stumps from the build site before foundation work.',
+          icon: '🌳',
+        },
+        {
+          text: 'Landscape Design in Murrieta',
+          href: 'https://landscapingmurrieta.com/services/landscape-design',
+          description: 'Plan grading, drainage, and planting around your new structure.',
+          icon: '🌱',
+        },
+      ]}
+    />
 
     <div class="mt-12">
       <h2 class="text-2xl font-bold text-primary mb-6">More Concrete Services</h2>

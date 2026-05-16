@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
 import heroBg from '../../assets/images/backyard-turf-design.jpg';
 
@@ -104,6 +105,14 @@ const breadcrumbSchema = {
         the required documentation for HOA approval on your behalf.
       </p>
     </div>
+
+    <CrossLinkWidget
+      heading="Hardscape to Complete Your Design"
+      links={[
+        { text: "Concrete Patios & Walkways", href: "https://murrietaconcreteworks.com/services/concrete-patios", description: "Add concrete patios, walkways, and entertaining areas to your landscape design.", icon: "🏡" },
+        { text: "Tree Trimming in Murrieta", href: "https://murrietatreeexperts.com/services/tree-trimming", description: "Shape existing trees to complement your new landscape design and improve sightlines.", icon: "🌳" },
+      ]}
+    />
 
     <div class="mt-12">
       <h2 class="text-2xl font-bold text-primary mb-6">More Landscaping Services</h2>

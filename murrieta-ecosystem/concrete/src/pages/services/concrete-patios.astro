@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { Image } from 'astro:assets';
 import { SITE_CONFIG } from '../../config';
 import patioImg from '../../assets/images/patio-formwork.png';
@@ -132,6 +133,24 @@ const breadcrumbSchema = {
         before we pour — unmanaged roots cause heaving within 5–10 years.
       </p>
     </div>
+
+    <CrossLinkWidget
+      heading="Complete Your Outdoor Space"
+      links={[
+        {
+          text: 'Landscape Design in Murrieta',
+          href: 'https://landscapingmurrieta.com/services/landscape-design',
+          description: 'Design the planting beds, borders, and softscape that surround your new patio.',
+          icon: '🌱',
+        },
+        {
+          text: 'Lawn Care & Restoration',
+          href: 'https://landscapingmurrieta.com/services/lawn-care',
+          description: 'Restore lawn areas affected during concrete installation.',
+          icon: '🌿',
+        },
+      ]}
+    />
 
     <div class="mt-12">
       <h2 class="text-2xl font-bold text-primary mb-6">More Concrete Services</h2>
