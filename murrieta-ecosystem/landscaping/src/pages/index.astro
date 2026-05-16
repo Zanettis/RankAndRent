@@ -4,6 +4,7 @@ import Hero from '../components/Hero.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import LeadForm from '../components/LeadForm.astro';
 import { SITE_CONFIG } from '../config';
+import heroBg from '../assets/images/patio-outdoor-living.jpg';
 
 const icons = ['🎨', '🌿', '💧', '🍂'];
 ---
@@ -12,6 +13,7 @@ const icons = ['🎨', '🌿', '💧', '🍂'];
   title="Landscaping Murrieta, CA | Professional Landscape Design & Lawn Care"
   description="Transform your Murrieta yard with professional landscaping. Custom design, lawn care, irrigation, and seasonal cleanup. Free consultations."
   aggregateRating={{ ratingValue: "4.8", reviewCount: "62" }}
+  ogImage="/images/patio-outdoor-living.jpg"
 >
   <Hero
     headline="Murrieta's Top-Rated Landscaping & Lawn Care"
@@ -19,6 +21,7 @@ const icons = ['🎨', '🌿', '💧', '🍂'];
     ctaText="Get a Free Consultation"
     secondaryCtaText="Call Now"
     secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+    backgroundImage={heroBg}
   />
 
   <section class="max-w-6xl mx-auto px-4 py-16">

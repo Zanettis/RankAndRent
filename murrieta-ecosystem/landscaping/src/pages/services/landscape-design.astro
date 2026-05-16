@@ -4,6 +4,7 @@ import Hero from '../../components/Hero.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import { SITE_CONFIG } from '../../config';
+import heroBg from '../../assets/images/backyard-turf-design.jpg';
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -56,6 +57,7 @@ const breadcrumbSchema = {
 <BaseLayout
   title="Landscape Design Murrieta, CA | Custom Yard Plans | Free Consultation"
   description="Custom landscape design in Murrieta, CA. Beautiful, drought-smart designs that thrive in inland Southern California. Free consultations."
+  ogImage="/images/backyard-turf-design.jpg"
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
@@ -63,6 +65,7 @@ const breadcrumbSchema = {
     headline="Custom Landscape Design for Murrieta Homes"
     subheadline="We design beautiful, water-smart outdoor spaces that reflect your style and thrive in Murrieta's warm inland climate."
     ctaText="Schedule Free Consultation"
+    backgroundImage={heroBg}
   />
 
   <div class="max-w-4xl mx-auto px-4 py-12">

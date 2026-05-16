@@ -5,6 +5,7 @@ import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
+import heroBg from '../../assets/images/retaining-wall-steps.jpg';
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -76,6 +77,7 @@ const breadcrumbSchema = {
 <BaseLayout
   title="Retaining Walls Murrieta, CA | Block, Stone & Concrete Wall Installation"
   description="Professional retaining wall installation in Murrieta, CA. Block, stone, and concrete walls for slopes and hillside properties. Permit coordination, free estimates. Serving Temecula, Wildomar, and Menifee."
+  ogImage="/images/retaining-wall-steps.jpg"
 >
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
@@ -84,6 +86,7 @@ const breadcrumbSchema = {
     headline="Retaining Walls in Murrieta, CA — Slopes Solved"
     subheadline="Professional retaining wall installation for Murrieta's hillside lots and sloped properties. Block, stone, and concrete walls built to handle clay soil movement. Permit coordination included. Free estimates."
     ctaText="Get a Free Estimate"
+    backgroundImage={heroBg}
   />
 
   <div class="max-w-4xl mx-auto px-4 py-12">

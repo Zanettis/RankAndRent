@@ -5,6 +5,7 @@ import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
+import heroBg from '../../assets/images/drought-tolerant-garden.jpg';
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -57,6 +58,7 @@ const breadcrumbSchema = {
 <BaseLayout
   title="Irrigation Systems Murrieta, CA | Smart Drip & Sprinkler Installation | Free Quote"
   description="Water-efficient irrigation systems for Murrieta homes. Drip irrigation, sprinkler installation, and smart controllers. Meets California water requirements. Free quotes."
+  ogImage="/images/drought-tolerant-garden.jpg"
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
@@ -64,6 +66,7 @@ const breadcrumbSchema = {
     headline="Smart Irrigation Systems for Murrieta Homes"
     subheadline="Keep your lawn and garden green without wasting water. We install drip irrigation, sprinkler systems, and smart controllers designed for inland SoCal's climate and water restrictions."
     ctaText="Get a Free Irrigation Quote"
+    backgroundImage={heroBg}
   />
 
   <div class="max-w-4xl mx-auto px-4 py-12">

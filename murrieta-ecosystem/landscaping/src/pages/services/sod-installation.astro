@@ -5,6 +5,7 @@ import LeadForm from '../../components/LeadForm.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
+import heroBg from '../../assets/images/sod-preparation.jpg';
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -76,6 +77,7 @@ const breadcrumbSchema = {
 <BaseLayout
   title="Sod Installation Murrieta, CA | Lawn Installation & Soil Prep"
   description="Professional sod installation in Murrieta, CA. Expert soil preparation, variety selection, and installation for lasting results. Serving Temecula, Wildomar, and Menifee. Free estimates."
+  ogImage="/images/sod-preparation.jpg"
 >
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
@@ -84,6 +86,7 @@ const breadcrumbSchema = {
     headline="Sod Installation in Murrieta, CA — Instant Green Lawn"
     subheadline="Professional sod installation with proper soil prep for Murrieta's clay soils. Variety selection, grading, and same-day new lawn. Free estimates throughout Southwest Riverside County."
     ctaText="Get a Free Estimate"
+    backgroundImage={heroBg}
   />
 
   <div class="max-w-4xl mx-auto px-4 py-12">
