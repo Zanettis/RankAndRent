@@ -60,6 +60,7 @@ import { SITE_CONFIG } from '../config';
       <a
         href={`tel:${SITE_CONFIG.phone}`}
         class="border border-white/50 text-white px-4 py-2 rounded font-semibold hover:bg-white/10 transition-colors"
+        data-phone-link
       >
         {SITE_CONFIG.phone}
       </a>
@@ -112,6 +113,7 @@ import { SITE_CONFIG } from '../config';
       <a
         href={`tel:${SITE_CONFIG.phone}`}
         class="border border-white/50 text-white px-4 py-2 rounded font-semibold text-center hover:bg-white/10 transition-colors mt-2"
+        data-phone-link
       >
         {SITE_CONFIG.phone}
       </a>
@@ -144,4 +146,12 @@ import { SITE_CONFIG } from '../config';
 
   setupAccordion('mobile-services-toggle', 'mobile-services-menu', 'mobile-services-chevron');
   setupAccordion('mobile-locations-toggle', 'mobile-locations-menu', 'mobile-locations-chevron');
+
+  document.querySelectorAll('[data-phone-link]').forEach((el) => {
+    el.addEventListener('click', () => {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'phone_click', { event_category: 'contact', event_label: 'nav' });
+      }
+    });
+  });
 </script>

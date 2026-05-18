@@ -1,0 +1,259 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
+import { SITE_CONFIG } from '../../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is tree pruning and why is it important?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Tree pruning is the selective removal of specific branches to improve a tree\'s structure, health, and safety. Unlike general trimming, pruning targets dead, diseased, crossing, or structurally weak branches. In Murrieta\'s climate, proper pruning prevents limb failure during Santa Ana winds, reduces fire fuel load, and extends a tree\'s lifespan by decades.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between tree pruning and tree trimming?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Tree pruning focuses on the health and structure of the tree — removing specific problem branches to prevent disease spread, improve branch attachment, or reduce failure risk. Tree trimming is primarily about aesthetics and clearance — shaping the canopy, reducing bulk near structures, and maintaining a tidy appearance. Our certified arborists often combine both techniques during a single visit.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'When is the best time to prune trees in Murrieta, CA?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Late fall through winter (November–February) is ideal for most species because trees are dormant, wounds close faster, and pest/disease pressure is lower. However, dead and hazardous branches should be pruned immediately regardless of season. Fruit trees in Murrieta are best pruned in late January before bud break. Avoid heavy pruning during spring flush when trees are expending energy on new growth.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does tree pruning cost in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Tree pruning in Murrieta typically costs $125–$800+ depending on tree size, species, and the extent of work. Small trees under 20 feet: $125–$275. Medium trees 20–40 feet: $250–$450. Large trees over 40 feet: $400–$800+. Structural pruning of young trees is on the lower end since less material is removed. We provide free written estimates — contact us for an exact quote.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What types of pruning do certified arborists perform?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Our ISA-trained arborists perform crown cleaning (removing dead/diseased wood), crown thinning (improving light and air penetration), crown raising (lifting the lower canopy for clearance), crown reduction (reducing overall size), structural pruning (directing growth in young trees), and vista pruning (selectively opening sightlines). Each cut follows ANSI A300 standards to minimize wound stress.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can improper pruning kill a tree?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Topping — indiscriminately cutting off the main leader or large branches — is one of the most harmful practices done to trees. It creates massive wounds, stimulates weak water-sprout growth, and often leads to decay or tree death within years. Our arborists never top trees and always make cuts just outside the branch collar using ISA pruning standards.' },
+    },
+  ],
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Tree Pruning',
+  name: 'Tree Pruning in Murrieta, CA',
+  description: 'Professional tree pruning by ISA-certified arborists in Murrieta, CA. Crown cleaning, structural pruning, deadwooding. Free estimates.',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.domain,
+    telephone: SITE_CONFIG.phone,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Murrieta' },
+    { '@type': 'City', name: 'Temecula' },
+    { '@type': 'City', name: 'Wildomar' },
+    { '@type': 'City', name: 'Menifee' },
+  ],
+  offers: {
+    '@type': 'Offer',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      minPrice: '125',
+      maxPrice: '800',
+      priceCurrency: 'USD',
+    },
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_CONFIG.domain}/services/` },
+    { '@type': 'ListItem', position: 3, name: 'Tree Pruning', item: `${SITE_CONFIG.domain}/services/tree-pruning/` },
+  ],
+};
+---
+
+<BaseLayout
+  title="Tree Pruning Murrieta CA | ISA-Certified Arborists | Free Estimates"
+  description="Professional tree pruning in Murrieta, CA by ISA-certified arborists. Crown cleaning, structural pruning, deadwooding. Improve tree health and safety. Free estimates."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <Hero
+    headline="Expert Tree Pruning in Murrieta, CA"
+    subheadline="Precision pruning by ISA-certified arborists. We follow ANSI A300 standards to improve tree health, prevent limb failure, and extend your tree's life."
+    ctaText="Get a Free Pruning Estimate"
+  />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-8" aria-label="breadcrumb">
+      <a href="/" class="hover:text-primary">Home</a>
+      <span class="mx-2">/</span>
+      <span>Services</span>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Tree Pruning</span>
+    </nav>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>What Is Tree Pruning?</h2>
+      <p>
+        Tree pruning is the targeted removal of specific branches to correct structural problems,
+        eliminate disease, and improve a tree's long-term health. It is more precise than general
+        trimming — every cut serves a purpose, and every cut is made at the right location to
+        minimize wound stress and promote closure.
+      </p>
+      <p>
+        In Murrieta, where Santa Ana winds routinely exceed 50 mph and drought stress weakens
+        branch attachment, proper pruning is not cosmetic — it is structural engineering.
+        A well-pruned tree sheds wind load instead of catching it, and co-dominant stems
+        competing to be the main leader are corrected before they split under their own weight.
+      </p>
+
+      <h2>Tree Pruning vs. Tree Trimming: What's the Difference?</h2>
+      <p>
+        The terms are often used interchangeably, but the goals differ:
+      </p>
+      <ul>
+        <li><strong>Pruning</strong> — health-driven. Removes dead, diseased, crossing, or structurally weak branches. Makes the tree safer and longer-lived.</li>
+        <li><strong>Trimming</strong> — appearance-driven. Shapes the canopy, clears structures, and maintains a tidy silhouette.</li>
+      </ul>
+      <p>
+        Our arborists assess both during every visit and recommend the right combination for your specific tree and goals.
+        Visit our <a href="/services/tree-trimming">tree trimming page</a> for more on aesthetic pruning.
+      </p>
+
+      <h2>Types of Pruning We Perform</h2>
+
+      <h3>Crown Cleaning</h3>
+      <p>
+        Removes dead, dying, diseased, and weakly attached branches throughout the canopy.
+        This is the most common pruning type — it eliminates immediate hazards and removes
+        entry points for wood-boring insects and fungal decay.
+      </p>
+
+      <h3>Crown Thinning</h3>
+      <p>
+        Selectively removes 15–20% of live branches to increase light penetration and air
+        movement through the canopy. In Murrieta's hot, humid summers, improved airflow
+        dramatically reduces fungal issues like powdery mildew and sooty mold.
+      </p>
+
+      <h3>Structural Pruning (Young Trees)</h3>
+      <p>
+        The most important pruning you'll ever do on a tree happens in its first 10 years.
+        Structural pruning establishes a dominant central leader, removes co-dominant stems
+        before they develop included bark, and spaces scaffold branches to prevent crowding.
+        A $200 structural pruning session on a young tree can prevent a $2,000 removal 20 years later.
+      </p>
+
+      <h3>Crown Reduction</h3>
+      <p>
+        Reduces the overall height or spread of a tree while maintaining its natural form.
+        We make reduction cuts back to lateral branches large enough to assume the terminal
+        role — this is categorically different from topping, which leaves stubs with no
+        viable lateral to take over.
+      </p>
+
+      <h3>Deadwooding</h3>
+      <p>
+        Removing dead branches eliminates fall hazards and the beetle and borer activity
+        that spreads to living wood. In fire-prone areas of Murrieta like Bear Creek and
+        Greer Ranch, deadwooding also directly reduces fire fuel load.
+      </p>
+
+      <h3>Vista Pruning</h3>
+      <p>
+        Selectively removes branches to open a sightline — to a mountain view, the valley,
+        or a neighbor's pool. Done without compromising the tree's structure.
+      </p>
+
+      <h2>The Right Cut Matters</h2>
+      <p>
+        Every cut our arborists make is positioned just outside the branch collar — the
+        slightly raised ring of tissue where the branch meets the trunk. This preserves
+        the tree's natural defense zone and allows the wound to close in a ring pattern.
+        A flush cut into the collar, or a stub left beyond it, both disrupt closure and
+        invite decay. We follow <strong>ANSI A300 pruning standards</strong> on every job.
+      </p>
+
+      <h2>Tree Pruning Cost in Murrieta</h2>
+      <p>
+        Pruning cost depends primarily on tree size, species, and how much work is needed:
+      </p>
+      <ul>
+        <li><strong>Small trees under 20 ft</strong> (fruit trees, ornamental pears, crape myrtles): $125–$275</li>
+        <li><strong>Medium trees 20–40 ft</strong> (oaks, pines, camphor trees): $250–$450</li>
+        <li><strong>Large trees over 40 ft</strong> (eucalyptus, mature sycamores, tall palms): $400–$800+</li>
+      </ul>
+      <p>
+        Structural pruning of young trees generally falls at the lower end since less material
+        is removed. We offer multi-tree discounts and provide free written estimates with
+        no obligation.
+      </p>
+
+      <h2>Service Area</h2>
+      <p>
+        We prune trees throughout Murrieta including Old Town, Bear Creek, Murrieta Oaks,
+        Copper Canyon, Greer Ranch, and Cal Oaks, as well as Temecula, Wildomar, Menifee,
+        Lake Elsinore, and surrounding Southwest Riverside County communities.
+      </p>
+    </div>
+
+    <CrossLinkWidget
+      heading="Pair Tree Pruning With Landscape Refresh"
+      links={[
+        { text: "Landscape Design in Murrieta", href: "https://landscapingmurrieta.com/services/landscape-design", description: "Redesign your landscape around healthier, properly pruned trees.", icon: "🎨" },
+        { text: "Lawn Care Murrieta", href: "https://landscapingmurrieta.com/services/lawn-care", description: "Improve lawn health in areas that now receive more sunlight after crown thinning.", icon: "🌿" },
+      ]}
+    />
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-primary mb-6">More Tree Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {SITE_CONFIG.services.filter(s => s.href !== '/services/tree-pruning').map((s) => (
+          <ServiceCard title={s.title} description={s.description} href={s.href} />
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <section class="max-w-4xl mx-auto py-8">
+        <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {[
+            { q: 'What is tree pruning and why is it important?', a: 'Tree pruning is the selective removal of specific branches to improve a tree\'s structure, health, and safety. Unlike general trimming, pruning targets dead, diseased, crossing, or structurally weak branches. In Murrieta\'s climate, proper pruning prevents limb failure during Santa Ana winds, reduces fire fuel load, and extends a tree\'s lifespan by decades.' },
+            { q: 'What is the difference between tree pruning and tree trimming?', a: 'Tree pruning focuses on the health and structure of the tree — removing specific problem branches to prevent disease spread, improve branch attachment, or reduce failure risk. Tree trimming is primarily about aesthetics and clearance — shaping the canopy, reducing bulk near structures, and maintaining a tidy appearance. Our certified arborists often combine both techniques during a single visit.' },
+            { q: 'When is the best time to prune trees in Murrieta, CA?', a: 'Late fall through winter (November–February) is ideal for most species because trees are dormant, wounds close faster, and pest/disease pressure is lower. However, dead and hazardous branches should be pruned immediately regardless of season. Fruit trees in Murrieta are best pruned in late January before bud break. Avoid heavy pruning during spring flush when trees are expending energy on new growth.' },
+            { q: 'How much does tree pruning cost in Murrieta?', a: 'Tree pruning in Murrieta typically costs $125–$800+ depending on tree size, species, and the extent of work. Small trees under 20 feet: $125–$275. Medium trees 20–40 feet: $250–$450. Large trees over 40 feet: $400–$800+. We provide free written estimates — contact us for an exact quote.' },
+            { q: 'What types of pruning do certified arborists perform?', a: 'Our ISA-trained arborists perform crown cleaning (removing dead/diseased wood), crown thinning (improving light and air penetration), crown raising (lifting the lower canopy for clearance), crown reduction (reducing overall size), structural pruning (directing growth in young trees), and vista pruning (selectively opening sightlines). Each cut follows ANSI A300 standards to minimize wound stress.' },
+            { q: 'Can improper pruning kill a tree?', a: 'Yes. Topping — indiscriminately cutting off the main leader or large branches — is one of the most harmful practices done to trees. It creates massive wounds, stimulates weak water-sprout growth, and often leads to decay or tree death within years. Our arborists never top trees and always make cuts just outside the branch collar using ISA pruning standards.' },
+          ].map(({ q, a }) => (
+            <details class="border border-gray-200 rounded-xl overflow-hidden group">
+              <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+                {q}
+                <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+            </details>
+          ))}
+        </div>
+      </section>
+    </div>
+
+    <div class="mt-12">
+      <LeadForm heading="Schedule Your Tree Pruning Estimate" />
+    </div>
+  </div>
+</BaseLayout>

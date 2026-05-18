@@ -13,6 +13,8 @@ const faqSchema = {
     { '@type': 'Question', name: 'Are there tree removal permit requirements in Wildomar, CA?', acceptedAnswer: { '@type': 'Answer', text: 'Wildomar follows Riverside County land use guidelines for tree removal on unincorporated parcels. Most standard residential tree removals do not require a permit, but protected oak species or trees in riparian corridors near Wildomar Creek may need county review. We check applicable requirements during your free estimate and handle the process for you.' } },
     { '@type': 'Question', name: "How does Wildomar's clay soil affect tree root systems?", acceptedAnswer: { '@type': 'Answer', text: "Wildomar's heavy clay soils drain poorly, which can lead to root rot in susceptible tree species and cause surface roots to spread wide and shallow rather than anchoring deep. This creates both a stability risk and a sidewalk/driveway damage concern. We assess root health during our estimate and can recommend whether removal or crown reduction is the right approach." } },
     { '@type': 'Question', name: 'Do you serve Heritage Lake and Palomar Hills communities in Wildomar?', acceptedAnswer: { '@type': 'Answer', text: "Yes — we service all of Wildomar's communities including Heritage Lake, Palomar Hills, and properties along Clinton Keith Road and Grand Avenue. We're familiar with the common tree species in these neighborhoods — particularly Canary Island palms, sycamores, and eucalyptus — and understand the access constraints on Wildomar's hillside lots." } },
+    { '@type': 'Question', name: 'What tree services are available in Wildomar, CA?', acceptedAnswer: { '@type': 'Answer', text: 'We offer the full range of tree services in Wildomar: tree removal (including hillside and tight-access lots), tree trimming and pruning, stump grinding, land clearing, emergency tree service (24/7), and tree planting. All work is performed by licensed arborists with California C-61/D-49 contractor certification and full liability insurance.' } },
+    { '@type': 'Question', name: 'How quickly can you respond to a tree emergency in Wildomar?', acceptedAnswer: { '@type': 'Answer', text: 'We offer 24/7 emergency tree service in Wildomar. For active hazards — fallen tree blocking access, limb on a roof, tree leaning toward a structure — we respond the same day and are typically on-site within 2–4 hours of your call. We stabilize the hazard immediately and complete the full removal in a follow-up visit if needed.' } },
   ],
 };
 ---
@@ -56,10 +58,21 @@ const faqSchema = {
         Portions of Wildomar — particularly properties bordering open hillsides and canyon areas — fall within CAL FIRE's designated Wildland-Urban Interface (WUI) zones. Homeowners in these areas are required to maintain 100 feet of defensible space, which includes removing dead trees and shrubs, clearing ladder fuels, and keeping trees trimmed away from rooflines. We perform defensible space clearance work that meets CAL FIRE and Riverside County standards. If an inspection is coming up or you've received a compliance notice, we respond quickly.
       </p>
 
-      <h2>Serving All Wildomar Neighborhoods</h2>
+      <h2>Wildomar Neighborhoods We Serve</h2>
       <p>
-        We provide tree service throughout Wildomar, including Heritage Lake, Palomar Hills, Clinton Keith Estates, and the rural parcels along Wildomar Trail and Clinton Keith Road. We also serve properties in unincorporated Riverside County adjacent to Wildomar city limits. No travel fee within our service area.
+        We provide tree services throughout all of Wildomar, CA — from established neighborhoods to rural parcels:
       </p>
+      <ul>
+        <li><strong>Heritage Lake</strong> — HOA community with Canary Island palms and mature oaks; we handle HOA permit coordination</li>
+        <li><strong>Palomar Hills</strong> — hillside lots with steep grade; specialized rigging equipment on every job</li>
+        <li><strong>The Farm</strong> — rural agricultural parcels; land clearing and orchard tree removal</li>
+        <li><strong>Clinton Keith Estates</strong> — larger residential lots with mature eucalyptus and sycamore</li>
+        <li><strong>Wildomar Ridge</strong> — WUI fire zone; defensible space clearance and dead-tree removal</li>
+        <li><strong>Bundy Canyon Road corridor</strong> — rural-to-suburban transition; mixed tree populations</li>
+        <li><strong>Grand Avenue / I-15 corridor</strong> — commercial and newer residential</li>
+        <li>Unincorporated Riverside County parcels adjacent to Wildomar city limits</li>
+      </ul>
+      <p>No travel fee for any Wildomar address. We're based in Murrieta — typically 10–15 minutes away.</p>
 
       <h2>Emergency Tree Service in Wildomar</h2>
       <p>
@@ -95,6 +108,8 @@ const faqSchema = {
         { q: "Are there tree removal permit requirements in Wildomar, CA?", a: "Wildomar follows Riverside County land use guidelines for tree removal on unincorporated parcels. Most standard residential tree removals do not require a permit, but protected oak species or trees in riparian corridors near Wildomar Creek may need county review. We check applicable requirements during your free estimate and handle the process for you." },
         { q: "How does Wildomar's clay soil affect tree root systems?", a: "Wildomar's heavy clay soils drain poorly, which can lead to root rot in susceptible tree species and cause surface roots to spread wide and shallow rather than anchoring deep. This creates both a stability risk and a sidewalk/driveway damage concern. We assess root health during our estimate and can recommend whether removal or crown reduction is the right approach." },
         { q: "Do you serve Heritage Lake and Palomar Hills communities in Wildomar?", a: "Yes — we service all of Wildomar's communities including Heritage Lake, Palomar Hills, and properties along Clinton Keith Road and Grand Avenue. We're familiar with the common tree species in these neighborhoods — particularly Canary Island palms, sycamores, and eucalyptus — and understand the access constraints on Wildomar's hillside lots." },
+        { q: "What tree services are available in Wildomar, CA?", a: "We offer the full range of tree services in Wildomar: tree removal (including hillside and tight-access lots), tree trimming and pruning, stump grinding, land clearing, emergency tree service (24/7), and tree planting. All work is performed by licensed arborists with California C-61/D-49 contractor certification and full liability insurance." },
+        { q: "How quickly can you respond to a tree emergency in Wildomar?", a: "We offer 24/7 emergency tree service in Wildomar. For active hazards — fallen tree blocking access, limb on a roof, tree leaning toward a structure — we respond the same day and are typically on-site within 2–4 hours of your call. We stabilize the hazard immediately and complete the full removal in a follow-up visit if needed." },
       ].map(({ q, a }) => (
         <details class="border border-gray-200 rounded-xl overflow-hidden group">
           <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">

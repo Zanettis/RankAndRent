@@ -1,7 +1,7 @@
 export const SITE_CONFIG = {
   name: 'Murrieta Tree Experts',
   shortName: 'Murrieta Tree Experts',
-  phone: '(951) 555-0101',
+  phone: '(814) 936-2501',
   email: 'info@murrietatreeexperts.com',
   address: 'Murrieta, CA 92562',
   domain: 'https://murrietatreeexperts.com',
@@ -9,6 +9,7 @@ export const SITE_CONFIG = {
   services: [
     { title: 'Tree Removal', href: '/services/tree-removal', description: 'Safe, efficient removal of hazardous or unwanted trees.' },
     { title: 'Tree Trimming', href: '/services/tree-trimming', description: 'Expert pruning to keep your trees healthy and beautiful.' },
+    { title: 'Tree Pruning', href: '/services/tree-pruning', description: 'Structural and health pruning by ISA-certified arborists.' },
     { title: 'Stump Grinding', href: '/services/stump-grinding', description: 'Complete stump removal to reclaim your yard space.' },
     { title: 'Emergency Service', href: '/services/emergency-tree-service', description: '24/7 emergency tree service for storm damage and hazards.' },
     { title: 'Land Clearing', href: '/services/land-clearing', description: 'Full lot and land clearing for construction or development.' },
