@@ -139,8 +139,8 @@ const {
       if (json.ok) {
         form.classList.add('hidden');
         successBox.classList.remove('hidden');
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'generate_lead', { event_category: 'contact', event_label: data.service });
+        if (typeof (window as any).gtag === 'function') {
+          (window as any).gtag('event', 'generate_lead', { event_category: 'contact', event_label: data.service });
         }
       } else {
         errorBox.textContent = json.error ?? 'Something went wrong. Please try again.';

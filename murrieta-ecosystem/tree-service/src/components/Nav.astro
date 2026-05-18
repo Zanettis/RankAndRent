@@ -149,8 +149,8 @@ import { SITE_CONFIG } from '../config';
 
   document.querySelectorAll('[data-phone-link]').forEach((el) => {
     el.addEventListener('click', () => {
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'phone_click', { event_category: 'contact', event_label: 'nav' });
+      if (typeof (window as any).gtag === 'function') {
+        (window as any).gtag('event', 'phone_click', { event_category: 'contact', event_label: 'nav' });
       }
     });
   });
