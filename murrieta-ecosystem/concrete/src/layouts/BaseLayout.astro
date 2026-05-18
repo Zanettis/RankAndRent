@@ -73,12 +73,13 @@ const schema = {
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://www.google-analytics.com" />
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SP7FPJ0JDT"></script>
-    <script>
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-SP7FPJ0JDT"></script>
+    <script is:inline>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-SP7FPJ0JDT');
+      window.gtag = function(){window.dataLayer.push(arguments);}
+      window.gtag('js', new Date());
+      window.gtag('config', 'G-SP7FPJ0JDT');
     </script>
 
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />

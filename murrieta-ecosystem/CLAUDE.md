@@ -85,6 +85,37 @@ Props já existentes no BaseLayout (aplicado nos 3 sites):
 
 ---
 
+### GA4 / gtag — Regra Obrigatória no Astro
+
+Scripts do GA4 em qualquer `BaseLayout.astro` **devem** ter `is:inline` e atribuir `window.gtag` explicitamente:
+
+```html
+<!-- correto -->
+<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){window.dataLayer.push(arguments);}
+  window.gtag('js', new Date());
+  window.gtag('config', 'G-XXXXXX');
+</script>
+```
+
+**Por quê:** Astro processa `<script>` sem `is:inline` como ES module (adiciona `type="module"` implicitamente). Em ES modules, `function gtag(){}` é local ao módulo e nunca vira `window.gtag`. Componentes que tentam chamar `window.gtag` recebem `undefined` e todos os eventos customizados do GA4 são silenciosamente descartados — sem erro no console, sem indício de falha.
+
+**Sintoma:** `page_view` e `form_start` chegam ao GA4 (eventos automáticos do script externo), mas eventos custom como `generate_lead` e `phone_click` nunca aparecem — nem no Realtime, nem no Events.
+
+Em componentes (LeadForm, Nav, etc.) que chamam gtag, sempre usar bracket notation:
+
+```js
+if (typeof (window as any).gtag === 'function') {
+  (window as any).gtag('event', 'nome_do_evento', { event_category: '...', event_label: '...' });
+}
+```
+
+IDs GA4 por site: tree-service `G-KTE41LFEW3` | landscaping `G-NJW91608HL` | concrete `G-SP7FPJ0JDT`
+
+---
+
 ### OG Images — Convenção
 
 Imagens referenciadas em `<meta property="og:image">` **devem estar em `public/images/`**, não em `src/assets/images/`. Arquivos em `src/assets/` são processados pelo pipeline do Astro e não acessíveis como URLs estáticas nos meta tags.
