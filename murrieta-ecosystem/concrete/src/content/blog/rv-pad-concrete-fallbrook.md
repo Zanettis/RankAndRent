@@ -71,7 +71,7 @@ RV pads are residential concrete — 3,500 PSI, 4 inches thick, standard residen
 
 **Surface**: Industrial broom finish is standard. Some shop floors use a power-troweled finish (smoother and easier to clean, appropriate for enclosed spaces). Exposed aggregate is sometimes used for barn aprons where maximum traction is needed.
 
-**Cost for agricultural slabs**: $6–$14 per square foot depending on thickness, PSI, reinforcement, and access conditions. A 2,000 sq ft barn apron runs $12,000–$28,000. A 500 sq ft heavy equipment pad runs $3,000–$7,000.
+**Cost for agricultural slabs**: $6–$14 per square foot depending on thickness, PSI, reinforcement, and access conditions. A 2,000 sq ft barn apron runs $12,000–$28,000. A 500 sq ft heavy equipment pad runs $3,000–$7,000. For smaller residential slab projects or if you're unsure whether your job is large enough for a contractor, our guide to [small concrete jobs in Murrieta](/blog/small-concrete-jobs-murrieta) explains minimum charges and how to combine jobs economically. Our [concrete slabs service page](/services/concrete-slabs) covers residential shed pads, RV pads, and equipment slabs throughout the service area.
 
 ## Fallbrook Terrain Considerations
 

@@ -22,7 +22,7 @@ A proper outdoor patio or dining area needs:
 
 **Control joints**: Concrete shrinks as it cures and expands in heat. Control joints at regular intervals give concrete a designated place to crack — protecting the aesthetics of the slab.
 
-**Appropriate finish**: Outdoor living spaces benefit from surfaces that stay comfortable underfoot even in summer heat. Light-colored broom finishes or exposed aggregate reflect more heat than dark stamped concrete. Pool deck areas should always use exposed aggregate or a brushed finish for slip resistance.
+**Appropriate finish**: Outdoor living spaces benefit from surfaces that stay comfortable underfoot even in summer heat. Light-colored broom finishes or exposed aggregate reflect more heat than dark stamped concrete. Pool deck areas should always use exposed aggregate or a brushed finish for slip resistance. For a full breakdown of patio design approaches suited to Murrieta, see our [concrete patio design ideas for Murrieta backyards](/blog/patio-ideas-murrieta). If you're comparing a concrete patio against a wood deck, our [concrete patio vs. wood deck comparison](/blog/concrete-patio-vs-wood-deck-murrieta) makes the 20-year cost case clearly.
 
 ## Trees and Outdoor Living: A Beautiful Relationship
 
@@ -63,4 +63,4 @@ Murrieta's climate makes outdoor entertaining genuinely viable year-round with t
 
 The outdoor living spaces that Murrieta homeowners use most consistently are those designed with all four seasons in mind — not just the pleasant spring and fall months.
 
-Ready to start planning your outdoor living space? Our team provides free estimates and can walk your property to help you understand what's possible, what the concrete work will involve, and how to sequence the project. Contact us to schedule a consultation.
+Ready to start planning your outdoor living space? Our [concrete patios service page](/services/concrete-patios) and [concrete pool decks service page](/services/concrete-pool-decks) cover the hardscape components specifically. Our team provides free estimates and can walk your property to help you understand what's possible, what the concrete work will involve, and how to sequence the project. Contact us to schedule a consultation.

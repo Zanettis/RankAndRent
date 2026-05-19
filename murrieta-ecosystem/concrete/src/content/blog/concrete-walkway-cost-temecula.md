@@ -97,7 +97,7 @@ The savings come from:
 - No seam between the patio and walkway (one continuous pour looks better)
 - Efficiency in forming and finishing
 
-A walkway added to a patio project might add $400–$900 rather than the $800–$1,500 it would cost as a standalone project. If you're planning a patio, think about whether you also want a path and price it together.
+A walkway added to a patio project might add $400–$900 rather than the $800–$1,500 it would cost as a standalone project. If you're planning a patio, think about whether you also want a path and price it together. For patio cost guidance to budget your combined project, see our [concrete patio cost guide for Murrieta](/blog/concrete-patio-cost-murrieta). Our [concrete walkways and sidewalks service page](/services/concrete-walkways-sidewalks) covers design options and the permit question for Temecula projects.
 
 ## DIY vs. Professional: The Honest Take
 

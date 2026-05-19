@@ -73,6 +73,8 @@ Concrete has no termite vulnerability. This is a meaningful advantage in the Mur
 - You want to add decorative value with stamped or colored finishes
 - You prefer a low-maintenance solution
 
+For design inspiration, our [concrete patio design ideas for Murrieta backyards](/blog/patio-ideas-murrieta) covers eight approaches from stamped flagstone to drought-tolerant combinations. If you have a smaller yard, [concrete patio ideas for small Murrieta backyards](/blog/concrete-patio-ideas-small-backyard-murrieta) focuses on compact lot design. For a deep dive on stamped concrete finishes, costs, and patterns, see our [stamped concrete guide for Murrieta](/blog/stamped-concrete-murrieta).
+
 **Choose a deck if:**
 - Your yard has significant slope or grade change making a ground-level patio impractical
 - You specifically want a raised outdoor structure
@@ -80,4 +82,4 @@ Concrete has no termite vulnerability. This is a meaningful advantage in the Mur
 
 **Our perspective:** For flat or gently sloped Murrieta backyards, a concrete patio — especially stamped or decorated — is usually the better investment. It costs less to maintain, lasts longer, and offers excellent design options that match or exceed the look of decking for most applications.
 
-We provide free on-site estimates for concrete patios throughout Murrieta, Temecula, Menifee, Lake Elsinore, Canyon Lake, and surrounding communities. Contact us to discuss your project.
+We provide free on-site estimates for [concrete patios in Murrieta](/services/concrete-patios), Temecula, Menifee, Lake Elsinore, Canyon Lake, and surrounding communities. Contact us to discuss your project.

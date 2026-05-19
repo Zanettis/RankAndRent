@@ -25,7 +25,7 @@ L-shaped layouts also make better use of the awkward corners that a lot of Murri
 
 On a large driveway, stamped concrete is impressive. On a small patio, it's transformative. A 200-square-foot patio with a slate or large-format tile pattern in a warm gray tone reads as a designed outdoor space rather than a slab. The pattern gives the eye something to engage with, which makes the space feel intentional and larger than it is.
 
-For Murrieta's HOA communities, check finish approval requirements — but most HOA covenants focus on front-yard visibility and are silent or permissive about backyard patio finishes. Many homeowners in Murrieta's gated communities have installed decorative stamped patios in their backyards without issue.
+For Murrieta's HOA communities, check finish approval requirements — but most HOA covenants focus on front-yard visibility and are silent or permissive about backyard patio finishes. Many homeowners in Murrieta's gated communities have installed decorative stamped patios in their backyards without issue. For a deeper look at stamped concrete patterns, colors, and realistic costs, see our [stamped concrete guide for Murrieta](/blog/stamped-concrete-murrieta).
 
 ### Combining Concrete with a Grass or Decomposed Granite Zone
 
@@ -92,4 +92,4 @@ When in doubt, a quick call to Murrieta Building & Safety (951-461-6032) before 
 
 ## Ready to Maximize Your Backyard?
 
-We help Murrieta homeowners get the most out of compact outdoor spaces every week. A well-planned concrete patio — right size, right finish, right color for the climate — genuinely changes how you use your home. [Contact us for a free estimate](/contact) and we'll bring samples, talk through the layout options for your specific yard, and give you a complete written proposal with no pressure.
+We help Murrieta homeowners get the most out of compact outdoor spaces every week. A well-planned concrete patio — right size, right finish, right color for the climate — genuinely changes how you use your home. If you're comparing concrete to a wood deck for your outdoor project, our [concrete patio vs. wood deck comparison for Murrieta](/blog/concrete-patio-vs-wood-deck-murrieta) makes the 20-year cost case clearly. For broader design inspiration across all patio sizes, see our [concrete patio design ideas for Murrieta backyards](/blog/patio-ideas-murrieta). When you're ready to plan, our [concrete patios service page](/services/concrete-patios) covers pricing, finish options, and the permit question. [Contact us for a free estimate](/contact) and we'll bring samples, talk through the layout options for your specific yard, and give you a complete written proposal with no pressure.

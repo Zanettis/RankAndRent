@@ -27,7 +27,7 @@ Not always — but the situations that do require a permit are more common than 
 - The work is entirely within your property and doesn't touch the public right-of-way
 - You're doing minor repairs to an existing slab (crack filling, patching isolated sections)
 
-The gray area — and this is where a lot of confusion lives — is driveway replacement. If your existing concrete is failing and you're replacing it in-kind, Murrieta often doesn't require a full permit. But the moment you change the size, shape, or approach angle, or the project involves the curb cut, you're in permit territory.
+The gray area — and this is where a lot of confusion lives — is driveway replacement. If your existing concrete is failing and you're replacing it in-kind, Murrieta often doesn't require a full permit. But the moment you change the size, shape, or approach angle, or the project involves the curb cut, you're in permit territory. For full driveway project planning, see our [concrete driveway cost guide for Murrieta](/blog/concrete-driveway-cost-murrieta) — it covers pricing alongside the permit question. If you're timing your project around the permit approval window, the [best time to pour concrete in Murrieta](/blog/best-time-pour-concrete-murrieta) guide helps you sequence both weather and paperwork.
 
 When in doubt, call the City of Murrieta Building & Safety Division at (951) 461-6032, or the City of Temecula Community Development Department at (951) 694-6400. A two-minute call saves you from a potential violation.
 
@@ -92,4 +92,4 @@ This is standard practice for reputable contractors. Permit management is part o
 
 ## Ready to Get Started?
 
-We handle all permitting for concrete driveway projects throughout Murrieta, Temecula, and surrounding Riverside County communities. When you get an estimate from us, we'll tell you upfront whether your project requires a permit, what it will cost, and how long it will take — so there are no surprises. [Contact us for a free estimate](/contact) and we'll take the permit question off your plate entirely.
+We handle all permitting for concrete driveway projects throughout Murrieta, Temecula, and surrounding Riverside County communities. Our [concrete driveways service page](/services/concrete-driveways) covers what to expect from permit management as part of full-service project work. When you get an estimate from us, we'll tell you upfront whether your project requires a permit, what it will cost, and how long it will take — so there are no surprises. [Contact us for a free estimate](/contact) and we'll take the permit question off your plate entirely.

@@ -54,7 +54,7 @@ March through May is often the best window of the year for concrete work in Murr
 - Low monsoon/rain risk
 - Long working days (good daylight for finishing)
 
-Spring is also when many homeowners start thinking about outdoor projects — driveway replacement, new patios, walkways — so demand for contractors picks up. If you're planning a project for spring, book your estimate in January or February. Spring slots fill quickly.
+Spring is also when many homeowners start thinking about outdoor projects — driveway replacement, new patios, walkways — so demand for contractors picks up. If you're planning a project for spring, book your estimate in January or February. Spring slots fill quickly. Our [concrete driveway cost guide for Murrieta](/blog/concrete-driveway-cost-murrieta) and [concrete patio cost guide](/blog/concrete-patio-cost-murrieta) help you budget before contractor schedules fill up.
 
 ## Coordinating With Other Trades
 
@@ -74,5 +74,7 @@ One thing that affects timing as much as weather: sequencing with other work.
 | Mar–May | Warm, dry, long days | ✅ Best overall |
 | Jun–Sep | Hot, monsoon risk | ⚠️ Possible with prep — schedule early AM |
 | Dec–Jan (frost risk nights) | Below 35°F possible | ⚠️ Check forecast; protect with blankets |
+
+If you need to time a permit application alongside your pour window, our [concrete permits guide for Murrieta and Temecula](/blog/concrete-permits-murrieta-temecula) explains what triggers a permit and how long approval takes. For foundation pours and larger structural slabs, see our [concrete foundations service page](/services/concrete-foundations) for details on subbase requirements in Murrieta's clay soil conditions.
 
 Ready to schedule your project? [Contact us](/contact) for a free estimate. We'll also give you a realistic timeline for when we can fit your project and what weather conditions we're working around.

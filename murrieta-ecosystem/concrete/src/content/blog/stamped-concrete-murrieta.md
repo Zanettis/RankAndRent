@@ -80,7 +80,7 @@ For driveways, the same math applies. A 500 sq ft driveway that costs $10,000 in
 
 Stamped concrete requires one thing that standard concrete doesn't: **periodic resealing**. The sealer is what gives stamped concrete its color depth, protects against UV fading, and prevents oil and stain penetration. Without regular sealing, the colors fade to flat, washed-out tones within a few years.
 
-**Resealing schedule in Murrieta**: Every 2–4 years. Murrieta's UV exposure and summer heat accelerate sealer degradation compared to northern California climates. You'll know it's time to reseal when water stops beading on the surface and the color looks dull.
+**Resealing schedule in Murrieta**: Every 2–4 years. Murrieta's UV exposure and summer heat accelerate sealer degradation compared to northern California climates. You'll know it's time to reseal when water stops beading on the surface and the color looks dull. For a full breakdown of timing, sealer types, and costs, see our guide to [concrete sealing in Murrieta](/blog/concrete-sealing-murrieta). If you're still deciding on a finish, our comparison of [stamped vs. brushed concrete finishes](/blog/stamped-vs-brushed-concrete-murrieta) walks through the maintenance and cost differences side by side.
 
 **Cleaning**: Regular pressure washing removes dirt, pollen, and debris. Avoid harsh acid-based cleaners — they can lift sealer and damage the surface. Most household concrete cleaners work fine.
 
@@ -102,4 +102,4 @@ The sealing maintenance commitment is the main honest caveat for stamped concret
 
 ## Get a Free Stamped Concrete Estimate
 
-We've installed stamped concrete patios, driveways, and pool decks throughout Murrieta, Temecula, Canyon Lake, and surrounding communities. Whether you're envisioning Ashlar slate for a modern backyard or cobblestone for a traditional home's driveway, we'll show you pattern samples and walk you through realistic costs. Call us at **(951) 555-0303** for a free estimate and design consultation.
+Our [decorative concrete service page](/services/decorative-concrete) covers all finish types — stamped, stained, and exposed aggregate — with pricing and examples for Murrieta projects. We've installed stamped concrete patios, driveways, and pool decks throughout Murrieta, Temecula, Canyon Lake, and surrounding communities. Whether you're envisioning Ashlar slate for a modern backyard or cobblestone for a traditional home's driveway, we'll show you pattern samples and walk you through realistic costs. Call us at **(951) 555-0303** for a free estimate and design consultation.

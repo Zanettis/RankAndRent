@@ -61,7 +61,7 @@ For small jobs, the question is often whether to repair or replace. Here's a rou
 - Spalling has gone through more than 1/3 of the slab thickness
 - Repair cost is more than 50% of replacement cost
 
-An honest contractor will tell you which applies to your situation. If someone shows up and immediately pushes replacement without assessing whether repair is viable, that's worth questioning.
+An honest contractor will tell you which applies to your situation. If someone shows up and immediately pushes replacement without assessing whether repair is viable, that's worth questioning. Our guide to [why concrete cracks in Murrieta](/blog/why-concrete-cracks-murrieta) explains the six most common causes and what each means for your repair options. Our [concrete repair service page](/services/concrete-repair) covers both partial repair and full replacement scenarios with pricing.
 
 ## What to Expect on a Small Residential Job
 

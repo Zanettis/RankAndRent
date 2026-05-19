@@ -119,4 +119,6 @@ The right design for your property depends on your home's architecture, your lot
 
 **Get written specifications**: Any contractor you hire should provide written specifications including slab thickness, reinforcement type, base depth, finish details, and who's responsible for permits. These details matter more than the price alone.
 
+For cost guidance before you start getting estimates, our [concrete patio cost guide for Murrieta](/blog/concrete-patio-cost-murrieta) covers standard, stamped, and exposed aggregate pricing. If you have a smaller yard, our [patio ideas for small Murrieta backyards](/blog/concrete-patio-ideas-small-backyard-murrieta) focuses specifically on compact lot design. If you're weighing concrete against a wood deck, our [concrete patio vs. wood deck comparison](/blog/concrete-patio-vs-wood-deck-murrieta) makes the 20-year cost case.
+
 Ready to get specific? We offer free property assessments and written estimates throughout Murrieta, Temecula, Wildomar, Menifee, and surrounding communities. Call us at **(951) 555-0303** to schedule a consultation.

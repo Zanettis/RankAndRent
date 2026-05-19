@@ -89,4 +89,6 @@ Exposed aggregate is more visually interesting than broom finish without the sea
 
 ## Ready to See Options for Your Property?
 
+For a deeper look at stamped concrete specifically — patterns, colors, and what the finished product actually looks like — see our [stamped concrete design and cost guide for Murrieta](/blog/stamped-concrete-murrieta). And if you're designing a patio, our [concrete patio design ideas for Murrieta backyards](/blog/patio-ideas-murrieta) shows how different finishes work in real Murrieta backyard contexts. Our [decorative concrete service page](/services/decorative-concrete) covers all three finish types with pricing.
+
 We work with homeowners across Murrieta, Temecula, and Menifee every week on both standard and decorative concrete projects. We'll show you samples of each finish and give you a straight comparison for your specific project. [Contact us for a free estimate](/contact) — we come to your property, measure the space, and give you real numbers in writing.
