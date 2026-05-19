@@ -97,7 +97,7 @@ Rancho California Water District, which serves most of Temecula and portions of 
 
 ## How a Professional Landscaper Helps Maximize Your Rebate
 
-Working with a landscaper who is familiar with the EVMWD program means your plant selection is pre-screened against the approved list, your drip irrigation design is documented correctly, your submission package is complete on the first submission, and your project is designed to meet the rebate requirements from the start rather than being retrofitted to qualify.
+Working with a landscaper who is familiar with the EVMWD program means your plant selection is pre-screened against the approved list, your drip irrigation design is documented correctly, your submission package is complete on the first submission, and your project is designed to meet the rebate requirements from the start rather than being retrofitted to qualify. See our [drought-tolerant rebate guide](/drought-tolerant-rebate) for a quick overview, or explore our full [landscape design service](/services/landscape-design).
 
 The rebate is real money — often $1,000–$3,000 for a typical Murrieta front yard — and it's worth doing right. A pre-application mistake that disqualifies the project or a documentation gap that delays the rebate by months is easily avoided with professional guidance.
 

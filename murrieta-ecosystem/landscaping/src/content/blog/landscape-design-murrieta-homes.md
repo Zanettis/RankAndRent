@@ -69,4 +69,4 @@ The specific ROI depends on the scope. Modest improvements — fresh mulch, prun
 
 What we can say with confidence: Murrieta buyers in the $500,000–$900,000 range are sophisticated and increasingly value low-maintenance, water-smart landscapes over high-maintenance traditional alternatives. A well-executed design in that direction is both a quality-of-life upgrade and a genuine investment.
 
-Start with a free consultation — we'll walk your property, assess what you're working with, and give you a realistic picture of what's possible and what it costs.
+Start with a free consultation through our [landscape design service](/services/landscape-design) — we'll walk your property, assess what you're working with, and give you a realistic picture of what's possible and what it costs.

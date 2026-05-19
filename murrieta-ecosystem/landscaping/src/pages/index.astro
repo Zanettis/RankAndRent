@@ -74,7 +74,7 @@ const icons = ['🎨', '🌿', '💧', '🍂'];
       to deliver seamless, coordinated results from start to finish.
     </p>
     <div class="text-center">
-      <a href="/services/landscape-design" class="text-cta font-semibold hover:underline">
+      <a href="/services/" class="text-cta font-semibold hover:underline">
         See all services →
       </a>
     </div>
@@ -88,11 +88,14 @@ const icons = ['🎨', '🌿', '💧', '🍂'];
         We landscape homes and properties throughout the region — familiar with local HOA guidelines, soil conditions, and water restrictions in every community.
       </p>
       <div class="flex flex-wrap justify-center gap-3 mb-8">
-        {['Murrieta', 'Temecula', 'Wildomar', 'Menifee', 'Lake Elsinore', 'Canyon Lake', 'Winchester'].map(city => (
-          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        {[
+          { city: 'Murrieta', href: '/' },
+          ...SITE_CONFIG.locations,
+        ].map(({ city, href }) => (
+          <a href={href} class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm hover:bg-primary hover:text-white hover:border-primary transition-colors">{city}</a>
         ))}
       </div>
-      <a href="/services/landscape-design" class="text-cta font-semibold hover:underline">
+      <a href="/services/" class="text-cta font-semibold hover:underline">
         See all services →
       </a>
     </div>
@@ -174,6 +177,30 @@ const icons = ['🎨', '🌿', '💧', '🍂'];
           <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
         </details>
       ))}
+    </div>
+  </section>
+
+  <!-- From the Blog -->
+  <section class="bg-gray-50 py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-primary text-center mb-4">From the Blog</h2>
+      <p class="text-gray-600 text-center mb-10">Landscaping tips, cost guides, and local advice for Murrieta homeowners.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          { title: 'Drought-Tolerant Landscaping in Murrieta', description: 'How to design a beautiful yard that thrives in Southern California heat without spiking your water bill.', href: '/blog/drought-tolerant-landscaping-murrieta' },
+          { title: 'Landscaping Cost in Murrieta, CA', description: 'A realistic breakdown of what landscape design, lawn care, and yard transformations cost in 2025.', href: '/blog/landscaping-cost-murrieta' },
+          { title: 'Irrigation System Cost in Murrieta', description: 'What to budget for drip systems, smart controllers, and water rebates from EVMWD and RCWD.', href: '/blog/drip-irrigation-upgrade-murrieta' },
+        ].map(post => (
+          <a href={post.href} class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
+            <h3 class="font-bold text-primary text-base leading-snug">{post.title}</h3>
+            <p class="text-gray-600 text-sm flex-1">{post.description}</p>
+            <span class="text-cta text-sm font-semibold">Read more →</span>
+          </a>
+        ))}
+      </div>
+      <div class="text-center mt-8">
+        <a href="/blog" class="text-cta font-semibold hover:underline">See all articles →</a>
+      </div>
     </div>
   </section>
 

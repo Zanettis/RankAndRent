@@ -67,7 +67,7 @@ Planting costs vary more than any other line item because plant selection is so 
 
 ## Irrigation System: $2,500–$8,000
 
-A new or replacement irrigation system is often the unsexy but essential backbone of any landscape project:
+A new or replacement [irrigation system](/services/irrigation) is often the unsexy but essential backbone of any landscape project:
 
 **New drip system for existing yard** (converting spray heads to drip, adding emitters for new plants): $2,500–$4,500.
 
@@ -111,4 +111,4 @@ Not all landscape budget is equal. Some investments compound over time; others d
 
 **Save on decorative lighting**: Outdoor lighting looks great but is often best added after you've lived with the space for a full year and know where you actually spend time after dark. It's easy to add; it's harder to change once installed in concrete.
 
-Get a written, itemized proposal before committing to any landscaping project. Any professional Murrieta landscaper will provide one — if they won't, that's a red flag. Verbal quotes don't protect you when scope expands or costs run over. The proposal should specify materials, quantities, plant species and sizes, and warranty terms for both plants and installation work.
+See our [landscape design service](/services/landscape-design) for what a full project includes. Get a written, itemized proposal before committing to any landscaping project. Any professional Murrieta landscaper will provide one — if they won't, that's a red flag. Verbal quotes don't protect you when scope expands or costs run over. The proposal should specify materials, quantities, plant species and sizes, and warranty terms for both plants and installation work.

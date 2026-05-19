@@ -74,6 +74,6 @@ If your HOA still has a minimum turf requirement in its guidelines but you want 
 
 ## Making the Process Manageable
 
-HOA landscape approval doesn't have to mean months of delays and frustration. Working with a landscape designer who knows Murrieta's communities means your submission package is complete the first time, your plant selections stay within approved parameters, and your design accounts for height restrictions and material requirements before anything is drawn up.
+HOA landscape approval doesn't have to mean months of delays and frustration. Our [landscape design service](/services/landscape-design) includes HOA submission handling — your package is complete the first time, your plant selections stay within approved parameters, and your design accounts for height restrictions and material requirements before anything is drawn up.
 
 The goal is one clean submission, a fast review, and approval — not three rounds of revisions while your project sits on hold. A free consultation is the right starting point.

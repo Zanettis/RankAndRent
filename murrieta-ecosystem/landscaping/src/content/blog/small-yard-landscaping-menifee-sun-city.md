@@ -85,4 +85,4 @@ For a front yard or backyard project in the 1,500–3,000 square foot range, com
 
 **Phasing is a completely reasonable approach**: tackle the front yard in year one (highest visibility, best ROI from curb appeal, often the HOA priority) and phase the backyard to a subsequent season. This allows you to spread cost, apply lessons from the first phase to the second, and live with the front yard design before committing to the back.
 
-If you're ready to talk through options for your Menifee or Sun City yard, reach out through our [contact page](/contact) for a free consultation. We work regularly throughout Menifee and Sun City and know the local HOA requirements well.
+If you're ready to talk through options for your [Menifee](/menifee) or Sun City yard, reach out through our [contact page](/contact) for a free consultation. We work regularly throughout Menifee and Sun City and know the local HOA requirements well.

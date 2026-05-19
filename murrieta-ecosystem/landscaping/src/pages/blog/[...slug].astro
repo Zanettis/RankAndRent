@@ -103,6 +103,15 @@ const howToSchema = post.data.howToSteps?.length ? {
       />
     </div>
 
+    <div class="mt-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+      <h3 class="font-bold text-primary text-lg mb-3">Our Landscaping Services</h3>
+      <ul class="grid grid-cols-2 gap-2 text-sm">
+        {SITE_CONFIG.services.map(s => (
+          <li><a href={s.href} class="text-cta hover:underline">{s.title}</a></li>
+        ))}
+      </ul>
+    </div>
+
     <div class="mt-12 pt-8 border-t border-gray-200">
       <LeadForm heading="Ready to Transform Your Murrieta Yard? Get a Free Consultation" />
     </div>

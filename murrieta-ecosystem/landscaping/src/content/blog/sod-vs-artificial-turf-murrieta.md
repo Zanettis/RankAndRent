@@ -84,4 +84,4 @@ For **backyards with kids and pets**, real grass is often the better choice — 
 
 For **drought-conscious homeowners** who want the lowest possible water bills, consider a **drought-tolerant design** with decomposed granite, mulch, and native plants as a third option — less water than sod, no heat issues of turf.
 
-We install both sod and artificial turf throughout Murrieta, Temecula, Wildomar, and Menifee. Contact us for a free on-site consultation to assess your yard's specific conditions.
+We handle [sod installation](/services/sod-installation) and artificial turf throughout Murrieta, Temecula, Wildomar, and Menifee. Contact us for a free on-site consultation to assess your yard's specific conditions.

@@ -65,7 +65,7 @@ Cool-season fescue should be fertilized in fall (September–November) and late 
 
 ## When to Call a Professional
 
-Most Murrieta homeowners can handle routine mowing and basic watering on their own. Call a professional landscaper when you're dealing with:
+Most Murrieta homeowners can handle routine mowing and basic watering on their own. Our [lawn care service](/services/lawn-care) covers all of the following — call a professional when you're dealing with:
 - Persistent bare or thin patches despite consistent watering and fertilizing
 - Recurring disease or insect pressure
 - A yard-wide renovation or conversion project

@@ -89,4 +89,4 @@ A complete professional irrigation installation from a reputable Murrieta landsc
 
 The difference between a properly designed system and a rushed one shows up in your water bill and in the health of your plants — a system that delivers water in the wrong amounts or at the wrong rates damages plants and wastes money regardless of what you paid for the hardware.
 
-If you're planning a new irrigation system or thinking about upgrading an aging one, contact us through our [contact page](/contact) for a free consultation and estimate. We'll assess your current setup, identify rebate opportunities, and give you a clear proposal before any work begins.
+If you're planning a new irrigation system or thinking about upgrading an aging one, learn more about our [irrigation services](/services/irrigation) or contact us for a free consultation and estimate. We'll assess your current setup, identify rebate opportunities, and give you a clear proposal before any work begins.
