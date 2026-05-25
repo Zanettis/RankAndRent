@@ -152,6 +152,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"affordable-tree-service-murrieta.md": {
+	id: "affordable-tree-service-murrieta.md";
+  slug: "affordable-tree-service-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "best-time-to-trim-trees-murrieta.md": {
 	id: "best-time-to-trim-trees-murrieta.md";
   slug: "best-time-to-trim-trees-murrieta";
@@ -173,6 +180,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"dead-tree-signs-murrieta.md": {
+	id: "dead-tree-signs-murrieta.md";
+  slug: "dead-tree-signs-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "emergency-tree-service-murrieta.md": {
 	id: "emergency-tree-service-murrieta.md";
   slug: "emergency-tree-service-murrieta";
@@ -190,6 +204,13 @@ declare module 'astro:content' {
 "how-to-identify-dead-dying-tree-murrieta.md": {
 	id: "how-to-identify-dead-dying-tree-murrieta.md";
   slug: "how-to-identify-dead-dying-tree-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"how-to-prune-trees-murrieta.md": {
+	id: "how-to-prune-trees-murrieta.md";
+  slug: "how-to-prune-trees-murrieta";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -229,6 +250,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"tree-removal-murrieta-ca-guide.md": {
+	id: "tree-removal-murrieta-ca-guide.md";
+  slug: "tree-removal-murrieta-ca-guide";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "tree-removal-permit-murrieta-temecula.md": {
 	id: "tree-removal-permit-murrieta-temecula.md";
   slug: "tree-removal-permit-murrieta-temecula";
@@ -239,6 +267,13 @@ declare module 'astro:content' {
 "tree-service-temecula-ca.md": {
 	id: "tree-service-temecula-ca.md";
   slug: "tree-service-temecula-ca";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"tree-service-wildomar-ca.md": {
+	id: "tree-service-wildomar-ca.md";
+  slug: "tree-service-wildomar-ca";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
