@@ -1,7 +1,7 @@
 export const SITE_CONFIG = {
   name: 'Murrieta Landscaping',
   shortName: 'Landscaping Murrieta',
-  phone: '(951) 555-0202',
+  phone: '(814) 936-2501',
   email: 'info@landscapingmurrieta.com',
   address: 'Murrieta, CA 92562',
   domain: 'https://landscapingmurrieta.com',

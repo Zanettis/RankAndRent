@@ -1,7 +1,7 @@
 export const SITE_CONFIG = {
   name: 'Murrieta Concrete Works',
   shortName: 'Concrete Murrieta',
-  phone: '(951) 555-0303',
+  phone: '(814) 936-2501',
   email: 'info@murrietaconcreteworks.com',
   address: 'Murrieta, CA 92562',
   domain: 'https://murrietaconcreteworks.com',
@@ -30,5 +30,6 @@ export const SITE_CONFIG = {
     { city: 'Fallbrook', href: '/fallbrook' },
     { city: 'Lake Elsinore', href: '/lake-elsinore' },
     { city: 'Canyon Lake', href: '/canyon-lake' },
+    { city: 'Winchester', href: '/winchester' },
   ],
 };
