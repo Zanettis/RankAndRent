@@ -41,6 +41,16 @@ Mudança em qualquer um desses arquivos deve ser aplicada nos 3 sites:
 
 Se a mudança for intencional em apenas 1 site, documente o motivo no commit.
 
+### astro.config.mjs — Configuração canônica obrigatória
+
+`trailingSlash: 'always'` **DEVE** permanecer nos 3 sites. Sem ele:
+- O Astro auto-gera o canonical sem barra: `https://site.com/services/tree-removal`
+- O Vercel serve a página com barra: `https://site.com/services/tree-removal/`
+- O Google detecta o mismatch e marca a página como "Alternate page with proper canonical"
+- A página **não é indexada**
+
+**Nunca remover essa opção.** Já está configurada nos 3 sites desde mai/2026.
+
 ---
 
 ### Componentes de Conteúdo — podem variar por site
@@ -155,13 +165,43 @@ Os `config.ts` dos 3 sites usam números fictícios (555-XXXX). Esses números a
 
 > Antes de criar uma comparison page nova, verificar sempre com `ls src/pages/` — o agente explorador já deixou de detectar páginas existentes nesse projeto.
 
-#### Blog posts (contagem aproximada, maio 2026)
-- tree-service: ~13 posts
+#### Blog posts (contagem, maio 2026)
+- tree-service: 20 posts
 - landscaping: ~16 posts
 - concrete: ~15 posts
 
 #### City landing pages (com FAQPage schema)
-7 cidades × 3 sites = 21 páginas: Murrieta, Temecula, Wildomar, Menifee, Perris, San Jacinto, Hemet, Fallbrook
+- tree-service: 10 cidades (Temecula, Wildomar, Menifee, Hemet, Perris, San Jacinto, Fallbrook, Lake Elsinore, Canyon Lake, Winchester)
+- landscaping e concrete: verificar com `ls src/pages/` — não usar contagem genérica como referência
+
+---
+
+### Adicionando Novas Páginas — Checklist de Indexação
+
+Qualquer nova página (blog post, serviço, cidade) aparece automaticamente no sitemap após o build. Para garantir que será indexada corretamente pelo Google:
+
+#### Blog posts (`src/content/blog/*.md`)
+- [ ] Frontmatter tem `title`, `description`, e `pubDate` no **passado** (formato `YYYY-MM-DD`)
+- [ ] **SEM** `draft: true` no frontmatter
+- [ ] Verificar no build log: `/blog/slug-do-post/index.html` deve aparecer na seção "prerendering static routes"
+- [ ] Conteúdo com ≥600 palavras; evitar repetição de texto de outros posts
+
+#### Service pages (`src/pages/services/*.astro`)
+- [ ] Arquivo **não** tem `export const prerender = false`
+- [ ] Verificar no build log: `/services/nome-do-serviço/index.html` deve aparecer
+- [ ] Incluir `Service` + `BreadcrumbList` schema (usar outro arquivo de serviço como referência)
+
+#### City pages (`src/pages/{cidade}.astro`)
+- [ ] Arquivo **não** tem `export const prerender = false`
+- [ ] Verificar no build log: `/nome-da-cidade/index.html` deve aparecer
+- [ ] Incluir `FAQPage` schema com 3–4 perguntas locais
+- [ ] **Não** é necessário passar `canonicalUrl` explícito — com `trailingSlash: 'always'`, o auto-gerado já inclui trailing slash e está correto
+
+#### Após adicionar qualquer página nova
+1. `npm run build` → confirmar que a página aparece no log de prerender
+2. Commit e push → Vercel rebuilda automaticamente
+3. No GSC: **Indexação → Sitemaps → Resubmeter** `sitemap-index.xml`
+4. Para indexação rápida: GSC → **Inspecionar URL** → "Solicitar indexação"
 
 ---
 
@@ -209,6 +249,12 @@ cd murrieta-ecosystem/concrete && npm run build
 ```
 
 Build falhou = não commitar. Corrija primeiro.
+
+**Verificar contagem de páginas no build log:** o log lista cada página prerendered. Para confirmar que nenhuma página foi omitida:
+```bash
+npm run build 2>&1 | grep "index.html" | wc -l
+```
+Comparar com o inventário esperado (tree-service ≈ 44 páginas em mai/2026).
 
 **Sinal de saúde no log do build:** a linha `[build] output: "hybrid"` deve aparecer sempre. Se aparecer `[build] output: "static"`, o Vercel está buildando do diretório errado (ver seção Vercel abaixo).
 
@@ -275,6 +321,8 @@ Cada site deve ter:
 | Sintoma no Search Console | Causa | Fix |
 |---|---|---|
 | "Página alternativa com tag canônica adequada" em ~N páginas | `www.dominio.com` acessível sem redirect; Google rastreia ambas as versões | Garantir o bloco `redirects` no `vercel.json` redirecionando `www` → não-`www` |
+| "Página alternativa com tag canônica adequada" na maioria das páginas | `trailingSlash` não definido no `astro.config.mjs` — canonical sem barra, Vercel serve com barra | `trailingSlash: 'always'` no `astro.config.mjs` (já corrigido em mai/2026) |
+| "Rastreada, mas não indexada no momento" | Conteúdo thin ou muito similar a outras páginas do site | Melhorar o conteúdo — adicionar FAQs, detalhes locais, estatísticas; não é problema técnico |
 
 ---
 
@@ -329,7 +377,7 @@ cd murrieta-ecosystem/tree-service && npm run preview
 │   │   ├── index.astro
 │   │   ├── contact.astro
 │   │   ├── blog/
-│   │   └── services/      ← 4 páginas de serviço por site
+│   │   └── services/      ← varia por site (tree-service tem 7; verificar com ls src/pages/services/)
 │   └── content/
 │       └── blog/          ← posts em markdown
 ├── public/                ← imagens, favicon
