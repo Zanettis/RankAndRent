@@ -1,7 +1,7 @@
 export const SITE_CONFIG = {
   name: 'Murrieta Tree Experts',
   shortName: 'Murrieta Tree Experts',
-  phone: '(814) 936-2501',
+  phone: '(341) 237-3729',
   email: 'info@murrietatreeexperts.com',
   address: 'Murrieta, CA 92562',
   domain: 'https://murrietatreeexperts.com',
