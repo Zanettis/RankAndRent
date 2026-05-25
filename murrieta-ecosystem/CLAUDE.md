@@ -167,12 +167,13 @@ Os `config.ts` dos 3 sites usam números fictícios (555-XXXX). Esses números a
 
 #### Blog posts (contagem, maio 2026)
 - tree-service: 20 posts
-- landscaping: ~16 posts
+- landscaping: 18 posts
 - concrete: ~15 posts
 
 #### City landing pages (com FAQPage schema)
 - tree-service: 10 cidades (Temecula, Wildomar, Menifee, Hemet, Perris, San Jacinto, Fallbrook, Lake Elsinore, Canyon Lake, Winchester)
-- landscaping e concrete: verificar com `ls src/pages/` — não usar contagem genérica como referência
+- landscaping: 10 cidades (Temecula, Wildomar, Menifee, Hemet, Perris, San Jacinto, Fallbrook, Lake Elsinore, Canyon Lake, Winchester) — **43 páginas total no build (mai/2026)**
+- concrete: verificar com `ls src/pages/` — não usar contagem genérica como referência
 
 ---
 

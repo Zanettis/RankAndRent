@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { SITE_CONFIG } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Do you provide landscaping services on rural and horse properties in Winchester, CA?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — we regularly work on rural and semi-rural lots throughout Winchester, including horse properties, acreage parcels, and newer tract homes in communities like Winchester Commons and Morningstar Ranch. Whether you need a full landscape design on an open rural lot or recurring lawn maintenance on a newer subdivision home, we bring the right crew and equipment for the property type.' } },
+    { '@type': 'Question', name: 'What landscaping styles work well in Winchester, CA?', acceptedAnswer: { '@type': 'Answer', text: "Winchester's inland, semi-rural character lends itself to California native plantings, drought-tolerant Mediterranean gardens, and low-water ranch-style landscapes. Agave, native grasses, rosemary, and ornamental sages thrive in Winchester's hot, dry summers and require minimal irrigation once established. For homeowners who want green lawn year-round, we also offer warm-season sod varieties well-suited to inland Southern California." } },
+    { '@type': 'Question', name: 'Can you help with drought-tolerant landscaping in Winchester?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely — drought-tolerant design is one of our specialties in inland Riverside County. Winchester homeowners benefit from removing traditional turf and replacing it with water-wise ground covers, decomposed granite, native plants, and drip irrigation. We also assist with EVMWD water rebate applications for qualifying turf removal projects, which can offset installation costs significantly.' } },
+    { '@type': 'Question', name: 'How much does landscaping cost in Winchester, CA?', acceptedAnswer: { '@type': 'Answer', text: 'Winchester landscaping projects typically range from $3,500–$15,000+ depending on lot size, scope, and whether the project includes hardscape elements like patios, retaining walls, or decomposed granite pathways. Rural properties with larger square footage or challenging terrain may be at the higher end. We provide free on-site consultations and written proposals — no phone estimates since every yard is different.' } },
+  ],
+};
+---
+
+<BaseLayout
+  title="Landscaping Winchester, CA | Lawn Care, Design & Drought-Tolerant Yards"
+  description="Professional landscaping and lawn care in Winchester, CA. Drought-tolerant designs, irrigation, sod installation, and yard cleanup for rural properties and tract homes. Free consultations."
+  canonicalUrl="https://landscapingmurrieta.com/winchester/"
+>
+  <Hero
+    headline="Landscaping & Lawn Care in Winchester, CA"
+    subheadline="Serving Winchester's rural properties, horse lots, and newer tract homes. Drought-tolerant designs, irrigation, sod installation, and ongoing maintenance. Free on-site consultations."
+    ctaText="Get a Free Consultation"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
+  />
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-primary text-center mb-4">Landscaping Services in Winchester</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+      From full landscape designs on rural acreage to weekly lawn maintenance on newer subdivision lots, we handle every aspect of landscaping in Winchester — built for the inland Riverside County climate.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {SITE_CONFIG.services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} href={service.href} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-none prose-headings:text-primary">
+      <h2>Landscaping for Winchester's Diverse Property Types</h2>
+      <p>
+        Winchester spans a wide range of property types — from newer master-planned communities like Winchester Commons and Morningstar Ranch to established horse properties and open agricultural parcels along Leon Road and Benton Road. Tract home lots often need regular lawn care and irrigation maintenance, while rural acreage properties may need full landscape designs starting from bare dirt. Our team has worked across all of these property types and understands the practical differences in planning, plant selection, and installation.
+      </p>
+
+      <h2>Drought-Tolerant and Water-Wise Landscaping</h2>
+      <p>
+        Winchester's hot, dry summers and limited rainfall make water-efficient landscaping both practical and increasingly required. We design drought-tolerant landscapes using California natives, Mediterranean plants, decomposed granite, and drip irrigation that deliver a finished, polished look without the water cost of traditional lawn. Many Winchester homeowners qualify for turf replacement rebates through EVMWD — we help with the application process and design the replacement planting to meet program requirements.
+      </p>
+
+      <h2>Irrigation Installation and Efficiency Upgrades</h2>
+      <p>
+        Proper irrigation is the backbone of any Winchester landscape. Whether you need a new drip system on a rural property, a smart controller upgrade on an existing subdivision system, or a full irrigation design as part of a landscape install, we size and install systems that match your plant material and soil type. We also diagnose and repair existing systems — many Winchester homes have aging spray heads or controllers that waste significant water and result in higher bills.
+      </p>
+
+      <h2>Why Winchester Homeowners Choose Us</h2>
+      <p>
+        We're based in the Murrieta/Temecula Valley and serve all of Winchester with no travel fees. Our team is fully licensed and insured, with experience on everything from small subdivision front yards to large acreage projects. We provide free on-site consultations, written proposals before any work starts, and realistic timelines. Every installation comes with a satisfaction guarantee — we stand behind the work we do.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Area -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Also Serving the Surrounding Area</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['Murrieta', 'Temecula', 'Menifee', 'Wildomar', 'Lake Elsinore', 'Perris', 'Hemet', 'San Jacinto'].map(city => (
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-sm">{city}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <section class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions — Landscaping in Winchester, CA</h2>
+    <div class="space-y-4">
+      {[
+        { q: "Do you provide landscaping services on rural and horse properties in Winchester, CA?", a: "Yes — we regularly work on rural and semi-rural lots throughout Winchester, including horse properties, acreage parcels, and newer tract homes in communities like Winchester Commons and Morningstar Ranch. Whether you need a full landscape design on an open rural lot or recurring lawn maintenance on a newer subdivision home, we bring the right crew and equipment for the property type." },
+        { q: "What landscaping styles work well in Winchester, CA?", a: "Winchester's inland, semi-rural character lends itself to California native plantings, drought-tolerant Mediterranean gardens, and low-water ranch-style landscapes. Agave, native grasses, rosemary, and ornamental sages thrive in Winchester's hot, dry summers and require minimal irrigation once established. For homeowners who want green lawn year-round, we also offer warm-season sod varieties well-suited to inland Southern California." },
+        { q: "Can you help with drought-tolerant landscaping in Winchester?", a: "Absolutely — drought-tolerant design is one of our specialties in inland Riverside County. Winchester homeowners benefit from removing traditional turf and replacing it with water-wise ground covers, decomposed granite, native plants, and drip irrigation. We also assist with EVMWD water rebate applications for qualifying turf removal projects, which can offset installation costs significantly." },
+        { q: "How much does landscaping cost in Winchester, CA?", a: "Winchester landscaping projects typically range from $3,500–$15,000+ depending on lot size, scope, and whether the project includes hardscape elements like patios, retaining walls, or decomposed granite pathways. Rural properties with larger square footage or challenging terrain may be at the higher end. We provide free on-site consultations and written proposals — no phone estimates since every yard is different." },
+      ].map(({ q, a }) => (
+        <details class="border border-gray-200 rounded-xl overflow-hidden group">
+          <summary class="flex justify-between items-center px-6 py-4 cursor-pointer font-semibold text-primary hover:bg-gray-50 list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <LeadForm heading="Schedule Your Free Landscaping Consultation in Winchester" />
+  </section>
+</BaseLayout>

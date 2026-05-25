@@ -25,5 +25,6 @@ export const SITE_CONFIG = {
     { city: 'Fallbrook', href: '/fallbrook' },
     { city: 'Lake Elsinore', href: '/lake-elsinore' },
     { city: 'Canyon Lake', href: '/canyon-lake' },
+    { city: 'Winchester', href: '/winchester' },
   ],
 };
