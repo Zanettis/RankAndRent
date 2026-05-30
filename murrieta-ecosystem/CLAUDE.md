@@ -186,6 +186,7 @@ Qualquer nova página (blog post, serviço, cidade) aparece automaticamente no s
 - [ ] **SEM** `draft: true` no frontmatter
 - [ ] Verificar no build log: `/blog/slug-do-post/index.html` deve aparecer na seção "prerendering static routes"
 - [ ] Conteúdo com ≥600 palavras; evitar repetição de texto de outros posts
+- [ ] **Extensão `.md`, não `.mdx`** — use `.mdx` apenas se o post importar e renderizar componentes JSX/Astro dentro do conteúdo. `.mdx` sem JSX força o bundler a incluir o runtime completo do MDX na função serverless, causando `Fatal process out of memory: Zone` durante o build e quebrando todas as páginas do blog.
 
 #### Service pages (`src/pages/services/*.astro`)
 - [ ] Arquivo **não** tem `export const prerender = false`
