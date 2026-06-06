@@ -43,13 +43,17 @@ Se a mudança for intencional em apenas 1 site, documente o motivo no commit.
 
 ### astro.config.mjs — Configuração canônica obrigatória
 
-`trailingSlash: 'always'` **DEVE** permanecer nos 3 sites. Sem ele:
-- O Astro auto-gera o canonical sem barra: `https://site.com/services/tree-removal`
-- O Vercel serve a página com barra: `https://site.com/services/tree-removal/`
-- O Google detecta o mismatch e marca a página como "Alternate page with proper canonical"
-- A página **não é indexada**
+`trailingSlash: 'ignore'` **DEVE** permanecer nos 3 sites. **Nunca mudar para `'always'`.**
 
-**Nunca remover essa opção.** Já está configurada nos 3 sites desde mai/2026.
+**Por quê `'ignore'` e não `'always'`:** com `output: 'hybrid'` e rotas dinâmicas `[...slug].astro`, o adapter `@astrojs/vercel` gera uma regra catch-all em `.vercel/output/config.json`:
+```json
+{"src": "/blog(?:\\/(.*?))?", "headers": {"Location": "/blog/$1/"}, "status": 308}
+```
+Essa regra captura `/blog/` (que já tem trailing slash) com `$1 = ""` (vazio) → redirect para `/blog//` → Vercel normaliza para `/blog/` → loop infinito de 308. Isso quebrou os blogs dos 3 sites simultaneamente em jun/2026.
+
+Com `'ignore'`, o adapter não gera essa regra. Páginas são servidas em `/blog/` e `/blog` sem redirect. Canônicos são gerados corretamente pelo Astro via `site` config no frontmatter.
+
+**SEO:** A consistência de canonical é garantida pelas tags `<link rel="canonical">` geradas no `BaseLayout.astro` — não pelo redirect de barra. O `vercel.json` de cada site garante `www` → não-`www` com `/(.*)`/`$1` (que preserva a barra). Configurado nos 3 sites desde jun/2026.
 
 ---
 
@@ -165,10 +169,10 @@ Os `config.ts` dos 3 sites usam números fictícios (555-XXXX). Esses números a
 
 > Antes de criar uma comparison page nova, verificar sempre com `ls src/pages/` — o agente explorador já deixou de detectar páginas existentes nesse projeto.
 
-#### Blog posts (contagem, maio 2026)
+#### Blog posts (contagem, junho 2026)
 - tree-service: 20 posts
-- landscaping: 18 posts
-- concrete: ~15 posts
+- landscaping: 22 posts
+- concrete: 28 posts
 
 #### City landing pages (com FAQPage schema)
 - tree-service: 10 cidades (Temecula, Wildomar, Menifee, Hemet, Perris, San Jacinto, Fallbrook, Lake Elsinore, Canyon Lake, Winchester)
@@ -197,7 +201,7 @@ Qualquer nova página (blog post, serviço, cidade) aparece automaticamente no s
 - [ ] Arquivo **não** tem `export const prerender = false`
 - [ ] Verificar no build log: `/nome-da-cidade/index.html` deve aparecer
 - [ ] Incluir `FAQPage` schema com 3–4 perguntas locais
-- [ ] **Não** é necessário passar `canonicalUrl` explícito — com `trailingSlash: 'always'`, o auto-gerado já inclui trailing slash e está correto
+- [ ] **Não** é necessário passar `canonicalUrl` explícito — o `BaseLayout.astro` gera o canonical automaticamente via `Astro.url.href`
 
 #### Após adicionar qualquer página nova
 1. `npm run build` → confirmar que a página aparece no log de prerender
@@ -323,7 +327,7 @@ Cada site deve ter:
 | Sintoma no Search Console | Causa | Fix |
 |---|---|---|
 | "Página alternativa com tag canônica adequada" em ~N páginas | `www.dominio.com` acessível sem redirect; Google rastreia ambas as versões | Garantir o bloco `redirects` no `vercel.json` redirecionando `www` → não-`www` |
-| "Página alternativa com tag canônica adequada" na maioria das páginas | `trailingSlash` não definido no `astro.config.mjs` — canonical sem barra, Vercel serve com barra | `trailingSlash: 'always'` no `astro.config.mjs` (já corrigido em mai/2026) |
+| "Página alternativa com tag canônica adequada" na maioria das páginas | `www.` acessível sem redirect, ou canônicos inconsistentes | Verificar bloco `redirects` no `vercel.json` de cada site; confirmar domínio não-www como primário no Vercel dashboard |
 | "Rastreada, mas não indexada no momento" | Conteúdo thin ou muito similar a outras páginas do site | Melhorar o conteúdo — adicionar FAQs, detalhes locais, estatísticas; não é problema técnico |
 
 ---
