@@ -34,7 +34,7 @@ California native plants are uniquely adapted to our climate — drought in summ
 
 Even drought-tolerant plants need water during the first two years of establishment, and continued supplemental irrigation during Murrieta's hottest summer stretches. The difference is how much water and how it's delivered.
 
-Drip irrigation delivers water slowly and directly to the root zone, reducing evaporation by 30–50% compared to spray systems. When buried under 3–4 inches of organic mulch, drip systems lose virtually no water to evaporation at all. Combined with a smart controller that adjusts schedules based on weather data, a properly designed drip system can maintain a drought-tolerant garden at 25–40% of what a traditional spray system would use.
+Drip irrigation delivers water slowly and directly to the root zone, reducing evaporation by 30–50% compared to spray systems. When buried under 3–4 inches of organic mulch, drip systems lose virtually no water to evaporation at all. Combined with a smart controller that adjusts schedules based on weather data, a properly designed drip system can maintain a drought-tolerant garden at 25–40% of what a traditional spray system would use. Our [irrigation installation service](/services/irrigation/) can design a drip system custom-matched to your drought-tolerant plant layout.
 
 ## Hardscaping as Water-Smart Design
 

@@ -73,4 +73,4 @@ The plants on this list don't just survive Murrieta's conditions. Once they're e
 
 **The overwatering trap**: The most common way homeowners kill drought-tolerant plants is by treating them the same as conventional plants. California natives and Mediterranean-climate species are adapted to dry summers. Frequent summer irrigation can cause root rot and rapid decline in species that would otherwise thrive for decades.
 
-Ready to design a drought-tolerant landscape for your Murrieta yard? Visit our [contact page](/contact) to schedule a free consultation. We'll assess your soil, sun exposure, and HOA requirements and recommend a plant palette that will look great for years without running up your water bill.
+Ready to design a drought-tolerant landscape for your Murrieta yard? Our [landscape design service](/services/landscape-design/) includes plant selection tailored to Murrieta's clay soil and HOA requirements, paired with a [drip irrigation system](/services/irrigation/) that keeps established plants healthy without waste. Visit our [contact page](/contact) to schedule a free consultation.

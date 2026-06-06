@@ -98,4 +98,4 @@ Most of the steps above are DIY-friendly for a capable homeowner. Call a profess
 
 A professional seasonal prep service covering aeration, dethatch where needed, fertilization, and irrigation audit typically runs $150–$400 for a standard Murrieta yard depending on size and condition — less than the cost of reseeding or sodding a lawn that was allowed to deteriorate through a summer without proper preparation.
 
-Don't wait until your lawn is struggling in July. Contact us through our [contact page](/contact) for a free consultation on getting your Murrieta lawn ready for the dry season.
+Don't wait until your lawn is struggling in July. Our [professional lawn care service](/services/lawn-care/) covers seasonal prep, aeration, and irrigation audits throughout Murrieta. Contact us through our [contact page](/contact) for a free consultation on getting your Murrieta lawn ready for the dry season.

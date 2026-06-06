@@ -67,7 +67,7 @@ This is the area where things have improved significantly for homeowners. Califo
 
 That said, HOAs still retain the right to require that drought-tolerant designs meet reasonable aesthetic standards, use appropriate materials, and follow submission procedures. "California law allows it" does not mean "no submission required." It means the committee can't reject a well-designed water-wise landscape purely because they prefer the look of grass.
 
-Working with an experienced landscaper who knows both the state law and your specific community's guidelines gives you the best chance of a smooth, fast approval — particularly for turf replacement projects where HOA-approved drought-tolerant plant lists and EVMWD or RCWD rebate requirements both need to be satisfied simultaneously.
+Working with our [professional landscape design team](/services/landscape-design/) — who regularly work in Murrieta and Temecula communities — gives you the best chance of a smooth, fast approval, particularly for turf replacement projects where HOA-approved drought-tolerant plant lists and EVMWD or RCWD rebate requirements both need to be satisfied simultaneously.
 
 ## How a Professional Landscaper Helps With HOA Submissions
 

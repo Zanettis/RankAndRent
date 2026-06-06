@@ -27,7 +27,7 @@ Plants installed in fall establish significantly faster than those installed in 
 Spring is a popular landscaping window and works well for most plant types. Temperatures are moderate, soil is warming, and plants respond quickly to new conditions.
 
 **What works well in spring:**
-- Lawn installation (sod and seeding)
+- [Lawn installation and sod](/services/sod-installation/) (sod and seeding)
 - Colorful annuals and warm-season perennials
 - Drip irrigation installation (before summer heat)
 - Concrete and hardscape work (before summer heat rush)
@@ -90,4 +90,4 @@ Concrete and paver work isn't sensitive to planting seasons, but it is sensitive
 
 ---
 
-Ready to start planning your project? We offer free on-site consultations throughout Murrieta, Temecula, Wildomar, Menifee, Lake Elsinore, and Canyon Lake. Contact us to schedule a visit — we'll assess your yard, discuss timing, and give you a realistic picture of what your project will involve.
+Ready to start planning your project? We offer free on-site consultations throughout Murrieta, Temecula, Wildomar, Menifee, Lake Elsinore, and Canyon Lake. Contact us to schedule a [landscape design consultation](/services/landscape-design/) — we'll assess your yard, discuss timing, and give you a realistic picture of what your project will involve.

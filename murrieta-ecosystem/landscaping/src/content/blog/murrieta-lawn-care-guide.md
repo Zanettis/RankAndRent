@@ -4,6 +4,15 @@ description: "Complete lawn care guide for Murrieta, CA homeowners. Watering sch
 pubDate: 2025-02-20
 author: "Murrieta Landscaping Pros"
 tags: ["lawn care", "murrieta", "grass", "watering", "fertilizing"]
+howToSteps:
+  - name: "Identify your grass type"
+    text: "Determine whether you have a warm-season grass (Bermuda, St. Augustine, Zoysia — goes dormant brown in winter, grows vigorously in summer) or a cool-season grass (tall fescue — stays green through Murrieta's mild winters, struggles in peak summer heat). Watering, fertilizing, and mowing schedules are entirely different for each type."
+  - name: "Set your watering schedule by grass type and season"
+    text: "Warm-season grasses in summer: water 3 days per week maximum, deeply enough to saturate 4–6 inches of soil, before 8 AM to comply with EVMWD and RCWD time-of-day restrictions. In winter dormancy, reduce to once every 3–4 weeks. Fescue needs consistent moisture year-round. Avoid shallow daily watering for any grass type."
+  - name: "Fertilize at the correct time for your grass type"
+    text: "Warm-season grasses (Bermuda, St. Augustine, Zoysia): fertilize when actively growing — April, June, and no later than August. Cool-season fescue: fertilize in fall (September–November) and late winter (February–March). Never apply high-nitrogen fertilizer in peak summer — it forces lush growth that demands more water and is more vulnerable to heat stress."
+  - name: "Mow at the right height for summer heat tolerance"
+    text: "Raise mowing height in summer. Taller grass shades the soil surface, reducing surface temperature and evaporation. Tall fescue: 3–3.5 inches for summer. Bermuda: 1.5–2 inches. St. Augustine: 3–4 inches. Never remove more than one-third of the blade height in a single mowing — scalping stressed summer grass accelerates damage and delays recovery."
 ---
 
 Murrieta's climate is genuinely beautiful for outdoor living, but it's challenging for lawns. With summer temperatures regularly exceeding 100°F, 12 inches of annual rainfall, and California's water restrictions, maintaining a lush, green lawn requires understanding what your grass actually needs — not what lawn care programs designed for wetter climates recommend.

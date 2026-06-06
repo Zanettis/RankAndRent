@@ -4,6 +4,17 @@ description: "How to get HOA approval for landscaping changes in Murrieta, CA. C
 pubDate: 2025-05-15
 author: "Murrieta Landscaping Pros"
 tags: ["HOA", "murrieta", "landscape design", "compliance", "Bear Creek", "Greer Ranch"]
+howToSteps:
+  - name: "Download and read your HOA's architectural guidelines before designing"
+    text: "Most Murrieta HOA communities publish an architectural guide or CC&Rs document specifying approved plant species, height restrictions by zone, allowable hardscape materials and colors, irrigation requirements, and minimum coverage standards. Designing without reading these documents is the single most common reason submissions fail — your design may be beautiful but non-compliant on plant heights or materials."
+  - name: "Check water district rebate requirements if doing turf removal"
+    text: "If your project includes turf removal and you plan to apply for an EVMWD or RCWD rebate, confirm the rebate program's plant list requirements before finalizing your design. Rebate programs require specific plant types, minimum mulch coverage, and drip irrigation — designing to HOA standards without accounting for rebate requirements can mean meeting one set of rules while failing the other."
+  - name: "Prepare a complete submission package"
+    text: "Murrieta HOA submissions typically require: a dimensioned site plan to scale (not a hand sketch) showing property boundaries, the house footprint, hardscape elements, and plant locations; a plant list with species names, mature heights, quantities, and locations; material specifications for any concrete, pavers, or retaining walls; and an irrigation plan if your HOA requires drip for new front-yard plantings. Missing any element typically results in rejection without full review."
+  - name: "Submit before the committee's cutoff date"
+    text: "Many Murrieta HOAs have monthly architectural committee meetings — a submission that misses the cutoff sits until the following month. Bear Creek and similarly active committees can take 4–8 weeks. Confirm the submission format accepted (digital vs. paper), the cutoff date, and the expected review timeline before you submit."
+  - name: "Budget time for at least one revision cycle"
+    text: "First-time submissions to Murrieta HOAs are frequently returned with conditions or revision requests, even when well-prepared. Budget for a 2–4 week revision and resubmission window in your project timeline. If your project has a seasonal deadline, work backward from that date to set a realistic submission target."
 ---
 
 HOA approval is the number one source of frustration for Murrieta homeowners planning landscaping projects — more than cost, more than timeline, more than plant selection. You find the perfect design, get excited about it, and then spend two months in a back-and-forth with an architectural committee that keeps asking for more documentation. It's avoidable, but only if you understand the process before you start.

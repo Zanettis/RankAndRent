@@ -33,13 +33,13 @@ Expect the higher end of this range — or beyond it — if your yard has signif
 
 ### Lawn Installation — $1,500 to $4,000
 
-Sod installation in Murrieta typically runs $1.50 to $3.50 per square foot installed, depending on the turf variety and site prep required. Drought-tolerant turf like Bermuda or Zoysia tends to be slightly more affordable than tall fescue, which requires more water. Artificial turf installation runs higher — typically $8 to $18 per square foot installed — but eliminates ongoing water costs.
+Our [sod installation service](/services/sod-installation/) in Murrieta typically runs $1.50 to $3.50 per square foot, depending on the turf variety and site prep required. Drought-tolerant turf like Bermuda or Zoysia tends to be slightly more affordable than tall fescue, which requires more water. Artificial turf installation runs higher — typically $8 to $18 per square foot installed — but eliminates ongoing water costs.
 
 If your yard needs rototilling, soil amendment, or grading before installation, expect to add $500 to $2,000 to the base price.
 
 ### Irrigation System Installation — $2,500 to $6,000
 
-A properly designed irrigation system is one of the best investments you can make in inland Southern California. New system installations in Murrieta typically fall in this range, depending on yard size, number of zones, and controller type. See our full irrigation cost guide for a detailed breakdown.
+A properly designed irrigation system is one of the best investments you can make in inland Southern California. Our [irrigation system installation service](/services/irrigation/) covers new installs and upgrades throughout Murrieta; pricing typically falls in this range depending on yard size, zones, and controller type.
 
 ### Drought-Tolerant Conversion — $3,000 to $12,000
 
@@ -111,6 +111,6 @@ Getting 2 to 3 bids is always a good idea. When comparing them, look beyond the 
 
 ## Ready to Get an Accurate Quote for Your Murrieta Yard?
 
-Every property is different, and the best way to get an accurate number is to have a professional walk your yard. We offer free consultations for homeowners in Murrieta, Temecula, Wildomar, Menifee, and the surrounding Temecula Valley communities.
+Every property is different, and the best way to get an accurate number is to have a professional walk your yard. Our [landscape design team](/services/landscape-design/) offers free consultations for homeowners in Murrieta, Temecula, Wildomar, Menifee, and the surrounding Temecula Valley communities.
 
 Call us at **(951) 555-0202** or fill out our contact form to schedule your free consultation. We'll walk your property, discuss your goals and budget, and provide a detailed, itemized quote — no pressure, no obligation.

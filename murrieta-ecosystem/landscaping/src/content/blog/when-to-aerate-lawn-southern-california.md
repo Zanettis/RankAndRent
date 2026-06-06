@@ -90,4 +90,4 @@ Aeration is most effective as part of a combined maintenance sequence:
 
 **Overseed if needed** (for fescue): Fall aeration is the perfect time to overseed thin fescue areas. Seed dropped into aeration holes germinates faster and establishes more reliably than seed broadcast onto intact soil.
 
-Whether you need a one-time aeration or a complete seasonal lawn care program, we work regularly with homeowners throughout Murrieta, Temecula, and Menifee. Reach out through our [contact page](/contact) for a free estimate and a recommendation on what your specific grass type needs.
+Whether you need a one-time aeration or a complete [professional lawn care program in Murrieta](/services/lawn-care/), we work regularly with homeowners throughout Murrieta, Temecula, and Menifee. Reach out through our [contact page](/contact) for a free estimate and a recommendation on what your specific grass type needs.

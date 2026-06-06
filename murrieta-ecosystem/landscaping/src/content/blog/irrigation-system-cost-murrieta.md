@@ -122,6 +122,6 @@ Once your system is installed, a little routine maintenance goes a long way:
 
 ## Ready to Install or Upgrade Your Irrigation System?
 
-Whether you're starting from scratch or upgrading an aging system, the right irrigation setup will save you money on water bills, protect your landscape investment, and eliminate the guesswork of hand-watering through Murrieta's hot summers.
+Whether you're starting from scratch or upgrading an aging system, our [irrigation system installation service](/services/irrigation/) will save you money on water bills, protect your landscape investment, and eliminate the guesswork of hand-watering through Murrieta's hot summers.
 
 We serve homeowners throughout Murrieta, Temecula, Wildomar, Menifee, Lake Elsinore, and the surrounding Temecula Valley. Call us at **(951) 555-0202** to schedule your free consultation — we'll assess your yard, discuss your water goals, and provide a detailed, itemized quote for the system that makes sense for your property.
