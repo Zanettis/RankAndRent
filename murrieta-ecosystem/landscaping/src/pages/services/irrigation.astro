@@ -44,6 +44,35 @@ const faqSchema = {
   ],
 };
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Irrigation System Installation',
+  name: 'Irrigation Systems in Murrieta, CA',
+  description: 'Drip irrigation, sprinkler systems, and smart controller installation for Murrieta homes. Water-efficient, rebate-eligible, and HOA-compliant. Free quotes.',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.domain,
+    telephone: SITE_CONFIG.phone,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Murrieta' },
+    { '@type': 'City', name: 'Temecula' },
+    { '@type': 'City', name: 'Wildomar' },
+    { '@type': 'City', name: 'Menifee' },
+  ],
+  offers: {
+    '@type': 'Offer',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      minPrice: '500',
+      maxPrice: '4000',
+      priceCurrency: 'USD',
+    },
+  },
+};
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -56,10 +85,11 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title="Irrigation Systems Murrieta, CA | Smart Drip & Sprinkler Installation | Free Quote"
-  description="Water-efficient irrigation systems for Murrieta homes. Drip irrigation, sprinkler installation, and smart controllers. Meets California water requirements. Free quotes."
+  title="Irrigation Systems Murrieta, CA | Free Quote"
+  description="Water-efficient drip & sprinkler systems for Murrieta homes. Smart controllers, rebate-eligible installs, HOA-compliant. Free quotes."
   ogImage="/images/drought-tolerant-garden.jpg"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero

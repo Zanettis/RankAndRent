@@ -44,6 +44,35 @@ const faqSchema = {
   ],
 };
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Landscape Design',
+  name: 'Landscape Design in Murrieta, CA',
+  description: 'Custom landscape design for Murrieta homes. Drought-tolerant plant selections, HOA submission handling, and full installation. Free consultation.',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.domain,
+    telephone: SITE_CONFIG.phone,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Murrieta' },
+    { '@type': 'City', name: 'Temecula' },
+    { '@type': 'City', name: 'Wildomar' },
+    { '@type': 'City', name: 'Menifee' },
+  ],
+  offers: {
+    '@type': 'Offer',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      minPrice: '3000',
+      maxPrice: '25000',
+      priceCurrency: 'USD',
+    },
+  },
+};
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -56,10 +85,11 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title="Landscape Design Murrieta, CA | Custom Yard Plans | Free Consultation"
-  description="Custom landscape design in Murrieta, CA. Beautiful, drought-smart designs that thrive in inland Southern California. Free consultations."
+  title="Landscape Design Murrieta, CA | Free Consultation"
+  description="Custom landscape design for Murrieta homes. Drought-smart, HOA-compliant. Native plants, irrigation planning, full installation. Free consultation."
   ogImage="/images/backyard-turf-design.jpg"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero

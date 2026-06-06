@@ -7,22 +7,50 @@ import { SITE_CONFIG } from '../config';
 import heroBg from '../assets/images/patio-outdoor-living.jpg';
 
 const icons = ['🎨', '🌿', '💧', '🍂'];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'How much does landscape design cost in Murrieta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Landscape design consultations are free. Full design plans range from $500–$2,500 depending on yard size and complexity. Installation costs vary widely — a basic front yard refresh starts around $3,000, while full backyard transformations typically run $8,000–$25,000+. We provide detailed written estimates before any work begins.' } },
+    { '@type': 'Question', name: 'Do you design drought-tolerant landscapes?',
+      acceptedAnswer: { '@type': 'Answer', text: "Yes — it's one of our specialties. We use California native plants, drought-adapted species, and water-efficient ground covers that look great without excessive irrigation. Many of our designs qualify for local water district rebates." } },
+    { '@type': 'Question', name: 'Do you handle HOA submissions and approvals?',
+      acceptedAnswer: { '@type': 'Answer', text: "Yes. We're familiar with HOA guidelines in communities throughout Murrieta including Bear Creek, Greer Ranch, and Copper Canyon. We prepare all required documentation and submit on your behalf." } },
+    { '@type': 'Question', name: 'How long does a full yard transformation take?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Design takes 1–2 weeks. Installation for a standard yard typically takes 3–7 days depending on scope. We schedule around your availability and provide a timeline before starting.' } },
+    { '@type': 'Question', name: 'Do you offer ongoing lawn care after installation?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. We offer weekly and biweekly lawn maintenance plans starting at $80/visit for standard lots. Services include mowing, edging, blowing, and seasonal fertilizing.' } },
+    { '@type': 'Question', name: 'Do you serve Temecula, Wildomar, and surrounding areas?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. We serve Murrieta, Temecula, Wildomar, Menifee, Lake Elsinore, Canyon Lake, and Winchester. Free consultations available throughout the Temecula Valley.' } },
+  ],
+};
 ---
 
 <BaseLayout
-  title="Landscaping Murrieta, CA | Professional Landscape Design & Lawn Care"
-  description="Transform your Murrieta yard with professional landscaping. Custom design, lawn care, irrigation, and seasonal cleanup. Free consultations."
+  title="Landscaping Murrieta, CA | Design, Lawn Care & Irrigation"
+  description="Top-rated Murrieta landscaping — custom design, lawn care, irrigation & cleanup. Drought-smart, HOA-compliant. 4.8 stars. Free consultation."
   aggregateRating={{ ratingValue: "4.8", reviewCount: "62" }}
   ogImage="/images/patio-outdoor-living.jpg"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <Hero
     headline="Murrieta's Top-Rated Landscaping & Lawn Care"
     subheadline="Custom landscape design, lawn maintenance, irrigation, and seasonal cleanup for Murrieta homeowners. Drought-smart, HOA-compliant, and built for inland SoCal. Free consultations."
     ctaText="Get a Free Consultation"
-    secondaryCtaText="Call Now"
+    secondaryCtaText={`Call ${SITE_CONFIG.phone}`}
     secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
     backgroundImage={heroBg}
   />
+
+  <div class="bg-white border-b border-gray-100 py-3 px-4">
+    <div class="max-w-6xl mx-auto flex flex-wrap justify-center items-center gap-x-8 gap-y-2 text-sm text-gray-600">
+      <span class="flex items-center gap-1.5 font-semibold text-gray-800">⭐ 4.8 Stars &middot; 62 Reviews</span>
+      <span class="flex items-center gap-1.5">✅ Licensed &amp; Insured in Murrieta, CA</span>
+      <span class="flex items-center gap-1.5">✅ Free Consultations</span>
+    </div>
+  </div>
 
   <section class="max-w-6xl mx-auto px-4 py-16">
     <h2 class="text-3xl font-bold text-primary text-center mb-4">Our Landscaping Services</h2>

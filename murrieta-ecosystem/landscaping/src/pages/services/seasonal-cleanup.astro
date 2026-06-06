@@ -43,6 +43,35 @@ const faqSchema = {
   ],
 };
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Seasonal Yard Cleanup',
+  name: 'Seasonal Yard Cleanup in Murrieta, CA',
+  description: 'Spring and fall yard cleanup for Murrieta properties. Leaf removal, pruning, mulching, and full debris haul-away. Reduces fire hazard. Free quotes.',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.domain,
+    telephone: SITE_CONFIG.phone,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Murrieta' },
+    { '@type': 'City', name: 'Temecula' },
+    { '@type': 'City', name: 'Wildomar' },
+    { '@type': 'City', name: 'Menifee' },
+  ],
+  offers: {
+    '@type': 'Offer',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      minPrice: '200',
+      maxPrice: '500',
+      priceCurrency: 'USD',
+    },
+  },
+};
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -55,9 +84,10 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title="Seasonal Yard Cleanup Murrieta, CA | Spring & Fall | Free Quote"
-  description="Professional seasonal yard cleanup in Murrieta, CA. Spring and fall cleanups including leaf removal, pruning, mulching, and debris hauling. Free quotes."
+  title="Seasonal Yard Cleanup Murrieta, CA | Free Quote"
+  description="Spring & fall yard cleanup in Murrieta. Leaf removal, pruning, mulching & full debris haul-away. Reduces fire hazard. Free quotes."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero

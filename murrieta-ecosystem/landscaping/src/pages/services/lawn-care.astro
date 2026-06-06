@@ -43,6 +43,35 @@ const faqSchema = {
   ],
 };
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Lawn Care',
+  name: 'Lawn Care in Murrieta, CA',
+  description: 'Weekly and biweekly lawn maintenance in Murrieta. Mowing, edging, fertilizing, and weed control. Consistent service built for inland SoCal climate. Free quotes.',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.domain,
+    telephone: SITE_CONFIG.phone,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Murrieta' },
+    { '@type': 'City', name: 'Temecula' },
+    { '@type': 'City', name: 'Wildomar' },
+    { '@type': 'City', name: 'Menifee' },
+  ],
+  offers: {
+    '@type': 'Offer',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      minPrice: '75',
+      maxPrice: '200',
+      priceCurrency: 'USD',
+    },
+  },
+};
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -55,9 +84,11 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title="Lawn Care Murrieta, CA | Weekly & Monthly Maintenance | Free Quotes"
-  description="Professional lawn care in Murrieta, CA. Mowing, edging, fertilizing, and weed control. Consistent weekly or biweekly service. Free quotes."
+  title="Lawn Care Murrieta, CA | Weekly Maintenance & Free Quote"
+  description="Professional lawn care in Murrieta. Weekly mowing, edging, fertilizing & weed control. Consistent service for SoCal's climate. Free quotes."
+  ogImage="/images/hero.jpg"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero
