@@ -8,6 +8,15 @@ import { Image } from 'astro:assets';
 import { SITE_CONFIG } from '../../config';
 import mixerImg from '../../assets/images/concrete-mixer.jpg';
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Concrete Slabs',
+  provider: { '@type': 'LocalBusiness', name: SITE_CONFIG.name, url: SITE_CONFIG.domain, telephone: SITE_CONFIG.phone },
+  areaServed: { '@type': 'City', name: 'Murrieta', containedInPlace: { '@type': 'State', name: 'California' } },
+  description: 'Shed pads, RV pads, shop floors, and equipment pads.',
+};
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -57,15 +66,18 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title="Concrete Slab & Floor Contractor Murrieta, CA | Garage, Shed & RV Pad Slabs | Free Estimates"
+  title="Concrete Slabs & Garage Floors Murrieta CA | Free Estimates"
   description="Licensed concrete slab and floor contractor in Murrieta, CA. Garage slabs, shed pads, RV pads, shop floors, and equipment pads. Rebar reinforcement standard. Free estimates."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero
     headline="Concrete Slab & Floor Contractor in Murrieta, CA"
     subheadline="Garage floors, shed pads, RV pads, and shop slabs — properly reinforced and graded for Murrieta's clay soil conditions."
     ctaText="Get a Free Estimate"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
   />
 
   <div class="max-w-4xl mx-auto px-4 pt-8 pb-2">

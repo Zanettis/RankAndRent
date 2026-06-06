@@ -9,6 +9,15 @@ import { SITE_CONFIG } from '../../config';
 import retainingImg from '../../assets/images/retaining-walls.jpg';
 import walkwayImg from '../../assets/images/workers-walkway.png';
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Concrete Patios & Walkways',
+  provider: { '@type': 'LocalBusiness', name: SITE_CONFIG.name, url: SITE_CONFIG.domain, telephone: SITE_CONFIG.phone },
+  areaServed: { '@type': 'City', name: 'Murrieta', containedInPlace: { '@type': 'State', name: 'California' } },
+  description: 'Custom concrete patios and walkway installations.',
+};
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -58,15 +67,18 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title="Concrete Patios & Walkways Murrieta, CA | Custom Hardscaping | Free Estimates"
+  title="Concrete Patios & Walkways Murrieta CA | Free Estimates"
   description="Custom concrete patios and walkways in Murrieta, CA. Standard, stamped, and exposed aggregate finishes. Free estimates from licensed contractors."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero
     headline="Concrete Patios & Walkways in Murrieta"
     subheadline="Create the outdoor living space you've always wanted — custom concrete work that complements your home and landscaping."
     ctaText="Get a Free Estimate"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
   />
 
   <div class="max-w-4xl mx-auto px-4 pt-8 pb-2">

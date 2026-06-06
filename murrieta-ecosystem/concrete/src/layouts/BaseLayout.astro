@@ -40,6 +40,19 @@ const schema = {
   ],
   priceRange: '$$',
   description: SITE_CONFIG.description,
+  openingHours: ['Mo-Fr 07:00-18:00', 'Sa 08:00-16:00'],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Concrete Services',
+    itemListElement: SITE_CONFIG.services.map(s => ({
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name: s.title, url: `${SITE_CONFIG.domain}${s.href}` },
+    })),
+  },
+  sameAs: [
+    'https://www.facebook.com/murrietaconcreteworks',
+    'https://www.yelp.com/biz/murrieta-concrete-works',
+  ],
   ...(aggregateRating ? { aggregateRating: { '@type': 'AggregateRating', ...aggregateRating } } : {}),
 };
 ---

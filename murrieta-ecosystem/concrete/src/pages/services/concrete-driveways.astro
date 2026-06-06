@@ -8,6 +8,15 @@ import { Image } from 'astro:assets';
 import { SITE_CONFIG } from '../../config';
 import drivewayImg from '../../assets/images/driveway-fresh.jpg';
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Concrete Driveways',
+  provider: { '@type': 'LocalBusiness', name: SITE_CONFIG.name, url: SITE_CONFIG.domain, telephone: SITE_CONFIG.phone },
+  areaServed: { '@type': 'City', name: 'Murrieta', containedInPlace: { '@type': 'State', name: 'California' } },
+  description: 'Durable driveway installation and replacement.',
+};
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -57,15 +66,18 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title="Concrete Driveway Contractor Murrieta, CA | Installation & Replacement | Free Estimates"
+  title="Concrete Driveways Murrieta CA | Free Estimates"
   description="Professional concrete driveway installation and replacement in Murrieta, CA. Licensed contractors, quality materials, 10-year guarantee. Free estimates."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero
     headline="Concrete Driveway Contractor in Murrieta, CA"
     subheadline="New driveway installation or full replacement — built to last in Murrieta's inland climate with proper reinforcement and grading."
     ctaText="Get a Free Estimate"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
   />
 
   <div class="max-w-4xl mx-auto px-4 pt-8 pb-2">

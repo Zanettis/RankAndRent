@@ -6,6 +6,15 @@ import ServiceCard from '../../components/ServiceCard.astro';
 import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Concrete Pool Decks',
+  provider: { '@type': 'LocalBusiness', name: SITE_CONFIG.name, url: SITE_CONFIG.domain, telephone: SITE_CONFIG.phone },
+  areaServed: { '@type': 'City', name: 'Murrieta', containedInPlace: { '@type': 'State', name: 'California' } },
+  description: 'Slip-resistant pool deck installations in exposed aggregate, stamped, or brushed finishes.',
+};
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -55,15 +64,18 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title="Concrete Pool Deck Contractor Murrieta, CA | Exposed Aggregate & Stamped | Free Estimates"
+  title="Concrete Pool Decks Murrieta CA | Free Estimates"
   description="Expert concrete pool deck installation in Murrieta, CA. Slip-resistant finishes, cool-deck coatings, exposed aggregate, and stamped concrete. Free estimates."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero
     headline="Concrete Pool Decks in Murrieta, CA"
     subheadline="Slip-resistant, heat-reflective pool decks built for Murrieta's inland SoCal climate. Exposed aggregate, stamped, broom finish, and cool-deck coatings."
     ctaText="Get a Free Estimate"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
   />
 
   <div class="max-w-4xl mx-auto px-4 py-12">

@@ -9,6 +9,15 @@ import { SITE_CONFIG } from '../../config';
 import patioImg from '../../assets/images/patio-formwork.png';
 import retainingImg from '../../assets/images/retaining-walls.jpg';
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Concrete Patios',
+  provider: { '@type': 'LocalBusiness', name: SITE_CONFIG.name, url: SITE_CONFIG.domain, telephone: SITE_CONFIG.phone },
+  areaServed: { '@type': 'City', name: 'Murrieta', containedInPlace: { '@type': 'State', name: 'California' } },
+  description: 'Custom patio slabs in standard, stamped, or exposed aggregate.',
+};
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -58,15 +67,18 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title="Concrete Patio Contractor Murrieta, CA | Custom Patio Installation | Free Estimates"
+  title="Concrete Patios Murrieta CA | Free Estimates"
   description="Licensed concrete patio contractor in Murrieta, CA. Custom patios in broom finish, stamped, or exposed aggregate. Drainage built in. Free estimates."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero
     headline="Concrete Patio Contractor in Murrieta, CA"
     subheadline="Create the outdoor living space you've always wanted — custom concrete patios built to last in Murrieta's sunny inland climate."
     ctaText="Get a Free Estimate"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
   />
 
   <div class="max-w-4xl mx-auto px-4 pt-8 pb-2">

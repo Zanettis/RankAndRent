@@ -8,6 +8,15 @@ import { Image } from 'astro:assets';
 import { SITE_CONFIG } from '../../config';
 import wallImg from '../../assets/images/retaining-walls.jpg';
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Concrete Walls',
+  provider: { '@type': 'LocalBusiness', name: SITE_CONFIG.name, url: SITE_CONFIG.domain, telephone: SITE_CONFIG.phone },
+  areaServed: { '@type': 'City', name: 'Murrieta', containedInPlace: { '@type': 'State', name: 'California' } },
+  description: 'Retaining walls, block walls, and garden walls.',
+};
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -57,15 +66,18 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title="Concrete Wall Contractor Murrieta, CA | Retaining Walls & Block Walls | Free Estimates"
+  title="Concrete Retaining Walls Murrieta CA | Free Estimates"
   description="Licensed concrete wall contractor in Murrieta, CA. Retaining walls, block walls, garden walls, and decorative concrete walls. Drainage included. Free estimates."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero
     headline="Concrete Wall Contractor in Murrieta, CA"
     subheadline="Retaining walls, block walls, and decorative garden walls — built with proper drainage and reinforcement to last decades in Murrieta's terrain."
     ctaText="Get a Free Estimate"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
   />
 
   <div class="max-w-4xl mx-auto px-4 pt-8 pb-2">

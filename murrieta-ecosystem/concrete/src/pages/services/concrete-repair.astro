@@ -6,6 +6,15 @@ import ServiceCard from '../../components/ServiceCard.astro';
 import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Concrete Repair',
+  provider: { '@type': 'LocalBusiness', name: SITE_CONFIG.name, url: SITE_CONFIG.domain, telephone: SITE_CONFIG.phone },
+  areaServed: { '@type': 'City', name: 'Murrieta', containedInPlace: { '@type': 'State', name: 'California' } },
+  description: 'Crack repair and resurfacing for existing concrete.',
+};
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -55,15 +64,18 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title="Concrete Repair Contractor Murrieta, CA | Crack Repair & Resurfacing | Free Estimates"
+  title="Concrete Repair Murrieta CA | Free Estimates"
   description="Professional concrete repair in Murrieta, CA. Crack repair, resurfacing, and settling correction. Restore your driveway or patio. Free estimates."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero
     headline="Concrete Repair Contractor in Murrieta, CA"
     subheadline="Cracked, sunken, or spalling concrete? We restore your driveway, patio, or walkway to like-new condition at a fraction of replacement cost."
     ctaText="Get a Free Estimate"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
   />
 
   <div class="max-w-4xl mx-auto px-4 py-12">

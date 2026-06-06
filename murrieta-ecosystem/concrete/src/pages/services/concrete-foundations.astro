@@ -8,6 +8,15 @@ import { Image } from 'astro:assets';
 import { SITE_CONFIG } from '../../config';
 import pourImg from '../../assets/images/concrete-pour-team.jpg';
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Concrete Foundations',
+  provider: { '@type': 'LocalBusiness', name: SITE_CONFIG.name, url: SITE_CONFIG.domain, telephone: SITE_CONFIG.phone },
+  areaServed: { '@type': 'City', name: 'Murrieta', containedInPlace: { '@type': 'State', name: 'California' } },
+  description: 'Garage slabs, ADU pads, and addition foundation pours.',
+};
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -57,15 +66,18 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title="Concrete Foundation Contractor Murrieta, CA | Slabs, ADU Pads & Additions | Free Estimates"
+  title="Concrete Foundation Murrieta CA | Free Estimates"
   description="Licensed concrete foundation contractor in Murrieta, CA. Garage slabs, ADU foundations, addition footings, and residential pads. Clay soil expertise. Free estimates."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero
     headline="Concrete Foundation Contractor in Murrieta, CA"
     subheadline="Garage slabs, ADU pads, addition foundations, and residential pours — built right the first time on Murrieta's challenging clay soil."
     ctaText="Get a Free Estimate"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
   />
 
   <div class="max-w-4xl mx-auto px-4 pt-8 pb-2">

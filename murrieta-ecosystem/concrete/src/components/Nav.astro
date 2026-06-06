@@ -57,6 +57,9 @@ import { SITE_CONFIG } from '../config';
 
       <a href="/blog" class="hover:text-accent transition-colors">Blog</a>
       <a href="/contact" class="hover:text-accent transition-colors">Contact</a>
+      <a href={`tel:${SITE_CONFIG.phone}`} class="text-white/80 hover:text-accent transition-colors text-sm font-medium">
+        📞 {SITE_CONFIG.phone}
+      </a>
       <a
         href="/contact"
         class="bg-cta text-white px-4 py-2 rounded font-semibold hover:opacity-90 transition-opacity"

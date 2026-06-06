@@ -6,6 +6,15 @@ import ServiceCard from '../../components/ServiceCard.astro';
 import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Concrete Sealing',
+  provider: { '@type': 'LocalBusiness', name: SITE_CONFIG.name, url: SITE_CONFIG.domain, telephone: SITE_CONFIG.phone },
+  areaServed: { '@type': 'City', name: 'Murrieta', containedInPlace: { '@type': 'State', name: 'California' } },
+  description: 'Professional sealing to protect and extend the life of your concrete.',
+};
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -55,15 +64,18 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title="Concrete Sealing & Maintenance Murrieta, CA | Driveway & Patio Sealing | Free Estimates"
+  title="Concrete Sealing Murrieta CA | Free Estimates"
   description="Professional concrete sealing in Murrieta, CA. Protect your driveway, patio, or pool deck from UV, staining, and water damage. Penetrating and acrylic sealers. Free estimates."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero
     headline="Concrete Sealing & Maintenance in Murrieta, CA"
     subheadline="Protect your driveway, patio, or pool deck from UV fading, water intrusion, and surface wear. The right sealer extends concrete life by years."
     ctaText="Get a Free Estimate"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
   />
 
   <div class="max-w-4xl mx-auto px-4 py-12">

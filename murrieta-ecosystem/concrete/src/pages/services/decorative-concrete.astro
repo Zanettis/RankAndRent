@@ -6,6 +6,15 @@ import ServiceCard from '../../components/ServiceCard.astro';
 import CrossLinkWidget from '../../components/CrossLinkWidget.astro';
 import { SITE_CONFIG } from '../../config';
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Decorative Concrete',
+  provider: { '@type': 'LocalBusiness', name: SITE_CONFIG.name, url: SITE_CONFIG.domain, telephone: SITE_CONFIG.phone },
+  areaServed: { '@type': 'City', name: 'Murrieta', containedInPlace: { '@type': 'State', name: 'California' } },
+  description: 'Stamped and stained concrete for curb appeal.',
+};
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -55,15 +64,18 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title="Stamped Concrete Contractor Murrieta, CA | Decorative & Stained Finishes | Free Estimates"
+  title="Stamped Concrete Murrieta CA | Free Estimates"
   description="Decorative concrete in Murrieta, CA. Stamped, stained, and exposed aggregate finishes for driveways, patios, and pool decks. Free estimates."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <Hero
     headline="Stamped Concrete Contractor in Murrieta, CA"
     subheadline="Stamped, stained, and polished concrete that transforms ordinary surfaces into stunning focal points for your Murrieta home."
     ctaText="Get a Free Estimate"
+    secondaryCtaText="Call Now"
+    secondaryCtaHref={`tel:${SITE_CONFIG.phone}`}
   />
 
   <div class="max-w-4xl mx-auto px-4 py-12">
