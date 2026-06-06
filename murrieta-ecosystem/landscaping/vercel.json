@@ -4,9 +4,9 @@
   "framework": "astro",
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "www.landscapingmurrieta.com" }],
-      "destination": "https://landscapingmurrieta.com/:path*",
+      "destination": "https://landscapingmurrieta.com/$1",
       "permanent": true
     }
   ]
