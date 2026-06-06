@@ -4,9 +4,9 @@
   "framework": "astro",
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "www.murrietaconcreteworks.com" }],
-      "destination": "https://murrietaconcreteworks.com/:path*",
+      "destination": "https://murrietaconcreteworks.com/$1",
       "permanent": true
     }
   ]

@@ -6,7 +6,7 @@ import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig({
   site: 'https://murrietaconcreteworks.com',
-  trailingSlash: 'always',
+  trailingSlash: 'ignore',
   output: 'hybrid',
   adapter: vercel(),
   integrations: [
