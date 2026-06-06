@@ -73,7 +73,7 @@ const testimonials = [
 ---
 
 <BaseLayout
-  title="Tree Service Murrieta, CA | Professional Tree Removal & Trimming"
+  title="Tree Service Murrieta CA | Free Same-Day Estimate"
   description="Expert tree removal, trimming, and stump grinding in Murrieta, CA. Licensed & insured. 24/7 emergency service. Free estimates — call today!"
   aggregateRating={{ ratingValue: "4.9", reviewCount: "87" }}
 >
@@ -228,14 +228,31 @@ const testimonials = [
     </div>
   </section>
 
+  <!-- Review CTA -->
+  <div class="bg-white border-b border-gray-100 py-5 px-4 text-center">
+    <p class="text-gray-600 text-sm">
+      ⭐ Based on <strong>87 verified Google reviews</strong> —{' '}
+      <a href="#" class="text-cta font-semibold hover:underline">See all reviews on Google →</a>
+    </p>
+  </div>
+
   <!-- Service Area -->
   <section class="bg-gray-50 py-16 px-4">
     <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-primary mb-4">Serving All of Murrieta</h2>
+      <h2 class="text-3xl font-bold text-primary mb-4">Serving Murrieta & the Temecula Valley</h2>
       <p class="text-gray-600 max-w-3xl mx-auto mb-8">
-        We serve all Murrieta neighborhoods including Old Town, Bear Creek, Murrieta Oaks, Copper Canyon,
-        Greer Ranch, and surrounding communities in Temecula, Wildomar, and Lake Elsinore.
+        We serve all Murrieta neighborhoods — Old Town, Bear Creek, Murrieta Oaks, Copper Canyon, Greer Ranch — plus the entire Southwest Riverside County area.
       </p>
+      <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 max-w-3xl mx-auto mb-8">
+        {SITE_CONFIG.locations.map((loc) => (
+          <a
+            href={loc.href}
+            class="block bg-white border border-gray-200 rounded-lg px-3 py-2 text-sm font-medium text-primary hover:bg-primary hover:text-white hover:border-primary transition-colors text-center"
+          >
+            {loc.city}
+          </a>
+        ))}
+      </div>
       <a href="/services/tree-removal" class="text-cta font-semibold hover:underline">
         See all services →
       </a>
@@ -280,6 +297,30 @@ const testimonials = [
           <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{a}</div>
         </details>
       ))}
+    </div>
+  </section>
+
+  <!-- From the Blog -->
+  <section class="bg-gray-50 py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-primary text-center mb-4">From the Blog</h2>
+      <p class="text-gray-600 text-center mb-10">Tree care tips, cost guides, and local advice for Murrieta homeowners.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          { title: 'Tree Removal Cost in Murrieta, CA (2025 Guide)', description: 'A realistic breakdown of what tree removal costs in Murrieta — small trees, large oaks, emergency jobs, and stump grinding.', href: '/blog/tree-removal-cost-murrieta' },
+          { title: 'How to Identify a Dead or Dying Tree', description: "Key warning signs Murrieta homeowners should watch for before a tree becomes a safety hazard on their property.", href: '/blog/how-to-identify-dead-dying-tree-murrieta' },
+          { title: 'Why Hire a Certified Arborist in Murrieta?', description: 'What ISA certification means, why it matters for tree work, and how to verify a contractor before hiring.', href: '/blog/certified-arborist-murrieta' },
+        ].map(post => (
+          <a href={post.href} class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
+            <h3 class="font-bold text-primary text-base leading-snug">{post.title}</h3>
+            <p class="text-gray-600 text-sm flex-1">{post.description}</p>
+            <span class="text-cta text-sm font-semibold">Read more →</span>
+          </a>
+        ))}
+      </div>
+      <div class="text-center mt-8">
+        <a href="/blog" class="text-cta font-semibold hover:underline">See all articles →</a>
+      </div>
     </div>
   </section>
 
