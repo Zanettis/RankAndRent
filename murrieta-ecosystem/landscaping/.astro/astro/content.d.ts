@@ -159,6 +159,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"backyard-landscaping-ideas-murrieta.md": {
+	id: "backyard-landscaping-ideas-murrieta.md";
+  slug: "backyard-landscaping-ideas-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "backyard-transformation-cost-murrieta.md": {
 	id: "backyard-transformation-cost-murrieta.md";
   slug: "backyard-transformation-cost-murrieta";
@@ -169,6 +176,13 @@ declare module 'astro:content' {
 "best-drought-tolerant-plants-murrieta.md": {
 	id: "best-drought-tolerant-plants-murrieta.md";
   slug: "best-drought-tolerant-plants-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"best-grass-types-murrieta.md": {
+	id: "best-grass-types-murrieta.md";
+  slug: "best-grass-types-murrieta";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -201,6 +215,20 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"fertilizing-schedule-southern-california.md": {
+	id: "fertilizing-schedule-southern-california.md";
+  slug: "fertilizing-schedule-southern-california";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"hoa-by-community-murrieta.md": {
+	id: "hoa-by-community-murrieta.md";
+  slug: "hoa-by-community-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "hoa-landscaping-murrieta.md": {
 	id: "hoa-landscaping-murrieta.md";
   slug: "hoa-landscaping-murrieta";
@@ -215,13 +243,20 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"irrigation-system-cost-murrieta.mdx": {
-	id: "irrigation-system-cost-murrieta.mdx";
+"how-to-hire-landscaper-murrieta.md": {
+	id: "how-to-hire-landscaper-murrieta.md";
+  slug: "how-to-hire-landscaper-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"irrigation-system-cost-murrieta.md": {
+	id: "irrigation-system-cost-murrieta.md";
   slug: "irrigation-system-cost-murrieta";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] };
+} & { render(): Render[".md"] };
 "landscape-design-murrieta-homes.md": {
 	id: "landscape-design-murrieta-homes.md";
   slug: "landscape-design-murrieta-homes";
@@ -229,16 +264,58 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"landscaping-cost-murrieta.mdx": {
-	id: "landscaping-cost-murrieta.mdx";
+"landscaping-cost-murrieta.md": {
+	id: "landscaping-cost-murrieta.md";
   slug: "landscaping-cost-murrieta";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] };
+} & { render(): Render[".md"] };
+"landscaping-fallbrook-ca.md": {
+	id: "landscaping-fallbrook-ca.md";
+  slug: "landscaping-fallbrook-ca";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"landscaping-lake-elsinore-ca.md": {
+	id: "landscaping-lake-elsinore-ca.md";
+  slug: "landscaping-lake-elsinore-ca";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"landscaping-temecula-ca.md": {
+	id: "landscaping-temecula-ca.md";
+  slug: "landscaping-temecula-ca";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"landscaping-winchester-ca.md": {
+	id: "landscaping-winchester-ca.md";
+  slug: "landscaping-winchester-ca";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"mulching-murrieta-yards.md": {
+	id: "mulching-murrieta-yards.md";
+  slug: "mulching-murrieta-yards";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "murrieta-lawn-care-guide.md": {
 	id: "murrieta-lawn-care-guide.md";
   slug: "murrieta-lawn-care-guide";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"native-california-plants-murrieta.md": {
+	id: "native-california-plants-murrieta.md";
+  slug: "native-california-plants-murrieta";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -250,9 +327,30 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"retaining-walls-murrieta-slope.md": {
+	id: "retaining-walls-murrieta-slope.md";
+  slug: "retaining-walls-murrieta-slope";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"seasonal-cleanup-murrieta.md": {
+	id: "seasonal-cleanup-murrieta.md";
+  slug: "seasonal-cleanup-murrieta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "small-yard-landscaping-menifee-sun-city.md": {
 	id: "small-yard-landscaping-menifee-sun-city.md";
   slug: "small-yard-landscaping-menifee-sun-city";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"sod-installation-cost-murrieta.md": {
+	id: "sod-installation-cost-murrieta.md";
+  slug: "sod-installation-cost-murrieta";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
